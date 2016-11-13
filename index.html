@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/skills.css" />
 		<link rel="stylesheet" href="assets/css/app.css" />
@@ -105,7 +105,7 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2 id="work">Some Work</h2>
+						<h2 id="work">Work</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
 								<a href="images/fulls/project-keysystems.jpg" class="image fit thumb"><img src="images/thumbs/preview-keysystems.jpg" alt="" /></a>
@@ -149,17 +149,22 @@
 						<p>You can reach me any time by filling the following contact form, thank you so much!</p>
 						<div class="row">
 							<div class="8u 12u$(small)" ng-controller="MainCrtl">
-								<form name="contactForm" method="post" action="">
+								<form name="contactForm" method="post" action="assets/php/form-process.php">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" ng-model="formData.name" required></div>
 										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" ng-model="formData.lastname" required></div>
-										<div class="12u$"><input type="email" name="email" id="email" placeholder="Email" ng-model="formData.email" required ></div>
+										<div class="12u$"><input type="email" name="email" id="email" placeholder="E-Mail" ng-model="formData.email" required ></div>
 											<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" ng-model="formData.message" required></textarea></div>
 									</div>
 									<br>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" ng-click="submitForm(formData)"></li>
 									</ul>
+									<div class="form-group">
+										<div class="col-sm-10 col-sm-offset-2">
+											<?php echo $result; ?>
+										</div>
+									</div>
 								</form>
 							</div>
 							<div class="4u$ 12u$(small)">

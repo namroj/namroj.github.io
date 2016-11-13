@@ -1,14 +1,16 @@
 <?php
 
-$firstname = $_POST['name'];
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
-$message = $_POST['message'];
-$to = "espinoza.dev@gmail.com";
-$subject = "Contact / Espinoza-Dev";
+        $firstname = $_POST['name'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
 
-mail ($to, $subject, $message, "From: " . $firstname . " " . $lastname);
+        $from = $email;
+        $to = 'espinoza.dev@gmail.com';
+        $subject = 'Contact / Espinoza-Dev';
 
-echo "Your message has been sent";
+        $body = "From: $firstname\n E-Mail: $email\n Message:\n $message";
+
+        mail ($to, $subject, $body, $from);    
 
 ?>
