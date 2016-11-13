@@ -12,16 +12,18 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/skills.css" />
+		<link rel="stylesheet" href="assets/css/app.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	</head>
-	<body id="top">
+	<body id="top" ng-app="formApp">
 
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 					<h2>Jorman Espinoza</h2>
-					<h1><strong>I am a Web Developer</strong>, specialized in WordPress developing, based in Caracas, Venezuela.</h1>
+					<h1><strong>I'm a Web Developer</strong>, specialized in WordPress developing, based in Caracas, Venezuela.</h1>
 				</div>
 			</header>
 
@@ -33,7 +35,7 @@
 						<header class="major">
 							<h2>University Higher Technician</h2>
 						</header>
-						<p>I am dedicated to the programming as a web developer, specialized in WordPress developing, also in the handling of several programmimg languages as CCS, JS, Bootstrap, AngularJs, PHP and another kind of programs, in this case, for video editing like, Camtasia Studio and Sony Vegas. <br /><br />Currently, I work in a company called <a href="http://keysystemsca.com/" target="_blank">Key Systems, C.A.</a>, dedicated on developing apps, websites, logos and graphic design.</p>
+						<p>I am dedicated to the programming as a web developer, specialized in WordPress developing, also in the handling of several programmimg languages as CCS, JS, Bootstrap, AngularJS, PHP and another kind of programs, in this case, for video editing like, Camtasia Studio and Sony Vegas. <br /><br />Currently, I work in a company called <a href="http://keysystemsca.com/" target="_blank">Key Systems, C.A.</a>, dedicated on developing apps, websites, logos and graphic design.</p>
 						<ul class="actions">
 							<div class="options">
 								<li><a href="#skills" class="button">Skills</a></li>
@@ -59,7 +61,7 @@
 
 							<li>
 							    <div class="progressbar-title">
-								    <h3>CSS / SASS</h3>
+								    <h3>CSS</h3>
 								    <span class="percent" id="css-pourcent"></span>
 							    </div>
 							    <div class="bar-container">
@@ -145,18 +147,17 @@
 						<h2>Get In Touch</h2>
 						<p>You can reach me any time by filling the following contact form, thank you so much!</p>
 						<div class="row">
-							<div class="8u 12u$(small)">
-								<form method="post" action="assets/php/form_process.php">
+							<div class="8u 12u$(small)" ng-controller="MainCrtl">
+								<form name="contactForm" method="post" action="assets\php\form-process.php">
 									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="First Name" /></div>
-										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" /></div>
-										<div class="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="6u 12u$(xsmall)"><input type="tel" name="phone" id="phone" placeholder="Phone" /></div>
-										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" ng-model="formData.name" required></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" ng-model="formData.lastname" required></div>
+										<div class="12u$"><input type="email" name="email" id="email" placeholder="Email" ng-model="formData.email" required ng-class="{error: contactForm.email.$error.required && !contactForm.$pristine, warning: contactForm.email.$error.email}"></div>
+											<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" ng-model="formData.message" required></textarea></div>
 									</div>
-									<br />
+									<br>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" /></li>
+										<li><input type="submit" value="Send Message" ng-click="submitForm(formData)"></li>
 									</ul>
 								</form>
 							</div>
@@ -527,6 +528,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/skills.js"></script>
-
+			<!-- AngularJS Validation -->
+			<script src="js/app.js"></script>
 	</body>
 </html>

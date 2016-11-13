@@ -3,7 +3,7 @@ var lang = {
   "css": "90%",
   "javascript": "70%",
   "php": "55%",
-  "angular": "35%"
+  "angular": "50%"
 };
 
 var multiply = 4;
