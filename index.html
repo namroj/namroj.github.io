@@ -14,10 +14,17 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/skills.css" />
 		<link rel="stylesheet" href="assets/css/app.css" />
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="assets/css/style.css">
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="assets/js/app.js"></script>
+	    <script src="assets/js/controllers.js"></script>
 	</head>
-	<body id="top" ng-app="formApp">
+	<body ng-app="contactApp" id="top">
 
 		<!-- Header -->
 			<header id="header">
@@ -148,8 +155,9 @@
 						<h2>Get In Touch</h2>
 						<p>You can reach me any time by filling the following contact form, thank you so much!</p>
 						<div class="row">
-							<div class="8u 12u$(small)" ng-controller="MainCrtl">
-								<form name="contactForm" method="post" action="">
+							<div class="8u 12u$(small)">
+								<!--
+								<form name="contactForm">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" ng-model="formData.name" required></div>
 										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" ng-model="formData.lastname" required></div>
@@ -159,8 +167,50 @@
 									<br>
 									<ul class="actions">
 										<li><input type="submit" value="Send Message" ng-click="submitForm(formData)"></li>
-									</ul>									
+									</ul>
 								</form>
+								-->
+								<!-- Contact Form -->
+
+								<div ng-controller="ContactController" class="panel-body">
+				                    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+				                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+				                            <label for="inputName" class="col-lg-2 control-label">Name</label>
+				                            <div class="col-lg-10">
+				                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+				                            </div>
+				                        </div>
+				                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+				                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+				                            <div class="col-lg-10">
+				                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+				                            </div>
+				                        </div>
+				                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+				                            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+				                            <div class="col-lg-10">
+				                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+				                            </div>
+				                        </div>
+				                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+				                            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+				                            <div class="col-lg-10">
+				                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+				                            </div>
+				                        </div>
+				                        <div class="form-group">
+				                            <div class="col-lg-offset-2 col-lg-10">
+				                                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
+				                                    Send Message
+				                                </button>
+				                            </div>
+				                        </div>
+				                    </form>
+				                    <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+				                </div>
+
+								<!-- Contact Form -->
+
 							</div>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
@@ -529,7 +579,5 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/skills.js"></script>
-			<!-- AngularJS Validation -->
-			<script src="js/app.js"></script>
 	</body>
 </html>
