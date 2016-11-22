@@ -4,6 +4,7 @@
 		<title>Espinoza-Dev</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="p:domain_verify" content="7c5e6f2353131028463e1a966203082c"/>
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -12,7 +13,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	</head>
-	<body id="top" ng-app="formApp">
+	<body id="top" ng-app="contactApp">
 
 		<!-- Header -->
 			<header id="header">
@@ -143,7 +144,7 @@
 						<h2>Get In Touch</h2>
 						<p>You can reach me any time by filling the following contact form, thank you so much!</p>
 						<div class="row">
-							<div class="8u 12u$(small)" ng-controller="MainCrtl">
+							<div class="8u 12u$(small)" ng-controller="ContactController">
 								<form name="contactForm" method="post" action="">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" ng-model="formData.name" required></div>
