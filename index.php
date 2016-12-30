@@ -144,17 +144,27 @@
 						<h2>Get In Touch</h2>
 						<p>You can reach me any time by filling the following contact form, thank you so much!</p>
 						<div class="row">
-							<div class="8u 12u$(small)" ng-controller="ContactController">
-								<form name="contactForm" method="post" action="">
+							<div class="8u 12u$(small)" >
+								<form name="contactForm" method="post" action="php/sendMail.php">
 									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" ng-model="formData.name" required></div>
-										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" ng-model="formData.lastname" required></div>
-										<div class="12u$"><input type="email" name="email" id="email" placeholder="E-Mail" ng-model="formData.email" required ></div>
-											<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" ng-model="formData.message" required></textarea></div>
+										<div class="6u 12u$(xsmall)"><input name="name" type="text" placeholder="Name" id="name" required></div>
+										<div class="6u 12u$(xsmall)"><input type="text" name="lastname" id="lastname" placeholder="Last Name" required></div>
+										<div class="12u$"><input type="email" name="email" id="email" placeholder="E-Mail" required ></div>
+										<div class="12u$"><input type="text" name="email" id="subject" placeholder="Subject" required ></div>
+											<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4" required></textarea></div>
 									</div>
-									<br>
+									<br>							
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" ng-click="submitForm(formData)"></li>
+										<?php $status=''; ?>
+										<li><input type="submit" value="Send Message">
+										</li>
+										<?php 						
+											if ($status){
+												echo '<li>Your email has been sent succesfully</li>';
+											}elseif (!$status == false){
+												echo '<li>Problems sending email</li>';		
+											}
+										?>
 									</ul>
 								</form>
 							</div>
