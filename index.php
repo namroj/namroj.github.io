@@ -13,7 +13,7 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	</head>
-	<body id="top" ng-app="contactApp">
+	<body id="top">
 
 		<!-- Header -->
 			<header id="header">
