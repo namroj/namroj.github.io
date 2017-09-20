@@ -1,9 +1,9 @@
 var lang = {
   "html": "95%",
   "css": "90%",
-  "javascript": "70%",
-  "php": "70%",
-  "angular": "75%"
+  "javascript": "85%",
+  "php": "85%",
+  "angular": "80%"
 };
 
 var multiply = 4;

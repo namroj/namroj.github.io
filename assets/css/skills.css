@@ -221,7 +221,7 @@
     width: 0%;
   }
   100% {
-    width: 75%;
+    width: 85%;
   }
 }
 @keyframes progress-php {
@@ -229,7 +229,7 @@
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 85%;
   }
 }
 @keyframes progress-angular {
@@ -237,6 +237,6 @@
     width: 0%;
   }
   100% {
-    width: 75%;
+    width: 80%;
   }
 }
