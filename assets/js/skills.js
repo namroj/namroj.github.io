@@ -1,9 +1,11 @@
 var lang = {
     "html": "95%",
     "css": "95%",
-    "javascript": "85%",
-    "php": "85%",
-    "angular": "80%"
+    "javascript": "95%",
+    "php": "90%",
+    "mysql": "85%",
+    "symfony": "85%",
+    "wordpress": "85%",
 };
 
 var multiply = 4;
