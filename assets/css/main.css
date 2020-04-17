@@ -1754,13 +1754,13 @@ a {
 	-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 	border-bottom: dotted 1px;
-	color: #49bf9d;
+	color: #111;
 	text-decoration: none;
 }
 
 a:hover {
 	border-bottom-color: transparent;
-	color: #49bf9d !important;
+	color: #111 !important;
 	text-decoration: none;
 }
 
@@ -1929,12 +1929,15 @@ header h6+p {
 	line-height: 1.5em;
 }
 
+header a:hover {
+	color: #f7f7f7 !important;
+}
+
 header.major h2 {
 	font-size: 2em;
 }
 
 /* Form */
-
 form {
 	margin: 0 0 2em 0;
 }
@@ -2547,8 +2550,8 @@ input[type="submit"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:hover {
-	border-color: #49bf9d;
-	color: #49bf9d !important;
+	border-color: #111;
+	color: #111 !important;
 }
 
 input[type="submit"]:active,
@@ -2556,8 +2559,8 @@ input[type="reset"]:active,
 input[type="button"]:active,
 .button:active {
 	background-color: rgba(73, 191, 157, 0.1);
-	border-color: #49bf9d;
-	color: #49bf9d !important;
+	border-color: #111;
+	color: #111 !important;
 }
 
 input[type="submit"].icon,
