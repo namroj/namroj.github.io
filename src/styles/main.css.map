@@ -1,0 +1,28 @@
+{
+    "version": 3,
+    "mappings": "AQAA,sDAAsD;AACtD,AAAA,IAAI;AACJ,IAAI,CAAC;EACH,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACX;;AQND;qCACqC;AACrC,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "main.scss",
+        "1-helpers/_1-helpers.scss",
+        "1-helpers/_variables.scss",
+        "1-helpers/_mixins.scss",
+        "1-helpers/_functions.scss",
+        "0-plugins/_0-plugins.scss",
+        "2-base/_2-base.scss",
+        "2-base/_reset.scss",
+        "2-base/_globals.scss",
+        "2-base/_typography.scss",
+        "3-layout/_3-layout.scss",
+        "3-layout/_header.scss",
+        "3-layout/_navigation.scss",
+        "3-layout/_main.scss",
+        "3-layout/_footer.scss",
+        "4-modules/_4-modules.scss",
+        "4-modules/_gmap.scss",
+        "4-modules/_instagram.scss",
+        "5-templates/_5-templates.scss",
+        "5-templates/_home.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

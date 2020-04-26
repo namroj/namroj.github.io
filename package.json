@@ -1,8 +1,8 @@
 {
   "name": "jormanespinoza.github.io",
   "version": "1.0.0",
-  "description": "Jorman Espinoza Web Developer Personal Site",
-  "main": "main.js",
+  "description": "Jorman Espinoza Web Developer",
+  "main": "src/scripts/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
