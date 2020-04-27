@@ -1,3 +1,5 @@
+import '../styles/main.scss'
+
 const developer = {
   name: 'Jorman Espinoza',
   email: 'espinoza.dev@gmail.com',
@@ -14,12 +16,11 @@ const developer = {
     console.groupEnd('Developer')
   }
 }
-
 // eslint-disable-next-line no-unused-vars
 let gMap
 let mapLoaded = false
 
-const loadMap = () => {
+const loadGmap = () => {
   if (!mapLoaded) {
     // Create the script tag, set the appropriate attributes
     const mapScript = document.createElement('script')
@@ -185,14 +186,13 @@ const loadMap = () => {
     mapLoaded = true
   }
 }
-
 const siteTitle = document.querySelector('.title')
-
-siteTitle.innerHTML = developer.name
 
 const loadingMap = document.querySelector('.load-map')
 
+siteTitle.innerHTML = developer.name
+
 loadingMap.addEventListener('click', (event) => {
   event.preventDefault()
-  loadMap()
+  loadGmap()
 })
