@@ -1,17 +1,27 @@
+const devMode = process.env.NODE_ENV !== 'production'
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './src/scripts/main.js',
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.html',
+      hash: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: devMode ? './styles/bundle.css' : './styles/bundle.[hash].css'
+    })
+  ],
+  entry: './src/scripts/app.js',
   output: {
-    filename: 'main.js',
+    filename: devMode ? 'scripts/bundle.js' : 'scripts/bundle.[hash].js',
     path: path.resolve(__dirname, 'build')
   },
-  resolve: {
-    extensions: ['.js']
-  },
   devServer: {
-    port: 8000,
-    inline: true
+    port: 2525,
+    open: true
   },
   module: {
     rules: [
@@ -28,27 +38,30 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         exclude: /node_modules/,
-        use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader'
+        loader: [
+          MiniCssExtractPlugin.loader,
+          // 'style-loader', // Creates `style` nodes from JS strings
+          'css-loader', // Translates CSS into CommonJS
+          'sass-loader' // Compiles Sass to CSS
         ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        exclude: /node_modules/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'build/fonts/'
+              outputPath: '/fonts/',
+              publicPath: '../fonts/'
             }
           }
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.scss']
   }
 }
