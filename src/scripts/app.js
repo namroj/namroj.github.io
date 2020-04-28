@@ -296,7 +296,7 @@ const loadGmap = () => {
           lng: -58.5035102
         },
         zoom: 12,
-        styles: gmapLightStyle
+        styles: gmapDarkStyle
       })
     }
 
