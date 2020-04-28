@@ -1,4 +1,4 @@
-import '../styles/main.scss'
+import '../styles/main.scss' // loads styles from main.scss
 
 const developer = {
   name: 'Jorman Espinoza',
@@ -24,7 +24,7 @@ siteTitle.innerHTML = developer.name
 let gmap
 let mapLoaded = false
 
-const gmapDarkStyle = [
+const gmapDarkMode = [
   {
     featureType: 'all',
     elementType: 'geometry',
@@ -161,7 +161,8 @@ const gmapDarkStyle = [
     ]
   }
 ]
-const gmapLightStyle = [
+// eslint-disable-next-line no-unused-vars
+const gmapLightMode = [
   {
     featureType: 'all',
     elementType: 'geometry',
@@ -296,7 +297,7 @@ const loadGmap = () => {
           lng: -58.5035102
         },
         zoom: 12,
-        styles: gmapDarkStyle
+        styles: gmapDarkMode
       })
     }
 
