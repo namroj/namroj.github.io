@@ -106,8 +106,8 @@
 }
 
 .skills-bar-container li .bar-container #progress-java {
-  -webkit-animation-name: progress-php;
-  animation-name: progress-php;
+  -webkit-animation-name: progress-java;
+  animation-name: progress-java;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
@@ -168,7 +168,47 @@
   }
 }
 
+@keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+@-moz-keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
 @-webkit-keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-css {
   0% {
     width: 0%;
   }
@@ -184,7 +224,27 @@
   }
 
   100% {
-    width: 75%;
+    width: 95%;
+  }
+}
+
+@-moz-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 95%;
   }
 }
 
@@ -194,11 +254,104 @@
   }
 
   100% {
-    width: 70%;
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-php {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-php {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes progress-java {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-java {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-java {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
   }
 }
 
 @-webkit-keyframes progress-mysql {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+@-webkit-keyframes progress-mysql {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes progress-mysql {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-mysql {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+
+
+
+@-moz-keyframes progress-mysql {
   0% {
     width: 0%;
   }
@@ -218,57 +371,7 @@
   }
 }
 
-@-webkit-keyframes progress-wordpress {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@-moz-keyframes progress-html {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 95%;
-  }
-}
-
-@-moz-keyframes progress-css {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@-moz-keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 75%;
-  }
-}
-
-@-moz-keyframes progress-php {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@-moz-keyframes progress-mysql {
+@keyframes progress-symfony {
   0% {
     width: 0%;
   }
@@ -288,67 +391,18 @@
   }
 }
 
+
+@-webkit-keyframes progress-wordpress {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
 @-moz-keyframes progress-wordpress {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes progress-html {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 95%;
-  }
-}
-
-@keyframes progress-css {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 90%;
-  }
-}
-
-@keyframes progress-javascript {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes progress-php {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes progress-mysql {
-  0% {
-    width: 0%;
-  }
-
-  100% {
-    width: 85%;
-  }
-}
-
-@keyframes progress-symfony {
   0% {
     width: 0%;
   }
