@@ -3,7 +3,8 @@ let lang = {
   css: '95%',
   javascript: '95%',
   php: '90%',
-  mysql: '85%',
+  java: '90%',
+  mysql: '90%',
   symfony: '85%',
   wordpress: '85%'
 }

@@ -25,7 +25,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   list-style: none;
-  margin: 200px 0 -275px;
+  margin: 290px 0 -275px;
 }
 
 .skills-bar-container li {
@@ -105,26 +105,33 @@
   animation-delay: 1.25s;
 }
 
+.skills-bar-container li .bar-container #progress-java {
+  -webkit-animation-name: progress-php;
+  animation-name: progress-php;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
 .skills-bar-container li .bar-container #progress-mysql {
   -webkit-animation-name: progress-mysql;
   animation-name: progress-mysql;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.75s;
+  animation-delay: 1.75s;
 }
 
 
 .skills-bar-container li .bar-container #progress-symfony {
   -webkit-animation-name: progress-symfony;
   animation-name: progress-symfony;
-  -webkit-animation-delay: 1.75s;
-  animation-delay: 1.75s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .skills-bar-container li .bar-container #progress-wordpress {
   -webkit-animation-name: progress-wordpress;
   animation-name: progress-wordpress;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
 
 .progressred {
