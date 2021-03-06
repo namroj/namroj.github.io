@@ -1,0 +1,25 @@
+/* -------------------------
+  ** GLOBAL *****
+------------------------- */
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  background: $primary-background-color;
+  color: $primary-color;
+  font-family: 'OperatorMonoBook', sans-serif;
+}
+
+h1 {
+  color: $secondary-color;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
