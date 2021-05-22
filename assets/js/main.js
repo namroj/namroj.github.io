@@ -57,6 +57,10 @@
       )
     })
 
+    $('body').on('.image', function(e){
+      e.preventDefault();
+    });
+
     // Footer.
     skel.on('+medium', function () {
       $footer.insertAfter($main)
