@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100svh;
+  padding: 25px;
+  color: var(--textColor);
+
+  h1 {
+    font-family: 'Dank Mono', monospace;
+    font-style: italic;
+    color: var(--textColor);
+  }
+
+  h2 {
+    font-family: 'Dank Mono', monospace;
+    font-weight: 900;
+    color: #9f16be;
+  }
+
+  a {
+    font-style: italic;
+    font-weight: bold;
+  }
+}
