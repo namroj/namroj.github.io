@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
-import { ThemeContextProvider } from '@/app/_context/theme/theme-provider'
-import ThemeToggler from '@/app/_components/theme-toggler/theme-toggler'
+import { GeneralContextProvider } from '@/app/_context/general/general-context-provider'
 
-import './globals.css'
+import Header from './_components/header/header'
+import Sidebar from './_components/sidebar/sidebar'
+import Main from './_components/main/main'
+
+import './globals.scss'
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',
@@ -13,12 +16,15 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="es">
       <body>
-        <ThemeContextProvider>
-          <ThemeToggler />
-          {children}
-        </ThemeContextProvider>
+        <GeneralContextProvider>
+          <Header />
+          <Sidebar />
+          <Main>
+            {children}
+          </Main>
+        </GeneralContextProvider>
       </body>
-    </html>
+    </html >
   )
 }
 

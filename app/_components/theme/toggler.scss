@@ -1,0 +1,24 @@
+.toggler {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+    border: none;
+    background-color: var(--bg);
+
+    path {
+        fill: var(--textColor);
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+    .icon {
+        border-radius: 50%;
+        padding: 2px;
+        transition: background-color 0.25s ease-in-out;
+    }
+}

@@ -1,1 +1,1 @@
-export { ThemeContextProvider, useThemeContext } from './theme'
+export { GeneralContextProvider, useGeneralContext } from './general'

@@ -1,11 +1,12 @@
 'use client'
 
-import classNames from 'classnames'
-import { motion } from 'framer-motion'
 import { FC } from 'react'
 
-import { Theme } from '@/app/_context/theme/theme-context'
-import { useThemeContext } from '@/app/_context/theme/theme-provider'
+import classNames from 'classnames'
+import { motion } from 'framer-motion'
+
+import { useGeneralContext } from '@/app/_context'
+import { Theme } from '@/app/_context/general/general-context-provider'
 
 import {
     TOGGLE_FRAMER_CONFIG,
@@ -13,14 +14,14 @@ import {
     TOGGLE_SVG_PROPS,
 } from './config'
 
-import './theme-toggler.scss'
+import './toggler.scss'
 
 const ToggleTheme: FC = () => {
-    const { toggleTheme, theme } = useThemeContext()
+    const { theme, toggleTheme } = useGeneralContext()
     const isDarkTheme = theme === Theme.DARK
 
     return (
-        <div
+        <button
             onClick={toggleTheme}
             className={classNames('toggler', { '--dark': isDarkTheme })}
         >
@@ -37,7 +38,7 @@ const ToggleTheme: FC = () => {
                     )}
                 </motion.svg>
             </motion.div>
-        </div>
+        </button>
     )
 }
 

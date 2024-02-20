@@ -1,0 +1,59 @@
+header {
+    width: 100vw;
+    height: var(--headerHeight);
+    position: fixed;
+    padding: 0 var(--gap);
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg);
+    color: var(--textColor);
+    border-bottom: 1px solid var(--textAccentColor);
+
+    main {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        color: var(--textColor);
+
+        .data {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Dank Mono', monospace;
+            font-size: 1.04rem;
+            font-style: italic;
+            color: var(--textColor);
+
+            @media (width > 768px) {
+                font-size: 1.89rem;
+            }
+
+            &:hover {
+                opacity: 0.7;
+                transition: opacity 0.28s ease-in-out;
+            }
+        }
+
+        h2 {
+            font-family: 'Dank Mono', monospace;
+            font-size: 0.898rem;
+            font-weight: 900;
+            color: var(--textAccentColor);
+            margin-left: 10px;
+
+            @media (width > 768px) {
+                font-size: 1.04rem;
+            }
+        }
+
+        span {
+            color: var(--textSecondaryAccentColor);
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+aside {
+    position: fixed;
+    width: var(--sidebarWidth);
+    height: calc(100svh - var(--headerHeight));
+    margin-top: var(--headerHeight);
+    padding: var(--gap);
+    background-color: var(--textAccentColor);
+    transition:
+        width 0.5s ease-in-out,
+        margin-left 0.5s ease-in-out;
+
+    &.expanded {
+        width: var(--sidebarWidth);
+    }
+
+    &.collapsed {
+        margin-left: calc((var(--sidebarWidth) * -1) + var(--gap));
+    }
+
+    .toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: var(--gap);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--textSecondaryAccentColor);
+        color: var(--textColor);
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.04rem;
+
+            &:hover {
+                opacity: 0.54;
+            }
+
+            &.active {
+                color: var(--textSecondaryAccentColor);
+            }
+        }
+    }
+}

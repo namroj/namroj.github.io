@@ -1,1 +1,1 @@
-export { default as ThemeToggler } from './theme-toggler/theme-toggler'
+export { default as ThemeToggler } from './theme/toggler'
