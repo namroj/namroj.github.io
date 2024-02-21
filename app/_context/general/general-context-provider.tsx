@@ -78,7 +78,7 @@ export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) =
 
   useEffect(() => {
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)
-    document.body.className = theme
+    document.body.setAttribute('data-theme', theme);
   }, [theme])
 
   useEffect(() => {

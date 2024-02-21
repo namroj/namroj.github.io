@@ -4,7 +4,7 @@ aside {
     height: calc(100svh - var(--headerHeight));
     margin-top: var(--headerHeight);
     padding: var(--gap);
-    background-color: var(--textAccentColor);
+    background-color: var(--sidebarBgColor);
     transition:
         width 0.5s ease-in-out,
         margin-left 0.5s ease-in-out;
@@ -27,10 +27,10 @@ aside {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: var(--textSecondaryAccentColor);
-        color: var(--textColor);
-        font-weight: bold;
         border: none;
+        background-color: var(--sidebarTogglerBgColor);
+        color: var(--sidebarTogglerTextColor);
+        font-weight: bold;
         cursor: pointer;
         opacity: 0.7;
 
@@ -48,14 +48,16 @@ aside {
         a {
             font-style: italic;
             font-weight: bold;
-            font-size: 1.04rem;
+            font-size: 0.93rem;
+            color: var(--linkTextColor);
 
             &:hover {
+                color: var(--linkHoverTextColor);
                 opacity: 0.65;
             }
 
             &.active {
-                color: var(--textSecondaryAccentColor);
+                color: var(--linkActiveTextColor);
             }
         }
     }

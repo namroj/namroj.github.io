@@ -1,8 +1,10 @@
+import '@/app/_assets/styles/not-found.scss'
+
 const NotFoundPage = () => {
     return (
-        <>
-            Recurso no encontrado
-        </>
+        <div className="not-found">
+            <h2>404</h2> Recurso no encontrado
+        </div>
     )
 }
 

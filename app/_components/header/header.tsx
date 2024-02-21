@@ -11,7 +11,7 @@ const Header: FC = () => {
                 <div className="identification">
                     <Link href="/"><h1>Jorman Espinoza</h1></Link>
                     <div className="data">
-                        [<span><Link href="/">namroj</Link></span>]
+                        [<code><Link href="/">namroj</Link></code>]
                         <h2>Desarrollador Full Stack</h2>
                     </div>
                 </div>

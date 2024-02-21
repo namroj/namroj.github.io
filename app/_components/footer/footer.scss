@@ -7,11 +7,20 @@ footer {
     align-content: center;
     justify-content: center;
     gap: calc(var(--gap) / 4);
-    border: 1px solid var(--textSecondaryAccentColor);
+    border-top: 1px dashed var(--textSecondaryAccentColor);
     border-bottom: none;
     border-right: none;
     color: var(--textColor);
-    font-size: 0.89rem;
+    font-size: 0.7rem;
+
+    @media (width < 250px) {
+        font-size: 0.5rem;
+    }
+
+    @media (width > 768px) {
+        padding: calc(var(--gap) / 8) calc(var(--gap) / 4);
+        font-size: 0.89rem;
+    }
 
     span {
         display: flex;

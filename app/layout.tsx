@@ -6,7 +6,7 @@ import Sidebar from './_components/sidebar/sidebar'
 import Main from './_components/main/main'
 import Footer from './_components/footer/footer'
 
-import './globals.scss'
+import '@/app/_assets/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',

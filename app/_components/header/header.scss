@@ -1,13 +1,14 @@
 header {
+    position: fixed;
     width: 100vw;
     height: var(--headerHeight);
-    position: fixed;
     padding: 0 var(--gap);
     border-bottom: 1px solid var(--textAccentColor);
     display: flex;
     justify-content: space-between;
-    background-color: var(--bg);
+    background-color: var(--bgColor);
     color: var(--textColor);
+    z-index: 1;
 
     main {
         width: 100vw;
@@ -27,7 +28,11 @@ header {
             font-family: 'Dank Mono', monospace;
             font-size: 1.04rem;
             font-style: italic;
-            color: var(--textColor);
+            color: var(--nameColor);
+
+            @media (width < 350px) {
+                font-size: 0.89rem;
+            }
 
             @media (width > 768px) {
                 font-size: 1.89rem;
@@ -42,18 +47,22 @@ header {
         h2 {
             margin-left: 10px;
             font-family: 'Dank Mono', monospace;
-            font-size: 0.898rem;
+            font-size: 0.89rem;
             font-weight: 900;
-            color: var(--textAccentColor);
+            color: var(--professionColor);
+
+            @media (width < 350px) {
+                font-size: 0.7rem;
+            }
 
             @media (width > 768px) {
                 font-size: 1.04rem;
             }
         }
 
-        span {
+        code {
             font-weight: 400;
-            color: var(--textSecondaryAccentColor);
+            color: var(--usernameColor);
         }
     }
 }

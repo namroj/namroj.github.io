@@ -1,9 +1,10 @@
 .main {
+    position: relative;
     width: calc(100vw - var(--sidebarWidth));
     min-height: 100svh;
     margin-left: var(--sidebarWidth);
     padding: calc(var(--headerHeight) + var(--gap)) var(--gap) var(--gap);
-    background-color: var(--bg);
+    background-color: var(--bgColor);
     color: var(--textColor);
     transition:
         width 0.5s ease-in-out,
