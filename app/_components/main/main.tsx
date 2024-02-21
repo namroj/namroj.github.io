@@ -8,11 +8,11 @@ import './main.scss'
 const Main = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     const { sidebarState } = useGeneralContext()
 
-    const getMainState = () => {
-        return sidebarState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED
-    }
+    const getCollapsedOrExpandedState = () =>
+        sidebarState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED
+
     return (
-        <main className={`main ${getMainState()}`}>
+        <main className={`main ${getCollapsedOrExpandedState()}`}>
             {children}
         </main >
     )

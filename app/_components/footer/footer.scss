@@ -1,0 +1,32 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: calc(var(--gap) / 4);
+    border: 1px solid var(--textSecondaryAccentColor);
+    border-bottom: none;
+    border-right: none;
+    color: var(--textColor);
+    font-size: 0.89rem;
+
+    span {
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            font-style: italic;
+            font-weight: bold;
+            color: var(--textColor);
+        }
+    }
+
+    a {
+        display: contents;
+    }
+}

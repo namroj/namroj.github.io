@@ -4,6 +4,7 @@ import { GeneralContextProvider } from '@/app/_context/general/general-context-p
 import Header from './_components/header/header'
 import Sidebar from './_components/sidebar/sidebar'
 import Main from './_components/main/main'
+import Footer from './_components/footer/footer'
 
 import './globals.scss'
 
@@ -22,6 +23,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
           <Main>
             {children}
           </Main>
+          <Footer />
         </GeneralContextProvider>
       </body>
     </html >

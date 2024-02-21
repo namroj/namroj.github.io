@@ -23,7 +23,7 @@ const ToggleTheme: FC = () => {
     return (
         <button
             onClick={toggleTheme}
-            className={classNames('toggler', { '--dark': isDarkTheme })}
+            className={classNames('theme-toggler', { '--dark': isDarkTheme })}
         >
             <motion.div className="btn" {...TOGGLE_FRAMER_CONFIG}>
                 <motion.svg

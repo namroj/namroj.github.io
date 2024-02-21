@@ -27,7 +27,29 @@ const Sidebar: FC = () => {
             <button className='toggler' onClick={toggleSidebarState}>
                 {sidebarState === SidebarState.COLLAPSED ? '->' : '<-'}
             </button>
+
             <nav>
+                <Link
+                    className={isCurrentPath('/formation') ? 'active' : ''}
+                    href="/formation"
+                    onClick={handleLinkClick}
+                >
+                    Formación
+                </Link>
+                <Link
+                    className={isCurrentPath('/professional-experience') ? 'active' : ''}
+                    href="/professional-experience"
+                    onClick={handleLinkClick}
+                >
+                    Experiencia
+                </Link>
+                <Link
+                    className={isCurrentPath('/projects') ? 'active' : ''}
+                    href="/projects"
+                    onClick={handleLinkClick}
+                >
+                    Proyectos
+                </Link>
                 <Link
                     className={isCurrentPath('/fonts') ? 'active' : ''}
                     href="/fonts"

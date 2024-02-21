@@ -6,8 +6,8 @@ const TOGGLE_SVG_FRAMER_CONFIG = {
 
 const TOGGLE_SVG_PROPS = {
   viewBox: '0 -960 960 960',
-  height: '28',
-  width: '28',
+  height: '33',
+  width: '33',
   xmlns: 'http://www.w3.org/2000/svg',
   className: 'icon'
 }

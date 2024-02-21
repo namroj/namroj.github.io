@@ -1,9 +1,15 @@
-.toggler {
+.theme-toggler {
     display: flex;
     justify-content: flex-start;
-    cursor: pointer;
     border: none;
     background-color: var(--bg);
+    cursor: pointer;
+    opacity: 0.7;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity 0.25s ease-in-out;
+    }
 
     path {
         fill: var(--textColor);

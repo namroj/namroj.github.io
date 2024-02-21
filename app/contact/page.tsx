@@ -1,7 +1,5 @@
 export default function Fonts() {
     return (
-        <>
-            Información de contacto
-        </>
+        <h2>Información de contacto</h2>
     )
 }
