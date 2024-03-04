@@ -41,6 +41,10 @@ aside {
             background-color: var(--sidebarTogglerHoverBgColor);
             color: var(--sidebarTogglerHoverTextColor);
         }
+
+        svg {
+            fill: var(--sidebarToggleIconColor);
+        }
     }
 
     nav {

@@ -14,10 +14,23 @@ header {
     .id {
         width: 100vw;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        gap: calc(var(--gap) / 4);
         font-weight: bold;
-        color: var(--textColor);
+
+        @media (width > 768px) {
+            gap: calc(var(--gap) / 2);
+        }
+
+        img {
+            width: auto;
+            max-height: 40px;
+            border-radius: 50%;
+
+            @media (width > 768px) {
+                max-height: 50px;
+            }
+        }
 
         h1 {
             font-family: 'Dank Mono', monospace;

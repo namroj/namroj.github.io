@@ -1,13 +1,20 @@
 import { FC } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import ThemeToggler from '@/app/_components/theme/toggler'
+
+import profileImage from '@/app/_assets/images/profile.jpeg'
+
 import './header.scss'
 
 const Header: FC = () => {
     return (
         <header>
             <div className="id">
+                <Link href="/" style={{ display: 'flex' }}>
+                    <Image src={profileImage} alt="Jorman Espinoza - Imagen de perfil" />
+                </Link>
                 <div>
                     <Link href="/"><h1>Jorman Espinoza</h1></Link>
                     <div className="data">
@@ -15,8 +22,9 @@ const Header: FC = () => {
                         <h2>Desarrollador Full Stack</h2>
                     </div>
                 </div>
-                <ThemeToggler />
             </div>
+            <ThemeToggler />
+
         </header>
     )
 }

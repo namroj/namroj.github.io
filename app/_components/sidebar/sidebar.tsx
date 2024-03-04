@@ -2,12 +2,14 @@
 
 import { FC } from 'react'
 import Link from 'next/link'
-
 import { usePathname } from 'next/navigation'
 import useMedia from 'use-media'
 
 import { useGeneralContext } from '@/app/_context'
 import { SidebarState } from '@/app/_context/general/general-context-provider'
+
+import { BiCollapseAlt } from 'react-icons/bi'
+import { BsArrowsAngleExpand } from 'react-icons/bs'
 
 import './sidebar.scss'
 
@@ -25,7 +27,7 @@ const Sidebar: FC = () => {
     return (
         <aside className={`${sidebarState}`}>
             <button className='toggler' onClick={toggleSidebarState}>
-                {sidebarState === SidebarState.COLLAPSED ? '->' : '<-'}
+                {sidebarState === SidebarState.COLLAPSED ? <BsArrowsAngleExpand size={15} /> : <BiCollapseAlt size={16} />}
             </button>
 
             <nav>
