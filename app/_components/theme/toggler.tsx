@@ -1,9 +1,8 @@
 'use client'
 
 import { FC } from 'react'
-
-import classNames from 'classnames'
 import { motion } from 'framer-motion'
+import classNames from 'classnames'
 
 import { useGeneralContext } from '@/app/_context'
 import { Theme } from '@/app/_context/general/general-context-provider'

@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import ThemeToggler from '@/app/_components/theme/toggler'
 
+import ThemeToggler from '@/app/_components/theme/toggler'
 import './header.scss'
 
 const Header: FC = () => {
     return (
         <header>
-            <main>
-                <div className="identification">
+            <div className="id">
+                <div>
                     <Link href="/"><h1>Jorman Espinoza</h1></Link>
                     <div className="data">
                         [<code><Link href="/">namroj</Link></code>]
@@ -16,7 +16,7 @@ const Header: FC = () => {
                     </div>
                 </div>
                 <ThemeToggler />
-            </main>
+            </div>
         </header>
     )
 }

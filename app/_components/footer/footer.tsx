@@ -1,5 +1,4 @@
 import { FC } from 'react'
-
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -9,7 +8,7 @@ import './footer.scss'
 const Footer: FC = () => {
     return (
         <footer>
-            <span>© 2024 | por <Link href="/">namroj</Link> mediante{' '}</span>
+            <span>por <Link href="/">Jorman</Link> mediante{' '}</span>
             <a href="https://nextjs.org/" target="_blank">
                 <Image
                     src={nextJsLogo}

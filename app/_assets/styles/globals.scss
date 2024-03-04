@@ -43,7 +43,7 @@
 
 // -- root -----
 :root {
-  --bgColor: #fff;
+  --bgColor: #FFF;
   --textColor: #000;
   --headerHeight: 60px;
   --sidebarWidth: 100vw;
@@ -58,41 +58,70 @@
 
 // -- theme -----
 [data-theme='light'] {
-  --bgColor: #eee;
-  --textColor: #1a1a1a;
-  --textAccentColor: #d4d4d4;
-  --textSecondaryAccentColor: #6f1394;
+  --bgColor: #FFF;
+  --textColor: #1A1A1A;
+  --textAccentColor: #D4D4D4;
+  --textSecondaryAccentColor: #C678DD;
   // header
-  --nameColor: #1a1a1a;
-  --usernameColor: #c678dd;
-  --professionColor: #488cff;
-  // sidebar
-  --sidebarBgColor: #fff;
-  --sidebarTogglerTextColor: #1a1a1a;
-  --sidebarTogglerBgColor: #abb2bf;
+  --nameColor: #1A1A1A;
+  --usernameTextColor: #C678DD;
+  --usernameHoverTextColor: #98C379;
+  --professionTextColor: #6087CF;
   // nav
-  --linkTextColor: #1a1a1a;
-  --linkActiveTextColor: #488cff;
-  --linkHoverTextColor: #c678dd;
+  --navBgColor: #EEE;
+  --linkTextColor: #1A1A1A;
+  --linkActiveTextColor: #6087CF;
+  --linkHoverTextColor: #C678DD;
+  // sidebar
+  --sidebarBgColor: #EEE;
+  --sidebarTogglerTextColor: #1A1A1A;
+  --sidebarTogglerBgColor: #C678DD;
+  --sidebarTogglerHoverBgColor: #6087CF;
+  // main
+  --mainBgColor: #FFF;
+  --mainHeadingColor: #1A1A1A;
+  // main - breadcrumbs
+  --breadcrumbItemColor: #B2B2B2;
+  --breadcrumbLinkedItemColor: #DE6A73;
+  --breadcrumbLinkedItemHoverColor: #6087CF;
+  // footer
+  --footerBorderColor: #C678DD;
+  --footerAnchorColor: #6087CF;
+  --footerAnchorHoverColor: #C678DD;
 }
 
 [data-theme='dark'] {
-  --bgColor: #1a1a1a;
-  --textColor: #eee;
-  --textAccentColor: #2b2b2b;
-  --textSecondaryAccentColor: #6f1394;
+  --bgColor: #1A1A1A;
+  --textColor: #EEE;
+  --textAccentColor: #2B2B2B;
+  --textSecondaryAccentColor: #C678DD;
   // header
-  --nameColor: #abb2bf;
-  --usernameColor: #98c379;
-  --professionColor: #488cff;
+  --nameColor: #ABB2BF;
+  --usernameTextColor: #98C379;
+  --usernameHoverTextColor: #C678DD;
+  --professionTextColor: #6087CF;
+  // nav
+  --navBgColor: #1A1A1A;
+  --linkTextColor: #ABB2BF;
+  --linkActiveTextColor: #6087CF;
+  --linkHoverTextColor: #C678DD;
   // sidebar
   --sidebarBgColor: #232327;
-  --sidebarTogglerTextColor: #eee;
-  --sidebarTogglerBgColor: #6f1394;
-  // nav
-  --linkTextColor: #abb2bf;
-  --linkActiveTextColor: #488cff;
-  --linkHoverTextColor: #c678dd;
+  --sidebarTogglerTextColor: #EEE;
+  --sidebarTogglerHoverTextColor: #EEE;
+  --sidebarTogglerBgColor: #C678DD;
+  --sidebarTogglerHoverBgColor: #6087CF;
+  // main
+  --mainBgColor: #1A1A1A;
+  --mainHeadingColor: #FFF;
+  // main - breadcrumbs
+  --breadcrumbItemColor: #ABB2BF;
+  --breadcrumbLinkedItemColor: #DE6A73;
+  --breadcrumbLinkedItemHoverColor: #6087CF;
+  // footer
+  --footerBorderColor: #C678DD;
+  --footerAnchorColor: #6087CF;
+  --footerAnchorHoverColor: #C678DD;
 }
 
 // -- global -----

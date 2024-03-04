@@ -1,7 +1,7 @@
 export default function Fonts() {
     return (
         <>
-            <h2>Fuentes preferidas</h2>
+            <h2>Tipografías preferidas</h2>
             <ul>
                 <li>
                     <a

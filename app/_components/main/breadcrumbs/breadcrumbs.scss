@@ -1,0 +1,41 @@
+// -- breadcrumbs -----
+.breadcrumbs {
+    display: flex;
+    margin-bottom: calc(var(--gap) / 2);
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(var(--gap) / 8);
+        padding-right: 0;
+        border-bottom: 1px dashed var(--textSecondaryAccentColor);
+        font-size: 0.7rem;
+        font-style: italic;
+        color: var(--breadcrumbItemColor);
+
+        a {
+            display: flex;
+
+            &.linked {
+                font-weight: bold;
+                color: var(--breadcrumbLinkedItemColor);
+                transition: color 0.25s ease-in-out;
+
+                &:hover {
+                    color: var(--breadcrumbLinkedItemHoverColor);
+                }
+            }
+
+            svg {
+                margin-right: calc(var(--gap) / 3);
+                transition: color 0.25s ease-in-out;
+            }
+        }
+
+        .connector {
+            margin: 0 calc(var(--gap) / 4);
+            font-size: 0.7rem;
+        }
+    }
+}

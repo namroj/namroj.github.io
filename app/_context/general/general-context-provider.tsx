@@ -28,13 +28,13 @@ export const SIDEBAR_STATE_LOCAL_STORAGE_KEY = 'sidebar_state'
 
 const getThemeFromLocalStorage = (): Theme => {
   if (typeof window === 'undefined') {
-    return Theme.LIGHT
+    return Theme.DARK
   }
 
   const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY)
 
   if (!theme || !Object.values(Theme).includes(theme as Theme)) {
-    return Theme.LIGHT
+    return Theme.DARK
   }
 
   return theme as Theme
@@ -93,7 +93,12 @@ export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) =
     setSidebarState((prevState) => (prevState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED))
   }
 
-  const contextValue = useMemo(() => ({ theme, toggleTheme, sidebarState, toggleSidebarState }), [theme, toggleTheme, sidebarState, toggleSidebarState])
+  const contextValue = useMemo(() => ({
+    theme,
+    toggleTheme,
+    sidebarState,
+    toggleSidebarState
+  }), [theme, toggleTheme, sidebarState, toggleSidebarState])
 
   return (
     <GeneralContext.Provider value={contextValue}>
