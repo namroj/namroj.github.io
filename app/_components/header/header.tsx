@@ -12,7 +12,7 @@ const Header: FC = () => {
     return (
         <header>
             <div className="id">
-                <Link href="/" style={{ display: 'flex' }}>
+                <Link href="/" className="profile-image">
                     <Image src={profileImage} alt="Jorman Espinoza - Imagen de perfil" />
                 </Link>
                 <div>
@@ -24,7 +24,6 @@ const Header: FC = () => {
                 </div>
             </div>
             <ThemeToggler />
-
         </header>
     )
 }
