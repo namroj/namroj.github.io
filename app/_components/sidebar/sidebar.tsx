@@ -66,6 +66,13 @@ const Sidebar: FC = () => {
                 >
                     Contacto
                 </Link>
+                <Link
+                    className={isCurrentPath('/test-md') ? 'active' : ''}
+                    href="/test-md"
+                    onClick={handleLinkClick}
+                >
+                    Prueba MD
+                </Link>
             </nav>
         </aside>
     )

@@ -8,7 +8,7 @@ import './breadcrumbs.scss'
 
 export interface BreadcrumbItem {
     label: string
-    href: string
+    href?: string
     icon: ReactNode
 }
 

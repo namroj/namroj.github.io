@@ -4,7 +4,7 @@ import { IoSchoolSharp } from 'react-icons/io5'
 
 export default function Formation() {
     const breadcrumbs: BreadcrumbItem[] = [
-        { label: 'Formación', href: '', icon: <IoSchoolSharp /> }
+        { label: 'Formación', icon: <IoSchoolSharp /> }
     ]
 
     return (
