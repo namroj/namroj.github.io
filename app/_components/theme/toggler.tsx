@@ -1,6 +1,4 @@
 'use client'
-
-import { FC } from 'react'
 import { motion } from 'framer-motion'
 import classNames from 'classnames'
 
@@ -15,7 +13,7 @@ import {
 
 import './toggler.scss'
 
-const ToggleTheme: FC = () => {
+export default function ToggleTheme() {
     const { theme, toggleTheme } = useGeneralContext()
     const isDarkTheme = theme === Theme.DARK
 
@@ -40,5 +38,3 @@ const ToggleTheme: FC = () => {
         </button>
     )
 }
-
-export default ToggleTheme

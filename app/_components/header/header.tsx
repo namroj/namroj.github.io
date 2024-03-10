@@ -1,14 +1,12 @@
-import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import ThemeToggler from '@/app/_components/theme/toggler'
 
 import profileImage from '@/app/_assets/images/profile.jpeg'
-
 import './header.scss'
 
-const Header: FC = () => {
+export default function Header() {
     return (
         <header>
             <div className="id">
@@ -27,5 +25,3 @@ const Header: FC = () => {
         </header>
     )
 }
-
-export default Header

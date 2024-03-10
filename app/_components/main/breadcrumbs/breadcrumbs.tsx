@@ -1,22 +1,22 @@
 'use client'
 
-import { FC, ReactNode } from 'react'
+import { ReactNode } from 'react'
 import Link from 'next/link'
 
 import { IoHeadsetSharp } from 'react-icons/io5'
 import './breadcrumbs.scss'
 
-export interface BreadcrumbItem {
+export interface Breadcrumb {
     label: string
     href: string
     icon: ReactNode
 }
 
 interface BreadcrumbsProps {
-    items: BreadcrumbItem[]
+    items: Breadcrumb[]
 }
 
-const Breadcrumbs: FC<BreadcrumbsProps> = ({ items }) => {
+export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     items = [{ label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> }, ...items]
 
     return (
@@ -28,7 +28,13 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({ items }) => {
                             <>{item.icon} <span>{item.label}</span></>
                         </Link>
                     ) : (
-                        <a href="/" style={{ cursor: 'auto' }} onClick={(e) => e.preventDefault()}>{item.icon} <span>{item.label}</span></a>
+                        <a
+                            href="/"
+                            style={{ cursor: 'auto' }}
+                            onClick={(e) => e.preventDefault()}
+                        >
+                            {item.icon} <span>{item.label}</span>
+                        </a>
                     )}
                     {index < items.length - 1 && <span className="connector">{'>'}</span>}
                 </div>
@@ -36,5 +42,3 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({ items }) => {
         </div>
     )
 }
-
-export default Breadcrumbs

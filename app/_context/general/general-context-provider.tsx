@@ -42,12 +42,12 @@ const getThemeFromLocalStorage = (): Theme => {
 
 const isSidebarCollapseFromLocalStorage = (): SidebarState => {
   if (typeof window === 'undefined') {
-    return SidebarState.EXPANDED
+    return SidebarState.COLLAPSED
   }
 
   const sidebarState = localStorage.getItem(SIDEBAR_STATE_LOCAL_STORAGE_KEY)
   if (!sidebarState || !Object.values(SidebarState).includes(sidebarState as SidebarState)) {
-    return SidebarState.EXPANDED
+    return SidebarState.COLLAPSED
   }
 
   return sidebarState as SidebarState

@@ -1,0 +1,22 @@
+// --nav -----
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 2);
+
+    a {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 0.93rem;
+        color: var(--linkTextColor);
+
+        &:hover {
+            color: var(--linkHoverTextColor);
+            opacity: 0.65;
+        }
+
+        &.active {
+            color: var(--linkActiveTextColor);
+        }
+    }
+}

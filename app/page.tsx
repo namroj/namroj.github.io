@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <p>Desarrollando desde 2014</p>
+    <p>Freelance y Desarrollador Full Stack en Accenture</p>
   )
 }

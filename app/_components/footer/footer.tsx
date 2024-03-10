@@ -1,11 +1,10 @@
-import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import nextJsLogo from '@/app/_assets/icons/next.png'
 import './footer.scss'
 
-const Footer: FC = () => {
+export default function Footer() {
     return (
         <footer>
             <span>por <Link href="/">Jorman</Link> mediante{' '}</span>
@@ -18,8 +17,6 @@ const Footer: FC = () => {
                     priority
                 />
             </a>
-        </footer>
+        </footer >
     )
 }
-
-export default Footer

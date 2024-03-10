@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import { GeneralContextProvider } from '@/app/_context/general/general-context-provider'
 
@@ -13,21 +14,17 @@ export const metadata: Metadata = {
   description: 'Full Stack Developer'
 }
 
-const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="es">
       <body>
         <GeneralContextProvider>
           <Header />
           <Sidebar />
-          <Main>
-            {children}
-          </Main>
+          <Main>{children}</Main>
           <Footer />
         </GeneralContextProvider>
       </body>
     </html >
   )
 }
-
-export default RootLayout
