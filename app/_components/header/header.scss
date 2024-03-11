@@ -30,17 +30,17 @@ header {
             align-items: center;
             border-radius: 50%;
             background-image: conic-gradient(
-                #de6a73 0deg 50deg,
+                var(--redColor) 0deg 50deg,
                 var(--navBgColor) 50deg 60deg,
-                #c678dd 60deg 110deg,
+                var(--purpleColor) 60deg 110deg,
                 var(--navBgColor) 110deg 120deg,
-                #6087cf 120deg 170deg,
+                var(--blueColor) 120deg 170deg,
                 var(--navBgColor) 170deg 180deg,
-                #98c379 180deg 230deg,
+                var(--greenColor) 180deg 230deg,
                 var(--navBgColor) 230deg 240deg,
-                #d09965 240deg 290deg,
+                var(--orangeColor) 240deg 290deg,
                 var(--navBgColor) 290deg 300deg,
-                #abb2bf 300deg 350deg,
+                var(--grayColor) 300deg 350deg,
                 var(--navBgColor) 350deg 300deg
             );
             overflow: hidden;
@@ -52,17 +52,17 @@ header {
 
             &:hover {
                 background-image: conic-gradient(
-                    #abb2bf 0deg 50deg,
+                    var(--grayColor) 0deg 50deg,
                     var(--navBgColor) 50deg 60deg,
-                    #de6a73 60deg 110deg,
+                    var(--redColor) 60deg 110deg,
                     var(--navBgColor) 110deg 120deg,
-                    #c678dd 120deg 170deg,
+                    var(--purpleColor) 120deg 170deg,
                     var(--navBgColor) 170deg 180deg,
-                    #6087cf 180deg 230deg,
+                    var(--blueColor) 180deg 230deg,
                     var(--navBgColor) 230deg 240deg,
-                    #98c379 240deg 290deg,
+                    var(--greenColor) 240deg 290deg,
                     var(--navBgColor) 290deg 300deg,
-                    #d09965 300deg 350deg,
+                    var(--orangeColor) 300deg 350deg,
                     var(--navBgColor) 350deg 300deg
                 );
                 animation: spin-colors 6s infinite linear;
@@ -142,33 +142,33 @@ header {
 @keyframes spin-colors {
     0% {
         background-image: conic-gradient(
-            #de6a73 0deg 50deg,
+            var(--redColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #c678dd 60deg 110deg,
+            var(--purpleColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #6087cf 120deg 170deg,
+            var(--blueColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #98c379 180deg 230deg,
+            var(--greenColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #d09965 240deg 290deg,
+            var(--orangeColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #abb2bf 300deg 350deg,
+            var(--grayColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     100% {
         background-image: conic-gradient(
-            #abb2bf 0deg 50deg,
+            var(--grayColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #de6a73 60deg 110deg,
+            var(--redColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #c678dd 120deg 170deg,
+            var(--purpleColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #6087cf 180deg 230deg,
+            var(--blueColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #98c379 240deg 290deg,
+            var(--greenColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #d09965 300deg 350deg,
+            var(--orangeColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
@@ -177,113 +177,113 @@ header {
 @keyframes spin-colors {
     0% {
         background-image: conic-gradient(
-            #de6a73 0deg 50deg,
+            var(--redColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #c678dd 60deg 110deg,
+            var(--purpleColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #6087cf 120deg 170deg,
+            var(--blueColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #98c379 180deg 230deg,
+            var(--greenColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #d09965 240deg 290deg,
+            var(--orangeColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #abb2bf 300deg 350deg,
+            var(--grayColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     16.66% {
         background-image: conic-gradient(
-            #abb2bf 0deg 50deg,
+            var(--grayColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #de6a73 60deg 110deg,
+            var(--redColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #c678dd 120deg 170deg,
+            var(--purpleColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #6087cf 180deg 230deg,
+            var(--blueColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #98c379 240deg 290deg,
+            var(--greenColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #d09965 300deg 350deg,
+            var(--orangeColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     33.33% {
         background-image: conic-gradient(
-            #d09965 0deg 50deg,
+            var(--orangeColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #abb2bf 60deg 110deg,
+            var(--grayColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #de6a73 120deg 170deg,
+            var(--redColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #c678dd 180deg 230deg,
+            var(--purpleColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #6087cf 240deg 290deg,
+            var(--blueColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #98c379 300deg 350deg,
+            var(--greenColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     50% {
         background-image: conic-gradient(
-            #98c379 0deg 50deg,
+            var(--greenColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #d09965 60deg 110deg,
+            var(--orangeColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #abb2bf 120deg 170deg,
+            var(--grayColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #de6a73 180deg 230deg,
+            var(--redColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #c678dd 240deg 290deg,
+            var(--purpleColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #6087cf 300deg 350deg,
+            var(--blueColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     66.66% {
         background-image: conic-gradient(
-            #6087cf 0deg 50deg,
+            var(--blueColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #98c379 60deg 110deg,
+            var(--greenColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #d09965 120deg 170deg,
+            var(--orangeColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #abb2bf 180deg 230deg,
+            var(--grayColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #de6a73 240deg 290deg,
+            var(--redColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #c678dd 300deg 350deg,
+            var(--purpleColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     83.33% {
         background-image: conic-gradient(
-            #c678dd 0deg 50deg,
+            var(--purpleColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #6087cf 60deg 110deg,
+            var(--blueColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #98c379 120deg 170deg,
+            var(--greenColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #d09965 180deg 230deg,
+            var(--orangeColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #abb2bf 240deg 290deg,
+            var(--grayColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #de6a73 300deg 350deg,
+            var(--redColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }
     100% {
         background-image: conic-gradient(
-            #de6a73 0deg 50deg,
+            var(--redColor) 0deg 50deg,
             var(--navBgColor) 50deg 60deg,
-            #c678dd 60deg 110deg,
+            var(--purpleColor) 60deg 110deg,
             var(--navBgColor) 110deg 120deg,
-            #6087cf 120deg 170deg,
+            var(--blueColor) 120deg 170deg,
             var(--navBgColor) 170deg 180deg,
-            #98c379 180deg 230deg,
+            var(--greenColor) 180deg 230deg,
             var(--navBgColor) 230deg 240deg,
-            #d09965 240deg 290deg,
+            var(--orangeColor) 240deg 290deg,
             var(--navBgColor) 290deg 300deg,
-            #abb2bf 300deg 350deg,
+            var(--grayColor) 300deg 350deg,
             var(--navBgColor) 350deg 300deg
         );
     }

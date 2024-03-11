@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import classNames from 'classnames'
 
 import { useGeneralContext } from '@/app/_context'
 import { Theme } from '@/app/_context/general/general-context-provider'
@@ -20,7 +19,7 @@ export default function ToggleTheme() {
     return (
         <button
             onClick={toggleTheme}
-            className={classNames('theme-toggler', { '--dark': isDarkTheme })}
+            className="theme-toggler"
         >
             <motion.div className="btn" {...TOGGLE_FRAMER_CONFIG}>
                 <motion.svg

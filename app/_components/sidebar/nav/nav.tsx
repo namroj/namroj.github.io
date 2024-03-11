@@ -32,11 +32,12 @@ export default function Nav() {
 
     return (
         <nav>
-            {navItems.map(item => (
+            {navItems.map((item, index) => (
                 <Link
                     className={setActivePathClass(item.path)}
                     href={item.path}
                     onClick={handleLinkClick}
+                    key={index}
                 >
                     {item.label}
                 </Link>

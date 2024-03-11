@@ -1,1 +1,23 @@
 // --links -----
+$colors: var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor) var(--redColor) var(--blueColor);
+
+.links {
+    display: flex;
+    justify-content: right;
+    gap: calc(var(--gap) / 2);
+    padding-right: var(--gap);
+
+    li {
+        a {
+            display: flex;
+            color: var(--navTextColor);
+            transition: color 0.25s ease-in-out;
+        }
+
+        @for $i from 1 through length($colors) {
+            &:nth-child(#{$i}) a:hover {
+                color: nth($colors, $i);
+            }
+        }
+    }
+}

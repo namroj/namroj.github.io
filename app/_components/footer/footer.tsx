@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import nextJsLogo from '@/app/_assets/icons/next.png'
+import nextJsLogo from '@/app/_assets/icons/next.svg'
 import './footer.scss'
 
 export default function Footer() {

@@ -3,6 +3,14 @@
 
 // -- root -----
 :root {
+  // colors
+  --purpleColor: #c678dd;
+  --blueColor: #6087cf;
+  --greenColor: #98c379;
+  --orangeColor: #d09965;
+  --grayColor: #abb2bf;
+  --redColor: #de6a73;
+  // general
   --bgColor: #fff;
   --textColor: #000;
   --headerHeight: 60px;
@@ -10,9 +18,9 @@
   --gap: 20px;
 
   @media (width > 768px) {
-    --headerHeight: 70px;
-    --sidebarWidth: 250px;
     --gap: 25px;
+    --headerHeight: 70px;
+    --sidebarWidth: calc(355px + var(--gap));
   }
 }
 

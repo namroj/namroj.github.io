@@ -43,5 +43,16 @@ footer {
 
     a {
         display: contents;
+
+        img {
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: all 0.25s ease-in-out;
+
+            &:hover {
+                background-color: white;
+                border-color: var(--footerBorderColor);
+            }
+        }
     }
 }

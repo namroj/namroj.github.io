@@ -5,6 +5,9 @@ aside {
     height: calc(100svh - var(--headerHeight));
     margin-top: var(--headerHeight);
     padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--sidebarBgColor);
     transition:
         width 0.5s ease-in-out,
