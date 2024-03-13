@@ -23,11 +23,11 @@ export default function Nav() {
     }
 
     const navItems: NavItem[] = [
-        { path: "/formation", label: "Formación" },
-        { path: "/professional-experience", label: "Experiencia" },
-        { path: "/projects", label: "Proyectos" },
-        { path: "/fonts", label: "Tipografías" },
-        { path: "/contact", label: "Contacto" }
+        { path: "/formacion", label: "Formación" },
+        { path: "/experiencia", label: "Experiencia" },
+        { path: "/proyectos", label: "Proyectos" },
+        { path: "/tipografias", label: "Tipografías" },
+        { path: "/contacto", label: "Contacto" }
     ];
 
     return (
