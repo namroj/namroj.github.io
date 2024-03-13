@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, createContext, useContext, useEffect, useMemo, useState } from 'react'
+import React, { FC, createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 
 export enum Theme {
   LIGHT = 'light',
@@ -32,7 +32,6 @@ const getThemeFromLocalStorage = (): Theme => {
   }
 
   const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY)
-
   if (!theme || !Object.values(Theme).includes(theme as Theme)) {
     return Theme.DARK
   }
@@ -53,10 +52,8 @@ const isSidebarCollapseFromLocalStorage = (): SidebarState => {
   return sidebarState as SidebarState
 }
 
-// Creación del contexto
 const GeneralContext = createContext<GeneralContextType | undefined>(undefined)
 
-// Hook personalizado para acceder al contexto
 export const useGeneralContext = () => {
   const context = useContext(GeneralContext)
   if (!context) {
@@ -66,7 +63,6 @@ export const useGeneralContext = () => {
   return context
 }
 
-// Proveedor de contexto
 export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage)
@@ -85,13 +81,13 @@ export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) =
     localStorage.setItem(SIDEBAR_STATE_LOCAL_STORAGE_KEY, sidebarState)
   }, [sidebarState])
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT))
-  }
+  const toggleTheme = useCallback(() => {
+    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
+  }, []);
 
-  const toggleSidebarState = () => {
-    setSidebarState((prevState) => (prevState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED))
-  }
+  const toggleSidebarState = useCallback(() => {
+    setSidebarState((prevState) => (prevState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED));
+  }, []);
 
   const contextValue = useMemo(() => ({
     theme,

@@ -1,9 +1,9 @@
-import Breadcrumbs, { BreadcrumbItem } from '@/app/_components/main/breadcrumbs/breadcrumbs'
+import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
 
 import { GrRss } from 'react-icons/gr'
 
 export default function Fonts() {
-    const breadcrumbs: BreadcrumbItem[] = [
+    const breadcrumbs: Breadcrumb[] = [
         { label: 'Contacto', icon: <GrRss /> }
     ]
 
