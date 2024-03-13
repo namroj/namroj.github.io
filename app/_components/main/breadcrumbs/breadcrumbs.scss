@@ -10,7 +10,7 @@
         align-items: center;
         padding: calc(var(--gap) / 8);
         padding-right: 0;
-        border-bottom: 1px dashed var(--textSecondaryAccentColor);
+        border-bottom: 1px dashed var(--breadcrumbBorderColor);
         font-size: 0.8rem;
         font-style: italic;
         color: var(--breadcrumbItemColor);
