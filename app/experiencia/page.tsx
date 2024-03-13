@@ -1,5 +1,23 @@
+import { Metadata } from 'next'
+
+import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
+
+import { MdLaptop } from 'react-icons/md';
+
+export const metadata: Metadata = {
+    title: 'Jorman Espinoza | Experiencia'
+}
+
 export default function ProfessionalExperience() {
+    const breadcrumbs: Breadcrumb[] = [
+        { label: 'Experiencia', icon: <MdLaptop /> }
+    ]
+
     return (
-        <h2>Experiencia</h2>
+        <>
+            <Breadcrumbs items={breadcrumbs} />
+
+            <h2>Experiencia</h2>
+        </>
     )
 }

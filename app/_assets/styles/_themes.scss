@@ -10,12 +10,11 @@
     --usernameHoverTextColor: #98c379;
     --professionTextColor: #6087cf;
     // sidebar
-    --sidebarBgColor: #eee;
+    --sidebarBgColor: #fff;
     --sidebarTogglerTextColor: #1a1a1a;
-    --sidebarTogglerBgColor: #c678dd;
-    --sidebarTogglerHoverBgColor: #6087cf;
-    --sidebarTogglerBgColor: #c678dd;
-    --sidebarTogglerHoverBgColor: #6087cf;
+    --sidebarTogglerHoverTextColor: #eee;
+    --sidebarTogglerBgColor: #6087cf;
+    --sidebarTogglerHoverBgColor: #c678dd;
     --sidebarToggleIconColor: #fff;
     // nav
     --navBgColor: #eee;
@@ -23,16 +22,16 @@
     --navActiveTextColor: #6087cf;
     --navHoverTextColor: #c678dd;
     // main
-    --mainBgColor: #fff;
+    --mainBgColor: #eee;
     --mainHeadingColor: #1a1a1a;
     // main - breadcrumbs
-    --breadcrumbItemColor: #b2b2b2;
+    --breadcrumbItemColor: #2b2b2b;
     --breadcrumbLinkedItemColor: #de6a73;
     --breadcrumbLinkedItemHoverColor: #6087cf;
     // footer
-    --footerBorderColor: #c678dd;
+    --footerBorderColor: #6087cf;
     --footerAnchorColor: #6087cf;
-    --footerAnchorHoverColor: #c678dd;
+    --footerAnchorHoverColor: #98c379;
 }
 
 [data-theme='dark'] {
@@ -67,12 +66,12 @@
     // footer
     --footerBorderColor: #c678dd;
     --footerAnchorColor: #6087cf;
-    --footerAnchorHoverColor: #c678dd;
+    --footerAnchorHoverColor: #d09965;
 }
 
-// md
-$codeDarkTheme: 'night-owl';
-$codeLightTheme: 'github-light';
+// md themes
+$codeDarkTheme: 'min-dark';
+$codeLightTheme: 'min-light';
 
 code[data-theme*='#{$codeLightTheme}'] {
     padding: calc(var(--gap) / 2);
@@ -82,13 +81,12 @@ code[data-theme*='#{$codeLightTheme}'] {
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'] span {
     color: var(--shiki-light);
     background-color: var(--shiki-light-bg);
-    background-color: rgb(223, 221, 221);
-    font-style: italic;
+    border-radius: 4.25px;
 }
 
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'],
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'] span {
     color: var(--shiki-dark);
     background-color: var(--shiki-dark-bg);
-    font-style: italic;
+    border-radius: 4.25px;
 }

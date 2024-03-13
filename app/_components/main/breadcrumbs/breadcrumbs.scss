@@ -5,8 +5,9 @@
 
     .item {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-self: center;
+        align-items: center;
         padding: calc(var(--gap) / 8);
         padding-right: 0;
         border-bottom: 1px dashed var(--textSecondaryAccentColor);

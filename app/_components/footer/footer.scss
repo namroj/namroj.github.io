@@ -8,7 +8,7 @@ footer {
     align-content: center;
     justify-content: center;
     gap: calc(var(--gap) / 4);
-    border-top: 1px dashed var(--textSecondaryAccentColor);
+    border-top: 1px dashed var(--footerBorderColor);
     border-bottom: none;
     border-right: none;
     color: var(--footerBorderColor);
@@ -25,9 +25,9 @@ footer {
 
     span {
         display: flex;
-        align-self: center;
         align-items: center;
         justify-content: center;
+        color: var(--textColor);
 
         a {
             font-style: italic;

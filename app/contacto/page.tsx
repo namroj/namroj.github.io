@@ -1,10 +1,16 @@
+import { Metadata } from 'next'
+
 import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
 
-import { GrRss } from 'react-icons/gr'
+import { LuMessagesSquare } from 'react-icons/lu'
+
+export const metadata: Metadata = {
+    title: 'Jorman Espinoza | Contacto'
+}
 
 export default function Fonts() {
     const breadcrumbs: Breadcrumb[] = [
-        { label: 'Contacto', icon: <GrRss /> }
+        { label: 'Contacto', icon: <LuMessagesSquare /> }
     ]
 
     return (

@@ -87,7 +87,7 @@ header {
 
         h1 {
             font-family: 'Dank Mono', monospace;
-            font-size: 1.04rem;
+            font-size: 1rem;
             font-style: italic;
             color: var(--nameColor);
 
@@ -122,7 +122,7 @@ header {
                 }
 
                 @media (width > 768px) {
-                    font-size: 1.04rem;
+                    font-size: 0.89rem;
                 }
             }
 

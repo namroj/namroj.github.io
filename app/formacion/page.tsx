@@ -1,10 +1,16 @@
+import { Metadata } from 'next'
+
 import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
 
-import { IoSchoolSharp } from 'react-icons/io5'
+import { ImBooks } from 'react-icons/im'
+
+export const metadata: Metadata = {
+    title: 'Jorman Espinoza | Formación'
+}
 
 export default function Formation() {
     const breadcrumbs: Breadcrumb[] = [
-        { label: 'Formación', href: '', icon: <IoSchoolSharp /> }
+        { label: 'Formación', href: '', icon: <ImBooks /> }
     ]
 
     return (

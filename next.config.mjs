@@ -12,8 +12,8 @@ const nextConfig = {
 
 const rehypePrettyCodeOptions = {
   theme: {
-    dark: 'night-owl',
-    light: 'github-light'
+    dark: 'min-dark',
+    light: 'min-light'
   }
 }
 

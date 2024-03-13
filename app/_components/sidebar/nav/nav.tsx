@@ -12,9 +12,9 @@ interface NavItem {
 }
 
 export default function Nav() {
-    const { toggleSidebarState } = useGeneralContext()
     const pathname = usePathname()
     const isMobile = useMedia({ maxWidth: '768px' })
+    const { toggleSidebarState } = useGeneralContext()
 
     const setActivePathClass = (path: string) => pathname === path ? 'active' : ''
 
@@ -27,6 +27,7 @@ export default function Nav() {
         { path: "/experiencia", label: "Experiencia" },
         { path: "/proyectos", label: "Proyectos" },
         { path: "/tipografias", label: "Tipografías" },
+        { path: "/blog", label: "Blog" },
         { path: "/contacto", label: "Contacto" }
     ];
 

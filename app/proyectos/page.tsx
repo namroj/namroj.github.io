@@ -1,5 +1,23 @@
+import { Metadata } from 'next'
+
+import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
+
+import { FaCode } from 'react-icons/fa6'
+
+export const metadata: Metadata = {
+    title: 'Jorman Espinoza | Proyectos'
+}
+
 export default function Formation() {
+    const breadcrumbs: Breadcrumb[] = [
+        { label: 'Proyectos', icon: <FaCode /> }
+    ]
+
     return (
-        <h2>Proyectos</h2>
+        <>
+            <Breadcrumbs items={breadcrumbs} />
+
+            <h2>Proyectos</h2>
+        </>
     )
 }
