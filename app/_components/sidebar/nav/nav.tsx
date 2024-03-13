@@ -16,7 +16,7 @@ export default function Nav() {
     const isMobile = useMedia({ maxWidth: '768px' })
     const { toggleSidebarState } = useGeneralContext()
 
-    const setActivePathClass = (path: string) => pathname === path ? 'active' : ''
+    const setActivePathClass = (path: string) => pathname.startsWith(path) ? 'active' : ''
 
     const handleLinkClick = () => {
         if (isMobile) toggleSidebarState()
@@ -29,7 +29,7 @@ export default function Nav() {
         { path: "/tipografias", label: "Tipografías" },
         { path: "/blog", label: "Blog" },
         { path: "/contacto", label: "Contacto" }
-    ];
+    ]
 
     return (
         <nav>

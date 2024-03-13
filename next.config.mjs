@@ -21,9 +21,9 @@ const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
-      [rehypeSlug],
+      rehypeSlug,
       [rehypePrettyCode, rehypePrettyCodeOptions],
-      rehypeAutolinkHeadings,
+      [rehypeAutolinkHeadings, { behavior: 'wrap' }],
       rehypeHighlight
     ]
   }

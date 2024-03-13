@@ -18,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
+
       <section>{children}</section>
     </>
   )
