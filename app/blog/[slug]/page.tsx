@@ -9,7 +9,9 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import rehypePrettyCode from 'rehype-pretty-code'
 
-import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
+import Breadcrumbs, {
+    Breadcrumb
+} from '@/app/_components/main/breadcrumbs/breadcrumbs'
 
 import { FaKeyboard } from 'react-icons/fa6'
 import { LuFileTerminal } from 'react-icons/lu'
@@ -17,11 +19,17 @@ import { LuFileTerminal } from 'react-icons/lu'
 interface PostProps {
     params: {
         slug: string
-    };
+    }
 }
 
-function getFilePath(slug: string): string {
-    return `./app/_posts/${slug}.mdx`
+const getMarkDownFileData = async (slug: string) => {
+    try {
+        const file = await readFile(`./app/_posts/${slug}.mdx`, 'utf8')
+        return matter(file)
+    } catch (error) {
+        console.error(error)
+        return notFound()
+    }
 }
 
 export default async function Post({ params }: Readonly<PostProps>) {
@@ -29,19 +37,17 @@ export default async function Post({ params }: Readonly<PostProps>) {
         return notFound()
     }
 
-    const filePath = getFilePath(params.slug)
     const postComponents = {}
 
-    try {
-        const markdown = await readFile(filePath, "utf8")
-        const { content, data } = matter(markdown);
+    const { content, data } = await getMarkDownFileData(params.slug)
 
-        const breadcrumbs: Breadcrumb[] = [
-            { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
-            { label: data.title, icon: <LuFileTerminal /> }
-        ]
+    const breadcrumbs: Breadcrumb[] = [
+        { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
+        { label: data.title, icon: <LuFileTerminal /> }
+    ]
 
-        return <>
+    return (
+        <>
             <Breadcrumbs items={breadcrumbs} />
 
             <MDXRemote
@@ -53,36 +59,30 @@ export default async function Post({ params }: Readonly<PostProps>) {
                         remarkPlugins: [remarkGfm],
                         rehypePlugins: [
                             rehypeSlug,
-                            [rehypePrettyCode, {
-                                theme: {
-                                    dark: 'min-dark',
-                                    light: 'min-light'
+                            [
+                                rehypePrettyCode,
+                                {
+                                    theme: {
+                                        dark: 'min-dark',
+                                        light: 'min-light'
+                                    }
                                 }
-                            }],
+                            ],
                             [rehypeAutolinkHeadings, { behavior: 'wrap' }],
                             rehypeHighlight
                         ]
-                    },
+                    }
                 }}
             />
         </>
-    } catch (error) {
-        console.error(error);
-        return notFound()
-    }
+    )
 }
 
 export async function generateMetadata({ params }: Readonly<PostProps>) {
-    try {
-        const file = await readFile(getFilePath(params.slug), "utf8")
-        const { data } = matter(file)
+    const { data } = await getMarkDownFileData(params.slug)
 
-        return {
-            title: `${data.title} | Jorman Espinoza`,
-            description: data.summary
-        }
-    } catch (error) {
-        console.error(error)
-        return notFound()
+    return {
+        title: `${data.title} | Jorman Espinoza`,
+        description: data.summary
     }
 }
