@@ -1,290 +1,290 @@
 // -- header -----
 header {
-    position: fixed;
-    width: 100vw;
-    height: var(--headerHeight);
-    padding: 0 var(--gap);
-    border-bottom: 1px solid var(--textAccentColor);
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--navBgColor);
-    color: var(--textColor);
-    z-index: 1;
+  position: fixed;
+  width: 100vw;
+  height: var(--headerHeight);
+  padding: 0 var(--gap);
+  border-bottom: 1px solid var(--textAccentColor);
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--navBgColor);
+  color: var(--textColor);
+  z-index: 1;
 
-    .id {
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        gap: calc(var(--gap) / 4);
-        font-weight: bold;
+  .id {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--gap) / 4);
+    font-weight: bold;
+
+    @media (width > 768px) {
+      gap: calc(var(--gap) / 2);
+    }
+
+    .profile-image {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-image: conic-gradient(
+        var(--redColor) 0deg 50deg,
+        var(--navBgColor) 50deg 60deg,
+        var(--purpleColor) 60deg 110deg,
+        var(--navBgColor) 110deg 120deg,
+        var(--blueColor) 120deg 170deg,
+        var(--navBgColor) 170deg 180deg,
+        var(--greenColor) 180deg 230deg,
+        var(--navBgColor) 230deg 240deg,
+        var(--orangeColor) 240deg 290deg,
+        var(--navBgColor) 290deg 300deg,
+        var(--grayColor) 300deg 350deg,
+        var(--navBgColor) 350deg 300deg
+      );
+      overflow: hidden;
+
+      @media (width > 768px) {
+        width: 58px;
+        height: 58px;
+      }
+
+      &:hover {
+        background-image: conic-gradient(
+          var(--grayColor) 0deg 50deg,
+          var(--navBgColor) 50deg 60deg,
+          var(--redColor) 60deg 110deg,
+          var(--navBgColor) 110deg 120deg,
+          var(--purpleColor) 120deg 170deg,
+          var(--navBgColor) 170deg 180deg,
+          var(--blueColor) 180deg 230deg,
+          var(--navBgColor) 230deg 240deg,
+          var(--greenColor) 240deg 290deg,
+          var(--navBgColor) 290deg 300deg,
+          var(--orangeColor) 300deg 350deg,
+          var(--navBgColor) 350deg 300deg
+        );
+        animation: spin-colors 6s infinite linear;
+      }
+
+      img {
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        /* Ensure circular shape */
+        border-radius: 50%;
+        /* Add subtle inner border */
+        border: 2px solid var(--navBgColor);
 
         @media (width > 768px) {
-            gap: calc(var(--gap) / 2);
+          width: 56px;
+          height: 56px;
+          border: 3px solid var(--navBgColor);
         }
-
-        .profile-image {
-            width: 44px;
-            height: 44px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            background-image: conic-gradient(
-                var(--redColor) 0deg 50deg,
-                var(--navBgColor) 50deg 60deg,
-                var(--purpleColor) 60deg 110deg,
-                var(--navBgColor) 110deg 120deg,
-                var(--blueColor) 120deg 170deg,
-                var(--navBgColor) 170deg 180deg,
-                var(--greenColor) 180deg 230deg,
-                var(--navBgColor) 230deg 240deg,
-                var(--orangeColor) 240deg 290deg,
-                var(--navBgColor) 290deg 300deg,
-                var(--grayColor) 300deg 350deg,
-                var(--navBgColor) 350deg 300deg
-            );
-            overflow: hidden;
-
-            @media (width > 768px) {
-                width: 58px;
-                height: 58px;
-            }
-
-            &:hover {
-                background-image: conic-gradient(
-                    var(--grayColor) 0deg 50deg,
-                    var(--navBgColor) 50deg 60deg,
-                    var(--redColor) 60deg 110deg,
-                    var(--navBgColor) 110deg 120deg,
-                    var(--purpleColor) 120deg 170deg,
-                    var(--navBgColor) 170deg 180deg,
-                    var(--blueColor) 180deg 230deg,
-                    var(--navBgColor) 230deg 240deg,
-                    var(--greenColor) 240deg 290deg,
-                    var(--navBgColor) 290deg 300deg,
-                    var(--orangeColor) 300deg 350deg,
-                    var(--navBgColor) 350deg 300deg
-                );
-                animation: spin-colors 6s infinite linear;
-            }
-
-            img {
-                width: 42px;
-                height: 42px;
-                object-fit: cover;
-                /* Ensure circular shape */
-                border-radius: 50%;
-                /* Add subtle inner border */
-                border: 2px solid var(--navBgColor);
-
-                @media (width > 768px) {
-                    width: 56px;
-                    height: 56px;
-                    border: 3px solid var(--navBgColor);
-                }
-            }
-        }
-
-        h1 {
-            font-family: 'Dank Mono', monospace;
-            font-size: 1rem;
-            font-style: italic;
-            color: var(--nameColor);
-
-            @media (width < 350px) {
-                font-size: 0.89rem;
-            }
-
-            @media (width > 768px) {
-                font-size: 1.25rem;
-            }
-
-            &:hover {
-                opacity: 0.7;
-                transition: opacity 0.25s ease-in-out;
-            }
-        }
-
-        .data {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            h2 {
-                margin-left: calc(var(--gap) / 6);
-                font-family: 'Dank Mono', monospace;
-                font-size: 0.88rem;
-                font-weight: 900;
-                color: var(--professionTextColor);
-
-                @media (width < 350px) {
-                    font-size: 0.7rem;
-                }
-
-                @media (width > 768px) {
-                    font-size: 0.89rem;
-                }
-            }
-
-            code {
-                font-weight: 400;
-                color: var(--usernameTextColor);
-                transition: color 0.25s steps ease-in-out;
-
-                &:hover {
-                    color: var(--usernameHoverTextColor);
-                }
-            }
-        }
+      }
     }
+
+    h1 {
+      font-family: 'Dank Mono', monospace;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--nameColor);
+
+      @media (width < 350px) {
+        font-size: 0.89rem;
+      }
+
+      @media (width > 768px) {
+        font-size: 1.25rem;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 0.25s ease-in-out;
+      }
+    }
+
+    .data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        margin-left: calc(var(--gap) / 6);
+        font-family: 'Dank Mono', monospace;
+        font-size: 0.88rem;
+        font-weight: 900;
+        color: var(--professionTextColor);
+
+        @media (width < 350px) {
+          font-size: 0.7rem;
+        }
+
+        @media (width > 768px) {
+          font-size: 0.89rem;
+        }
+      }
+
+      code {
+        font-weight: 400;
+        color: var(--usernameTextColor);
+        transition: color 0.25s steps ease-in-out;
+
+        &:hover {
+          color: var(--usernameHoverTextColor);
+        }
+      }
+    }
+  }
 }
 
 @keyframes spin-colors {
-    0% {
-        background-image: conic-gradient(
-            var(--redColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--purpleColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--blueColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--greenColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--orangeColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--grayColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    100% {
-        background-image: conic-gradient(
-            var(--grayColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--redColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--purpleColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--blueColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--greenColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--orangeColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
+  0% {
+    background-image: conic-gradient(
+      var(--redColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--purpleColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--blueColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--greenColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--orangeColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--grayColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  100% {
+    background-image: conic-gradient(
+      var(--grayColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--redColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--purpleColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--blueColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--greenColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--orangeColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
 }
 
 @keyframes spin-colors {
-    0% {
-        background-image: conic-gradient(
-            var(--redColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--purpleColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--blueColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--greenColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--orangeColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--grayColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    16.66% {
-        background-image: conic-gradient(
-            var(--grayColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--redColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--purpleColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--blueColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--greenColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--orangeColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    33.33% {
-        background-image: conic-gradient(
-            var(--orangeColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--grayColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--redColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--purpleColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--blueColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--greenColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    50% {
-        background-image: conic-gradient(
-            var(--greenColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--orangeColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--grayColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--redColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--purpleColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--blueColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    66.66% {
-        background-image: conic-gradient(
-            var(--blueColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--greenColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--orangeColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--grayColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--redColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--purpleColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    83.33% {
-        background-image: conic-gradient(
-            var(--purpleColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--blueColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--greenColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--orangeColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--grayColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--redColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
-    100% {
-        background-image: conic-gradient(
-            var(--redColor) 0deg 50deg,
-            var(--navBgColor) 50deg 60deg,
-            var(--purpleColor) 60deg 110deg,
-            var(--navBgColor) 110deg 120deg,
-            var(--blueColor) 120deg 170deg,
-            var(--navBgColor) 170deg 180deg,
-            var(--greenColor) 180deg 230deg,
-            var(--navBgColor) 230deg 240deg,
-            var(--orangeColor) 240deg 290deg,
-            var(--navBgColor) 290deg 300deg,
-            var(--grayColor) 300deg 350deg,
-            var(--navBgColor) 350deg 300deg
-        );
-    }
+  0% {
+    background-image: conic-gradient(
+      var(--redColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--purpleColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--blueColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--greenColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--orangeColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--grayColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  16.66% {
+    background-image: conic-gradient(
+      var(--grayColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--redColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--purpleColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--blueColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--greenColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--orangeColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  33.33% {
+    background-image: conic-gradient(
+      var(--orangeColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--grayColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--redColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--purpleColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--blueColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--greenColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  50% {
+    background-image: conic-gradient(
+      var(--greenColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--orangeColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--grayColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--redColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--purpleColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--blueColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  66.66% {
+    background-image: conic-gradient(
+      var(--blueColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--greenColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--orangeColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--grayColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--redColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--purpleColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  83.33% {
+    background-image: conic-gradient(
+      var(--purpleColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--blueColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--greenColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--orangeColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--grayColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--redColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
+  100% {
+    background-image: conic-gradient(
+      var(--redColor) 0deg 50deg,
+      var(--navBgColor) 50deg 60deg,
+      var(--purpleColor) 60deg 110deg,
+      var(--navBgColor) 110deg 120deg,
+      var(--blueColor) 120deg 170deg,
+      var(--navBgColor) 170deg 180deg,
+      var(--greenColor) 180deg 230deg,
+      var(--navBgColor) 230deg 240deg,
+      var(--orangeColor) 240deg 290deg,
+      var(--navBgColor) 290deg 300deg,
+      var(--grayColor) 300deg 350deg,
+      var(--navBgColor) 350deg 300deg
+    );
+  }
 }

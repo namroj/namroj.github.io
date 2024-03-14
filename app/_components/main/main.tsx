@@ -8,14 +8,10 @@ import { SidebarState } from '@/app/_context/general/general-context-provider'
 import './main.scss'
 
 export default function Main({ children }: Readonly<{ children: ReactNode }>) {
-    const { sidebarState } = useGeneralContext()
+  const { sidebarState } = useGeneralContext()
 
-    const getCollapsedOrExpandedState = () =>
-        sidebarState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED
+  const getCollapsedOrExpandedState = () =>
+    sidebarState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED
 
-    return (
-        <main className={`main ${getCollapsedOrExpandedState()}`}>
-            {children}
-        </main >
-    )
+  return <main className={`main ${getCollapsedOrExpandedState()}`}>{children}</main>
 }

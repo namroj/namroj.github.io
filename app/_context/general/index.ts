@@ -1,4 +1,1 @@
-export {
-  GeneralContextProvider,
-  useGeneralContext
-} from './general-context-provider'
+export { GeneralContextProvider, useGeneralContext } from './general-context-provider'

@@ -1,58 +1,58 @@
 // -- footer -----
 footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: calc(var(--gap) / 4) calc(var(--gap) / 2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: calc(var(--gap) / 4);
+  border-top: 1px dashed var(--footerBorderColor);
+  border-bottom: none;
+  border-right: none;
+  color: var(--footerBorderColor);
+  font-size: 0.7rem;
+
+  @media (width < 250px) {
+    font-size: 0.5rem;
+  }
+
+  @media (width > 768px) {
+    padding: calc(var(--gap) / 8) calc(var(--gap) / 4);
+    font-size: 0.89rem;
+  }
+
+  span {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    gap: calc(var(--gap) / 4);
-    border-top: 1px dashed var(--footerBorderColor);
-    border-bottom: none;
-    border-right: none;
-    color: var(--footerBorderColor);
-    font-size: 0.7rem;
-
-    @media (width < 250px) {
-        font-size: 0.5rem;
-    }
-
-    @media (width > 768px) {
-        padding: calc(var(--gap) / 8) calc(var(--gap) / 4);
-        font-size: 0.89rem;
-    }
-
-    span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--textColor);
-
-        a {
-            font-style: italic;
-            font-weight: bold;
-            color: var(--footerAnchorColor);
-            transition: color 0.25s ease-in-out;
-
-            &:hover {
-                color: var(--footerAnchorHoverColor);
-            }
-        }
-    }
+    color: var(--textColor);
 
     a {
-        display: contents;
+      font-style: italic;
+      font-weight: bold;
+      color: var(--footerAnchorColor);
+      transition: color 0.25s ease-in-out;
 
-        img {
-            border: 2px solid transparent;
-            border-radius: 50%;
-            transition: all 0.25s ease-in-out;
-
-            &:hover {
-                background-color: white;
-                border-color: var(--footerBorderColor);
-            }
-        }
+      &:hover {
+        color: var(--footerAnchorHoverColor);
+      }
     }
+  }
+
+  a {
+    display: contents;
+
+    img {
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        background-color: white;
+        border-color: var(--footerBorderColor);
+      }
+    }
+  }
 }

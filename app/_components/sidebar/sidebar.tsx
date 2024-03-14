@@ -9,13 +9,13 @@ import Links from './links/links'
 import './sidebar.scss'
 
 export default function Sidebar() {
-    const { sidebarState } = useGeneralContext()
+  const { sidebarState } = useGeneralContext()
 
-    return (
-        <aside className={`${sidebarState}`}>
-            <Toggler />
-            <Nav />
-            <Links />
-        </aside>
-    )
+  return (
+    <aside className={`${sidebarState}`}>
+      <Toggler />
+      <Nav />
+      <Links />
+    </aside>
+  )
 }

@@ -1,31 +1,31 @@
 // -- theme toggler -----
 .theme-toggler {
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  path {
+    fill: var(--textColor);
+  }
+
+  .btn {
     display: flex;
-    justify-content: flex-start;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    opacity: 0.7;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
 
-    &:hover {
-        opacity: 1;
-        transition: opacity 0.25s ease-in-out;
-    }
-
-    path {
-        fill: var(--textColor);
-    }
-
-    .btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        user-select: none;
-    }
-
-    .icon {
-        border-radius: 50%;
-        padding: 2px;
-        transition: background-color 0.25s ease-in-out;
-    }
+  .icon {
+    border-radius: 50%;
+    padding: 2px;
+    transition: background-color 0.25s ease-in-out;
+  }
 }

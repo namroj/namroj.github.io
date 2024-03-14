@@ -4,23 +4,23 @@ import React, { FC, createContext, useCallback, useContext, useEffect, useMemo, 
 
 export enum Theme {
   LIGHT = 'light',
-  DARK = 'dark',
+  DARK = 'dark'
 }
 
 export enum SidebarState {
   COLLAPSED = 'collapsed',
-  EXPANDED = 'expanded',
+  EXPANDED = 'expanded'
 }
 
 type GeneralContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-  sidebarState: SidebarState;
-  toggleSidebarState: () => void;
+  theme: Theme
+  toggleTheme: () => void
+  sidebarState: SidebarState
+  toggleSidebarState: () => void
 }
 
 export interface GeneralProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active'
@@ -74,7 +74,7 @@ export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) =
 
   useEffect(() => {
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)
-    document.body.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-theme', theme)
   }, [theme])
 
   useEffect(() => {
@@ -82,23 +82,24 @@ export const GeneralContextProvider: FC<GeneralProviderProps> = ({ children }) =
   }, [sidebarState])
 
   const toggleTheme = useCallback(() => {
-    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT));
-  }, []);
+    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT))
+  }, [])
 
   const toggleSidebarState = useCallback(() => {
-    setSidebarState((prevState) => (prevState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED));
-  }, []);
+    setSidebarState((prevState) =>
+      prevState === SidebarState.COLLAPSED ? SidebarState.EXPANDED : SidebarState.COLLAPSED
+    )
+  }, [])
 
-  const contextValue = useMemo(() => ({
-    theme,
-    toggleTheme,
-    sidebarState,
-    toggleSidebarState
-  }), [theme, toggleTheme, sidebarState, toggleSidebarState])
-
-  return (
-    <GeneralContext.Provider value={contextValue}>
-      {mounted && <>{children}</>}
-    </GeneralContext.Provider>
+  const contextValue = useMemo(
+    () => ({
+      theme,
+      toggleTheme,
+      sidebarState,
+      toggleSidebarState
+    }),
+    [theme, toggleTheme, sidebarState, toggleSidebarState]
   )
+
+  return <GeneralContext.Provider value={contextValue}>{mounted && <>{children}</>}</GeneralContext.Provider>
 }

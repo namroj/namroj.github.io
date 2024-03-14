@@ -1,23 +1,23 @@
 // --nav -----
 nav {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--gap) / 2);
-    padding-right: var(--gap);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) / 2);
+  padding-right: var(--gap);
 
-    a {
-        font-style: italic;
-        font-weight: bold;
-        font-size: 0.89rem;
-        color: var(--navTextColor);
+  a {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.89rem;
+    color: var(--navTextColor);
 
-        &:hover {
-            color: var(--navHoverTextColor);
-            opacity: 0.65;
-        }
-
-        &.active {
-            color: var(--navActiveTextColor);
-        }
+    &:hover {
+      color: var(--navHoverTextColor);
+      opacity: 0.65;
     }
+
+    &.active {
+      color: var(--navActiveTextColor);
+    }
+  }
 }

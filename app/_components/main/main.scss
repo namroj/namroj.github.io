@@ -1,32 +1,32 @@
 // -- main -----
 .main {
-    position: relative;
-    width: calc(100vw - var(--sidebarWidth));
-    min-height: 100svh;
+  position: relative;
+  width: calc(100vw - var(--sidebarWidth));
+  min-height: 100svh;
+  margin-left: var(--sidebarWidth);
+  padding: calc(var(--headerHeight) + var(--gap)) var(--gap) var(--gap);
+  background-color: var(--mainBgColor);
+  color: var(--textColor);
+  transition:
+    width 0.5s ease-in-out,
+    margin-left 0.5s ease-in-out;
+
+  &.expanded {
+    width: calc(100vw - var(--gap));
+    margin-left: var(--gap);
+  }
+
+  &.collapsed {
+    width: 100vw;
     margin-left: var(--sidebarWidth);
-    padding: calc(var(--headerHeight) + var(--gap)) var(--gap) var(--gap);
-    background-color: var(--mainBgColor);
-    color: var(--textColor);
-    transition:
-        width 0.5s ease-in-out,
-        margin-left 0.5s ease-in-out;
 
-    &.expanded {
-        width: calc(100vw - var(--gap));
-        margin-left: var(--gap);
+    @media (width > 768px) {
+      width: calc(100vw - var(--sidebarWidth));
+      margin-left: var(--sidebarWidth);
     }
+  }
 
-    &.collapsed {
-        width: 100vw;
-        margin-left: var(--sidebarWidth);
-
-        @media (width > 768px) {
-            width: calc(100vw - var(--sidebarWidth));
-            margin-left: var(--sidebarWidth);
-        }
-    }
-
-    h2 {
-        color: var(--mainHeadingColor);
-    }
+  h2 {
+    color: var(--mainHeadingColor);
+  }
 }

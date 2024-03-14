@@ -1,74 +1,74 @@
 // -- theme -----
 [data-theme='light'] {
-    --bgColor: #fff;
-    --textColor: #1a1a1a;
-    --textAccentColor: #d4d4d4;
-    --textSecondaryAccentColor: #c678dd;
-    // header
-    --nameColor: #1a1a1a;
-    --usernameTextColor: #d09965;
-    --usernameHoverTextColor: #98c379;
-    --professionTextColor: #6087cf;
-    // sidebar
-    --sidebarBgColor: #fff;
-    --sidebarTogglerTextColor: #1a1a1a;
-    --sidebarTogglerHoverTextColor: #eee;
-    --sidebarTogglerBgColor: #6087cf;
-    --sidebarTogglerHoverBgColor: #c678dd;
-    --sidebarToggleIconColor: #fff;
-    // nav
-    --navBgColor: #eee;
-    --navTextColor: #1a1a1a;
-    --navActiveTextColor: #6087cf;
-    --navHoverTextColor: #c678dd;
-    // main
-    --mainBgColor: #eee;
-    --mainHeadingColor: #1a1a1a;
-    // main - breadcrumbs
-    --breadcrumbItemColor: #2b2b2b;
-    --breadcrumbLinkedItemColor: #6087cf;
-    --breadcrumbLinkedItemHoverColor: #de6a73;
-    --breadcrumbBorderColor: #6087cf;
-    // footer
-    --footerBorderColor: #6087cf;
-    --footerAnchorColor: #6087cf;
-    --footerAnchorHoverColor: #98c379;
+  --bgColor: #fff;
+  --textColor: #1a1a1a;
+  --textAccentColor: #d4d4d4;
+  --textSecondaryAccentColor: #c678dd;
+  // header
+  --nameColor: #1a1a1a;
+  --usernameTextColor: #d09965;
+  --usernameHoverTextColor: #98c379;
+  --professionTextColor: #6087cf;
+  // sidebar
+  --sidebarBgColor: #fff;
+  --sidebarTogglerTextColor: #1a1a1a;
+  --sidebarTogglerHoverTextColor: #eee;
+  --sidebarTogglerBgColor: #6087cf;
+  --sidebarTogglerHoverBgColor: #c678dd;
+  --sidebarToggleIconColor: #fff;
+  // nav
+  --navBgColor: #eee;
+  --navTextColor: #1a1a1a;
+  --navActiveTextColor: #6087cf;
+  --navHoverTextColor: #c678dd;
+  // main
+  --mainBgColor: #eee;
+  --mainHeadingColor: #1a1a1a;
+  // main - breadcrumbs
+  --breadcrumbItemColor: #2b2b2b;
+  --breadcrumbLinkedItemColor: #6087cf;
+  --breadcrumbLinkedItemHoverColor: #de6a73;
+  --breadcrumbBorderColor: #6087cf;
+  // footer
+  --footerBorderColor: #6087cf;
+  --footerAnchorColor: #6087cf;
+  --footerAnchorHoverColor: #98c379;
 }
 
 [data-theme='dark'] {
-    --bgColor: #1a1a1a;
-    --textColor: #eee;
-    --textAccentColor: #2b2b2b;
-    --textSecondaryAccentColor: #c678dd;
-    // header
-    --nameColor: #abb2bf;
-    --usernameTextColor: #6087cf;
-    --usernameHoverTextColor: #98c379;
-    --professionTextColor: #c678dd;
-    // sidebar
-    --sidebarBgColor: #232327;
-    --sidebarTogglerTextColor: #eee;
-    --sidebarTogglerHoverTextColor: #eee;
-    --sidebarTogglerBgColor: #c678dd;
-    --sidebarTogglerHoverBgColor: #6087cf;
-    --sidebarToggleIconColor: #fff;
-    // nav
-    --navBgColor: #1a1a1a;
-    --navTextColor: #abb2bf;
-    --navActiveTextColor: #6087cf;
-    --navHoverTextColor: #c678dd;
-    // main
-    --mainBgColor: #282c34;
-    --mainHeadingColor: #fff;
-    // main - breadcrumbs
-    --breadcrumbItemColor: #abb2bf;
-    --breadcrumbLinkedItemColor: #c678dd;
-    --breadcrumbLinkedItemHoverColor: #6087cf;
-    --breadcrumbBorderColor: #c678dd;
-    // footer
-    --footerBorderColor: #c678dd;
-    --footerAnchorColor: #6087cf;
-    --footerAnchorHoverColor: #d09965;
+  --bgColor: #1a1a1a;
+  --textColor: #eee;
+  --textAccentColor: #2b2b2b;
+  --textSecondaryAccentColor: #c678dd;
+  // header
+  --nameColor: #abb2bf;
+  --usernameTextColor: #6087cf;
+  --usernameHoverTextColor: #98c379;
+  --professionTextColor: #c678dd;
+  // sidebar
+  --sidebarBgColor: #232327;
+  --sidebarTogglerTextColor: #eee;
+  --sidebarTogglerHoverTextColor: #eee;
+  --sidebarTogglerBgColor: #c678dd;
+  --sidebarTogglerHoverBgColor: #6087cf;
+  --sidebarToggleIconColor: #fff;
+  // nav
+  --navBgColor: #1a1a1a;
+  --navTextColor: #abb2bf;
+  --navActiveTextColor: #6087cf;
+  --navHoverTextColor: #c678dd;
+  // main
+  --mainBgColor: #282c34;
+  --mainHeadingColor: #fff;
+  // main - breadcrumbs
+  --breadcrumbItemColor: #abb2bf;
+  --breadcrumbLinkedItemColor: #c678dd;
+  --breadcrumbLinkedItemHoverColor: #6087cf;
+  --breadcrumbBorderColor: #c678dd;
+  // footer
+  --footerBorderColor: #c678dd;
+  --footerAnchorColor: #6087cf;
+  --footerAnchorHoverColor: #d09965;
 }
 
 // md themes
@@ -76,19 +76,19 @@ $codeDarkTheme: 'min-dark';
 $codeLightTheme: 'min-light';
 
 code[data-theme*='#{$codeLightTheme}'] {
-    padding: calc(var(--gap) / 2);
+  padding: calc(var(--gap) / 2);
 }
 
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'],
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'] span {
-    color: var(--shiki-light);
-    background-color: var(--shiki-light-bg);
-    border-radius: 4.25px;
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+  border-radius: 4.25px;
 }
 
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'],
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'] span {
-    color: var(--shiki-dark);
-    background-color: var(--shiki-dark-bg);
-    border-radius: 4.25px;
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+  border-radius: 4.25px;
 }
