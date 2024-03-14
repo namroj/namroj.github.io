@@ -5,7 +5,7 @@ import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/brea
 import { RxFontFamily } from 'react-icons/rx'
 
 export const metadata: Metadata = {
-    title: 'Jorman Espinoza | Tipografías preferidas'
+    title: 'Tipografías preferidas | Jorman Espinoza'
 }
 
 export default function Fonts() {

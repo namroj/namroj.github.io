@@ -5,7 +5,7 @@ import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/brea
 import { FaCode } from 'react-icons/fa6'
 
 export const metadata: Metadata = {
-    title: 'Jorman Espinoza | Proyectos'
+    title: 'Proyectos | Jorman Espinoza'
 }
 
 export default function Formation() {

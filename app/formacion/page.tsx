@@ -5,7 +5,7 @@ import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/brea
 import { ImBooks } from 'react-icons/im'
 
 export const metadata: Metadata = {
-    title: 'Jorman Espinoza | Formación'
+    title: 'Formación | Jorman Espinoza'
 }
 
 export default function Formation() {

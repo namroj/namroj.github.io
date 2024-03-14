@@ -5,7 +5,7 @@ import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/brea
 import { MdLaptop } from 'react-icons/md';
 
 export const metadata: Metadata = {
-    title: 'Jorman Espinoza | Experiencia'
+    title: 'Experiencia | Jorman Espinoza'
 }
 
 export default function ProfessionalExperience() {

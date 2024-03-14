@@ -5,7 +5,7 @@ import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/brea
 import { LuMessagesSquare } from 'react-icons/lu'
 
 export const metadata: Metadata = {
-    title: 'Jorman Espinoza | Contacto'
+    title: 'Contacto | Jorman Espinoza'
 }
 
 export default function Fonts() {

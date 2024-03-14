@@ -2,7 +2,6 @@
 
 import { ReactNode } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 import { IoHeadsetSharp } from 'react-icons/io5'
 import './breadcrumbs.scss'
@@ -18,15 +17,13 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
-    const pathname = usePathname()
-
     items = [{ label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> }, ...items]
 
     return (
         <div className="breadcrumbs">
             {items.map((item, index) => (
                 <div className="item" key={index}>
-                    {item.href && pathname !== item.href ? (
+                    {item.href ? (
                         <Link href={item.href} className="linked">
                             <>{item.icon} <span>{item.label}</span></>
                         </Link>
