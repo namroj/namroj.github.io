@@ -50,3 +50,11 @@ a {
 ul li {
   list-style: none;
 }
+
+a[href*='#'],
+h1[id],
+h2[id],
+h3[id] {
+  scroll-behavior: smooth;
+  scroll-margin-top: calc(var(--headerHeight));
+}
