@@ -4,20 +4,20 @@ import Image from 'next/image'
 import ThemeToggler from '@/app/_components/theme/toggler'
 
 import profileImage from '@/app/_assets/images/profile.jpeg'
-import './header.scss'
+import styles from './header.module.scss'
 
 export default function Header() {
   return (
-    <header>
-      <div className='id'>
-        <Link href='/' className='profile-image'>
+    <header className={styles.header}>
+      <div className={styles.id}>
+        <Link href='/' className={styles['profile-image']}>
           <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' />
         </Link>
         <div>
           <Link href='/'>
             <h1>Jorman Espinoza</h1>
           </Link>
-          <div className='data'>
+          <div className={styles.data}>
             {'['}
             <code>
               <Link href='/'>namroj</Link>

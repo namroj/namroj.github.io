@@ -7,7 +7,7 @@ $colors: var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor
   gap: calc(var(--gap) / 2);
   padding-right: var(--gap);
 
-  li {
+  li.link {
     a {
       display: flex;
       color: var(--navTextColor);

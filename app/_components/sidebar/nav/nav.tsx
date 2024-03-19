@@ -5,7 +5,7 @@ import useMedia from 'use-media'
 
 import { useGeneralContext } from '@/app/_context'
 
-import './nav.scss'
+import styles from './nav.module.scss'
 
 interface NavItem {
   path: string
@@ -17,13 +17,13 @@ export default function Nav() {
   const isMobile = useMedia({ maxWidth: '768px' })
   const { toggleSidebarState } = useGeneralContext()
 
-  const setActivePathClass = (path: string) => (pathname.startsWith(path) ? 'active' : '')
+  const setActivePathClass = (path: string) => (pathname.startsWith(path) ? styles.active : '')
 
   const handleLinkClick = () => {
     if (isMobile) toggleSidebarState()
   }
 
-  const navItems: NavItem[] = [
+  const items: NavItem[] = [
     { path: '/formacion', label: 'Formación' },
     { path: '/experiencia', label: 'Experiencia' },
     { path: '/proyectos', label: 'Proyectos' },
@@ -33,8 +33,8 @@ export default function Nav() {
   ]
 
   return (
-    <nav>
-      {navItems.map((item, index) => (
+    <nav className={styles.nav}>
+      {items.map((item, index) => (
         <Link className={setActivePathClass(item.path)} href={item.path} onClick={handleLinkClick} key={index}>
           {item.label}
         </Link>

@@ -6,13 +6,13 @@ import Nav from './nav/nav'
 import Toggler from './toggler/toggler'
 import Links from './links/links'
 
-import './sidebar.scss'
+import styles from './sidebar.module.scss'
 
 export default function Sidebar() {
   const { sidebarState } = useGeneralContext()
 
   return (
-    <aside className={`${sidebarState}`}>
+    <aside className={`${styles.sidebar } ${styles[sidebarState]}`}>
       <Toggler />
       <Nav />
       <Links />

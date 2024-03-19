@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import '@/app/_assets/styles/not-found.scss'
+import styles from '@/app/_assets/styles/not-found.module.scss'
 
 export const metadata: Metadata = {
   title: '404 | Jorman Espinoza'
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function NotFoundPage() {
   return (
-    <div className='not-found'>
+    <div className={styles['not-found']}>
       <h2>404</h2> Recurso no encontrado
     </div>
   )

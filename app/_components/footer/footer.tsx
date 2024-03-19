@@ -2,11 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import nextJsLogo from '@/app/_assets/icons/next.svg'
-import './footer.scss'
+import styles from './footer.module.scss'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <span>
         por <Link href='/'>Jorman</Link> mediante{' '}
       </span>
