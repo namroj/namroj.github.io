@@ -12,7 +12,7 @@ import '@/app/_assets/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',
-  description: 'Full Stack Developer'
+  description: 'Desarrollador Full Stack'
 }
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

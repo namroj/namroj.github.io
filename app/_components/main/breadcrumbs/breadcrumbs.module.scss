@@ -15,7 +15,8 @@
     font-style: italic;
     color: var(--breadcrumbItemColor);
 
-    a {
+    a,
+    .current {
       display: flex;
 
       &.linked {

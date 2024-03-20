@@ -1,5 +1,3 @@
-'use client'
-
 import { ReactNode } from 'react'
 
 import Link from 'next/link'
@@ -31,9 +29,9 @@ export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
               </>
             </Link>
           ) : (
-            <a href='/' style={{ cursor: 'auto' }} onClick={(e) => e.preventDefault()}>
+            <span className={styles.current}>
               {item.icon} <span>{item.label}</span>
-            </a>
+            </span>
           )}
           {index < items.length - 1 && <span className={styles.connector}>{'>'}</span>}
         </div>
