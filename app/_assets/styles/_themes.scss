@@ -1,74 +1,74 @@
 // -- theme -----
 [data-theme='light'] {
-  --bgColor: #fff;
-  --textColor: #1a1a1a;
-  --textAccentColor: #d4d4d4;
-  --textSecondaryAccentColor: #c678dd;
+  --bgColor: var(--lightColor);
+  --textColor: var(--darkSemiColor);
+  --textAccentColor: var(--lightGrayColor);
+  --textSecondaryAccentColor: var(--purpleColor);
   // header
-  --nameColor: #1a1a1a;
-  --usernameTextColor: #d09965;
-  --usernameHoverTextColor: #98c379;
-  --professionTextColor: #6087cf;
+  --nameColor: var(--lightSemiColor);
+  --usernameTextColor: var(--orangeColor);
+  --usernameHoverTextColor: var(--greenColor);
+  --professionTextColor: var(--blueColor);
   // sidebar
-  --sidebarBgColor: #fff;
-  --sidebarTogglerTextColor: #1a1a1a;
-  --sidebarTogglerHoverTextColor: #eee;
-  --sidebarTogglerBgColor: #6087cf;
-  --sidebarTogglerHoverBgColor: #c678dd;
-  --sidebarToggleIconColor: #fff;
+  --sidebarBgColor: var(--lightColor);
+  --sidebarTogglerTextColor: var(--darkSemiColor);
+  --sidebarTogglerHoverTextColor: var(--lightSemiColor);
+  --sidebarTogglerBgColor: var(--blueColor);
+  --sidebarTogglerHoverBgColor: var(--purpleColor);
+  --sidebarToggleIconColor: var(--lightColor);
   // nav
-  --navBgColor: #eee;
-  --navTextColor: #1a1a1a;
-  --navActiveTextColor: #6087cf;
-  --navHoverTextColor: #c678dd;
+  --navBgColor: var(--lightSemiColor);
+  --navTextColor: var(--darkSemiColor);
+  --navActiveTextColor: var(--blueColor);
+  --navHoverTextColor: var(--purpleColor);
   // main
-  --mainBgColor: #eee;
-  --mainHeadingColor: #1a1a1a;
+  --mainBgColor: var(--lightSemiColor);
+  --mainHeadingColor: var(--darkSemiColor);
   // main - breadcrumbs
-  --breadcrumbItemColor: #2b2b2b;
-  --breadcrumbLinkedItemColor: #6087cf;
-  --breadcrumbLinkedItemHoverColor: #de6a73;
-  --breadcrumbBorderColor: #6087cf;
+  --breadcrumbItemColor: var(--darkGrayColor);
+  --breadcrumbLinkedItemColor: var(--blueColor);
+  --breadcrumbLinkedItemHoverColor: var(--redColor);
+  --breadcrumbBorderColor: var(--blueColor);
   // footer
-  --footerBorderColor: #6087cf;
-  --footerAnchorColor: #6087cf;
-  --footerAnchorHoverColor: #98c379;
+  --footerBorderColor: var(--blueColor);
+  --footerAnchorColor: var(--blueColor);
+  --footerAnchorHoverColor: var(--greenColor);
 }
 
 [data-theme='dark'] {
-  --bgColor: #1a1a1a;
-  --textColor: #eee;
-  --textAccentColor: #2b2b2b;
-  --textSecondaryAccentColor: #c678dd;
+  --bgColor: var(--darkSemiColor);
+  --textColor: var(--lightSemiColor);
+  --textAccentColor: var(--darkGrayColor);
+  --textSecondaryAccentColor: var(--purpleColor);
   // header
-  --nameColor: #abb2bf;
-  --usernameTextColor: #6087cf;
-  --usernameHoverTextColor: #98c379;
-  --professionTextColor: #c678dd;
+  --nameColor: var(--grayColor);
+  --usernameTextColor: var(--blueColor);
+  --usernameHoverTextColor: var(--greenColor);
+  --professionTextColor: var(--purpleColor);
   // sidebar
-  --sidebarBgColor: #232327;
-  --sidebarTogglerTextColor: #eee;
-  --sidebarTogglerHoverTextColor: #eee;
-  --sidebarTogglerBgColor: #c678dd;
-  --sidebarTogglerHoverBgColor: #6087cf;
-  --sidebarToggleIconColor: #fff;
+  --sidebarBgColor: var(--darkSemiColor);
+  --sidebarTogglerTextColor: var(--lightSemiColor);
+  --sidebarTogglerHoverTextColor: var(--lightSemiColor);
+  --sidebarTogglerBgColor: var(--purpleColor);
+  --sidebarTogglerHoverBgColor: var(--blueColor);
+  --sidebarToggleIconColor: var(--lightColor);
   // nav
-  --navBgColor: #1a1a1a;
-  --navTextColor: #abb2bf;
-  --navActiveTextColor: #6087cf;
-  --navHoverTextColor: #c678dd;
+  --navBgColor: var(--darkSemiColor);
+  --navTextColor: var(--grayColor);
+  --navActiveTextColor: var(--blueColor);
+  --navHoverTextColor: var(--purpleColor);
   // main
-  --mainBgColor: #282c34;
-  --mainHeadingColor: #fff;
+  --mainBgColor: var(--darkGrayAlternativeColor);
+  --mainHeadingColor: c
   // main - breadcrumbs
-  --breadcrumbItemColor: #abb2bf;
-  --breadcrumbLinkedItemColor: #c678dd;
-  --breadcrumbLinkedItemHoverColor: #6087cf;
-  --breadcrumbBorderColor: #c678dd;
+  --breadcrumbItemColor: var(--grayColor);
+  --breadcrumbLinkedItemColor: var(--purpleColor);
+  --breadcrumbLinkedItemHoverColor: var(--blueColor);
+  --breadcrumbBorderColor: var(--purpleColor);
   // footer
-  --footerBorderColor: #c678dd;
-  --footerAnchorColor: #6087cf;
-  --footerAnchorHoverColor: #d09965;
+  --footerBorderColor: var(--purpleColor);
+  --footerAnchorColor: var(--blueColor);
+  --footerAnchorHoverColor: var(--orangeColor);
 }
 
 // md themes

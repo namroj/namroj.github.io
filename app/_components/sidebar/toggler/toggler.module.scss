@@ -22,6 +22,16 @@
     color: var(--sidebarTogglerHoverTextColor);
   }
 
+  &.expanded {
+    background-color: var(--sidebarTogglerHoverBgColor);
+    color: var(--sidebarTogglerHoverTextColor);
+
+    &:hover {
+      background-color: var(--sidebarTogglerBgColor);
+      color: var(--sidebarTogglerTextColor);
+    }
+  }
+
   svg {
     fill: var(--sidebarToggleIconColor);
   }

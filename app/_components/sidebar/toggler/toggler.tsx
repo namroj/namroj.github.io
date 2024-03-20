@@ -10,7 +10,7 @@ export default function Toggler() {
   const { sidebarState, toggleSidebarState } = useGeneralContext()
 
   return (
-    <button className={styles.toggler} onClick={toggleSidebarState}>
+    <button className={`${styles.toggler} ${styles[sidebarState]}`} onClick={toggleSidebarState}>
       {sidebarState === SidebarState.COLLAPSED ? <BsArrowsAngleExpand size={15} /> : <BiCollapseAlt size={16} />}
     </button>
   )
