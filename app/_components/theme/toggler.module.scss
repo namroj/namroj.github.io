@@ -2,6 +2,7 @@
 .toggler {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -18,8 +19,6 @@
 
   .btn {
     display: flex;
-    justify-content: center;
-    align-items: center;
     user-select: none;
   }
 
