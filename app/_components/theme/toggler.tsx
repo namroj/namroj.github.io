@@ -2,15 +2,14 @@
 
 import { motion } from 'framer-motion'
 
-import { useGeneralContext } from '@/app/_context'
-import { Theme } from '@/app/_context/general/general-context-provider'
+import { Theme, useThemeContext } from '@/app/_context-providers/theme/ThemeProvider'
 
 import { TOGGLE_FRAMER_CONFIG, TOGGLE_SVG_FRAMER_CONFIG, TOGGLE_SVG_PROPS } from './config'
 
 import styles from './toggler.module.scss'
 
 export default function ToggleTheme() {
-  const { theme, toggleTheme } = useGeneralContext()
+  const { theme, toggleTheme } = useThemeContext()
   const isDarkTheme = theme === Theme.DARK
 
   return (

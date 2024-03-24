@@ -2,7 +2,9 @@ import { ReactNode } from 'react'
 
 import { Metadata } from 'next'
 
-import { GeneralContextProvider } from '@/app/_context/general/general-context-provider'
+import { ThemeContextProvider } from '@/app/_context-providers/theme/ThemeProvider'
+import { ExpandCollapseContextProvider } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+
 import Header from '@/app/_components/header/header'
 import Sidebar from '@/app/_components/sidebar/sidebar'
 import Main from '@/app/_components/main/main'
@@ -19,12 +21,14 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang='es'>
       <body>
-        <GeneralContextProvider>
-          <Header />
-          <Sidebar />
-          <Main>{children}</Main>
-          <Footer />
-        </GeneralContextProvider>
+        <ThemeContextProvider>
+          <ExpandCollapseContextProvider>
+            <Header />
+            <Sidebar />
+            <Main>{children}</Main>
+            <Footer />
+          </ExpandCollapseContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   )

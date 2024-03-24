@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import { useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 import useMedia from 'use-media'
-
-import { useGeneralContext } from '@/app/_context'
 
 import styles from './nav.module.scss'
 
@@ -15,12 +14,12 @@ interface NavItem {
 export default function Nav() {
   const pathname = usePathname()
   const isMobile = useMedia({ maxWidth: '768px' })
-  const { toggleSidebarState } = useGeneralContext()
+  const { toggleExpandCollapseState } = useExpandCollapseContext()
 
   const setActivePathClass = (path: string) => (pathname.startsWith(path) ? styles.active : '')
 
   const handleLinkClick = () => {
-    if (isMobile) toggleSidebarState()
+    if (isMobile) toggleExpandCollapseState()
   }
 
   const items: NavItem[] = [

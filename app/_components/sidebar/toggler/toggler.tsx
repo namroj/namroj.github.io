@@ -1,5 +1,4 @@
-import { useGeneralContext } from '@/app/_context'
-import { SidebarState } from '@/app/_context/general/general-context-provider'
+import { ExpandCollapseState, useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 
 import { BiCollapseAlt } from 'react-icons/bi'
 import { BsArrowsAngleExpand } from 'react-icons/bs'
@@ -7,11 +6,15 @@ import { BsArrowsAngleExpand } from 'react-icons/bs'
 import styles from './toggler.module.scss'
 
 export default function Toggler() {
-  const { sidebarState, toggleSidebarState } = useGeneralContext()
+  const { expandCollapseState, toggleExpandCollapseState } = useExpandCollapseContext()
 
   return (
-    <button className={`${styles.toggler} ${styles[sidebarState]}`} onClick={toggleSidebarState}>
-      {sidebarState === SidebarState.COLLAPSED ? <BsArrowsAngleExpand size={15} /> : <BiCollapseAlt size={16} />}
+    <button className={`${styles.toggler} ${styles[expandCollapseState]}`} onClick={toggleExpandCollapseState}>
+      {expandCollapseState === ExpandCollapseState.COLLAPSED ? (
+        <BsArrowsAngleExpand size={15} />
+      ) : (
+        <BiCollapseAlt size={16} />
+      )}
     </button>
   )
 }
