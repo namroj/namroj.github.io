@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import ThemeToggler from '@/app/_components/theme/toggler'
+import ThemeToggler from '@/app/_components/theme/Toggler'
 
 import profileImage from '@/app/_assets/images/profile.jpeg'
 import styles from './Header.module.scss'

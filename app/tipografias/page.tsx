@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 export default function Fonts() {
-  const breadcrumbs: Breadcrumb[] = [{ label: 'Tipografías', href: '/tipografias', icon: <RxFontFamily /> }]
+  const breadcrumbs: Breadcrumb[] = [{ label: 'Tipografías', icon: <RxFontFamily /> }]
 
   return (
     <>

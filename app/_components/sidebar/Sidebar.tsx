@@ -3,8 +3,8 @@
 import { useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 
 import Nav from './nav/Nav'
-import Toggler from './toggler/toggler'
-import Links from './links/links'
+import Toggler from './toggler/Toggler'
+import Links from './links/Links'
 
 import styles from './Sidebar.module.scss'
 

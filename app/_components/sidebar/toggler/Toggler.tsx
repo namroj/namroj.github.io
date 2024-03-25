@@ -3,7 +3,7 @@ import { ExpandCollapseState, useExpandCollapseContext } from '@/app/_context-pr
 import { BiCollapseAlt } from 'react-icons/bi'
 import { BsArrowsAngleExpand } from 'react-icons/bs'
 
-import styles from './toggler.module.scss'
+import styles from './Toggler.module.scss'
 
 export default function Toggler() {
   const { expandCollapseState, toggleExpandCollapseState } = useExpandCollapseContext()

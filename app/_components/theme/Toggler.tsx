@@ -6,7 +6,7 @@ import { Theme, useThemeContext } from '@/app/_context-providers/theme/ThemeProv
 
 import { TOGGLE_FRAMER_CONFIG, TOGGLE_SVG_FRAMER_CONFIG, TOGGLE_SVG_PROPS } from './config'
 
-import styles from './toggler.module.scss'
+import styles from './Toggler.module.scss'
 
 export default function ToggleTheme() {
   const { theme, toggleTheme } = useThemeContext()

@@ -5,7 +5,7 @@ import { FaXTwitter, FaThreads } from 'react-icons/fa6'
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
 import { PiButterfly } from 'react-icons/pi'
 
-import styles from './links.module.scss'
+import styles from './Links.module.scss'
 
 interface NetworkLink {
   href: string
