@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 
 import { ExpandCollapseState, useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 
-import styles from './main.module.scss'
+import styles from './Main.module.scss'
 
 export default function Main({ children }: Readonly<{ children: ReactNode }>) {
   const { expandCollapseState } = useExpandCollapseContext()

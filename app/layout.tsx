@@ -5,10 +5,10 @@ import { Metadata } from 'next'
 import { ThemeContextProvider } from '@/app/_context-providers/theme/ThemeProvider'
 import { ExpandCollapseContextProvider } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 
-import Header from '@/app/_components/header/header'
-import Sidebar from '@/app/_components/sidebar/sidebar'
-import Main from '@/app/_components/main/main'
-import Footer from '@/app/_components/footer/footer'
+import Header from '@/app/_components/header/Header'
+import Sidebar from '@/app/_components/sidebar/Sidebar'
+import Main from '@/app/_components/main/Main'
+import Footer from '@/app/_components/footer/Footer'
 
 import '@/app/_assets/styles/globals.scss'
 

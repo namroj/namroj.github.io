@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/breadcrumbs'
+import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/Breadcrumbs'
 
 import { MdLaptop } from 'react-icons/md'
 

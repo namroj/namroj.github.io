@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import Link from 'next/link'
 
 import { IoHeadsetSharp } from 'react-icons/io5'
-import styles from './breadcrumbs.module.scss'
+import styles from './Breadcrumbs.module.scss'
 
 export interface Breadcrumb {
   label: string

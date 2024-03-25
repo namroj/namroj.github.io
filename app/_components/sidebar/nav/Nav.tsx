@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 import useMedia from 'use-media'
 
-import styles from './nav.module.scss'
+import styles from './Nav.module.scss'
 
 interface NavItem {
   path: string
@@ -12,11 +12,11 @@ interface NavItem {
 }
 
 export default function Nav() {
-  const pathname = usePathname()
-  const isMobile = useMedia({ maxWidth: '768px' })
+  const currentPath = usePathname()
   const { toggleExpandCollapseState } = useExpandCollapseContext()
+  const isMobile = useMedia({ maxWidth: '768px' })
 
-  const setActivePathClass = (path: string) => (pathname.startsWith(path) ? styles.active : '')
+  const setActivePathClass = (path: string) => (currentPath.startsWith(path) ? styles.active : '')
 
   const handleLinkClick = () => {
     if (isMobile) toggleExpandCollapseState()

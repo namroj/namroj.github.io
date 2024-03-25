@@ -4,7 +4,7 @@ import Image from 'next/image'
 import ThemeToggler from '@/app/_components/theme/toggler'
 
 import profileImage from '@/app/_assets/images/profile.jpeg'
-import styles from './header.module.scss'
+import styles from './Header.module.scss'
 
 export default function Header() {
   return (
