@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Experiencia | Jorman Espinoza'
 }
 
-export default function ProfessionalExperience() {
+export default function ProfessionalExperiencePage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Experiencia', icon: <MdLaptop /> }]
 
   return (

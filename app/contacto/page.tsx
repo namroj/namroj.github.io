@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Contacto | Jorman Espinoza'
 }
 
-export default function Fonts() {
+export default function ContactPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Contacto', icon: <LuMessagesSquare /> }]
 
   return (

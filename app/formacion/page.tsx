@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Formación | Jorman Espinoza'
 }
 
-export default function Formation() {
+export default function FormationPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Formación', href: '', icon: <ImBooks /> }]
 
   return (

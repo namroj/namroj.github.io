@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Tipografías preferidas | Jorman Espinoza'
 }
 
-export default function Fonts() {
+export default function FontsPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Tipografías', icon: <RxFontFamily /> }]
 
   return (

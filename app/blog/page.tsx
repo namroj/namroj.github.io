@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Jorman Espinoza | Blog'
 }
 
-export default function Blog() {
+export default function BlogPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Blog', icon: <FaKeyboard /> }]
 
   return (

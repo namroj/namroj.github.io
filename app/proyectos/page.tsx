@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Proyectos | Jorman Espinoza'
 }
 
-export default function Formation() {
+export default function ProjectsPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Proyectos', icon: <FaCode /> }]
 
   return (

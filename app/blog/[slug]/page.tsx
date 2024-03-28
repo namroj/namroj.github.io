@@ -30,7 +30,7 @@ const getMarkDownFileData = async (slug: string) => {
   }
 }
 
-export default async function Post({ params }: Readonly<PostProps>) {
+export default async function PostPage({ params }: Readonly<PostProps>) {
   if (params?.slug === undefined) {
     return notFound()
   }
