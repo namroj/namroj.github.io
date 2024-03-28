@@ -5,6 +5,7 @@
   --textAccentColor: var(--lightGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
   // header
+  --headerBorderColor: var(--lightGrayColor);
   --nameColor: var(--darkGrayAlternativeColor);
   --usernameTextColor: var(--orangeColor);
   --usernameHoverTextColor: var(--greenColor);
@@ -30,7 +31,8 @@
   --breadcrumbLinkedItemHoverColor: var(--redColor);
   --breadcrumbBorderColor: var(--blueColor);
   // footer
-  --footerBorderColor: var(--blueColor);
+  --footerBgColor: var(--lightSemiColor);
+  --footerBorderColor: var(--lightGrayColor);
   --footerAnchorColor: var(--blueColor);
   --footerAnchorHoverColor: var(--greenColor);
 }
@@ -41,6 +43,7 @@
   --textAccentColor: var(--darkGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
   // header
+  --headerBorderColor: var(--darkGrayColor);
   --nameColor: var(--grayColor);
   --usernameTextColor: var(--blueColor);
   --usernameHoverTextColor: var(--greenColor);
@@ -66,7 +69,8 @@
   --breadcrumbLinkedItemHoverColor: var(--blueColor);
   --breadcrumbBorderColor: var(--purpleColor);
   // footer
-  --footerBorderColor: var(--purpleColor);
+  --footerBgColor: var(--darkSemiColor);
+  --footerBorderColor: var(--darkGrayColor);
   --footerAnchorColor: var(--blueColor);
   --footerAnchorHoverColor: var(--orangeColor);
 }

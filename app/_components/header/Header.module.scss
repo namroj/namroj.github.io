@@ -4,7 +4,7 @@
   width: 100vw;
   height: var(--headerHeight);
   padding: 0 var(--gap);
-  border-bottom: 1px solid var(--textAccentColor);
+  border-bottom: 1px solid var(--headerBorderColor);
   display: flex;
   justify-content: space-between;
   background-color: var(--navBgColor);

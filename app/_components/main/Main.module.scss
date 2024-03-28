@@ -4,7 +4,7 @@
   width: calc(100vw - var(--sidebarWidth));
   min-height: 100svh;
   margin-left: var(--sidebarWidth);
-  padding: calc(var(--headerHeight) + var(--gap)) var(--gap) var(--gap);
+  padding: calc(var(--headerHeight) + var(--gap)) var(--gap) calc(var(--gap) * 2);
   background-color: var(--mainBgColor);
   color: var(--textColor);
   transition:
