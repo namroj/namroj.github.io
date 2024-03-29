@@ -6,10 +6,10 @@
   --textSecondaryAccentColor: var(--purpleColor);
   // header
   --headerBorderColor: var(--lightGrayColor);
-  --nameColor: var(--darkGrayAlternativeColor);
-  --usernameTextColor: var(--orangeColor);
-  --usernameHoverTextColor: var(--greenColor);
-  --professionTextColor: var(--blueColor);
+  --headerNameColor: var(--darkGrayAlternativeColor);
+  ----headerUsernameTextColor: var(--orangeColor);
+  --headerUsernameHoverTextColor: var(--greenColor);
+  --headerProfessionTextColor: var(--blueColor);
   // sidebar
   --sidebarBgColor: var(--lightColor);
   --sidebarTogglerTextColor: var(--darkSemiColor);
@@ -44,10 +44,10 @@
   --textSecondaryAccentColor: var(--purpleColor);
   // header
   --headerBorderColor: var(--darkGrayColor);
-  --nameColor: var(--grayColor);
-  --usernameTextColor: var(--blueColor);
-  --usernameHoverTextColor: var(--greenColor);
-  --professionTextColor: var(--purpleColor);
+  --headerNameColor: var(--grayColor);
+  --headerUsernameTextColor: var(--blueColor);
+  --headerUsernameHoverTextColor: var(--greenColor);
+  --headerProfessionTextColor: var(--purpleColor);
   // sidebar
   --sidebarBgColor: var(--darkSemiColor);
   --sidebarTogglerTextColor: var(--lightSemiColor);
@@ -62,7 +62,7 @@
   --navHoverTextColor: var(--purpleColor);
   // main
   --mainBgColor: var(--darkGrayAlternativeColor);
-  --mainHeadingColor: c
+  --mainHeadingColor: var(--lightGrayColor);
   // main - breadcrumbs
   --breadcrumbItemColor: var(--grayColor);
   --breadcrumbLinkedItemColor: var(--purpleColor);

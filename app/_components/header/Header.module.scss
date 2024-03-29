@@ -89,7 +89,7 @@
       font-family: 'Dank Mono', monospace;
       font-size: 1rem;
       font-style: italic;
-      color: var(--nameColor);
+      color: var(--headerNameColor);
 
       @media (width < 350px) {
         font-size: 0.89rem;
@@ -115,7 +115,7 @@
         font-family: 'Dank Mono', monospace;
         font-size: 0.88rem;
         font-weight: 900;
-        color: var(--professionTextColor);
+        color: var(--headerProfessionTextColor);
 
         @media (width < 350px) {
           font-size: 0.7rem;
@@ -128,11 +128,11 @@
 
       code {
         font-weight: 400;
-        color: var(--usernameTextColor);
+        color: var(----headerUsernameTextColor);
         transition: color 0.25s steps ease-in-out;
 
         &:hover {
-          color: var(--usernameHoverTextColor);
+          color: var(--headerUsernameHoverTextColor);
         }
       }
     }
