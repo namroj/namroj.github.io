@@ -17,22 +17,18 @@
     background-color 0.25s ease-in-out,
     color 0.25s ease-in-out;
 
-  @media (width > 768) {
-    &:hover {
-      background-color: var(--sidebarTogglerHoverBgColor);
-      color: var(--sidebarTogglerHoverTextColor);
-    }
+  &:hover {
+    background-color: var(--sidebarTogglerHoverBgColor);
+    color: var(--sidebarTogglerHoverTextColor);
   }
 
   &.expanded {
     background-color: var(--sidebarTogglerHoverBgColor);
     color: var(--sidebarTogglerHoverTextColor);
 
-    @media (width > 768) {
-      &:hover {
-        background-color: var(--sidebarTogglerBgColor);
-        color: var(--sidebarTogglerTextColor);
-      }
+    &:hover {
+      background-color: var(--sidebarTogglerBgColor);
+      color: var(--sidebarTogglerTextColor);
     }
   }
 
