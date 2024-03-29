@@ -19,7 +19,6 @@ export default function Sidebar() {
   const [isResizing, setIsResizing] = useState(false)
   const [width, setWidth] = useState<string>('')
 
-  const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement
   const SIDEBAR_WIDTH_KEY = 'sidebar_width'
 
   useEffect(() => {
@@ -46,9 +45,10 @@ export default function Sidebar() {
     handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [expandCollapseState])
 
   useEffect(() => {
+    const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement
     if (!width) {
       return
     }
@@ -64,6 +64,22 @@ export default function Sidebar() {
       return
     }
 
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isResizing) {
+        return
+      }
+
+      const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement
+      const newWidth = e.pageX - sidebar.offsetLeft
+      const minWidth = 250
+      const maxWidth = Math.max(window.innerWidth * 0.35, 500)
+      const updatedWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
+
+      document.documentElement.style.setProperty('--sidebarWidth', `${updatedWidth}px`)
+      setWidth(updatedWidth.toString())
+      sidebar.style.transition = 'none'
+    }
+
     document.addEventListener('mousemove', handleMouseMove)
     document.addEventListener('mouseup', handleMouseUp)
 
@@ -73,22 +89,8 @@ export default function Sidebar() {
     }
   }, [isResizing])
 
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isResizing) {
-      return
-    }
-
-    const newWidth = e.pageX - sidebar.offsetLeft
-    const minWidth = 250
-    const maxWidth = Math.max(window.innerWidth * 0.35, 500)
-    const clampedWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
-
-    document.documentElement.style.setProperty('--sidebarWidth', `${clampedWidth}px`)
-    setWidth(clampedWidth.toString())
-    sidebar.style.transition = 'none'
-  }
-
   const handleMouseDown = () => setIsResizing(true)
+
   const handleMouseUp = () => setIsResizing(false)
 
   return (
