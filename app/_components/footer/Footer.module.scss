@@ -13,9 +13,7 @@
   background-color: var(--footerBgColor);
   color: var(--footerBorderColor);
   font-size: 0.5rem;
-  transition:
-    width 0.5s ease-in-out,
-    margin-left 0.5s ease-in-out;
+  transition: var(--expandCollapseTransition);
 
   @media (width < 250px) {
     font-size: 0.5rem;

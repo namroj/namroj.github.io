@@ -110,7 +110,7 @@
       justify-content: space-between;
       align-items: center;
 
-      h2 {
+      span {
         margin-left: calc(var(--gap) / 6);
         font-family: 'Dank Mono', monospace;
         font-size: 0.88rem;
@@ -128,7 +128,7 @@
 
       code {
         font-weight: 400;
-        color: var(----headerUsernameTextColor);
+        color: var(--headerUsernameTextColor);
         transition: color 0.25s steps ease-in-out;
 
         &:hover {

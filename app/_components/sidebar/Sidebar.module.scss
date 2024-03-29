@@ -2,16 +2,14 @@
 .sidebar {
   position: fixed;
   width: var(--sidebarWidth);
-  height: calc(100svh - var(--headerHeight));
+  height: calc(100vh - var(--headerHeight));
   margin-top: var(--headerHeight);
   padding: var(--gap);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--sidebarBgColor);
-  transition:
-    width 0.5s ease-in-out,
-    margin-left 0.5s ease-in-out;
+  transition: var(--expandCollapseTransition);
   z-index: 1;
 
   &.expanded {
@@ -20,5 +18,19 @@
 
   &.collapsed {
     margin-left: calc((var(--sidebarWidth) * -1) + var(--gap));
+
+    .resizer {
+      display: none;
+    }
+  }
+
+  .resizer {
+    position: absolute;
+    right: -1px;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    border-color: var(--headerBorderColor);
+    cursor: col-resize;
   }
 }

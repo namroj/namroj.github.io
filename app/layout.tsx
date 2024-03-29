@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang='es'>
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
       <body>
         <ThemeContextProvider>
           <ExpandCollapseContextProvider>

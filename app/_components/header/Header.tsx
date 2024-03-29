@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.id}>
         <Link href='/' className={styles['profile-image']}>
-          <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' />
+          <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' priority />
         </Link>
         <div>
           <Link href='/'>
@@ -23,7 +23,7 @@ export default function Header() {
               <Link href='/'>namroj</Link>
             </code>
             {']'}
-            <h2>Desarrollador Full Stack</h2>
+            <span>Desarrollador Full Stack</span>
           </div>
         </div>
       </div>

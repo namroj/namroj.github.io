@@ -1,4 +1,4 @@
-// -- theme -----
+// -- themes -----
 [data-theme='light'] {
   --bgColor: var(--lightColor);
   --textColor: var(--darkSemiColor);
@@ -7,7 +7,7 @@
   // header
   --headerBorderColor: var(--lightGrayColor);
   --headerNameColor: var(--darkGrayAlternativeColor);
-  ----headerUsernameTextColor: var(--orangeColor);
+  --headerUsernameTextColor: var(--orangeColor);
   --headerUsernameHoverTextColor: var(--greenColor);
   --headerProfessionTextColor: var(--blueColor);
   // sidebar

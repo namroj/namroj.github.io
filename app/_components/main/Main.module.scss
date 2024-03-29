@@ -7,9 +7,7 @@
   padding: calc(var(--headerHeight) + var(--gap)) var(--gap) calc(var(--gap) * 2);
   background-color: var(--mainBgColor);
   color: var(--textColor);
-  transition:
-    width 0.5s ease-in-out,
-    margin-left 0.5s ease-in-out;
+  transition: var(--expandCollapseTransition);
 
   &.expanded {
     width: calc(100vw - var(--gap));
