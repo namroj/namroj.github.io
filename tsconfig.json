@@ -24,6 +24,15 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@/assets/*": [
+        "./app/_assets/*"
+      ],
+      "@/components/*": [
+        "./app/_components/*"
+      ],
+      "@/fonts/*": [
+        "./app/_assets/fonts/*"
       ]
     }
   },

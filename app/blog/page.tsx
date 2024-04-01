@@ -1,12 +1,12 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
-import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import { FaKeyboard } from 'react-icons/fa6'
 
 export const metadata: Metadata = {
-  title: 'Jorman Espinoza | Blog'
+  title: 'Blog | Jorman Espinoza'
 }
 
 export default function BlogPage() {

@@ -16,6 +16,11 @@
     color: var(--breadcrumbItemColor);
 
     a,
+    span {
+      font-family: var(--dankMonoFont);
+    }
+
+    a,
     .current {
       display: flex;
 

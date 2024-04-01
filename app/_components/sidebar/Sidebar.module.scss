@@ -30,7 +30,27 @@
     top: 0;
     width: 10px;
     height: 100%;
-    border-color: var(--headerBorderColor);
+    background-color: var(--headerBorderColor);
+    border: none;
     cursor: col-resize;
+    animation: resizerAnimation 8.9s ease infinite;
+  }
+
+  @keyframes resizerAnimation {
+    0% {
+      background-color: var(--headerBorderColor);
+    }
+    1% {
+      background-color: var(--sidebarToggleBlinkColor);
+    }
+    9% {
+      background-color: var(--sidebarToggleBlinkColor);
+    }
+    10% {
+      background-color: var(--headerBorderColor);
+    }
+    100% {
+      background-color: var(--headerBorderColor);
+    }
   }
 }

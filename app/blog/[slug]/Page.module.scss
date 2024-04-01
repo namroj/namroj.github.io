@@ -1,0 +1,10 @@
+// -- post/article -----
+.article {
+  h1[id] {
+    margin-bottom: var(--gap);
+  }
+
+  code {
+    font-family: var(--jetBrainsMonoFont), monospace;
+  }
+}

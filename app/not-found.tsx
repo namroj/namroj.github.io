@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import styles from '@/app/_assets/styles/not-found.module.scss'
+import styles from '@/assets/styles/not-found.module.scss'
 
 export const metadata: Metadata = {
   title: '404 | Jorman Espinoza'

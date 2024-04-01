@@ -9,10 +9,11 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import rehypePrettyCode from 'rehype-pretty-code'
 
-import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import { FaKeyboard } from 'react-icons/fa6'
 import { LuFileTerminal } from 'react-icons/lu'
+import styles from './Page.module.scss'
 
 interface PostProps {
   params: {
@@ -45,7 +46,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
   ]
 
   return (
-    <>
+    <article className={styles.article}>
       <Breadcrumbs items={breadcrumbs} />
 
       <MDXRemote
@@ -74,7 +75,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
           }
         }}
       />
-    </>
+    </article>
   )
 }
 

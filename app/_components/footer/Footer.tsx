@@ -8,7 +8,7 @@ import {
   useExpandCollapseContext
 } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
 
-import nextJsLogo from '@/app/_assets/icons/next.svg'
+import nextJsLogo from '@/assets/icons/next.svg'
 import styles from './Footer.module.scss'
 
 export default function Footer() {

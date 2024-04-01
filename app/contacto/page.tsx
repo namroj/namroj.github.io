@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 
-import Breadcrumbs, { Breadcrumb } from '@/app/_components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import { LuMessagesSquare } from 'react-icons/lu'
 

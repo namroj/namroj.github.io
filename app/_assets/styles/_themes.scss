@@ -17,6 +17,7 @@
   --sidebarTogglerBgColor: var(--blueColor);
   --sidebarTogglerHoverBgColor: var(--purpleColor);
   --sidebarToggleIconColor: var(--lightColor);
+  --sidebarToggleBlinkColor: var(--darkSemiColor);
   // nav
   --navBgColor: var(--lightSemiColor);
   --navTextColor: var(--darkSemiColor);
@@ -55,6 +56,7 @@
   --sidebarTogglerBgColor: var(--purpleColor);
   --sidebarTogglerHoverBgColor: var(--blueColor);
   --sidebarToggleIconColor: var(--lightColor);
+  --sidebarToggleBlinkColor: var(--grayColor);
   // nav
   --navBgColor: var(--darkSemiColor);
   --navTextColor: var(--grayColor);
@@ -75,24 +77,23 @@
   --footerAnchorHoverColor: var(--orangeColor);
 }
 
-// md themes
+// markdown themes
 $codeDarkTheme: 'min-dark';
 $codeLightTheme: 'min-light';
 
 code[data-theme*='#{$codeLightTheme}'] {
   padding: calc(var(--gap) / 2);
+  border-radius: 4.25px;
 }
 
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'],
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'] span {
-  color: var(--shiki-light);
   background-color: var(--shiki-light-bg);
-  border-radius: 4.25px;
+  color: var(--shiki-light);
 }
 
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'],
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'] span {
-  color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
-  border-radius: 4.25px;
+  color: var(--shiki-dark);
 }

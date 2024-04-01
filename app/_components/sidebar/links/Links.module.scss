@@ -8,6 +8,9 @@ $colors: var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor
   padding-right: var(--gap);
 
   li.link {
+    list-style: none;
+    margin-left: 0;
+
     a {
       display: flex;
       color: var(--navTextColor);

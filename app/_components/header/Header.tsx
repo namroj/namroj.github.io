@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import ThemeToggler from '@/app/_components/theme/Toggler'
+import ThemeToggler from '@/components/theme/Toggler'
 
-import profileImage from '@/app/_assets/images/profile.jpeg'
+import profileImage from '@/assets/images/profile.jpeg'
 import styles from './Header.module.scss'
 
 export default function Header() {

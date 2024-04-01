@@ -11,6 +11,10 @@
   color: var(--textColor);
   z-index: 1;
 
+  @media (width > 768px) {
+    gap: calc(var(--gap) / 2);
+  }
+
   .id {
     width: 100vw;
     display: flex;
@@ -18,8 +22,60 @@
     gap: calc(var(--gap) / 4);
     font-weight: bold;
 
-    @media (width > 768px) {
-      gap: calc(var(--gap) / 2);
+    h1 {
+      font-family: var(--jetBrainsMonoFont), monospace;
+      font-size: 1rem;
+      color: var(--headerNameColor);
+
+      @media (width < 350px) {
+        font-size: 0.89rem;
+      }
+
+      @media (width > 768px) {
+        font-size: 1.25rem;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        transition: opacity 0.25s ease-in-out;
+      }
+    }
+
+    .data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      code {
+        color: var(--headerUsernameTextColor);
+        transition: color 0.25s steps ease-in-out;
+
+        &:hover {
+          color: var(--headerUsernameHoverTextColor);
+        }
+
+        a {
+          font-family: var(--jetBrainsMonoFont), monospace;
+          font-weight: 500;
+        }
+      }
+
+      span {
+        margin-left: calc(var(--gap) / 6);
+        font-family: var(--dankMonoFont);
+        font-size: 0.88rem;
+        font-style: italic;
+        font-weight: 900;
+        color: var(--headerProfessionTextColor);
+
+        @media (width < 350px) {
+          font-size: 0.7rem;
+        }
+
+        @media (width > 768px) {
+          font-size: 0.89rem;
+        }
+      }
     }
 
     .profile-image {
@@ -81,58 +137,6 @@
           width: 56px;
           height: 56px;
           border: 3px solid var(--navBgColor);
-        }
-      }
-    }
-
-    h1 {
-      font-family: 'Dank Mono', monospace;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--headerNameColor);
-
-      @media (width < 350px) {
-        font-size: 0.89rem;
-      }
-
-      @media (width > 768px) {
-        font-size: 1.25rem;
-      }
-
-      &:hover {
-        opacity: 0.7;
-        transition: opacity 0.25s ease-in-out;
-      }
-    }
-
-    .data {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      span {
-        margin-left: calc(var(--gap) / 6);
-        font-family: 'Dank Mono', monospace;
-        font-size: 0.88rem;
-        font-weight: 900;
-        color: var(--headerProfessionTextColor);
-
-        @media (width < 350px) {
-          font-size: 0.7rem;
-        }
-
-        @media (width > 768px) {
-          font-size: 0.89rem;
-        }
-      }
-
-      code {
-        font-weight: 400;
-        color: var(--headerUsernameTextColor);
-        transition: color 0.25s steps ease-in-out;
-
-        &:hover {
-          color: var(--headerUsernameHoverTextColor);
         }
       }
     }
