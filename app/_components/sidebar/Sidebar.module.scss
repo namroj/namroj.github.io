@@ -33,7 +33,8 @@
     background-color: var(--headerBorderColor);
     border: none;
     cursor: col-resize;
-    animation: resizerAnimation 8.9s ease infinite;
+    animation: resizerAnimation 5.2s ease infinite;
+    transition: 0.25s ease-in-out;
   }
 
   @keyframes resizerAnimation {
@@ -41,10 +42,10 @@
       background-color: var(--headerBorderColor);
     }
     1% {
-      background-color: var(--sidebarToggleBlinkColor);
+      background-color: var(--sidebarResizerBlinkColor);
     }
     9% {
-      background-color: var(--sidebarToggleBlinkColor);
+      background-color: var(--sidebarResizerBlinkColor);
     }
     10% {
       background-color: var(--headerBorderColor);
