@@ -34,7 +34,6 @@
     border: none;
     cursor: col-resize;
     animation: resizerAnimation 5.2s ease infinite;
-    transition: 0.25s ease-in-out;
   }
 
   @keyframes resizerAnimation {
