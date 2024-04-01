@@ -1,9 +1,13 @@
 // -- themes -----
 [data-theme='light'] {
+  // general
   --bgColor: var(--lightColor);
   --textColor: var(--darkSemiColor);
   --textAccentColor: var(--lightGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
+  // scrollbar
+  --scrollbarTrackColor: var(--lightGrayColor);
+  --scrollbarThumbColor: var(--blueColor);
   // header
   --headerBorderColor: var(--lightGrayColor);
   --headerNameColor: var(--darkGrayAlternativeColor);
@@ -39,10 +43,14 @@
 }
 
 [data-theme='dark'] {
+  // general
   --bgColor: var(--darkSemiColor);
   --textColor: var(--lightSemiColor);
   --textAccentColor: var(--darkGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
+  // scrollbar
+  --scrollbarTrackColor: var(--darkGrayColor);
+  --scrollbarThumbColor: var(--purpleColor);
   // header
   --headerBorderColor: var(--darkGrayColor);
   --headerNameColor: var(--grayColor);
@@ -78,8 +86,8 @@
 }
 
 // markdown themes
-$codeDarkTheme: 'min-dark';
-$codeLightTheme: 'min-light';
+$codeDarkTheme: 'DarkItalic';
+$codeLightTheme: 'NightOwlLight';
 
 code[data-theme*='#{$codeLightTheme}'] {
   padding: calc(var(--gap) / 2);

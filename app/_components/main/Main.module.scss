@@ -24,12 +24,11 @@
     }
   }
 
-  h2 {
-    color: var(--mainHeadingColor);
-    margin-bottom: var(--gap);
+  * {
+    font-family: var(--jetBrainsMonoFont), monospace;
   }
 
- * {
-    font-family: var(--jetBrainsMonoFont), monospace;
+  h2 {
+    color: var(--mainHeadingColor);
   }
 }

@@ -4,7 +4,30 @@
     margin-bottom: var(--gap);
   }
 
-  code {
-    font-family: var(--jetBrainsMonoFont), monospace;
+  .markdown {
+    line-height: 1.25rem;
+
+    code * {
+      font-family: var(--jetBrainsMonoFont);
+    }
+
+    p {
+      margin-bottom: calc(var(--gap) / 2);
+    }
+
+    pre code {
+      width: auto;
+      margin-bottom: var(--gap);
+      overflow-x: auto;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    li {
+      margin-top: var(--gap);
+      margin-bottom: var(--gap);
+    }
   }
 }
