@@ -98,10 +98,14 @@ code[data-theme*='#{$codeLightTheme}'] {
 [data-theme='light'] code[data-theme*='#{$codeLightTheme}'] span {
   background-color: var(--shiki-light-bg);
   color: var(--shiki-light);
+  font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
 }
 
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'],
 [data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'] span {
   background-color: var(--shiki-dark-bg);
   color: var(--shiki-dark);
+  font-style: var(--shiki-dark-font-style);
+  font-weight: var(--shiki-dark-font-weight);
 }

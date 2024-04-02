@@ -7,18 +7,8 @@
   .markdown {
     line-height: 1.25rem;
 
-    code * {
-      font-family: var(--jetBrainsMonoFont);
-    }
-
     p {
       margin-bottom: calc(var(--gap) / 2);
-    }
-
-    pre code {
-      width: auto;
-      margin-bottom: var(--gap);
-      overflow-x: auto;
     }
 
     img {
@@ -26,8 +16,48 @@
     }
 
     li {
-      margin-top: var(--gap);
-      margin-bottom: var(--gap);
+      margin-top: calc(var(--gap) / 2);
+      margin-bottom: calc(var(--gap) / 2);
+    }
+
+    pre {
+      overflow-x: auto;
+      padding: 1rem 0;
+
+      [data-line] {
+        padding: 0 1rem;
+      }
+
+      code {
+        width: auto;
+        margin-bottom: var(--gap);
+        overflow-x: auto;
+      }
+    }
+
+    code {
+      counter-reset: line;
+
+      * {
+        font-family: var(--dankMonoFont);
+      }
+
+      > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+        width: 1rem;
+        margin-right: var(--gap);
+        display: inline-block;
+        color: var(--grayColor);
+      }
+
+      code[data-line-numbers-max-digits='2'] > [data-line]::before {
+        width: 2rem;
+      }
+
+      code[data-line-numbers-max-digits='3'] > [data-line]::before {
+        width: 2rem;
+      }
     }
   }
 }

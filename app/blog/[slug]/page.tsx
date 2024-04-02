@@ -4,17 +4,18 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { readFile } from 'fs/promises'
 import matter from 'gray-matter'
 import remarkGfm from 'remark-gfm'
-import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import rehypePrettyCode from 'rehype-pretty-code'
+import rehypeSlug from 'rehype-slug'
 
 import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
 
-import { FaKeyboard } from 'react-icons/fa6'
-import { LuFileTerminal } from 'react-icons/lu'
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json'
 import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json'
+
+import { FaKeyboard } from 'react-icons/fa6'
+import { LuFileTerminal } from 'react-icons/lu'
 import styles from './Page.module.scss'
 
 interface PostProps {
@@ -38,8 +39,6 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
     return notFound()
   }
 
-  const postComponents = {}
-
   const { content, data } = await getMarkDownFileData(params.slug)
 
   const breadcrumbs: Breadcrumb[] = [
@@ -53,9 +52,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
 
       <div className={styles.markdown}>
         <MDXRemote
-          className={styles.markdown}
           source={content}
-          components={{ ...postComponents }}
           options={{
             mdxOptions: {
               useDynamicImport: true,
