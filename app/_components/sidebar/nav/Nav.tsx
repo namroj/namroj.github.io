@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
 
 import { useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
@@ -19,7 +19,9 @@ export default function Nav() {
   const setActivePathClass = (path: string) => (currentPath.startsWith(path) ? styles.active : '')
 
   const handleLinkClick = () => {
-    if (isMobile) toggleExpandCollapseState()
+    if (isMobile) {
+      toggleExpandCollapseState()
+    }
   }
 
   const items: NavItem[] = [

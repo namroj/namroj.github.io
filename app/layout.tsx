@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 import { Metadata } from 'next'
+import { ViewTransitions } from 'next-view-transitions'
 
 import { ThemeContextProvider } from '@/app/_context-providers/theme/ThemeProvider'
 import { ExpandCollapseContextProvider } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
@@ -20,18 +21,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang='es'>
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <body className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}>
-        <ThemeContextProvider>
-          <ExpandCollapseContextProvider>
-            <Header />
-            <Sidebar />
-            <Main>{children}</Main>
-            <Footer />
-          </ExpandCollapseContextProvider>
-        </ThemeContextProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang='es'>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <body className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}>
+          <ThemeContextProvider>
+            <ExpandCollapseContextProvider>
+              <Header />
+              <Sidebar />
+              <Main>{children}</Main>
+              <Footer />
+            </ExpandCollapseContextProvider>
+          </ThemeContextProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }
