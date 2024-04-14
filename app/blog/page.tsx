@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from 'next-view-transitions'
 
 import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
 
