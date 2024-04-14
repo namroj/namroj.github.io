@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
-
 import { readFile } from 'fs/promises'
 import matter from 'gray-matter'
 import remarkGfm from 'remark-gfm'
@@ -35,7 +34,7 @@ const getMarkDownFileData = async (slug: string) => {
 }
 
 export default async function PostPage({ params }: Readonly<PostProps>) {
-  if (params?.slug === undefined) {
+  if (!params?.slug) {
     return notFound()
   }
 
