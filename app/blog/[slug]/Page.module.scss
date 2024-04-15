@@ -30,7 +30,7 @@
 
       code {
         width: auto;
-        margin-bottom: var(--gap);
+        margin-bottom: calc(var(--gap) / 2);
         overflow-x: auto;
       }
     }
