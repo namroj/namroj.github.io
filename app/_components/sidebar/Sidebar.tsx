@@ -71,8 +71,8 @@ export default function Sidebar() {
 
       const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement
       const newWidth = e.pageX - sidebar.offsetLeft
-      const minWidth = 225
-      const maxWidth = Math.max(window.innerWidth * 0.50, 500)
+      const minWidth = 230
+      const maxWidth = Math.max(window.innerWidth * 0.5, 500)
       const updatedWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
 
       document.documentElement.style.setProperty('--sidebarWidth', `${updatedWidth}px`)

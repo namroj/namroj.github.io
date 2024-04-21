@@ -1,0 +1,208 @@
+.timeline {
+  width: 100%;
+  min-width: 400px;
+  margin: 0 auto;
+
+  hr {
+    margin: var(--gap) 0;
+    border-color: var(--blueColor);
+  }
+
+  .highlight {
+    background-color: var(--purpleColor);
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+
+    article {
+      position: relative;
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      margin: var(--gap) 0;
+      transition: all 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      }
+
+      h3 {
+        max-width: 80%;
+        margin: 0 0 10px;
+        color: var(--textColor);
+        font-size: 0.9rem;
+        text-wrap: balance;
+      }
+
+      h4 {
+        max-width: 85%;
+        font-size: 0.8rem;
+        text-wrap: balance;
+
+        a {
+          color: var(--blueColor);
+          transition: all 0.25s ease-in-out;
+
+          &:hover {
+            color: var(--purpleColor);
+          }
+        }
+      }
+
+      p {
+        font-size: 0.8rem;
+        color: var(--grayColor);
+        text-wrap: balance;
+        max-width: 85%;
+      }
+
+      .date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+        color: var(--blueColor);
+      }
+
+      .tags {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+
+        ul {
+          max-width: 85%;
+          display: flex;
+          gap: 5px;
+          flex-wrap: wrap;
+        }
+
+        code {
+          padding: 2px 3px;
+          border-radius: 3px;
+          background-color: var(--blueColor);
+          color: var(--textColor);
+          font-size: 0.7rem;
+
+          &.active {
+            background-color: var(--purpleColor);
+          }
+
+          &.certificate {
+            border-radius: none;
+            background-color: transparent;
+            color: var(--orangeColor);
+            font-size: 0.7rem;
+            display: inline-flex;
+            align-items: flex-end;
+
+            a {
+              display: flex;
+              gap: 2px;
+              font-family: var(--dankMonoFont);
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tag-filter {
+    .title {
+      font-size: 0.8rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 5px;
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px 3px;
+        border: none;
+        border-radius: 3px;
+        background-color: var(--grayColor);
+        font-size: 0.7rem;
+        transition: all 0.25s ease;
+
+        &.active {
+          background-color: var(--purpleColor);
+        }
+
+        &:hover {
+          background-color: var(--blueColor);
+        }
+      }
+    }
+
+    button.clear {
+      margin-top: 5px;
+      background-color: transparent;
+      border: none;
+      font-size: 0.7rem;
+      font-family: var(--dankMonoFont);
+      font-style: italic;
+      color: var(--textColor);
+      visibility: hidden;
+
+      &:hover {
+        color: var(--redColor);
+      }
+
+      &.visible {
+        visibility: visible;
+      }
+    }
+  }
+
+  .text-search {
+    .title {
+      margin-top: 5px;
+      font-size: 0.8rem;
+    }
+
+    input {
+      margin-left: 5px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid var(--grayColor);
+      border-color: var(--grayColor);
+      color: var(--textColor);
+      font-size: 0.7rem;
+      font-style: italic;
+      font-family: var(--dankMonoFont);
+
+      &:focus {
+        outline: none;
+        border-color: var(--blueColor);
+      }
+    }
+
+    button {
+      margin-left: 5px;
+      visibility: hidden;
+      background-color: transparent;
+      border: none;
+      color: var(--textColor);
+      font-size: 0.7rem;
+      font-family: var(--dankMonoFont);
+      font-style: italic;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--redColor);
+      }
+
+      &.visible {
+        visibility: visible;
+      }
+    }
+  }
+}

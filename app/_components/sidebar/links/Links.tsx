@@ -15,7 +15,7 @@ interface NetworkLink {
 
 const links: NetworkLink[] = [
   {
-    href: 'https://github.com/jormanespinoza',
+    href: 'https://github.com/namroj',
     title: 'GitHub',
     icon: <IoLogoGithub />
   },
@@ -25,22 +25,22 @@ const links: NetworkLink[] = [
     icon: <FaLinkedinIn />
   },
   {
-    href: 'https://twitter.com/_jormanespinoza',
+    href: 'https://twitter.com/jormandev',
     title: 'Twitter',
     icon: <FaXTwitter />
   },
   {
-    href: 'https://instagram.com/_jormanespinoza',
+    href: 'https://instagram.com/jorman.dev',
     title: 'Instagram',
     icon: <FaInstagram />
   },
   {
-    href: 'https://www.threads.net/@_jormanespinoza',
+    href: 'https://www.threads.net/@jorman.dev',
     title: 'Threads',
     icon: <FaThreads />
   },
   {
-    href: 'https://bsky.app/profile/jormanespinoza.bsky.social',
+    href: 'https://bsky.app/profile/jormandev.bsky.social',
     title: 'Bsky',
     icon: <PiButterfly />
   }

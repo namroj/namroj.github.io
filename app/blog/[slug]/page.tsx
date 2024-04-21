@@ -15,7 +15,7 @@ import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json'
 
 import { FaKeyboard } from 'react-icons/fa6'
 import { LuFileTerminal } from 'react-icons/lu'
-import styles from './Page.module.scss'
+import styles from './page.module.scss'
 
 interface PostProps {
   params: {
