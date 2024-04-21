@@ -76,10 +76,12 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
   const textSearch = (
     <div className={styles['text-search']}>
       <span className={styles.title}>Filtrar por palabra clave:</span>
-      <input type='text' value={searchTerm} onChange={handleSearchChange} placeholder='Escribe para buscar...' />
-      <button className={searchTerm ? styles.visible : ''} onClick={handleClearSearch}>
-        <FaDeleteLeft /> <span>Borrar</span>
-      </button>
+      <div className={styles.search}>
+        <input type='text' value={searchTerm} onChange={handleSearchChange} placeholder='Escribe para buscar...' />
+        <button className={`${styles.clear} ${searchTerm && styles.visible}`} onClick={handleClearSearch}>
+          <FaDeleteLeft /> <span>Borrar</span>
+        </button>
+      </div>
     </div>
   )
 
@@ -94,6 +96,7 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
   const formationList = filteredFormation.map((item: FormationItem, index: number) => (
     <li key={index}>
       <article>
+        <p className={styles.date}>{highlightText(item.interval)}</p>
         <h3>{highlightText(item.title)}</h3>
         <h4>
           {item.entity.url ? (
@@ -104,11 +107,9 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
           ) : (
             highlightText(item.entity.name)
           )}
-          . {highlightText(item.location)}
+          . {highlightText(item.location)}.
         </h4>
-        <p className={styles.date}>{highlightText(item.interval)}</p>
-        <p>{highlightText(item.description)}</p>
-
+        <p className={styles.description}>{highlightText(item.description)}</p>
         <div className={styles.tags}>
           <ul>
             {item.tags.map((tag, index) => (

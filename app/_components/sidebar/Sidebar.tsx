@@ -26,7 +26,8 @@ export default function Sidebar() {
       setTimeout(() => {
         if (window.innerWidth < 768) {
           if (expandCollapseState === ExpandCollapseState.EXPANDED) {
-            document.documentElement.style.setProperty('--sidebarWidth', '50vw')
+            const sidebarWidth = window.innerWidth < 366 ? '100vw' : '56vw'
+            document.documentElement.style.setProperty('--sidebarWidth', sidebarWidth)
             setWidth(window.innerWidth.toString())
           }
 
@@ -80,12 +81,16 @@ export default function Sidebar() {
       sidebar.style.transition = 'none'
     }
 
-    document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('mouseup', handleMouseUp)
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('touchmove', handleMouseMove as EventListener);
+    document.addEventListener('touchend', handleMouseUp as EventListener);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseup', handleMouseUp)
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleMouseMove as EventListener);
+      document.removeEventListener('touchend', handleMouseUp as EventListener);
     }
   }, [isResizing])
 

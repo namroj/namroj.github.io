@@ -1,9 +1,7 @@
 // -- main -----
 .main {
   position: relative;
-  width: calc(100vw - var(--sidebarWidth));
   min-height: 100svh;
-  margin-left: var(--sidebarWidth);
   padding: calc(var(--headerHeight) + var(--gap)) var(--gap) calc(var(--gap) * 2);
   background-color: var(--mainBgColor);
   color: var(--textColor);
@@ -15,7 +13,7 @@
   }
 
   &.collapsed {
-    width: 100vw;
+    width: calc(100vw - var(--sidebarWidth));
     margin-left: var(--sidebarWidth);
 
     @media (width > 768px) {
@@ -30,6 +28,5 @@
 
   h2 {
     color: var(--mainHeadingColor);
-    margin-bottom: var(--gap);
   }
 }

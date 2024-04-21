@@ -1,7 +1,13 @@
+// -- formation timeline -----
 .timeline {
   width: 100%;
-  min-width: 400px;
-  margin: 0 auto;
+  min-width: 225px;
+  overflow-x: auto;
+
+  @media (width > 768px) {
+    max-width: 758px;
+    margin: 0 auto;
+  }
 
   hr {
     margin: var(--gap) 0;
@@ -18,11 +24,10 @@
 
     article {
       position: relative;
-      width: 100%;
       padding: 10px;
       border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      margin: var(--gap) 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+      margin: var(--gap) 5px;
       transition: all 0.25s ease;
 
       &:hover {
@@ -30,7 +35,6 @@
       }
 
       h3 {
-        max-width: 80%;
         margin: 0 0 10px;
         color: var(--textColor);
         font-size: 0.9rem;
@@ -38,9 +42,12 @@
       }
 
       h4 {
-        max-width: 85%;
         font-size: 0.8rem;
         text-wrap: balance;
+
+        @media (width > 768px) {
+          max-width: 85%;
+        }
 
         a {
           color: var(--blueColor);
@@ -56,15 +63,28 @@
         font-size: 0.8rem;
         color: var(--grayColor);
         text-wrap: balance;
-        max-width: 85%;
+
+        @media (width > 768px) {
+          max-width: 85%;
+        }
+
+        &.description {
+          margin-top: 5px;
+        }
       }
 
       .date {
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        position: relative;
         font-size: 0.8rem;
         color: var(--blueColor);
+        margin-bottom: 5px;
+
+        @media (width > 768px) {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          margin-bottom: 0;
+        }
       }
 
       .tags {
@@ -73,10 +93,13 @@
         margin-top: 5px;
 
         ul {
-          max-width: 85%;
           display: flex;
           gap: 5px;
           flex-wrap: wrap;
+
+          @media (width > 768px) {
+            max-width: 85%;
+          }
         }
 
         code {
@@ -91,12 +114,17 @@
           }
 
           &.certificate {
+            padding: 0;
             border-radius: none;
             background-color: transparent;
             color: var(--orangeColor);
             font-size: 0.7rem;
             display: inline-flex;
             align-items: flex-end;
+
+            @media (width > 768px) {
+              flex-direction: column;
+            }
 
             a {
               display: flex;
@@ -130,6 +158,7 @@
         border-radius: 3px;
         background-color: var(--grayColor);
         font-size: 0.7rem;
+        cursor: pointer;
         transition: all 0.25s ease;
 
         &.active {
@@ -150,6 +179,7 @@
       font-family: var(--dankMonoFont);
       font-style: italic;
       color: var(--textColor);
+      cursor: pointer;
       visibility: hidden;
 
       &:hover {
@@ -168,40 +198,57 @@
       font-size: 0.8rem;
     }
 
-    input {
-      margin-left: 5px;
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid var(--grayColor);
-      border-color: var(--grayColor);
-      color: var(--textColor);
-      font-size: 0.7rem;
-      font-style: italic;
-      font-family: var(--dankMonoFont);
+    .search {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
 
-      &:focus {
-        outline: none;
-        border-color: var(--blueColor);
-      }
-    }
-
-    button {
-      margin-left: 5px;
-      visibility: hidden;
-      background-color: transparent;
-      border: none;
-      color: var(--textColor);
-      font-size: 0.7rem;
-      font-family: var(--dankMonoFont);
-      font-style: italic;
-      transition: all 0.25s ease-in-out;
-
-      &:hover {
-        color: var(--redColor);
+      @media (width > 768px) {
+        display: inline-flex;
       }
 
-      &.visible {
-        visibility: visible;
+      input {
+        margin-top: 5px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--grayColor);
+        border-color: var(--grayColor);
+        color: var(--textColor);
+        font-size: 0.7rem;
+        font-style: italic;
+        font-family: var(--dankMonoFont);
+
+        @media (width > 768px) {
+          margin-top: 0;
+          margin-left: 5px;
+          display: inline;
+        }
+
+        &:focus {
+          outline: none;
+          border-color: var(--blueColor);
+        }
+      }
+
+      button.clear {
+        margin-left: 5px;
+        visibility: hidden;
+        background-color: transparent;
+        border: none;
+        color: var(--textColor);
+        font-size: 0.7rem;
+        font-family: var(--dankMonoFont);
+        font-style: italic;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          color: var(--redColor);
+        }
+
+        &.visible {
+          visibility: visible;
+        }
       }
     }
   }
