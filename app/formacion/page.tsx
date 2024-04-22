@@ -32,16 +32,16 @@ export default async function FormationPage() {
 
       <div className={styles.intro}>
         <p>
-          Registro de mi formación académica y profesional. Por supuesto, existen otras fuentes de las cuales he adquirido conocimientos, tales como:
+          Registro de mi formación académica y profesional.<br />
+          Por supuesto, existen otras fuentes de las cuales he adquirido conocimientos, tales como:
         </p>
 
         <ul>
           <li>YouTube</li>
           <li>Libros</li>
           <li>Blogs</li>
-          <li>Documentación oficial</li>
-          <li>Documentación de terceros</li>
-          <li>Proyectos laborales</li>
+          <li>Documentación oficial/de terceros</li>
+          <li>Proyectos laborales/personales</li>
         </ul>
       </div>
 

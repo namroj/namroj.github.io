@@ -375,7 +375,7 @@
     "location": "Caracas, Venezuela",
     "description": "Técnico Superior en Desarrollo de Aplicaciones Informáticas.",
     "tags": [
-      "Universitario",
+      "Universitaria",
       "Informática"
     ]
   },
@@ -384,12 +384,12 @@
     "interval": "2007 - 2009",
     "entity": {
       "name": "Universidad Central de Venezuela",
-      "url": "https://ucv.ve"
+      "url": "http://www.ucv.ve"
     },
     "location": "Caracas, Venezuela",
     "description": "Estudiante de la carrera de Licenciatura en Computación.",
     "tags": [
-      "Universitario",
+      "Universitaria",
       "Computación"
     ]
   }

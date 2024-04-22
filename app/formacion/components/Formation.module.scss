@@ -146,14 +146,14 @@
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      gap: 10px;
       margin-top: 5px;
 
       button {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1px 3px;
+        padding: 3px;
         border: none;
         border-radius: 3px;
         background-color: var(--grayColor);
@@ -172,7 +172,7 @@
     }
 
     button.clear {
-      margin-top: 5px;
+      margin: 15px 0;
       background-color: transparent;
       border: none;
       font-size: 0.7rem;
