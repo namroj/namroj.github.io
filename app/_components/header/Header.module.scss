@@ -48,7 +48,12 @@
 
       code {
         color: var(--headerUsernameTextColor);
+        font-size: 0.8rem;
         transition: color 0.25s steps ease-in-out;
+
+        @media (width > 768px) {
+          font-size: 0.9rem;
+        }
 
         &:hover {
           color: var(--headerUsernameHoverTextColor);

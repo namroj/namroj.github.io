@@ -252,4 +252,21 @@
       }
     }
   }
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grayColor);
+    font-size: 0.8rem;
+    text-wrap: balance;
+
+    span {
+     text-align: center;
+    }
+
+    .icon {
+      font-size: 4rem;
+    }
+  }
 }

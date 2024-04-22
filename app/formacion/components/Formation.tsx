@@ -6,6 +6,7 @@ import Highlighter from 'react-highlight-words'
 import { RiArrowGoBackFill } from 'react-icons/ri'
 import { FaDeleteLeft } from 'react-icons/fa6'
 import { TbExternalLink } from 'react-icons/tb'
+import { LuPackageSearch } from 'react-icons/lu'
 
 import styles from './Formation.module.scss'
 
@@ -86,49 +87,63 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
   )
 
   const filteredFormation = formation.filter((item) => {
-    const itemString = normalizeAndCleanString(JSON.stringify(item).toLowerCase())
+    const { certificate, entity, tags, ...rest } = item
+    const itemValues = Object.values(rest).filter((value) => typeof value !== 'object')
+    const tagsString = tags.join(' ')
+    const itemString = normalizeAndCleanString([...itemValues, tagsString].join('').toLowerCase())
+
     const isTagSelected = selectedTags.length === 0 || selectedTags.some((tag) => item.tags.includes(tag))
     const isSearchTermPresent = searchTerm === '' || itemString.includes(normalizeAndCleanString(searchTerm))
 
     return isTagSelected && isSearchTermPresent
   })
 
-  const formationList = filteredFormation.map((item: FormationItem, index: number) => (
-    <li key={index}>
-      <article>
-        <p className={styles.date}>{highlightText(item.interval)}</p>
-        <h3>{highlightText(item.title)}</h3>
-        <h4>
-          {item.entity.url ? (
-            <a href={item.entity.url} target='_blank'>
-              {' '}
-              {highlightText(item.entity.name)}
-            </a>
-          ) : (
-            highlightText(item.entity.name)
-          )}
-          . {highlightText(item.location)}.
-        </h4>
-        <p className={styles.description}>{highlightText(item.description)}</p>
-        <div className={styles.tags}>
-          <ul>
-            {item.tags.map((tag, index) => (
-              <li key={index}>
-                <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
-              </li>
-            ))}
-          </ul>
-          {item.certificate && (
-            <code className={styles.certificate}>
-              <a href={item.certificate} target='_blank'>
-                <TbExternalLink /> Certificado
-              </a>
-            </code>
-          )}
-        </div>
-      </article>
-    </li>
-  ))
+  const formationList =
+    filteredFormation.length === 0 ? (
+      <div className={styles.empty}>
+        <span className={styles.icon}>
+          <LuPackageSearch />
+        </span>
+        <span>No se encontraron resultados. Prueba con otra palabra clave.</span>
+      </div>
+    ) : (
+      filteredFormation.map((item: FormationItem, index: number) => (
+        <li key={index}>
+          <article>
+            <p className={styles.date}>{highlightText(item.interval)}</p>
+            <h3>{highlightText(item.title)}</h3>
+            <h4>
+              {item.entity.url ? (
+                <a href={item.entity.url} target='_blank'>
+                  {' '}
+                  {highlightText(item.entity.name)}
+                </a>
+              ) : (
+                highlightText(item.entity.name)
+              )}
+              . {highlightText(item.location)}.
+            </h4>
+            <p className={styles.description}>{highlightText(item.description)}</p>
+            <div className={styles.tags}>
+              <ul>
+                {item.tags.map((tag, index) => (
+                  <li key={index}>
+                    <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
+                  </li>
+                ))}
+              </ul>
+              {item.certificate && (
+                <code className={styles.certificate}>
+                  <a href={item.certificate} target='_blank'>
+                    <TbExternalLink /> Certificado
+                  </a>
+                </code>
+              )}
+            </div>
+          </article>
+        </li>
+      ))
+    )
 
   return (
     <ul className={styles.timeline}>
