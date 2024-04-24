@@ -139,7 +139,9 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
               <ul>
                 {item.tags.map((tag, index) => (
                   <li key={index}>
-                    <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
+                    <button onClick={() => handleTagClick(tag)}>
+                      <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
+                    </button>
                   </li>
                 ))}
               </ul>

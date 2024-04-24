@@ -118,12 +118,24 @@
             }
           }
 
+          button {
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+          }
+
           code {
             padding: 2px 3px;
             border-radius: 3px;
             background-color: var(--blueColor);
-            color: var(--textColor);
+            color: var(--darkColor);
             font-size: 0.7rem;
+
+            &:hover {
+              background-color: var(--orangeColor);
+            }
 
             &.active {
               background-color: var(--purpleColor);
