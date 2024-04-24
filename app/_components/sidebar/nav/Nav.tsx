@@ -1,6 +1,6 @@
 import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
-import { useExpandCollapseContext } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
 import useMedia from 'use-media'
 import styles from './Nav.module.scss'
 import { useEffect, useState } from 'react'

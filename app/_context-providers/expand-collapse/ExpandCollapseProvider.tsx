@@ -10,6 +10,9 @@ export enum ExpandCollapseState {
 type ExpandCollapseContextType = {
   expandCollapseState: ExpandCollapseState
   toggleExpandCollapseState: () => void
+  sidebarWidth: number
+  setSidebarWidth: (width: number) => void
+  mainWidth: number
 }
 
 export interface ExpandCollapseProviderProps {
@@ -50,6 +53,8 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
   const [expandCollapseState, setExpandCollapseState] = useState<ExpandCollapseState>(
     getExpandCollapseStateFromLocalStorage
   )
+  const [sidebarWidth, setSidebarWidth] = useState<number>(0)
+  const [mainWidth, setMainWidth] = useState<number>(0)
 
   useEffect(() => {
     setMounted(true)
@@ -57,7 +62,14 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
 
   useEffect(() => {
     localStorage.setItem(EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY, expandCollapseState)
+    expandCollapseState === ExpandCollapseState.COLLAPSED
+      ? setMainWidth(window.innerWidth)
+      : setMainWidth(window.innerWidth - sidebarWidth)
   }, [expandCollapseState])
+
+  useEffect(() => {
+    setMainWidth(window.innerWidth - sidebarWidth)
+  }, [sidebarWidth])
 
   const toggleExpandCollapseState = useCallback(() => {
     setExpandCollapseState((prevState) =>
@@ -68,9 +80,12 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
   const contextValue = useMemo(
     () => ({
       expandCollapseState,
-      toggleExpandCollapseState
+      toggleExpandCollapseState,
+      sidebarWidth,
+      setSidebarWidth,
+      mainWidth
     }),
-    [expandCollapseState, toggleExpandCollapseState]
+    [expandCollapseState, toggleExpandCollapseState, sidebarWidth, setSidebarWidth, mainWidth]
   )
 
   return (

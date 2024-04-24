@@ -6,7 +6,7 @@ import Image from 'next/image'
 import {
   ExpandCollapseState,
   useExpandCollapseContext
-} from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+} from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import nextJsLogo from '@/assets/icons/next.svg'
 import styles from './Footer.module.scss'

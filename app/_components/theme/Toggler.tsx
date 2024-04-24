@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-import { Theme, useThemeContext } from '@/app/_context-providers/theme/ThemeProvider'
+import { Theme, useThemeContext } from '@/providers/theme/ThemeProvider'
 
 import { TOGGLE_FRAMER_CONFIG, TOGGLE_SVG_FRAMER_CONFIG, TOGGLE_SVG_PROPS } from './config'
 

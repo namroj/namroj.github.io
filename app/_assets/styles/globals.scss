@@ -22,14 +22,21 @@
   // dimensions
   --headerHeight: 60px;
   --sidebarWidth: 50vw;
+  --mainWidth: calc(100vw - var(--sidebarWidth));
   --gap: 20px;
   --expandCollapseTransition: width 0.5s ease-in-out, margin-left 0.5s ease-in-out;
   --dankMonoFont: 'Dank Mono';
+  // breakpoints
+  --sm: 576px;
+  --md: 768px;
+  --lg: 992px;
+  --xl: 1200px;
 
-  @media (width > 768px) {
+  @media (width > var(--md)) {
     --gap: 25px;
     --headerHeight: 70px;
     --sidebarWidth: calc(330px + var(--gap));
+    --mainWidth: calc(100vw - var(--sidebarWidth));
   }
 }
 

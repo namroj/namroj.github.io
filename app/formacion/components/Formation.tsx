@@ -8,6 +8,8 @@ import { FaDeleteLeft } from 'react-icons/fa6'
 import { TbExternalLink } from 'react-icons/tb'
 import { LuPackageSearch } from 'react-icons/lu'
 
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+
 import styles from './Formation.module.scss'
 
 export type FormationItem = {
@@ -21,6 +23,8 @@ export type FormationItem = {
 }
 
 export default function FormationList({ formation }: Readonly<{ formation: FormationItem[] }>) {
+  const { mainWidth } = useExpandCollapseContext()
+
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [searchTerm, setSearchTerm] = useState('')
 
@@ -86,6 +90,13 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
     </div>
   )
 
+  const filters = (
+    <div className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+      {tagFilter}
+      {textSearch}
+    </div>
+  )
+
   const filteredFormation = formation.filter((item) => {
     const { certificate, entity, tags, ...rest } = item
     const itemValues = Object.values(rest).filter((value) => typeof value !== 'object')
@@ -146,14 +157,12 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
     )
 
   return (
-    <ul className={styles.timeline}>
-      {tagFilter}
-
-      {textSearch}
-
-      <hr />
-
-      {formationList}
-    </ul>
+    <div className={`${styles.formation} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+      {filters}
+      <div className={`${styles.timeline} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+        <hr />
+        <ul>{formationList}</ul>
+      </div>
+    </div>
   )
 }

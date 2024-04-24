@@ -3,8 +3,8 @@ import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import { ViewTransitions } from 'next-view-transitions'
 
-import { ThemeContextProvider } from '@/app/_context-providers/theme/ThemeProvider'
-import { ExpandCollapseContextProvider } from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+import { ThemeContextProvider } from '@/providers/theme/ThemeProvider'
+import { ExpandCollapseContextProvider } from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import Header from '@/components/header/Header'
 import Sidebar from '@/components/sidebar/Sidebar'

@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 import {
   ExpandCollapseState,
   useExpandCollapseContext
-} from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+} from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import styles from './Main.module.scss'
 

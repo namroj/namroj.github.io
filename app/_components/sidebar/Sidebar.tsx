@@ -2,10 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import {
-  ExpandCollapseState,
-  useExpandCollapseContext
-} from '@/app/_context-providers/expand-collapse/ExpandCollapseProvider'
+import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import Nav from './nav/Nav'
 import Toggler from './toggler/Toggler'
@@ -13,22 +10,24 @@ import Links from './links/Links'
 
 import styles from './Sidebar.module.scss'
 
+const SIDEBAR_WIDTH_KEY = 'sidebar_width'
+
 export default function Sidebar() {
-  const { expandCollapseState } = useExpandCollapseContext()
+  const { expandCollapseState, setSidebarWidth } = useExpandCollapseContext()
 
   const [isResizing, setIsResizing] = useState(false)
   const [width, setWidth] = useState<string>('')
 
-  const SIDEBAR_WIDTH_KEY = 'sidebar_width'
-
   useEffect(() => {
     const handleResize = () => {
       setTimeout(() => {
-        if (window.innerWidth < 768) {
+        const windowWidth = window.innerWidth
+        if (windowWidth < 768) {
           if (expandCollapseState === ExpandCollapseState.EXPANDED) {
-            const sidebarWidth = window.innerWidth < 366 ? '100vw' : '56vw'
+            const sidebarWidth = windowWidth < 366 ? '100vw' : '56vw'
             document.documentElement.style.setProperty('--sidebarWidth', sidebarWidth)
-            setWidth(window.innerWidth.toString())
+            setWidth(windowWidth.toString())
+            setSidebarWidth(windowWidth < 366 ? windowWidth : windowWidth * 0.56)
           }
 
           return
@@ -39,7 +38,9 @@ export default function Sidebar() {
           return
         }
 
-        document.documentElement.style.setProperty('--sidebarWidth', `${storedSidebarWidth}px`)
+        const sidebarWidth = parseInt(storedSidebarWidth, 10)
+        setSidebarWidth(sidebarWidth)
+        document.documentElement.style.setProperty('--sidebarWidth', `${sidebarWidth}px`)
       }, 250)
     }
 
@@ -74,23 +75,20 @@ export default function Sidebar() {
       const newWidth = e.pageX - sidebar.offsetLeft
       const minWidth = 230
       const maxWidth = Math.max(window.innerWidth * 0.5, 500)
-      const updatedWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
+      const resizedSidebarWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
 
-      document.documentElement.style.setProperty('--sidebarWidth', `${updatedWidth}px`)
-      setWidth(updatedWidth.toString())
+      document.documentElement.style.setProperty('--sidebarWidth', `${resizedSidebarWidth}px`)
+      setWidth(resizedSidebarWidth.toString())
+      setSidebarWidth(resizedSidebarWidth)
       sidebar.style.transition = 'none'
     }
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('touchmove', handleMouseMove as EventListener);
-    document.addEventListener('touchend', handleMouseUp as EventListener);
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleMouseMove as EventListener);
-      document.removeEventListener('touchend', handleMouseUp as EventListener);
+      document.removeEventListener('mousemove', handleMouseMove)
+      document.removeEventListener('mouseup', handleMouseUp)
     }
   }, [isResizing])
 
