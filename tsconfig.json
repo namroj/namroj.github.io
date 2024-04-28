@@ -36,6 +36,9 @@
       ],
       "@/fonts/*": [
         "./app/_assets/fonts/*"
+      ],
+      "@/utils/*": [
+        "./app/_utils/*"
       ]
     }
   },

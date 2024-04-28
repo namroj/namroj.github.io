@@ -30,4 +30,9 @@
     color: var(--mainHeadingColor);
     margin-bottom: var(--gap);
   }
+
+  p, ul {
+    margin-bottom: var(--gap);
+  }
+  
 }

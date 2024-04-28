@@ -16,6 +16,10 @@ export default function ProfessionalExperiencePage() {
       <Breadcrumbs items={breadcrumbs} />
 
       <h2>Experiencia</h2>
+
+      <div>
+        <p>Registro de mi experiencia laboral.</p>
+      </div>
     </>
   )
 }

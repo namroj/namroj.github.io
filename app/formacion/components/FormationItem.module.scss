@@ -1,0 +1,136 @@
+// -- formation item -----
+.item {
+  list-style: none !important;
+  margin: var(--gap) 0;
+
+  article {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s ease;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--textColor);
+      font-size: 0.9rem;
+      text-wrap: balance;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+      text-wrap: balance;
+
+      @media (width > 768px) {
+        max-width: 85%;
+      }
+
+      a {
+        color: var(--blueColor);
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          color: var(--purpleColor);
+        }
+      }
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: var(--grayColor);
+      text-wrap: balance;
+
+      @media (width > 768px) {
+        max-width: 85%;
+      }
+
+      &.description {
+        margin-top: 5px;
+      }
+    }
+
+    .date {
+      position: relative;
+      font-size: 0.8rem;
+      color: var(--blueColor);
+      margin-bottom: 5px;
+
+      @media (width > 768px) {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        margin-bottom: 0;
+      }
+    }
+
+    .tags {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+
+      ul {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+
+        @media (width > 768px) {
+          max-width: 85%;
+        }
+
+        li {
+          list-style: none;
+          margin: 0;
+        }
+      }
+
+      button {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      code {
+        padding: 2px 3px;
+        border-radius: 3px;
+        background-color: var(--blueColor);
+        color: var(--darkColor);
+        font-size: 0.7rem;
+
+        &:hover {
+          background-color: var(--orangeColor);
+        }
+
+        &.active {
+          background-color: var(--purpleColor);
+        }
+
+        &.certificate {
+          padding: 0;
+          border-radius: none;
+          background-color: transparent;
+          color: var(--orangeColor);
+          font-size: 0.7rem;
+          display: inline-flex;
+          align-items: flex-end;
+
+          @media (width > 768px) {
+            flex-direction: column;
+          }
+
+          a {
+            display: flex;
+            gap: 2px;
+            font-family: var(--dankMonoFont);
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}

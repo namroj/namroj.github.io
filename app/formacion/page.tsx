@@ -7,8 +7,6 @@ import Formation, { FormationItem } from './components/Formation'
 
 import { ImBooks } from 'react-icons/im'
 
-import styles from './page.module.scss'
-
 export const metadata: Metadata = {
   title: 'Formación | Jorman Espinoza'
 }
@@ -30,9 +28,10 @@ export default async function FormationPage() {
 
       <h2>Formación</h2>
 
-      <div className={styles.intro}>
+      <div>
         <p>
-          Registro de mi formación académica y profesional.<br />
+          Registro de mi formación académica y profesional.
+          <br />
           Por supuesto, existen otras fuentes de las cuales he adquirido conocimientos, tales como:
         </p>
 
