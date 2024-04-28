@@ -51,9 +51,11 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)
-    document.body.setAttribute('data-theme', theme)
-  }, [theme])
+    localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme);
+    document.body.setAttribute('data-theme', theme);
+    document.body.setAttribute('data-darkreader-mode', theme === Theme.DARK ? 'dark' : 'light');
+    document.body.setAttribute('data-darkreader-scheme', theme === Theme.DARK ? 'dark' : 'light');
+  }, [theme]);
 
   const toggleTheme = useCallback(() => {
     setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT))

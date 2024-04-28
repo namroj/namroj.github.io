@@ -14,7 +14,7 @@ import { LuPackageSearch } from 'react-icons/lu'
 
 import styles from './Formation.module.scss'
 
-export default function FormationList({ formation }: Readonly<{ formation: FormationItemType[] }>) {
+export default function Formation({ formationData }: Readonly<{ formationData: FormationItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext()
 
   const [selectedTags, setSelectedTags] = useState<string[]>([])
@@ -44,7 +44,7 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
     <div className={styles['tag-filter']}>
       <span className={styles.title}>Filtrar por etiquetas</span>
       <div className={styles.tags}>
-        {Array.from(new Set(formation.flatMap((item) => item.tags)))
+        {Array.from(new Set(formationData.flatMap((item) => item.tags)))
           .sort((a, b) => normalizeAndCleanString(a).localeCompare(normalizeAndCleanString(b)))
           .map((tag, index) => (
             <button
@@ -81,7 +81,7 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
     </div>
   )
 
-  const filteredFormation = formation.filter((item) => {
+  const filteredFormation = formationData.filter((item) => {
     const { certificate, entity, tags, ...rest } = item
     const itemValues = Object.values(rest).filter((value) => typeof value !== 'object')
     const tagsString = tags.join(' ')
@@ -102,7 +102,7 @@ export default function FormationList({ formation }: Readonly<{ formation: Forma
         <span>No se encontraron resultados. Prueba con otra palabra clave.</span>
       </div>
     ) : (
-      filteredFormation.map((item, index: number) => (
+      filteredFormation.map((item: FormationItemType, index: number) => (
         <FormationItem
           key={index}
           item={item}

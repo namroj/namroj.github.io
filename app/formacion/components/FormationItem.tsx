@@ -36,7 +36,7 @@ const FormationItem: React.FC<{
           )}
           . {highlightText(item.location)}.
         </h4>
-        <p className={styles.description}>{highlightText(item.description)}</p>
+        <p className={styles.description}>{highlightText(item.description)}.</p>
         <div className={styles.tags}>
           <ul>
             {item.tags.map((tag, index) => (

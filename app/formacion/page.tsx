@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
-import path from 'path'
-import { readFile } from 'fs/promises'
+
+import { readJsonFile } from '@/utils/files'
 
 import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
-import Formation, { FormationItem } from './components/Formation'
+import Formation from './components/Formation'
+import { FormationItemType } from './components/FormationItem'
 
 import { ImBooks } from 'react-icons/im'
 
@@ -11,16 +12,9 @@ export const metadata: Metadata = {
   title: 'Formación | Jorman Espinoza'
 }
 
-const getFormation = async () => {
-  const filePath = path.join(process.cwd(), 'app/formacion', 'data.json')
-  const jsonData = await readFile(filePath)
-
-  return JSON.parse(jsonData.toString())
-}
-
 export default async function FormationPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Formación', href: '', icon: <ImBooks /> }]
-  const formation: FormationItem[] = await getFormation()
+  const formationData: FormationItemType[] = await await readJsonFile('app/formacion', 'data.json')
 
   return (
     <>
@@ -28,23 +22,21 @@ export default async function FormationPage() {
 
       <h2>Formación</h2>
 
-      <div>
-        <p>
-          Registro de mi formación académica y profesional.
-          <br />
-          Por supuesto, existen otras fuentes de las cuales he adquirido conocimientos, tales como:
-        </p>
+      <p>
+        Registro de mi formación académica y profesional.
+        <br />
+        Por supuesto, existen otras fuentes de las cuales he adquirido conocimientos, tales como:
+      </p>
 
-        <ul>
-          <li>YouTube</li>
-          <li>Libros</li>
-          <li>Blogs</li>
-          <li>Documentación oficial/de terceros</li>
-          <li>Proyectos laborales/personales</li>
-        </ul>
-      </div>
+      <ul>
+        <li>YouTube</li>
+        <li>Libros</li>
+        <li>Blogs</li>
+        <li>Documentación oficial/de terceros</li>
+        <li>Proyectos laborales/personales</li>
+      </ul>
 
-      <Formation formation={formation} />
+      <Formation formationData={formationData} />
     </>
   )
 }

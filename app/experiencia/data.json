@@ -1,13 +1,28 @@
 [
   {
-    "title": "",
-    "interval": "",
     "entity": {
-      "name": "",
-      "url": ""
+      "name": "DIRECTV",
+      "url": "https://www.directvla.com/es.html"
     },
-    "location": "",
-    "description": "",
-    "tags": []
+    "interval": "Ene. 2019 - Dic. 2019",
+    "location": "Caracas, Venezuela",
+    "positions": [
+      {
+        "title": "Agente de servicio de atención al cliente",
+        "extract": "Gestión de carteras de clientes.",
+        "description": "Atención al cliente, facturación, cobranzas.",
+        "interval": "Ene. 2019 - Jun. 2019"
+      },
+      {
+        "title": "Agente de servicio de atención al cliente",
+        "extract": "Actualización de datos.",
+        "description": "Soporte técnico, retenciones, facturación, cobranzas.",
+        "interval": "Jul. 2019 - Dic. 2019"
+      }
+    ],
+    "tags": [
+      "Telecomunicaciones",
+      "Atención al cliente"
+    ]
   }
 ]
