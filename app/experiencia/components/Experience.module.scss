@@ -1,5 +1,5 @@
-// -- formation timeline -----
-.formation {
+// -- experience timeline -----
+.experience {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -34,7 +34,7 @@
       background-color: var(--purpleColor);
       color: var(--darkColor);
     }
-    
+
     .empty {
       display: flex;
       flex-direction: column;
@@ -66,7 +66,7 @@
 
     .tag-filter {
       @media (width > 768px) {
-        margin-top: calc(calc(var(--gap) / 4 ) * -1);
+        margin-top: calc(calc(var(--gap) / 4) * -1);
       }
 
       .title {

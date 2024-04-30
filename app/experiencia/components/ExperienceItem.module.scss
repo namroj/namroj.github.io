@@ -1,4 +1,4 @@
-// -- formation timeline item -----
+// -- experience timeline item -----
 .item {
   list-style: none;
   margin: var(--gap) 0;
@@ -14,12 +14,57 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
 
-    h3 {
-      margin: 0 0 10px;
-      color: var(--textColor);
-      font-size: 0.9rem;
-      max-width: 90%;
-      text-wrap: balance;
+    .entity {
+      display: inline-flex;
+      align-items: center;
+      margin-top: var(--gap);
+      gap: 5px;
+
+      &.main-reduced {
+        margin-top: 0;
+      }
+
+      @media (width > 768px) {
+        margin-top: 0;
+
+        &.main-reduced {
+          margin-top: var(--gap);
+        }
+      }
+
+      * {
+        display: inline-flex;
+      }
+
+      p {
+        display: contents;
+      }
+
+      h3 {
+        margin: 5px 0;
+        color: var(--textColor);
+        font-size: 0.9rem;
+        text-wrap: balance;
+        max-width: 90%;
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--purpleColor);
+        }
+      }
+
+      img {
+        width: calc(var(--gap) * 2);
+        height: calc(var(--gap) * 2);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        object-fit: cover;
+        transition: var(--transition);
+
+        &:hover {
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+      }
     }
 
     h4 {
@@ -40,6 +85,46 @@
       }
     }
 
+    .timeline {
+      position: relative;
+      margin-left: calc(var(--gap) / 1.5);
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        padding-left: calc(var(--gap) * 1.5);
+        margin: 0;
+
+        .circle {
+          width: calc(var(--gap) / 2);
+          height: calc(var(--gap) / 2);
+          background-color: var(--grayColor);
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: calc(var(--gap) / 5);
+        }
+
+        .line {
+          position: absolute;
+          width: 1px;
+          top: calc(var(--gap) * 1.2);
+          left: calc(var(--gap) / 8 + 1px);
+          bottom: calc(var(--gap) / 3.8);
+          background-color: var(--grayColor);
+        }
+
+        &:last-child .line {
+          display: none;
+        }
+
+        .position {
+          flex: 1;
+        }
+      }
+    }
+
     p {
       font-size: 0.8rem;
       color: var(--grayColor);
@@ -51,6 +136,12 @@
 
       &.description {
         margin-top: 5px;
+      }
+
+      &.highlight-text {
+        color: var(--orangeColor);
+        font-family: var(--dankMonoFont);
+        font-style: italic;
       }
     }
 

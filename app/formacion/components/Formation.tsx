@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+
 import Highlighter from 'react-highlight-words'
 
 import { normalizeAndCleanString } from '@/utils/strings'
@@ -84,11 +85,11 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
   const filteredFormation = formationData.filter((item) => {
     const { certificate, entity, tags, ...rest } = item
     const itemValues = Object.values(rest).filter((value) => typeof value !== 'object')
-    const tagsString = tags.join(' ')
-    const itemString = normalizeAndCleanString([...itemValues, tagsString].join('').toLowerCase())
+    const tagsKeywords = tags.join(' ')
+    const itemKeywords = normalizeAndCleanString([...itemValues, entity.name, tagsKeywords].join('').toLowerCase())
 
     const isTagSelected = selectedTags.length === 0 || selectedTags.some((tag) => item.tags.includes(tag))
-    const isSearchTermPresent = searchTerm === '' || itemString.includes(normalizeAndCleanString(searchTerm))
+    const isSearchTermPresent = searchTerm === '' || itemKeywords.includes(normalizeAndCleanString(searchTerm))
 
     return isTagSelected && isSearchTermPresent
   })
@@ -114,9 +115,9 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
     )
 
   return (
-    <div className={`${styles.formation} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+    <div className={`${styles.formation} ${mainWidth < 768 && styles['main-reduced']}`}>
       {filters}
-      <div className={`${styles.timeline} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+      <div className={`${styles.timeline} ${mainWidth < 768 && styles['main-reduced']}`}>
         <hr />
         <ul>{formationList}</ul>
       </div>

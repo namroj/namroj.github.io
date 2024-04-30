@@ -31,6 +31,8 @@
   --md: 768px;
   --lg: 992px;
   --xl: 1200px;
+  // transition
+  --transition: all 0.25s ease-in-out;
 
   @media (width > var(--md)) {
     --gap: 25px;

@@ -2,27 +2,29 @@
   {
     "entity": {
       "name": "DIRECTV",
-      "url": "https://www.directvla.com/es.html"
+      "url": "https://www.directvla.com/es.html",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQGTqyJ23-hSWA/company-logo_100_100-alternative/0/1630549667197/directv_logo?e=1722470400&v=beta&t=4eJ5X2u5n3D2jfwV8j3W7G3QF9naBAZrUKb2sCu2BnA"
     },
-    "interval": "Ene. 2019 - Dic. 2019",
     "location": "Caracas, Venezuela",
+    "interval": "Ene. 2009 - Dic. 2009",
     "positions": [
       {
-        "title": "Agente de servicio de atención al cliente",
-        "extract": "Gestión de carteras de clientes.",
-        "description": "Atención al cliente, facturación, cobranzas.",
-        "interval": "Ene. 2019 - Jun. 2019"
+        "title": "Actualizador de datos",
+        "description": "En esta etapa me desempeñé como actualizador de datos de las carteras de clientes, verificando y actualizando la información de los mismos.",
+        "highlight": "Esto me trajo capacidad de organización y velocidad en la gestión. Puesto que contaba con una meta diaria de actualización de datos.",
+        "interval": "Jul. 2009 - Dic. 2009"
       },
       {
-        "title": "Agente de servicio de atención al cliente",
-        "extract": "Actualización de datos.",
-        "description": "Soporte técnico, retenciones, facturación, cobranzas.",
-        "interval": "Jul. 2019 - Dic. 2019"
+        "title": "Agente de cobranzas",
+        "description": "Me desempeñé como agente de cobranzas, realizando llamadas a los clientes para gestionar el pago de sus facturas.",
+        "highlight": "Esto representó un reto al tener que comunicar aspectos negativos a clientes. Por lo cual me dejó una gran experiencia en el manejo de situaciones difíciles.",
+        "interval": "Ene. 2009 - Jun. 2009"
       }
     ],
     "tags": [
-      "Telecomunicaciones",
-      "Atención al cliente"
+      "Comunicación",
+      "Atención",
+      "Cliente"
     ]
   }
 ]
