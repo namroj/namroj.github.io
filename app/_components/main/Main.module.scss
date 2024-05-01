@@ -1,12 +1,12 @@
 // -- main -----
 .main {
   position: relative;
+  min-width: 300px;
   min-height: 100svh;
   padding: calc(var(--headerHeight) + var(--gap)) var(--gap) calc(var(--gap) * 2);
   background-color: var(--mainBgColor);
   color: var(--textColor);
   transition: var(--expandCollapseTransition);
-
   &.expanded {
     width: calc(100vw - var(--gap));
     margin-left: var(--gap);

@@ -3,22 +3,22 @@
     "entity": {
       "name": "DIRECTV",
       "url": "https://www.directvla.com/es.html",
-      "image": "https://media.licdn.com/dms/image/C4D0BAQGTqyJ23-hSWA/company-logo_100_100-alternative/0/1630549667197/directv_logo?e=1722470400&v=beta&t=4eJ5X2u5n3D2jfwV8j3W7G3QF9naBAZrUKb2sCu2BnA"
+      "image": "https://media.licdn.com/dms/image/C4D0BAQGTqyJ23-hSWA/company-logo_200_200/0/1630549667238/directv_logo?e=1722470400&v=beta&t=Nb92fNc5hOg4gGfqp62Igw0Ov0R0FdHqbJSDlsB2-pY"
     },
     "location": "Caracas, Venezuela",
-    "interval": "Ene. 2009 - Dic. 2009",
+    "interval": "Ene 2009 - Dic 2009",
     "positions": [
       {
         "title": "Actualizador de datos",
-        "description": "En esta etapa me desempeñé como actualizador de datos de las carteras de clientes, verificando y actualizando la información de los mismos.",
-        "highlight": "Esto me trajo capacidad de organización y velocidad en la gestión. Puesto que contaba con una meta diaria de actualización de datos.",
-        "interval": "Jul. 2009 - Dic. 2009"
+        "description": "Actualizador de datos de las carteras de clientes, verificando y actualizando la información de los mismos.",
+        "highlight": "Capacidad de organización y velocidad en la gestión --debido a meta diaria de actualización de datos.",
+        "interval": "Jul 2009 - Dic 2009"
       },
       {
         "title": "Agente de cobranzas",
-        "description": "Me desempeñé como agente de cobranzas, realizando llamadas a los clientes para gestionar el pago de sus facturas.",
-        "highlight": "Esto representó un reto al tener que comunicar aspectos negativos a clientes. Por lo cual me dejó una gran experiencia en el manejo de situaciones difíciles.",
-        "interval": "Ene. 2009 - Jun. 2009"
+        "description": "Realizando llamadas a los clientes para gestionar el pago de sus facturas.",
+        "highlight": "Representó un reto al tener que comunicar aspectos negativos a clientes. Dejó una gran experiencia en el manejo de situaciones difíciles.",
+        "interval": "Ene 2009 - Jun 2009"
       }
     ],
     "tags": [

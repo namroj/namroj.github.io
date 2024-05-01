@@ -1,38 +1,42 @@
 [
   {
-    "title": "Next.js 14 & React - The Complete Guide",
+    "title": "Next.js 14 & React",
     "interval": "En curso",
     "entity": {
       "name": "Udemy",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQFQr9e68bBOPQ/company-logo_200_200/0/1630536914848/udemy_logo?e=1722470400&v=beta&t=qQUwvDINSTGuhLY-XyH9z8Jk1FS6Xca1NMVue7jQRKY",
       "url": "https://udemy.com/"
     },
     "location": "En línea",
-    "description": "Con 32.5 horas de duración",
+    "description": "Curso de Next.js 14 & React --con 32.5 horas de duración.",
     "tags": [
       "Desarrollo",
       "JS",
       "Javascript",
       "React",
-      "Next.js"
+      "Next.js",
+      "En curso"
     ],
     "certificate": ""
   },
   {
-    "title": "Introducción arquitectura hexagonal y DDD básico en Laravel",
+    "title": "Arquitectura Hexagonal y DDD",
     "interval": "2024",
     "entity": {
       "name": "Udemy",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQFQr9e68bBOPQ/company-logo_200_200/0/1630536914848/udemy_logo?e=1722470400&v=beta&t=qQUwvDINSTGuhLY-XyH9z8Jk1FS6Xca1NMVue7jQRKY",
       "url": "https://udemy.com/"
     },
     "location": "En línea",
-    "description": "Con 6 horas de duración",
+    "description": "Curso introductorio de arquitectura hexagonal y DDD básico en Laravel --con 6 horas de duración.",
     "tags": [
       "Desarrollo",
       "Arquitectura",
       "Hexagonal",
       "DDD",
       "PHP",
-      "Laravel"
+      "Laravel",
+      "2024"
     ],
     "certificate": "https://drive.google.com/file/d/1wc5riJM58hCuSbUlJUe1FWbq-_coIPU6/view?usp=drive_link"
   },
@@ -41,206 +45,232 @@
     "interval": "2022",
     "entity": {
       "name": "Udemy",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQFQr9e68bBOPQ/company-logo_200_200/0/1630536914848/udemy_logo?e=1722470400&v=beta&t=qQUwvDINSTGuhLY-XyH9z8Jk1FS6Xca1NMVue7jQRKY",
       "url": "https://udemy.com/"
     },
     "location": "En línea",
-    "description": "Con 6.5 horas de duración",
+    "description": "Curso Principios SOLID y Clean Code --con 6.5 horas de duración.",
     "tags": [
       "Desarrollo",
       "SOLID",
-      "Código limpio"
+      "Código limpio",
+      "2022"
     ],
     "certificate": "https://drive.google.com/file/d/1VsClfbDQU8s-RGx7cLapIaNZtXITDSdi/view?usp=drive_link"
   },
   {
-    "title": "Curso Profesional de React Hooks",
+    "title": "React Hooks",
     "interval": "2022",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 26 horas de teoría y práctica",
+    "description": "Curso Profesional de React Hooks --con 26 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "JS",
       "Javascript",
-      "React"
+      "React",
+      "2022"
     ],
     "certificate": "https://drive.google.com/file/d/1UMM-DBbPs6tyiyTFXe0rqYWa8Plr12cM/view?usp=drive_link"
   },
   {
-    "title": "Curso de Vue.js",
+    "title": "Vue.js",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 12 horas de teoría y práctica",
+    "description": "Curso de Vue.js --con 12 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "JS",
       "Javascript",
-      "Vue"
+      "Vue.js",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1NuckLoKnkssNLjFmc7VIic_6HtY_kx0f/view?usp=drive_link"
   },
   {
-    "title": "Curso de Programación Funcional con Java SE",
+    "title": "PostgreSQL",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 16 horas de teoría y práctica",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Funcional"
-    ],
-    "certificate": "https://drive.google.com/file/d/1Ggzsj8lILPCrqWn7Qn7qYa-4LS7yxw22/view?usp=drive_link"
-  },
-  {
-    "title": "Curso de Programación Funcional con Java SE",
-    "interval": "2021",
-    "entity": {
-      "name": "Platzi",
-      "url": "https://platzi.com/"
-    },
-    "location": "En línea",
-    "description": "Con 16 horas de teoría y práctica",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Funcional"
-    ],
-    "certificate": "https://drive.google.com/file/d/1Ggzsj8lILPCrqWn7Qn7qYa-4LS7yxw22/view?usp=drive_link"
-  },
-  {
-    "title": "Curso Básico de Testing en Java",
-    "interval": "2021",
-    "entity": {
-      "name": "Platzi",
-      "url": "https://platzi.com/"
-    },
-    "location": "En línea",
-    "description": "Con 26 horas de teoría y práctica",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Testing",
-      "TDD"
-    ],
-    "certificate": "https://drive.google.com/file/d/1NNWwOacRwBlxhmI2Vmb4dEUQi3qIdBSm/view?usp=drive_link"
-  },
-  {
-    "title": "Curso de Fundamentos de Bases de Datos",
-    "interval": "2021",
-    "entity": {
-      "name": "Platzi",
-      "url": "https://platzi.com/"
-    },
-    "location": "En línea",
-    "description": "Con 26 horas de teoría y práctica",
+    "description": "Curso de PostgreSQL --con 15 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "Base de Datos",
       "SQL",
-      "NoSQL"
+      "PostgreSQL",
+      "2021"
+    ],
+    "certificate": "https://drive.google.com/file/d/1R_eqBrSoJYa1xU10J5NhTJtLi6bF-GKN/view?usp=drive_link"
+  },
+  {
+    "title": "Programación Funcional con Java SE",
+    "interval": "2021",
+    "entity": {
+      "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
+      "url": "https://platzi.com/"
+    },
+    "location": "En línea",
+    "description": "Curso de Programación Funcional con Java SE --con 16 horas de teoría y práctica.",
+    "tags": [
+      "Desarrollo",
+      "Java",
+      "Funcional",
+      "2021"
+    ],
+    "certificate": "https://drive.google.com/file/d/1Ggzsj8lILPCrqWn7Qn7qYa-4LS7yxw22/view?usp=drive_link"
+  },
+  {
+    "title": "Testing en Java",
+    "interval": "2021",
+    "entity": {
+      "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
+      "url": "https://platzi.com/"
+    },
+    "location": "En línea",
+    "description": "Curso Básico de Testing en Java --con 26 horas de teoría y práctica.",
+    "tags": [
+      "Desarrollo",
+      "Java",
+      "Testing",
+      "TDD",
+      "2021"
+    ],
+    "certificate": "https://drive.google.com/file/d/1NNWwOacRwBlxhmI2Vmb4dEUQi3qIdBSm/view?usp=drive_link"
+  },
+  {
+    "title": "Bases de Datos",
+    "interval": "2021",
+    "entity": {
+      "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
+      "url": "https://platzi.com/"
+    },
+    "location": "En línea",
+    "description": "Curso de Fundamentos de Bases de Datos --con 26 horas de teoría y práctica.",
+    "tags": [
+      "Desarrollo",
+      "Base de Datos",
+      "SQL",
+      "NoSQL",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1KXaxVpSJ3qcNe2S9XwYNInY9JdGeuKL1/view?usp=drive_link"
   },
   {
-    "title": "Curso de Introducción a la Terminal y Línea de Comandos",
+    "title": "Terminal y Línea de Comandos",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 11 horas de teoría y práctica",
+    "description": "Curso de Introducción a la Terminal y Línea de Comandos --con 11 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
-      "Terminal"
+      "Terminal",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1hvAKRBcPU-id1dOG8kBKAlgQnMhpJODT/view?usp=drive_link"
   },
   {
-    "title": "Curso de Programación Orientada a Objetos: POO",
+    "title": "Programación Orientada a Objetos [POO]",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 16 horas de teoría y práctica",
+    "description": "Curso de Programación Orientada a Objetos --con 16 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "Java",
-      "POO"
+      "POO",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1OyeAgOWWViesltmXISPe7YZgIAs-94sY/view?usp=drive_link"
   },
   {
-    "title": "Curso Profesional de Git y GitHub",
+    "title": "Git y GitHub",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 22 horas de teoría y práctica",
+    "description": "Curso Profesional de Git y GitHub --con 22 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "Git",
-      "GitHub"
+      "GitHub",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1-FRTn_NGHxQq7v2VzII1D7zAH9Np7eaV/view?usp=drive_link"
   },
   {
-    "title": "Curso de Buenas Prácticas para Escritura de Código",
+    "title": "Escritura de Código - Buenas Prácticas",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 20 horas de teoría y práctica",
+    "description": "Curso de Buenas Prácticas para Escritura de Código --con 20 horas de teoría y práctica.",
     "tags": [
       "Desarrollo"
     ],
     "certificate": "https://drive.google.com/file/d/1ogqOzew9NpFKDc7g2S25ATsuI85K0fxX/view?usp=drive_link"
   },
   {
-    "title": "Curso de Java Spring",
+    "title": "Java Spring",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 19 horas de teoría y práctica",
+    "description": "Curso de Java Spring --con 19 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
       "Java",
-      "Spring"
+      "Spring",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/1DWoZ0SCyz1_y4YQegtsBj5wdsXQPBFZt/view?usp=drive_link"
   },
   {
-    "title": "Curso de Postman",
+    "title": "Postman",
     "interval": "2021",
     "entity": {
       "name": "Platzi",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEOTcHh0HnWwQ/company-logo_200_200/0/1677870818258/platzi_inc_logo?e=1722470400&v=beta&t=RjJHlIo0VMO4l1OQm2z6Qeees9k9JJqslNvPoBxAITs",
       "url": "https://platzi.com/"
     },
     "location": "En línea",
-    "description": "Con 10 horas de teoría y práctica",
+    "description": "Curso de Postman --con 10 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
-      "Postman"
+      "Postman",
+      "2021"
     ],
     "certificate": "https://drive.google.com/file/d/13njJ6CeCXkJxVsDAIzH7kUVyoNNnO1hJ/view?usp=drive_link"
   },
@@ -249,59 +279,67 @@
     "interval": "2018",
     "entity": {
       "name": "SymfonyCasts",
+      "image": "https://media.licdn.com/dms/image/C560BAQE3MQI6QUyRTw/company-logo_200_200/0/1630606060615/symfonycasts_logo?e=1722470400&v=beta&t=KaEdoLt-ROdyagu5WQWFPSuoK59jW9sT2sHJ_G23bK4",
       "url": "https://symfonycasts.com"
     },
     "location": "En línea",
-    "description": "Tutorial de Symfony 4",
+    "description": "Tutorial de Symfony 4. Nivel 1.",
     "tags": [
       "Desarrollo",
       "PHP",
-      "Symfony"
+      "Symfony",
+      "2018"
     ],
     "certificate": "https://symfonycasts.com/certificates/FF568D75C101"
   },
   {
-    "title": "jQuery Tutorial Course",
+    "title": "jQuery",
     "interval": "2018",
     "entity": {
       "name": "Sololearn",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQHER-dvTqh2tA/company-logo_200_200/0/1630576160230/sololearn_inc__logo?e=1722470400&v=beta&t=UqJ_TZoKW8AAVGcJmedblXUSJx9HoxaWvWjbRKR2lEg",
       "url": "https://www.sololearn.com"
     },
     "location": "En línea",
-    "description": "Fundamentos de jQuery",
+    "description": "Curso de fundamentos de jQuery.",
     "tags": [
       "Desarrollo",
       "JS",
       "Javascript",
-      "jQuery"
+      "jQuery",
+      "2018"
     ],
     "certificate": "https://www.sololearn.com/es/certificates/CT-WFNEYSBP"
   },
   {
-    "title": "Curso de Introducción al Desarrollo Web",
+    "title": "Desarrollo Web",
     "interval": "2017",
     "entity": {
       "name": "Google Actívate",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQGlBBVXCfSVag/company-logo_200_200/0/1630481085080/activatecongoogle_logo?e=1722470400&v=beta&t=KU1GkHKBlFVuuzd7uPIrUz1poBhL5H_cxu4Wq7kbdBU",
       "url": "https://www.linkedin.com/company/activatecongoogle/"
     },
     "location": "En línea",
-    "description": "Curso de Introducción al Desarrollo Web con una duración de 40 horas",
+    "description": "Curso de Introducción al Desarrollo Web --con una duración de 40 horas.",
     "tags": [
-      "Desarrollo"
+      "Desarrollo",
+      "2017"
     ],
     "certificate": "https://drive.google.com/file/d/1-L-SfoptU2mxqVlGUSthURccUffBy33_/view?usp=drive_link"
   },
   {
-    "title": "Curso básico de Marketing Digital",
+    "title": "Marketing Digital Básico",
     "interval": "2017",
     "entity": {
       "name": "Google Actívate",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQGlBBVXCfSVag/company-logo_200_200/0/1630481085080/activatecongoogle_logo?e=1722470400&v=beta&t=KU1GkHKBlFVuuzd7uPIrUz1poBhL5H_cxu4Wq7kbdBU",
       "url": "https://www.linkedin.com/company/activatecongoogle/"
     },
     "location": "En línea",
-    "description": "Curso básico de Marketing Digital con una duración de 40 horas",
+    "description": "Curso básico de Marketing Digital con una duración de 40 horas.",
     "tags": [
-      "Marketing"
+      "Marketing",
+      "2017"
     ],
     "certificate": "https://drive.google.com/file/d/1SmioQfmPLJzAONGDQcnJ5x_vF8If9cvX/view?usp=drive_link"
   },
@@ -310,14 +348,16 @@
     "interval": "2016",
     "entity": {
       "name": "Sololearn",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQHER-dvTqh2tA/company-logo_200_200/0/1630576160230/sololearn_inc__logo?e=1722470400&v=beta&t=UqJ_TZoKW8AAVGcJmedblXUSJx9HoxaWvWjbRKR2lEg",
       "url": "https://www.sololearn.com"
     },
     "location": "En línea",
-    "description": "Fundamentos de javascript",
+    "description": "Curso de fundamentos de Javascript.",
     "tags": [
       "Desarrollo",
       "JS",
-      "Javascript"
+      "Javascript",
+      "2016"
     ],
     "certificate": "https://www.sololearn.com/es/certificates/CT-8M64MHZW"
   },
@@ -326,13 +366,15 @@
     "interval": "2016",
     "entity": {
       "name": "Sololearn",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQHER-dvTqh2tA/company-logo_200_200/0/1630576160230/sololearn_inc__logo?e=1722470400&v=beta&t=UqJ_TZoKW8AAVGcJmedblXUSJx9HoxaWvWjbRKR2lEg",
       "url": "https://www.sololearn.com"
     },
     "location": "En línea",
-    "description": "Fundamentos de CSS",
+    "description": "Curso de fundamentos de CSS.",
     "tags": [
       "Desarrollo",
-      "CSS"
+      "CSS",
+      "2016"
     ],
     "certificate": "https://www.sololearn.com/es/certificates/CT-QLHQIDUE"
   },
@@ -341,56 +383,67 @@
     "interval": "2016",
     "entity": {
       "name": "Sololearn",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQHER-dvTqh2tA/company-logo_200_200/0/1630576160230/sololearn_inc__logo?e=1722470400&v=beta&t=UqJ_TZoKW8AAVGcJmedblXUSJx9HoxaWvWjbRKR2lEg",
       "url": "https://www.sololearn.com"
     },
     "location": "En línea",
-    "description": "Fundamentos de HTML",
+    "description": "Curso de fundamentos de HTML.",
     "tags": [
       "Desarrollo",
-      "HTML"
+      "HTML",
+      "2016"
     ],
     "certificate": "https://www.sololearn.com/es/certificates/CT-ASTWZQTM"
   },
   {
-    "title": "Curso de Inglés",
+    "title": "Inglés Intermedio",
     "interval": "2016 - 2017",
     "entity": {
-      "name": "Centro Venezolano Americano",
+      "name": "CVA",
+      "image": "https://0.gravatar.com/avatar/7cdd92a95048b6f251e409821da4598a?d=identicon&r=g",
       "url": "https://centrovenezolanoamericano.org"
     },
     "location": "Caracas, Venezuela",
-    "description": "Programa de Inglés como Lengua Extranjera. Nivel Intermedio",
+    "description": "Programa de Inglés como Lengua Extranjera. Nivel Intermedio.",
     "tags": [
       "Idiomas",
-      "Inglés"
+      "Inglés",
+      "2016",
+      "2017"
     ]
   },
   {
-    "title": "Técnico Superior Universitario en Informática",
+    "title": "Ingeniería Informática",
     "interval": "2010 - 2014",
     "entity": {
       "name": "IUTIRLA",
+      "image": "https://iutirlaoficial.com/wp-content/uploads/2022/08/ad9d067d-f082-4287-8447-88aacac50bea-219x300-1.png",
       "url": "https://iutirlaoficial.com"
     },
     "location": "Caracas, Venezuela",
-    "description": "Técnico Superior en Desarrollo de Aplicaciones Informáticas",
+    "description": "Técnico Superior en Desarrollo de Aplicaciones Informáticas.",
     "tags": [
       "Universitaria",
-      "Informática"
+      "Informática",
+      "2010",
+      "2014"
     ]
   },
   {
-    "title": "Estudiante en Licenciatura en Computación",
+    "title": "Licenciatura en Computación",
     "interval": "2007 - 2009",
     "entity": {
-      "name": "Universidad Central de Venezuela",
+      "name": "UCV",
+      "image": "https://media.licdn.com/dms/image/C560BAQEqH4pTb_C3Vg/company-logo_200_200/0/1631301018658?e=1722470400&v=beta&t=inUl8mJkhTotKKPXUZZSL06t-GNKXIP7o6YBWBmGscc",
       "url": "http://www.ucv.ve"
     },
     "location": "Caracas, Venezuela",
-    "description": "Estudiante de la carrera de Licenciatura en Computación",
+    "description": "Estudiante de la carrera de Licenciatura en Computación.",
     "tags": [
       "Universitaria",
-      "Computación"
+      "Computación",
+      "2007",
+      "2009"
     ]
   }
 ]

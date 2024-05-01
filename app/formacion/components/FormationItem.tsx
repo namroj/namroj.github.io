@@ -1,12 +1,16 @@
 import React from 'react'
 
+import Image from 'next/image'
+
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+
 import { TbExternalLink } from 'react-icons/tb'
 
 import styles from './FormationItem.module.scss'
 
 export type FormationItemType = {
   title: string
-  entity: { name: string; url: string }
+  entity: { name: string; image: string; url: string }
   location: string
   interval: string
   description: string
@@ -20,23 +24,32 @@ const FormationItem: React.FC<{
   handleTagClick: (tag: string) => void
   highlightText: (text: string) => JSX.Element
 }> = ({ item, handleTagClick, selectedTags, highlightText }) => {
+  const { mainWidth } = useExpandCollapseContext()
+
   return (
     <li className={styles.item}>
-      <article>
+      <article className={`${mainWidth < 300 ? styles['main-reduced'] : ''}`}>
         <p className={styles.date}>{highlightText(item.interval)}</p>
-        <h3>{highlightText(item.title)}</h3>
-        <h4>
-          {item.entity.url ? (
-            <a href={item.entity.url} target='_blank'>
-              {' '}
-              {highlightText(item.entity.name)}
-            </a>
-          ) : (
-            highlightText(item.entity.name)
-          )}
-          . {highlightText(item.location)}
-        </h4>
+        <div className={styles.data}>
+          <a href={item.entity.url} target='_blank'>
+            <Image src={item.entity.image} alt={item.entity.name} width={100} height={100} />
+          </a>
+
+          <div className={styles.content}>
+            <h3 className={styles.title}>{highlightText(item.title)}</h3>
+            <div className={styles.entity}>
+              <h4>
+                <a href={item.entity.url} target='_blank'>
+                  {highlightText(item.entity.name)}
+                </a>
+              </h4>
+              <p>[{highlightText(item.location)}]</p>
+            </div>
+          </div>
+        </div>
+
         <p className={styles.description}>{highlightText(item.description)}</p>
+
         <div className={styles.tags}>
           <ul>
             {item.tags.map((tag, index) => (

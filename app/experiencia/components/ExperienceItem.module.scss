@@ -2,16 +2,25 @@
 .item {
   list-style: none;
   margin: var(--gap) 0;
+  min-width: 300px;
 
   article {
     position: relative;
-    padding: 10px 10px 0;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-    transition: all 0.25s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    transition: var(--transition);
+
+    @media (width > 768px) {
+      padding: 10px;
+    }
+
+    &.main-reduced {
+      padding: 30px 10px 30px;
+    }
 
     &:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     }
 
     .entity {
@@ -20,24 +29,26 @@
       margin-top: var(--gap);
       gap: 5px;
 
-      &.main-reduced {
-        margin-top: 0;
-      }
-
       @media (width > 768px) {
         margin-top: 0;
-
-        &.main-reduced {
-          margin-top: var(--gap);
-        }
       }
 
       * {
         display: inline-flex;
       }
 
+      .content {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) / 4);
+      }
+
       p {
         display: contents;
+
+        &.location {
+          max-width: unset;
+        }
       }
 
       h3 {
@@ -49,7 +60,7 @@
         transition: var(--transition);
 
         &:hover {
-          color: var(--purpleColor);
+          color: var(--orangeColor);
         }
       }
 
@@ -57,12 +68,12 @@
         width: calc(var(--gap) * 2);
         height: calc(var(--gap) * 2);
         border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
         object-fit: cover;
         transition: var(--transition);
 
         &:hover {
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 1);
         }
       }
     }
@@ -80,7 +91,7 @@
         transition: all 0.25s ease-in-out;
 
         &:hover {
-          color: var(--purpleColor);
+          color: var(--orangeColor);
         }
       }
     }
@@ -146,17 +157,11 @@
     }
 
     .date {
-      position: relative;
-      font-size: 0.8rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
       color: var(--blueColor);
-      margin-bottom: 5px;
-
-      @media (width > 768px) {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        margin-bottom: 0;
-      }
+      font-size: 0.8rem;
     }
 
     .tags {
@@ -168,6 +173,7 @@
         display: flex;
         gap: 5px;
         flex-wrap: wrap;
+        margin: 0;
 
         @media (width > 768px) {
           max-width: 85%;
@@ -194,12 +200,9 @@
         color: var(--darkColor);
         font-size: 0.7rem;
 
-        &:hover {
-          background-color: var(--orangeColor);
-        }
-
+        &:hover,
         &.active {
-          background-color: var(--purpleColor);
+          background-color: var(--orangeColor);
         }
 
         &.certificate {

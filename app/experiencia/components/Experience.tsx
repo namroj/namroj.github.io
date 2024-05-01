@@ -65,7 +65,7 @@ export default function Experience({ experienceData }: Readonly<{ experienceData
 
   const textSearch = (
     <div className={styles['text-search']}>
-      <span className={styles.title}>Filtrar por palabra clave</span>
+      <span className={styles.label}>Filtrar por palabra clave</span>
       <div className={styles.search}>
         <input type='text' value={searchTerm} onChange={handleSearchChange} placeholder='Escribe para buscar...' />
         <button className={`${styles.clear} ${searchTerm && styles.visible}`} onClick={handleClearSearch}>

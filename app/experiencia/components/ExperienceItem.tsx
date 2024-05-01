@@ -1,11 +1,13 @@
 import React from 'react'
 
+import Image from 'next/image'
+
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import styles from './ExperienceItem.module.scss'
 
 export type ExperienceItemType = {
-  entity: { name: string; image?: string; url?: string }
+  entity: { name: string; image: string; url: string }
   location: string
   interval: string
   positions: {
@@ -28,18 +30,20 @@ const ExperienceItem: React.FC<{
 
   return (
     <li className={styles.item}>
-      <article>
+      <article className={`${mainWidth < 300 ? styles['main-reduced'] : ''}`}>
         <p className={styles.date}>{highlightText(item.interval)}</p>
-        <div className={`${styles.entity} ${mainWidth < 768 && styles['main-reduced']}`}>
+        <div className={styles.entity}>
           <a href={item.entity.url} target='_blank'>
-            <img src={item.entity.image} alt={item.entity.name} />
+            <Image src={item.entity.image} alt={item.entity.name} width={100} height={100} />
           </a>
-          <h3>
-            <a href={item.entity.url} target='_blank'>
-              {highlightText(item.entity.name)}
-            </a>
-          </h3>
-          <p>[{highlightText(item.location)}]</p>
+          <div className={styles.content}>
+            <h3>
+              <a href={item.entity.url} target='_blank'>
+                {highlightText(item.entity.name)}
+              </a>
+            </h3>
+            <p className={styles.location}><span>[{highlightText(item.location)}]</span></p>
+          </div>
         </div>
 
         <div className={styles.timeline}>

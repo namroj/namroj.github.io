@@ -24,7 +24,7 @@ export default function Sidebar() {
         const windowWidth = window.innerWidth
         if (windowWidth < 768) {
           if (expandCollapseState === ExpandCollapseState.EXPANDED) {
-            const sidebarWidth = windowWidth < 366 ? '100vw' : '56vw'
+            const sidebarWidth = windowWidth < 366 ? '100vw' : '70vw'
             document.documentElement.style.setProperty('--sidebarWidth', sidebarWidth)
             setWidth(windowWidth.toString())
             setSidebarWidth(windowWidth < 366 ? windowWidth : windowWidth * 0.56)

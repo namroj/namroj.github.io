@@ -31,7 +31,7 @@
     }
 
     .highlight {
-      background-color: var(--purpleColor);
+      background-color: var(--orangeColor);
       color: var(--darkColor);
     }
 
@@ -91,11 +91,8 @@
           cursor: pointer;
           transition: all 0.25s ease;
 
+          &:hover,
           &.active {
-            background-color: var(--purpleColor);
-          }
-
-          &:hover {
             background-color: var(--orangeColor);
           }
         }
@@ -123,7 +120,10 @@
     }
 
     .text-search {
-      .title {
+      display: flex;
+      flex-direction: column;
+
+      .label {
         margin-top: 5px;
         font-size: 0.8rem;
       }
@@ -131,6 +131,7 @@
       .search {
         display: flex;
         align-items: center;
+        gap: 5px;
         margin-top: 5px;
 
         @media (width > 768px) {
@@ -150,7 +151,6 @@
 
           @media (width > 768px) {
             margin-top: 0;
-            margin-left: 5px;
             display: inline;
           }
 
