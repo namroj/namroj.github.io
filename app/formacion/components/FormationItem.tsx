@@ -18,6 +18,8 @@ export type FormationItemType = {
   certificate?: string
 }
 
+const COMPONENT_MIN_WIDTH = 300
+
 const FormationItem: React.FC<{
   item: FormationItemType
   selectedTags: string[]
@@ -28,7 +30,7 @@ const FormationItem: React.FC<{
 
   return (
     <li className={styles.item}>
-      <article className={`${mainWidth < 300 ? styles['main-reduced'] : ''}`}>
+      <article className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}>
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.data}>
           <a href={item.entity.url} target='_blank'>

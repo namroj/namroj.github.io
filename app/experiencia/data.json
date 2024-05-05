@@ -1,6 +1,278 @@
 [
   {
     "entity": {
+      "name": "Accenture",
+      "url": "https://www.accenture.com/ar-es/services/song/commerce-transformation",
+      "image": "https://media.licdn.com/dms/image/D4E0BAQF4xYO4nr649w/company-logo_200_200/0/1685628275969/accenture_song_logo?e=1723075200&v=beta&t=iwUtbZk1KqvTKNJk5f-FD5c9FPPy0wW6Hh6aLgv3GkI"
+    },
+    "location": "Buenos Aires, Argentina",
+    "interval": "Abr 2022 - Presente",
+    "positions": [
+      {
+        "title": "Desarrollador Full Stack [Líder]",
+        "description": "",
+        "highlight": "",
+        "interval": "Abr 2023 - Presente"
+      },
+      {
+        "title": "Desarrollador Full Stack",
+        "description": "",
+        "highlight": "",
+        "interval": "Ago 2022 - Abr 2023"
+      }
+    ],
+    "tags": [
+      "Accenture",
+      "Desarrollo",
+      "Web",
+      "Backend",
+      "Frontend",
+      "Windows",
+      "Linux",
+      "AWS",
+      "API",
+      "Microservicio",
+      "Serverless",
+      "Lambda",
+      "HTML",
+      "WordPress",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "NodeJs",
+      "React",
+      "UmiJs",
+      "Java",
+      "Spring",
+      "PHP",
+      "Magento",
+      "MySQL",
+      "2022",
+      "Presente"
+    ]
+  },
+  {
+    "entity": {
+      "name": "Glamit",
+      "url": "https://www.linkedin.com/company/glamit",
+      "image": "https://media.licdn.com/dms/image/C560BAQFBrPi3WVtj8w/company-logo_200_200/0/1634321423373?e=1723075200&v=beta&t=gWQtlbqeHlKT7HJtrkUkNI-MlqGlTyFYUFdH9u1hu6E"
+    },
+    "location": "Buenos Aires, Argentina",
+    "interval": "Jul 2020 - Abr 2022",
+    "positions": [
+      {
+        "title": "Desarrollador Back End [Senior]",
+        "description": "",
+        "highlight": "",
+        "interval": "Ago 2021 - Abr 2022"
+      },
+      {
+        "title": "Desarrollador Back End [Semi Senior]",
+        "description": "",
+        "highlight": "",
+        "interval": "Jul 2020 - Jun 2021"
+      }
+    ],
+    "tags": [
+      "Glamit",
+      "Desarrollo",
+      "Web",
+      "eCommerce",
+      "Backend",
+      "Windows",
+      "Linux",
+      "AWS",
+      "API",
+      "Microservicio",
+      "Serverless",
+      "Lambda",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "NodeJs",
+      "React",
+      "UmiJs",
+      "Java",
+      "Spring",
+      "PHP",
+      "Magento",
+      "MySQL",
+      "2020",
+      "2022"
+    ]
+  },
+  {
+    "entity": {
+      "name": "REMOLINO",
+      "url": "https://remolino.org/es",
+      "image": "https://media.licdn.com/dms/image/C4D0BAQEkp5RM-DP12A/company-logo_200_200/0/1631334515223?e=1723075200&v=beta&t=zek3swZUp-trUcSHWYtB73v4GxVJQ9LotWP_VziIE14"
+    },
+    "location": "Buenos Aires, Argentina",
+    "interval": "Oct 2017 - Jun 2020",
+    "positions": [
+      {
+        "title": "Desarrollador Web",
+        "description": "Generación e implementación de sitios web, generación de sistemas gestores de contenido (CMS) basados en frameworks PHP, principalmente Symfony 4, así como la maquetación, corrección y mantenimiento de los mismos. Generación de firmas de mail (HTML), creación y gestión de bases de datos. Generación de manuales de usuario e inducción online/presencial a clientes acerca del manejo de sus respectivos sitios.",
+        "highlight": "",
+        "interval": "Oct 2017 - Jun 2020"
+      }
+    ],
+    "tags": [
+      "Remolino",
+      "Desarrollo",
+      "Web",
+      "Windows",
+      "Linux",
+      "HTML",
+      "WordPress",
+      "CSS",
+      "SASS",
+      "LESS",
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "2017",
+      "2020"
+    ]
+  },
+  {
+    "entity": {
+      "name": "3DLINK",
+      "url": "https://www.3dlinkweb.com",
+      "image": "https://media.licdn.com/dms/image/D4E0BAQFtFSeFYB0uCA/company-logo_200_200/0/1687792832896/3dlink_logo?e=1723075200&v=beta&t=SJJUgiBvXhynA_utMMmQuEBAxmklrMir5rWnx4_ae6E"
+    },
+    "location": "Caracas, Venezuela",
+    "interval": "Ene 2017 - Dic 2018",
+    "positions": [
+      {
+        "title": "Desarrollador Web",
+        "description": "Generación de sitios web mediante HTML, CSS, PHP, JavaScript, jQuery incluyendo WordPress y frameworks como Laravel.||Edición de temas y plugins para WordPress, adaptaciones, implementaciones de diseños específicas para los distintos clientes.||Implementación de sitios web a nivel de servidor.||Inducción presencial a clientes acerca del manejo de sus respectivos sitios web, así como la generación video tutoriales y manuales de procedimiento acerca del manejo de herramientas y sitios web.",
+        "highlight": "Afianzamiento en la aplicación de tecnologías y manejo de CMS --desarrollo de un gestor de tareas y asignaciones dentro del equipo <<utilizando Laravel>>.",
+        "interval": "Ene 2017 - Dic 2018"
+      }
+    ],
+    "tags": [
+      "3DLink",
+      "Comunicación",
+      "Gestión",
+      "Soporte",
+      "Desarrollo",
+      "Web",
+      "Windows",
+      "Linux",
+      "HTML",
+      "WordPress",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "2017",
+      "2018"
+    ]
+  },
+  {
+    "entity": {
+      "name": "Key Systems",
+      "url": "https://twitter.com/keysystemsca",
+      "image": "https://pbs.twimg.com/profile_images/645284132134612994/a1ts_JTj_400x400.jpg"
+    },
+    "location": "Estado Miranda, Venezuela",
+    "interval": "Abr 2014 - Dic 2016",
+    "positions": [
+      {
+        "title": "Desarrollador Web",
+        "description": "Elaboración de sitios web mediante HTML, CSS, PHP, JavaScript incluyendo WordPress, PrestaShop, Joomla y WIX como gestores de contenido.||Edición de temas y plugins para WordPress, adaptaciones, implementaciones de diseños específicas para clientes.||Implementación de sitios web a nivel de servidor.||Soporte en línea para usuarios en cuanto el manejo de sus respectivos sitios web.||Creación de Video tutoriales acerca del manejo de herramientas y sitios web.||Elaboración de manuales de usuario.",
+        "highlight": "Primer trabajo en desarrollo web. Aprendizaje de nuevas tecnologías, manejo de CMS, creación de múltiples sitios web (desde páginas sencillas hasta tiendas virtuales) --agradecimiento siempre para esta Startup por la oportunidad brindada.",
+        "interval": "Abr 2014 - Dic 2016"
+      }
+    ],
+    "tags": [
+      "Comunicación",
+      "Gestión",
+      "Soporte",
+      "Desarrollo",
+      "Web",
+      "Windows",
+      "Linux",
+      "HTML",
+      "WordPress",
+      "CSS",
+      "JavaScript",
+      "jQuery",
+      "PHP",
+      "MySQL",
+      "2014",
+      "2016"
+    ]
+  },
+  {
+    "entity": {
+      "name": "BBVA Provincial",
+      "url": "https://www.provincial.com",
+      "image": "https://media.licdn.com/dms/image/D4E0BAQFPRE9wZRBCtw/company-logo_200_200/0/1690474044748/bbva_banco_provincial_logo?e=1723075200&v=beta&t=Nojabh2YTVi_BSdMvX-9m_FWAHXI8k1hTvrUFrUMkM4"
+    },
+    "location": "Caracas, Venezuela",
+    "interval": "Mar 2010 - Sep 2014",
+    "positions": [
+      {
+        "title": "Analista de Soporte Informático",
+        "description": "Soporte telefónico a la red de oficinas a nivel nacional.||Soporte remoto mediante la herramienta DameWare para equipos con S.O. Windows.||Atención remota con Putty a estaciones de trabajo Windows, Linux, servidores de oficina.||Registro, atención y canalización de casos web a través de la herramienta CRM (Microsoft).||Activación y desbloqueo de terminales de usuarios y oficinas a través del Emulador 3270.||Monitoreo de ATMs (manejo y distribución del total de cajeros automáticos a monitorear entre gestores, canalización y gestión de fallas y/o consultas, validación de estado de ATMs).||Soporte técnico de primer nivel a red oficinas (activación de servicios, importación de datos estadísticos).||Soporte de primer nivel en el área de Seguridad Lógica.||Reinicio y desbloqueo de claves de acceso de usuarios.||Monitoreo de equipos de comunicación de las oficinas (routers, switches, servidores).||Canalización y escalamiento de fallas con las distintas áreas resolutorias.",
+        "highlight": "Resolución de problemas variados, manejo de herramientas de soporte remoto, atención telefónica y remota, manejo de herramientas de monitoreo y gestión de fallas.",
+        "interval": "Mar 2011 - Set 2014"
+      },
+      {
+        "title": "Gestor de Requerimientos Especiales",
+        "description": "Atención telefónica a todo el personal interno a nivel nacional en las áreas de Diseño y Desarrollo (D&D).||Gestión, canalización y escalamiento de requerimientos vía web de parte del personal de D&D  hacia las distintas Áreas Resolutorias.||Coordinación y planificación de proyectos en conjunto con las áreas de D&D, Implantación, Homologación y Producción.||Canalización de pases emergentes (programas, modificaciones, scripts) hacia el entorno de producción.||Auditoría y seguimiento de proyectos de D&D, llevados al ambiente de producción.",
+        "highlight": "Capacidad de organización, planificación y comunicación. Redacción y envío de emails --debido a constante comunicación con personal de D&D y áreas resolutorias tanto telefónica, remota y presencial.",
+        "interval": "Mar 2010 - Mar 2011"
+      }
+    ],
+    "tags": [
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "Gestión",
+      "Informática",
+      "Soporte",
+      "Técnico",
+      "Microsoft",
+      "Windows",
+      "Linux",
+      "2010",
+      "2014"
+    ]
+  },
+  {
+    "entity": {
+      "name": "CANTV",
+      "url": "https://www.cantv.com.ve",
+      "image": "https://media.licdn.com/dms/image/C4E0BAQEHY9sZA70Iiw/company-logo_200_200/0/1631312690802?e=1723075200&v=beta&t=lGqXnh7eI9059iWnxPnxPxPfcmk8kN4eti7ojXM6r6c"
+    },
+    "location": "Caracas, Venezuela",
+    "interval": "Ene 2010 - Mar 2010",
+    "positions": [
+      {
+        "title": "Operador telefónico",
+        "description": "Servicio 113 de CANTV. Agente de atención al cliente. Responsable de proveer datos en base a recepción de solicitudes de información (números telefónicos y direcciones) de locales, establecimientos, hospitales, empresas, entre otros.",
+        "highlight": "Velocidad en la gestión, rapidez de respuesta, seguimiento de procedimientos y metodologías --30 segundos era la cantidad máxima esperada de tiempo de respuesta de cara al cliente con una media de 300 llamadas durante la jornada.",
+        "interval": "Ene 2010 - Mar 2010"
+      }
+    ],
+    "tags": [
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "Gestión",
+      "2010"
+    ]
+  },
+  {
+    "entity": {
       "name": "DIRECTV",
       "url": "https://www.directvla.com/es.html",
       "image": "https://media.licdn.com/dms/image/C4D0BAQGTqyJ23-hSWA/company-logo_200_200/0/1630549667238/directv_logo?e=1722470400&v=beta&t=Nb92fNc5hOg4gGfqp62Igw0Ov0R0FdHqbJSDlsB2-pY"
@@ -17,14 +289,16 @@
       {
         "title": "Agente de cobranzas",
         "description": "Realizando llamadas a los clientes para gestionar el pago de sus facturas.",
-        "highlight": "Representó un reto al tener que comunicar aspectos negativos a clientes. Dejó una gran experiencia en el manejo de situaciones difíciles.",
+        "highlight": "Mejor comunicación/manejo con/de clientes --todo reto al tener que comunicar aspectos negativos a clientes.",
         "interval": "Ene 2009 - Jun 2009"
       }
     ],
     "tags": [
       "Comunicación",
       "Atención",
-      "Cliente"
+      "Cliente",
+      "2009",
+      "2010"
     ]
   }
 ]

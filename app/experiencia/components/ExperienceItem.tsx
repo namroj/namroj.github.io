@@ -20,6 +20,8 @@ export type ExperienceItemType = {
   tags: string[]
 }
 
+const COMPONENT_MIN_WIDTH = 400
+
 const ExperienceItem: React.FC<{
   item: ExperienceItemType
   selectedTags: string[]
@@ -30,19 +32,22 @@ const ExperienceItem: React.FC<{
 
   return (
     <li className={styles.item}>
-      <article className={`${mainWidth < 300 ? styles['main-reduced'] : ''}`}>
+      <article className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}>
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.entity}>
           <a href={item.entity.url} target='_blank'>
             <Image src={item.entity.image} alt={item.entity.name} width={100} height={100} />
           </a>
+
           <div className={styles.content}>
             <h3>
               <a href={item.entity.url} target='_blank'>
                 {highlightText(item.entity.name)}
               </a>
             </h3>
-            <p className={styles.location}><span>[{highlightText(item.location)}]</span></p>
+            <p className={styles.location}>
+              <span>[{highlightText(item.location)}]</span>
+            </p>
           </div>
         </div>
 
@@ -54,12 +59,20 @@ const ExperienceItem: React.FC<{
               <div className={styles.position}>
                 <h4>{highlightText(position.title)}</h4>
                 <p>{highlightText(position.interval)}</p>
-                <p>{highlightText(position.description)}</p>
+                <p className={styles.description}>
+                  {(() => {
+                    const descriptionItems = position.description.split('||')
+                    return descriptionItems.length > 1
+                      ? descriptionItems.map((desc, index) => <li key={index}>{highlightText(desc)}</li>)
+                      : highlightText(position.description)
+                  })()}
+                </p>
                 <p className={styles['highlight-text']}>{highlightText(position.highlight)}</p>
               </div>
             </div>
           ))}
         </div>
+
         <div className={styles.tags}>
           <ul>
             {item.tags.map((tag, index) => (

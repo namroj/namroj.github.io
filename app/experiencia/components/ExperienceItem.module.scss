@@ -69,6 +69,7 @@
         height: calc(var(--gap) * 2);
         border-radius: 50%;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        background: var(--grayColor);
         object-fit: cover;
         transition: var(--transition);
 
@@ -136,23 +137,31 @@
       }
     }
 
-    p {
+    p,
+    .description li {
       font-size: 0.8rem;
       color: var(--grayColor);
       text-wrap: balance;
 
       @media (width > 768px) {
-        max-width: 85%;
+        max-width: 90%;
       }
 
       &.description {
         margin-top: 5px;
+        max-width: 90%;
+
+        li {
+          list-style: '- ';
+          margin-bottom: 1px;
+        }
       }
 
       &.highlight-text {
         color: var(--orangeColor);
         font-family: var(--dankMonoFont);
         font-style: italic;
+        max-width: 90%;
       }
     }
 
