@@ -2,7 +2,7 @@ import React from 'react'
 
 import Image from 'next/image'
 
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
 
 import styles from './ExperienceItem.module.scss'
 

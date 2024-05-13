@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
-import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import { ExpandCollapseState, useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
 
 import Nav from './nav/Nav'
 import Toggler from './toggler/Toggler'

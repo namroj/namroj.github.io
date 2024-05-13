@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Highlighter from 'react-highlight-words'
 
 import { normalizeAndCleanString } from '@/utils/strings'
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
 
 import ExperienceItem, { ExperienceItemType } from './ExperienceItem'
 
