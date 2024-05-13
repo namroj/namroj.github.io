@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
 
 import styles from './ExperienceItem.module.scss'
+import Tag from '@/app/_components/ui/tag/Tag'
 
 export type ExperienceItemType = {
   entity: { name: string; image: string; url: string }
@@ -77,9 +78,12 @@ const ExperienceItem: React.FC<{
           <ul>
             {item.tags.map((tag, index) => (
               <li key={index}>
-                <button onClick={() => handleTagClick(tag)}>
-                  <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
-                </button>
+                <Tag
+                  tag={tag}
+                  handleTagClick={handleTagClick}
+                  selectedTags={selectedTags}
+                  highlightText={highlightText}
+                />
               </li>
             ))}
           </ul>

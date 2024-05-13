@@ -193,48 +193,6 @@
           margin: 0;
         }
       }
-
-      button {
-        margin: 0;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-      }
-
-      code {
-        padding: 2px 3px;
-        border-radius: 3px;
-        background-color: var(--blueColor);
-        color: var(--darkColor);
-        font-size: 0.7rem;
-
-        &:hover,
-        &.active {
-          background-color: var(--orangeColor);
-        }
-
-        &.certificate {
-          padding: 0;
-          border-radius: none;
-          background-color: transparent;
-          color: var(--orangeColor);
-          font-size: 0.7rem;
-          display: inline-flex;
-          align-items: flex-end;
-
-          @media (width > 768px) {
-            flex-direction: column;
-          }
-
-          a {
-            display: flex;
-            gap: 2px;
-            font-family: var(--dankMonoFont);
-            font-style: italic;
-          }
-        }
-      }
     }
   }
 }
