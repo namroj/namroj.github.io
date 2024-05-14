@@ -65,7 +65,7 @@
       },
       {
         "title": "Desarrollador Full Stack",
-        "description": "Desarrollo y mantenimiento de microservicios, librerías Y SDKs internas.||Optimización y actualización de aplicaciones.||Integración y documentación de APIs.",
+        "description": "Desarrollo y mantenimiento de microservicios, librerías Y SDKs internas.||Optimización y actualización de aplicaciones.||Integración y documentación de APIs.||Aplicación de Arquitectura Hexagonal para la integración de módulos.",
         "highlight": "Glamit es adquirida por Accenture, así que marca una transición dentro de la línea de tiempo. En esta etapa destaca la elaboración de un módulo completo para la gestión de stock de productos.",
         "interval": "Ago 2022 - Abr 2023"
       }
