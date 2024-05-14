@@ -1,0 +1,64 @@
+// -- keyword search
+.keyword-search {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  .search {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    @media (width > 768px) {
+      display: inline-flex;
+    }
+
+    input {
+      margin-top: 5px;
+      border: none;
+      border-bottom: 1px solid var(--grayColor);
+      border-color: var(--grayColor);
+      background-color: transparent;
+      color: var(--textColor);
+      font-size: 0.7rem;
+      font-style: italic;
+      font-family: var(--dankMonoFont);
+
+      @media (width > 768px) {
+        margin-top: 0;
+        display: inline;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--blueColor);
+      }
+    }
+
+    button.clear {
+      margin-left: 5px;
+      background-color: transparent;
+      border: none;
+      color: var(--orangeColor);
+      font-size: 0.7rem;
+      font-family: var(--dankMonoFont);
+      font-style: italic;
+      cursor: pointer;
+      visibility: hidden;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--redColor);
+      }
+
+      &.visible {
+        visibility: visible;
+      }
+    }
+  }
+}

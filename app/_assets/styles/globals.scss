@@ -35,10 +35,10 @@
   --transition: all 0.25s ease-in-out;
 
   @media (width > var(--md)) {
-    --gap: 25px;
     --headerHeight: 70px;
     --sidebarWidth: calc(330px + var(--gap));
     --mainWidth: calc(100vw - var(--sidebarWidth));
+    --gap: 25px;
   }
 }
 

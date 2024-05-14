@@ -1,18 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-
 import Highlighter from 'react-highlight-words'
 
 import { normalizeAndCleanString } from '@/utils/strings'
-import { useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import FormationItem, { FormationItemType } from './FormationItem'
+import TagsFilter from '@/components/ui/tag/TagsFilter'
+import KeywordSearch from '@/components/ui/keyword/KeywordSearch'
 
-import { RiArrowGoBackFill } from 'react-icons/ri'
-import { FaDeleteLeft } from 'react-icons/fa6'
 import { LuPackageSearch } from 'react-icons/lu'
-
 import styles from './Formation.module.scss'
 
 export default function Formation({ formationData }: Readonly<{ formationData: FormationItemType[] }>) {
@@ -41,44 +39,19 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
     )
   }
 
-  const tagFilter = (
-    <div className={styles['tag-filter']}>
-      <span className={styles.title}>Filtrar por etiquetas</span>
-      <div className={styles.tags}>
-        {Array.from(new Set(formationData.flatMap((item) => item.tags)))
-          .sort((a, b) => normalizeAndCleanString(a).localeCompare(normalizeAndCleanString(b)))
-          .map((tag, index) => (
-            <button
-              key={index}
-              className={selectedTags.includes(tag) ? styles.active : ''}
-              onClick={() => handleTagClick(tag)}
-            >
-              {tag}
-            </button>
-          ))}
-      </div>
-      <button className={`${styles.clear} ${selectedTags.length > 0 && styles.visible}`} onClick={handleClearTags}>
-        <RiArrowGoBackFill /> <span>Desmarcar</span>
-      </button>
-    </div>
-  )
-
-  const textSearch = (
-    <div className={styles['text-search']}>
-      <span className={styles.title}>Filtrar por palabra clave</span>
-      <div className={styles.search}>
-        <input type='text' value={searchTerm} onChange={handleSearchChange} placeholder='Escribe para buscar...' />
-        <button className={`${styles.clear} ${searchTerm && styles.visible}`} onClick={handleClearSearch}>
-          <FaDeleteLeft /> <span>Borrar</span>
-        </button>
-      </div>
-    </div>
-  )
-
   const filters = (
     <div className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
-      {tagFilter}
-      {textSearch}
+      <TagsFilter
+        tags={Array.from(new Set(formationData.flatMap((item) => item.tags)))}
+        selectedTags={selectedTags}
+        handleTagClick={handleTagClick}
+        handleClearTags={handleClearTags}
+      />
+      <KeywordSearch
+        keyword={searchTerm}
+        handleSearchChange={handleSearchChange}
+        handleClearSearch={handleClearSearch}
+      />
     </div>
   )
 

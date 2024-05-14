@@ -1,11 +1,11 @@
 import React from 'react'
-
 import Image from 'next/image'
 
-import { useExpandCollapseContext } from '@/app/_providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+
+import TagButton from '@/components/ui/tag/TagButton'
 
 import { TbExternalLink } from 'react-icons/tb'
-
 import styles from './FormationItem.module.scss'
 
 export type FormationItemType = {
@@ -56,9 +56,12 @@ const FormationItem: React.FC<{
           <ul>
             {item.tags.map((tag, index) => (
               <li key={index}>
-                <button onClick={() => handleTagClick(tag)}>
-                  <code className={selectedTags.includes(tag) ? styles.active : ''}>{highlightText(tag)}</code>
-                </button>
+                <TagButton
+                  tag={tag}
+                  handleTagClick={handleTagClick}
+                  selectedTags={selectedTags}
+                  highlightText={highlightText}
+                />
               </li>
             ))}
           </ul>

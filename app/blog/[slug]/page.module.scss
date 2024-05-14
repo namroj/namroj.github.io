@@ -43,12 +43,12 @@
       }
 
       > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
         width: 1rem;
         margin-right: var(--gap);
         display: inline-block;
         color: var(--grayColor);
+        counter-increment: line;
+        content: counter(line);
       }
 
       code[data-line-numbers-max-digits='2'] > [data-line]::before {

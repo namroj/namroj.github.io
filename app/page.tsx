@@ -12,7 +12,7 @@ export default function HomePage() {
         objectPosition: 'center',
         width: '100%',
         height: 'auto',
-        borderRadius: '1rem',
+        borderRadius: '1rem'
       }}
     />
   )

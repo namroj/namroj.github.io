@@ -7,6 +7,7 @@
   background-color: var(--mainBgColor);
   color: var(--textColor);
   transition: var(--expandCollapseTransition);
+
   &.expanded {
     width: calc(100vw - var(--gap));
     margin-left: var(--gap);
@@ -31,8 +32,8 @@
     margin-bottom: var(--gap);
   }
 
-  p, ul {
+  p,
+  ul {
     margin-bottom: var(--gap);
   }
-  
 }

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react'
-
 import { Link } from 'next-view-transitions'
 
 import { IoHeadsetSharp } from 'react-icons/io5'

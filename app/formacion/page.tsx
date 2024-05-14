@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-
 import { readJsonFile } from '@/utils/files'
 
 import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
