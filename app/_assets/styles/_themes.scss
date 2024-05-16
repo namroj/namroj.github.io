@@ -1,10 +1,17 @@
 // -- themes -----
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 [data-theme='light'] {
   // general
   --bgColor: var(--lightColor);
   --textColor: var(--darkSemiColor);
+  --textSecondaryColor: var(--darkGrayColor);
   --textAccentColor: var(--lightGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
+  --bgAccentColor: var(--blueColor);
+  --bgHoverAccentColor: var(--orangeColor);
   // scrollbar
   --scrollbarTrackColor: var(--lightGrayColor);
   --scrollbarThumbColor: var(--blueColor);
@@ -46,8 +53,11 @@
   // general
   --bgColor: var(--darkSemiColor);
   --textColor: var(--lightSemiColor);
+  --textSecondaryColor: var(--lightGrayColor);
   --textAccentColor: var(--darkGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
+  --bgAccentColor: var(--blueColor);
+  --bgHoverAccentColor: var(--orangeColor);
   // scrollbar
   --scrollbarTrackColor: var(--darkGrayColor);
   --scrollbarThumbColor: var(--purpleColor);

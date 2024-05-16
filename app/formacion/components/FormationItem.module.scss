@@ -26,7 +26,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      color: var(--blueColor);
+      color: var(--bgAccentColor);
       font-size: 0.8rem;
     }
 
@@ -39,12 +39,12 @@
         width: calc(var(--gap) * 2);
         height: calc(var(--gap) * 2);
         border-radius: 50%;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 2px var(--textColor);
         object-fit: cover;
         transition: var(--transition);
 
         &:hover {
-          box-shadow: 0 0 5px rgba(208, 153, 101, 1);
+          box-shadow: 0 0 15px var(--bgHoverAccentColor);
         }
       }
 
@@ -81,11 +81,11 @@
           }
 
           a {
-            color: var(--blueColor);
+            color: var(--bgAccentColor);
             transition: all 0.25s ease-in-out;
 
             &:hover {
-              color: var(--orangeColor);
+              color: var(--bgHoverAccentColor);
             }
           }
         }
@@ -94,7 +94,7 @@
 
     p {
       font-size: 0.8rem;
-      color: var(--grayColor);
+      color: var(--textSecondaryColor);
       margin-bottom: 0;
 
       &.description {
@@ -131,8 +131,13 @@
         display: inline-flex;
         align-items: center;
         background-color: transparent;
-        color: var(--orangeColor);
+        color: var(--bgAccentColor);
         font-size: 0.7rem;
+        transform: var(--transition);
+
+        &:hover {
+          color: var(--bgHoverAccentColor);
+        }
 
         @media (width > 768px) {
           flex-direction: column;

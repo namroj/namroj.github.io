@@ -16,7 +16,7 @@
 
   hr {
     margin: 0 0 var(--gap);
-    border-color: var(--blueColor);
+    border-color: var(--bgAccentColor);
   }
 
   .timeline {
@@ -31,7 +31,7 @@
     }
 
     .highlight {
-      background-color: var(--orangeColor);
+      background-color: var(--bgHoverAccentColor);
       color: var(--darkColor);
     }
 
@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--grayColor);
+      color: var(--textSecondaryColor);
       font-size: 0.8rem;
       text-wrap: balance;
 

@@ -22,12 +22,12 @@
     font-size: 0.7rem;
     font-family: var(--dankMonoFont);
     font-style: italic;
-    color: var(--orangeColor);
+    color: var(--bgAccentColor);
     cursor: pointer;
     visibility: hidden;
 
     &:hover {
-      color: var(--redColor);
+      color: var(--bgHoverAccentColor);
     }
 
     &.visible {

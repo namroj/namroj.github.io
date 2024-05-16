@@ -60,7 +60,7 @@
         transition: var(--transition);
 
         &:hover {
-          color: var(--orangeColor);
+          color: var(--bgHoverAccentColor);
         }
       }
 
@@ -69,12 +69,12 @@
         height: calc(var(--gap) * 2);
         border-radius: 50%;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-        background: var(--grayColor);
+        background: var(--textSecondaryColor);
         object-fit: cover;
         transition: var(--transition);
 
         &:hover {
-          box-shadow: 0 0 5px rgba(208, 153, 101, 1);
+          box-shadow: 0 0 15px var(--bgHoverAccentColor)
         }
       }
     }
@@ -88,11 +88,11 @@
       }
 
       a {
-        color: var(--blueColor);
+        color: var(--bgAccentColor);
         transition: all 0.25s ease-in-out;
 
         &:hover {
-          color: var(--orangeColor);
+          color: var(--bgHoverAccentColor);
         }
       }
     }
@@ -111,7 +111,7 @@
         .circle {
           width: calc(var(--gap) / 2);
           height: calc(var(--gap) / 2);
-          background-color: var(--grayColor);
+          background-color: var(--textSecondaryColor);
           border-radius: 50%;
           position: absolute;
           left: 0;
@@ -124,7 +124,7 @@
           top: calc(var(--gap) * 1.2);
           left: calc(var(--gap) / 8 + 1px);
           bottom: calc(var(--gap) / 3.8);
-          background-color: var(--grayColor);
+          background-color: var(--textSecondaryColor);
         }
 
         &:last-child .line {
@@ -140,7 +140,7 @@
     p,
     .description li {
       font-size: 0.8rem;
-      color: var(--grayColor);
+      color: var(--textSecondaryColor);
       text-wrap: balance;
 
       @media (width > 768px) {
@@ -158,7 +158,7 @@
       }
 
       &.highlight-text {
-        color: var(--orangeColor);
+        color: var(--bgHoverAccentColor);
         font-family: var(--dankMonoFont);
         font-style: italic;
         max-width: 90%;
@@ -169,7 +169,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      color: var(--blueColor);
+      color: var(--bgAccentColor);
       font-size: 0.8rem;
     }
 

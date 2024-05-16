@@ -9,13 +9,13 @@
   code {
     padding: 2px 3px;
     border-radius: 3px;
-    background-color: var(--blueColor);
+    background-color: var(--bgAccentColor);
     color: var(--darkColor);
     font-size: 0.7rem;
 
     &:hover,
     &.active {
-      background-color: var(--orangeColor);
+      background-color: var(--bgHoverAccentColor);
     }
   }
 }
