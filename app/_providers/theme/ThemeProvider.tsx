@@ -25,7 +25,18 @@ const getThemeFromLocalStorage = (): Theme => {
 
   const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY)
   if (!theme || !Object.values(Theme).includes(theme as Theme)) {
-    return Theme.DARK
+    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+
+    if (userPrefersDark) {
+      return Theme.DARK
+    }
+
+    if (userPrefersLight) {
+      return Theme.LIGHT
+    }
+
+    return Theme.LIGHT
   }
 
   return theme as Theme
