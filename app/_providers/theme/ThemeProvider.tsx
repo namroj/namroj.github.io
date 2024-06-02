@@ -1,15 +1,24 @@
 'use client'
 
-import { FC, createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import {
+  FC,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState
+} from 'react'
 
 export enum Theme {
   LIGHT = 'light',
-  DARK = 'dark'
+  DARK = 'dark',
+  AUTO = 'auto'
 }
 
 type ThemeContextType = {
   theme: Theme
-  toggleTheme: () => void
+  toggleTheme: (theme: Theme) => void
 }
 
 export interface ThemeProviderProps {
@@ -20,29 +29,28 @@ export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active'
 
 const getThemeFromLocalStorage = (): Theme => {
   if (typeof window === 'undefined') {
-    return Theme.DARK
+    return Theme.AUTO
   }
 
   const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY)
   if (!theme || !Object.values(Theme).includes(theme as Theme)) {
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
-
-    if (userPrefersDark) {
-      return Theme.DARK
-    }
-
-    if (userPrefersLight) {
-      return Theme.LIGHT
-    }
-
-    return Theme.LIGHT
+    return Theme.AUTO
   }
 
   return theme as Theme
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const setThemeAttribute = (theme: Theme) => {
+  document.body.setAttribute('data-theme', theme)
+  document.body.setAttribute(
+    'data-darkreader-mode',
+    theme === Theme.DARK ? 'dark' : 'light'
+  )
+  document.body.setAttribute(
+    'data-darkreader-scheme',
+    theme === Theme.DARK ? 'dark' : 'light'
+  )
+}
 
 export const useThemeContext = () => {
   const context = useContext(ThemeContext)
@@ -53,24 +61,36 @@ export const useThemeContext = () => {
   return context
 }
 
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+
 export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage)
 
-  useEffect(() => {
-    setMounted(true)
-  }, [])
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
+    if (theme === Theme.AUTO) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+      const prefersColorSchemeListener = (event: MediaQueryListEvent) => {
+        const currentTheme = event.matches ? Theme.DARK : Theme.LIGHT
+        localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO)
+        toggleTheme(Theme.AUTO)
+        setThemeAttribute(currentTheme)
+      }
+
+      localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO)
+      setThemeAttribute(mediaQuery.matches ? Theme.DARK : Theme.LIGHT)
+
+      mediaQuery.addEventListener('change', prefersColorSchemeListener)
+      return () => mediaQuery.removeEventListener('change', prefersColorSchemeListener)
+    }
+
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)
-    document.body.setAttribute('data-theme', theme)
-    document.body.setAttribute('data-darkreader-mode', theme === Theme.DARK ? 'dark' : 'light')
-    document.body.setAttribute('data-darkreader-scheme', theme === Theme.DARK ? 'dark' : 'light')
+    setThemeAttribute(theme)
   }, [theme])
 
-  const toggleTheme = useCallback(() => {
-    setTheme((prevTheme) => (prevTheme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT))
-  }, [])
+  const toggleTheme = useCallback((theme: Theme) => setTheme(theme), [])
 
   const contextValue = useMemo(
     () => ({
@@ -80,5 +100,9 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
     [theme, toggleTheme]
   )
 
-  return <ThemeContext.Provider value={contextValue}>{mounted && <>{children}</>}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={contextValue}>
+      {mounted && <>{children}</>}
+    </ThemeContext.Provider>
+  )
 }

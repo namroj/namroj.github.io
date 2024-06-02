@@ -7,6 +7,7 @@ export default function HomePage() {
       alt='Hero'
       width={1500}
       height={500}
+      priority
       style={{
         objectFit: 'cover',
         objectPosition: 'center',
