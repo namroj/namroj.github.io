@@ -2,7 +2,10 @@
 
 import { useState, useEffect } from 'react'
 
-import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import {
+  ExpandCollapseState,
+  useExpandCollapseContext
+} from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import Nav from './nav/Nav'
 import Toggler from './toggler/Toggler'
@@ -77,7 +80,10 @@ export default function Sidebar() {
       const maxWidth = Math.max(window.innerWidth * 0.5, 500)
       const resizedSidebarWidth = Math.min(Math.max(newWidth, minWidth), maxWidth)
 
-      document.documentElement.style.setProperty('--sidebarWidth', `${resizedSidebarWidth}px`)
+      document.documentElement.style.setProperty(
+        '--sidebarWidth',
+        `${resizedSidebarWidth}px`
+      )
       setWidth(resizedSidebarWidth.toString())
       setSidebarWidth(resizedSidebarWidth)
       sidebar.style.transition = 'none'

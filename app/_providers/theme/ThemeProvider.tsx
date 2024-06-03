@@ -11,9 +11,15 @@ import {
 } from 'react'
 
 export enum Theme {
+  AUTO = 'auto',
   LIGHT = 'light',
-  DARK = 'dark',
-  AUTO = 'auto'
+  DARK = 'dark'
+}
+
+export enum ThemeLabel {
+  AUTO = 'Automático',
+  LIGHT = 'Claro',
+  DARK = 'Oscuro'
 }
 
 type ThemeContextType = {
@@ -55,7 +61,9 @@ const setThemeAttribute = (theme: Theme) => {
 export const useThemeContext = () => {
   const context = useContext(ThemeContext)
   if (!context) {
-    throw new Error('useThemeContext must be used within a ThemeContextProvider')
+    throw new Error(
+      'useThemeContext must be used within a ThemeContextProvider'
+    )
   }
 
   return context
@@ -83,7 +91,8 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
       setThemeAttribute(mediaQuery.matches ? Theme.DARK : Theme.LIGHT)
 
       mediaQuery.addEventListener('change', prefersColorSchemeListener)
-      return () => mediaQuery.removeEventListener('change', prefersColorSchemeListener)
+      return () =>
+        mediaQuery.removeEventListener('change', prefersColorSchemeListener)
     }
 
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)

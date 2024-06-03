@@ -104,6 +104,7 @@
         var(--grayColor) 300deg 350deg,
         var(--navBgColor) 350deg 300deg
       );
+      animation: spin-colors 6s infinite linear;
       overflow: hidden;
 
       @media (width > 768px) {
@@ -126,7 +127,7 @@
           var(--orangeColor) 300deg 350deg,
           var(--navBgColor) 350deg 300deg
         );
-        animation: spin-colors 6s infinite linear;
+        animation: spin-colors 1s infinite linear;
       }
 
       img {

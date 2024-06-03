@@ -1,7 +1,7 @@
 // -- footer -----
 .footer {
   width: calc(100vw - var(--sidebarWidth));
-  height: var(--gap);
+  height: calc(var(--gap) * 1.25);
   position: fixed;
   right: 0;
   bottom: 0;
@@ -64,15 +64,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid transparent;
 
     img {
-      border: 2px solid transparent;
+      border: 2px solid var(--footerBorderColor);
       border-radius: 50%;
+      background-color: white;
       transition: all 0.25s ease-in-out;
 
       &:hover {
-        background-color: white;
-        border-color: var(--footerBorderColor);
+        border-color: var(--footerAnchorHoverColor);
       }
     }
   }
