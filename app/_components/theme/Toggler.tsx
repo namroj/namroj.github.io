@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 import {
   Theme,
   ThemeLabel,
@@ -19,36 +17,36 @@ export default function ToggleTheme() {
   return (
     <>
       <button key={Theme.AUTO} className={styles.toggler}>
-        <motion.div
+        <div
           className={`${styles.btn} ${theme === Theme.AUTO && styles.active}`}
         >
           <RiMacbookLine
             onClick={() => toggleTheme(Theme.AUTO)}
             title={ThemeLabel.AUTO}
           />
-        </motion.div>
+        </div>
       </button>
 
       <button key={Theme.LIGHT} className={styles.toggler}>
-        <motion.div
+        <div
           className={`${styles.btn} ${theme === Theme.LIGHT && styles.active}`}
         >
           <BsSun
             onClick={() => toggleTheme(Theme.LIGHT)}
             title={ThemeLabel.LIGHT}
           />
-        </motion.div>
+        </div>
       </button>
 
       <button key={Theme.DARK} className={styles.toggler}>
-        <motion.div
+        <div
           className={`${styles.btn} ${theme === Theme.DARK && styles.active}`}
         >
           <HiMoon
             onClick={() => toggleTheme(Theme.DARK)}
             title={ThemeLabel.DARK}
           />
-        </motion.div>
+        </div>
       </button>
     </>
   )
