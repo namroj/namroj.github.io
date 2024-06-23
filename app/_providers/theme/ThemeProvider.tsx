@@ -7,19 +7,19 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState
+  useState,
 } from 'react'
 
 export enum Theme {
   AUTO = 'auto',
   LIGHT = 'light',
-  DARK = 'dark'
+  DARK = 'dark',
 }
 
 export enum ThemeLabel {
   AUTO = 'Automático',
   LIGHT = 'Claro',
-  DARK = 'Oscuro'
+  DARK = 'Oscuro',
 }
 
 type ThemeContextType = {
@@ -50,11 +50,11 @@ const setThemeAttribute = (theme: Theme) => {
   document.body.setAttribute('data-theme', theme)
   document.body.setAttribute(
     'data-darkreader-mode',
-    theme === Theme.DARK ? 'dark' : 'light'
+    theme === Theme.DARK ? 'dark' : 'light',
   )
   document.body.setAttribute(
     'data-darkreader-scheme',
-    theme === Theme.DARK ? 'dark' : 'light'
+    theme === Theme.DARK ? 'dark' : 'light',
   )
 }
 
@@ -62,7 +62,7 @@ export const useThemeContext = () => {
   const context = useContext(ThemeContext)
   if (!context) {
     throw new Error(
-      'useThemeContext must be used within a ThemeContextProvider'
+      'useThemeContext must be used within a ThemeContextProvider',
     )
   }
 
@@ -104,9 +104,9 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
   const contextValue = useMemo(
     () => ({
       theme,
-      toggleTheme
+      toggleTheme,
     }),
-    [theme, toggleTheme]
+    [theme, toggleTheme],
   )
 
   return (

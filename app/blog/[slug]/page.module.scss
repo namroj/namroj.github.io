@@ -1,11 +1,27 @@
 // -- post/article -----
 .article {
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+
   h1[id] {
+    margin-top: var(--gap);
     margin-bottom: var(--gap);
+    color: var(--purpleColor);
   }
 
   .markdown {
     line-height: 1.25rem;
+
+    h2[id] {
+      color: var(--orangeColor);
+    }
+
+    hr {
+      margin-top: var(--gap);
+      margin-bottom: var(--gap);
+      border-color: var(--greenColor);
+    }
 
     p {
       margin-bottom: calc(var(--gap) / 2);

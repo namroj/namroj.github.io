@@ -1,15 +1,19 @@
 import { Metadata } from 'next'
 
-import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, {
+  Breadcrumb,
+} from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import { RxFontFamily } from 'react-icons/rx'
 
 export const metadata: Metadata = {
-  title: 'Tipografías preferidas | Jorman Espinoza'
+  title: 'Tipografías preferidas | Jorman Espinoza',
 }
 
 export default function FontsPage() {
-  const breadcrumbs: Breadcrumb[] = [{ label: 'Tipografías', icon: <RxFontFamily /> }]
+  const breadcrumbs: Breadcrumb[] = [
+    { label: 'Tipografías', icon: <RxFontFamily /> },
+  ]
 
   return (
     <>
@@ -47,7 +51,10 @@ export default function FontsPage() {
           </a>
         </li>
         <li>
-          <a href='https://github.com/tonsky/FiraCode/blob/master/LEEME.md' target='_blank'>
+          <a
+            href='https://github.com/tonsky/FiraCode/blob/master/LEEME.md'
+            target='_blank'
+          >
             Fira Code
           </a>{' '}
           - by{' '}

@@ -1,10 +1,18 @@
 'use client'
 
-import { FC, createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
+import {
+  FC,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
 
 export enum ExpandCollapseState {
   COLLAPSED = 'collapsed',
-  EXPANDED = 'expanded'
+  EXPANDED = 'expanded',
 }
 
 type ExpandCollapseContextType = {
@@ -26,10 +34,14 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
     return ExpandCollapseState.COLLAPSED
   }
 
-  const expandCollapseState = localStorage.getItem(EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY)
+  const expandCollapseState = localStorage.getItem(
+    EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
+  )
   if (
     !expandCollapseState ||
-    !Object.values(ExpandCollapseState).includes(expandCollapseState as ExpandCollapseState)
+    !Object.values(ExpandCollapseState).includes(
+      expandCollapseState as ExpandCollapseState,
+    )
   ) {
     return ExpandCollapseState.COLLAPSED
   }
@@ -37,22 +49,27 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   return expandCollapseState as ExpandCollapseState
 }
 
-const ExpandCollapseContext = createContext<ExpandCollapseContextType | undefined>(undefined)
+const ExpandCollapseContext = createContext<
+  ExpandCollapseContextType | undefined
+>(undefined)
 
 export const useExpandCollapseContext = () => {
   const context = useContext(ExpandCollapseContext)
   if (!context) {
-    throw new Error('useExpandCollapseContext must be used within a ExpandCollapseContextProvider')
+    throw new Error(
+      'useExpandCollapseContext must be used within a ExpandCollapseContextProvider',
+    )
   }
 
   return context
 }
 
-export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({ children }) => {
+export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
+  children,
+}) => {
   const [mounted, setMounted] = useState(false)
-  const [expandCollapseState, setExpandCollapseState] = useState<ExpandCollapseState>(
-    getExpandCollapseStateFromLocalStorage
-  )
+  const [expandCollapseState, setExpandCollapseState] =
+    useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage)
   const [sidebarWidth, setSidebarWidth] = useState<number>(0)
   const [mainWidth, setMainWidth] = useState<number>(0)
 
@@ -61,7 +78,10 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
   }, [])
 
   useEffect(() => {
-    localStorage.setItem(EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY, expandCollapseState)
+    localStorage.setItem(
+      EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
+      expandCollapseState,
+    )
     expandCollapseState === ExpandCollapseState.COLLAPSED
       ? setMainWidth(window.innerWidth)
       : setMainWidth(window.innerWidth - sidebarWidth)
@@ -73,7 +93,9 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
 
   const toggleExpandCollapseState = useCallback(() => {
     setExpandCollapseState((prevState) =>
-      prevState === ExpandCollapseState.COLLAPSED ? ExpandCollapseState.EXPANDED : ExpandCollapseState.COLLAPSED
+      prevState === ExpandCollapseState.COLLAPSED
+        ? ExpandCollapseState.EXPANDED
+        : ExpandCollapseState.COLLAPSED,
     )
   }, [])
 
@@ -83,12 +105,20 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
       toggleExpandCollapseState,
       sidebarWidth,
       setSidebarWidth,
-      mainWidth
+      mainWidth,
     }),
-    [expandCollapseState, toggleExpandCollapseState, sidebarWidth, setSidebarWidth, mainWidth]
+    [
+      expandCollapseState,
+      toggleExpandCollapseState,
+      sidebarWidth,
+      setSidebarWidth,
+      mainWidth,
+    ],
   )
 
   return (
-    <ExpandCollapseContext.Provider value={contextValue}>{mounted && <>{children}</>}</ExpandCollapseContext.Provider>
+    <ExpandCollapseContext.Provider value={contextValue}>
+      {mounted && <>{children}</>}
+    </ExpandCollapseContext.Provider>
   )
 }

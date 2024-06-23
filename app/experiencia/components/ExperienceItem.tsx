@@ -33,11 +33,18 @@ const ExperienceItem: React.FC<{
 
   return (
     <li className={styles.item}>
-      <article className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}>
+      <article
+        className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
+      >
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.entity}>
           <a href={item.entity.url} target='_blank'>
-            <Image src={item.entity.image} alt={item.entity.name} width={100} height={100} />
+            <Image
+              src={item.entity.image}
+              alt={item.entity.name}
+              width={100}
+              height={100}
+            />
           </a>
 
           <div className={styles.content}>
@@ -64,11 +71,15 @@ const ExperienceItem: React.FC<{
                   {(() => {
                     const descriptionItems = position.description.split('||')
                     return descriptionItems.length > 1
-                      ? descriptionItems.map((desc, index) => <li key={index}>{highlightText(desc)}</li>)
+                      ? descriptionItems.map((desc, index) => (
+                          <li key={index}>{highlightText(desc)}</li>
+                        ))
                       : highlightText(position.description)
                   })()}
                 </p>
-                <p className={styles['highlight-text']}>{highlightText(position.highlight)}</p>
+                <p className={styles['highlight-text']}>
+                  {highlightText(position.highlight)}
+                </p>
               </div>
             </div>
           ))}

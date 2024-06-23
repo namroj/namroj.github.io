@@ -8,7 +8,9 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 
-import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, {
+  Breadcrumb,
+} from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json'
 import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json'
@@ -42,7 +44,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
-    { label: data.title, icon: <LuFileTerminal /> }
+    { label: data.title, icon: <LuFileTerminal /> },
   ]
 
   return (
@@ -64,15 +66,15 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
                   {
                     theme: {
                       dark: DarkItalic,
-                      light: NightOwlLight
-                    }
-                  }
+                      light: NightOwlLight,
+                    },
+                  },
                 ],
                 [rehypeAutolinkHeadings, { behavior: 'wrap' }],
                 // @ts-expect-error
-                rehypeHighlight
-              ]
-            }
+                rehypeHighlight,
+              ],
+            },
           }}
         />
       </div>
@@ -85,6 +87,6 @@ export async function generateMetadata({ params }: Readonly<PostProps>) {
 
   return {
     title: `${data.title} | Jorman Espinoza`,
-    description: data.summary
+    description: data.summary,
   }
 }

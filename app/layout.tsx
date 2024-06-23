@@ -16,15 +16,19 @@ import '@/assets/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',
-  description: 'Desarrollador Full Stack'
+  description: 'Desarrollador Full Stack',
 }
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <ViewTransitions>
       <html lang='es'>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <body className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}>
+        <body
+          className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
+        >
           <ThemeContextProvider>
             <ExpandCollapseContextProvider>
               <Header />

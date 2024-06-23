@@ -2,17 +2,24 @@ import { Metadata } from 'next'
 
 import { readJsonFile } from '@/utils/files'
 
-import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, {
+  Breadcrumb,
+} from '@/components/main/breadcrumbs/Breadcrumbs'
 
 import { MdLaptop } from 'react-icons/md'
 import Experience from './components/Experience'
 
 export const metadata: Metadata = {
-  title: 'Experiencia | Jorman Espinoza'
+  title: 'Experiencia | Jorman Espinoza',
 }
 export default async function ProfessionalExperiencePage() {
-  const breadcrumbs: Breadcrumb[] = [{ label: 'Experiencia', icon: <MdLaptop /> }]
-  const experienceData: any[] = await readJsonFile('app/experiencia', 'data.json')
+  const breadcrumbs: Breadcrumb[] = [
+    { label: 'Experiencia', icon: <MdLaptop /> },
+  ]
+  const experienceData: any[] = await readJsonFile(
+    'app/experiencia',
+    'data.json',
+  )
 
   return (
     <>
