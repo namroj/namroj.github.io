@@ -1,8 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
-
 import { renderToString } from 'react-dom/server'
+import { Theme, useThemeContext } from '@/providers/theme/ThemeProvider'
+
+import mapDarkStyles from './dark'
+import mapLightStyles from './light'
 import { FaBus, FaPlane, FaMapMarker } from 'react-icons/fa'
 
 declare global {
@@ -12,8 +15,9 @@ declare global {
 }
 
 const GMap = () => {
+  const { theme } = useThemeContext()
+
   useEffect(() => {
-    // Load the Google Maps script
     const script = document.createElement('script')
     script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`
     script.async = true
@@ -22,92 +26,110 @@ const GMap = () => {
     document.head.appendChild(script)
 
     return () => {
-      // Cleanup the script if the component is unmounted
       document.head.removeChild(script)
     }
   }, [])
 
+  useEffect(() => {
+    if (typeof google !== 'undefined' && google.maps) {
+      initMap()
+    }
+  }, [theme])
+
+  const getMapStyles = () => {
+    let activeTheme = theme
+    if (theme === Theme.AUTO) {
+      const prefersDarkMode =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      activeTheme = prefersDarkMode ? Theme.DARK : Theme.LIGHT
+    }
+
+    if (activeTheme === Theme.DARK) {
+      return mapDarkStyles
+    }
+
+    return mapLightStyles
+  }
+
   const initMap = () => {
-    const caracas = { lat: 10.49158, lng: -66.85092 } // Caracas, Venezuela
-    const tachira = { lat: 7.74957, lng: -72.23547 } // Tachira, Venezuela
-    const cucuta = { lat: 7.92802, lng: -72.507 } // Cucuta, Colombia
-    const bogota = { lat: 4.70118, lng: -74.14588 } // Bogota, Colombia
-    const buenosAires = { lat: -34.81576, lng: -58.53542 } // Buenos Aires, Argentina
+    const point1 = { lat: 10.49158, lng: -66.85092 } // Caracas, Venezuela
+    const point2 = { lat: 7.74957, lng: -72.23547 } // Táchira, Venezuela
+    const point3 = { lat: 7.92802, lng: -72.507 } // Cúcuta, Colombia
+    const point4 = { lat: 4.70118, lng: -74.14588 } // Bogota, Colombia
+    const point5 = { lat: -34.81576, lng: -58.53542 } // Buenos Aires, Argentina
 
     const map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
-      center: { lat: -15.0, lng: -65.0 }, // Center of the map between Caracas and Buenos Aires
+      center: { lat: -12.5, lng: -65.0 },
+      styles: getMapStyles(),
     })
 
     const busIcon = {
-      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaBus size={32} color='black' />))}`,
-      scaledSize: new google.maps.Size(20, 20), // Scaled size of the icon
+      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaBus color='black' />))}`,
+      scaledSize: new google.maps.Size(20, 20),
     }
 
     const airplaneIcon = {
-      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaPlane size={32} color='black' />))}`,
-      scaledSize: new google.maps.Size(20, 20), // Scaled size of the icon
+      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaPlane color='black' />))}`,
+      scaledSize: new google.maps.Size(20, 20),
     }
 
     const destinationIcon = {
-      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaMapMarker size={32} color='black' />))}`,
-      scaledSize: new google.maps.Size(20, 20), // Scaled size of the icon
+      url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(<FaMapMarker color='black' />))}`,
+      scaledSize: new google.maps.Size(20, 20),
     }
 
     new google.maps.Marker({
-      position: caracas,
-      map: map,
+      position: point1,
+      map,
       icon: busIcon,
     })
 
     new google.maps.Marker({
-      position: cucuta,
-      map: map,
+      position: point3,
+      map,
       icon: airplaneIcon,
     })
 
     new google.maps.Marker({
-      position: bogota,
-      map: map,
+      position: point4,
+      map,
       icon: airplaneIcon,
     })
 
     new google.maps.Marker({
-      position: buenosAires,
-      map: map,
+      position: point5,
+      map,
       icon: destinationIcon,
     })
 
-    // Polyline from Caracas to Tachira with bus icon
     const path1 = new google.maps.Polyline({
-      path: [caracas, tachira],
+      path: [point1, point2],
       geodesic: true,
       strokeColor: '#6087cf',
       strokeOpacity: 1.0,
       strokeWeight: 2,
     })
 
-    // Polyline from Caracas to Tachira with bus icon
     const path2 = new google.maps.Polyline({
-      path: [tachira, cucuta],
+      path: [point2, point3],
       geodesic: true,
       strokeColor: '#6087cf',
       strokeOpacity: 1.0,
       strokeWeight: 2,
     })
 
-    // Polyline from Tachira to Buenos Aires with airplane icon
     const path3 = new google.maps.Polyline({
-      path: [cucuta, bogota],
+      path: [point3, point4],
       geodesic: true,
       strokeColor: '#6087cf',
       strokeOpacity: 1.0,
       strokeWeight: 2,
     })
 
-    // Polyline from Tachira to Buenos Aires with airplane icon
     const path4 = new google.maps.Polyline({
-      path: [bogota, buenosAires],
+      path: [point4, point5],
       geodesic: true,
       strokeColor: '#6087cf',
       strokeOpacity: 1.0,
