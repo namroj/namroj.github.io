@@ -22,15 +22,9 @@ export default function ContactPage() {
 
   return (
     <>
-      <Breadcrumbs items={breadcrumbs} />
+      <Breadcrumbs items={breadcrumbs}/>
 
       <h2>Contacto</h2>
-
-      <p>
-        Actualmente resido en Buenos Aires, Argentina. Si deseas contactarme.
-      </p>
-
-      <MapWithNoSSR />
 
       <p>
         <a href='mailto:espinoza.dev@gmail.com' target='_blank'>
@@ -42,6 +36,12 @@ export default function ContactPage() {
           +54 9 11 27910154
         </a>
       </p>
+
+      <p>
+        Actualmente resido en Buenos Aires, Argentina.
+      </p>
+
+      <MapWithNoSSR/>
     </>
   )
 }

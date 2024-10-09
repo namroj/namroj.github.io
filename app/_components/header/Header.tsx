@@ -1,7 +1,5 @@
-import { Link } from 'next-view-transitions'
+import {Link} from 'next-view-transitions'
 import Image from 'next/image'
-
-import ThemeToggler from '@/components/theme/Toggler'
 
 import profileImage from '@/assets/images/profile.jpeg'
 import styles from './Header.module.scss'
@@ -11,7 +9,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.id}>
         <Link href='/' className={styles['profile-image']}>
-          <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' priority />
+          <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' priority/>
         </Link>
         <div>
           <Link href='/'>
@@ -27,7 +25,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <ThemeToggler />
     </header>
   )
 }

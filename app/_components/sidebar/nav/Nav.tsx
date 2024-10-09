@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'next-view-transitions'
-import { usePathname } from 'next/navigation'
+import {useEffect, useState} from 'react'
+import {Link} from 'next-view-transitions'
+import {usePathname} from 'next/navigation'
 import useMedia from 'use-media'
 
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import {useExpandCollapseContext} from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import styles from './Nav.module.scss'
 
@@ -14,8 +14,8 @@ interface NavItem {
 
 export default function Nav() {
   const currentPath = usePathname()
-  const { toggleExpandCollapseState } = useExpandCollapseContext()
-  const isMobile = useMedia({ maxWidth: '768px' })
+  const {toggleExpandCollapseState} = useExpandCollapseContext()
+  const isMobile = useMedia({maxWidth: '768px'})
 
   const [activePaths, setActivePaths] = useState<string[]>([])
 
@@ -30,12 +30,12 @@ export default function Nav() {
   }
 
   const items: NavItem[] = [
-    { path: '/formacion', label: 'Formación' },
-    { path: '/experiencia', label: 'Experiencia' },
-    { path: '/proyectos', label: 'Proyectos' },
-    { path: '/tipografias', label: 'Tipografías' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contacto', label: 'Contacto' }
+    {path: '/formacion', label: 'Formación'},
+    {path: '/experiencia', label: 'Experiencia'},
+    {path: '/proyectos', label: 'Proyectos'},
+    {path: '/tipografias', label: 'Tipografías'},
+    {path: '/blog', label: 'Blog'},
+    {path: '/contacto', label: 'Contacto'}
   ]
 
   return (

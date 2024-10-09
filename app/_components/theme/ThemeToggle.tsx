@@ -9,14 +9,14 @@ import {
 import { RiMacbookLine } from 'react-icons/ri'
 import { BsSun } from 'react-icons/bs'
 import { HiMoon } from 'react-icons/hi'
-import styles from './Toggler.module.scss'
+import styles from './ThemeToggle.module.scss'
 
-export default function ToggleTheme() {
+export default function ThemeToggle() {
   const { theme, toggleTheme } = useThemeContext()
 
   return (
     <>
-      <button key={Theme.AUTO} className={styles.toggler}>
+      <button key={Theme.AUTO} className={styles.toggle}>
         <div
           className={`${styles.btn} ${theme === Theme.AUTO && styles.active}`}
         >
@@ -27,7 +27,7 @@ export default function ToggleTheme() {
         </div>
       </button>
 
-      <button key={Theme.LIGHT} className={styles.toggler}>
+      <button key={Theme.LIGHT} className={styles.toggle}>
         <div
           className={`${styles.btn} ${theme === Theme.LIGHT && styles.active}`}
         >
@@ -38,7 +38,7 @@ export default function ToggleTheme() {
         </div>
       </button>
 
-      <button key={Theme.DARK} className={styles.toggler}>
+      <button key={Theme.DARK} className={styles.toggle}>
         <div
           className={`${styles.btn} ${theme === Theme.DARK && styles.active}`}
         >

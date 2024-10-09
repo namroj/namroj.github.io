@@ -49,7 +49,7 @@
       code {
         color: var(--headerUsernameTextColor);
         font-size: 0.8rem;
-        transition: color 0.25s steps ease-in-out;
+        transition: color 0.25s steps(1);
 
         @media (width > 768px) {
           font-size: 0.9rem;
@@ -67,7 +67,7 @@
 
       span {
         margin-left: calc(var(--gap) / 6);
-        font-family: var(--dankMonoFont);
+        font-family: var(--dankMonoFont), serif;
         font-size: 0.88rem;
         font-style: italic;
         font-weight: 900;
@@ -108,8 +108,8 @@
       overflow: hidden;
 
       @media (width > 768px) {
-        width: 58px;
-        height: 58px;
+        width: 50px;
+        height: 50px;
       }
 
       &:hover {
@@ -134,14 +134,12 @@
         width: 42px;
         height: 42px;
         object-fit: cover;
-        /* Ensure circular shape */
         border-radius: 50%;
-        /* Add subtle inner border */
         border: 2px solid var(--navBgColor);
 
         @media (width > 768px) {
-          width: 56px;
-          height: 56px;
+          width: 48px;
+          height: 48px;
           border: 3px solid var(--navBgColor);
         }
       }

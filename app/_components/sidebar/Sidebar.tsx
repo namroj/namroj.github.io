@@ -8,7 +8,7 @@ import {
 } from '@/providers/expand-collapse/ExpandCollapseProvider'
 
 import Nav from './nav/Nav'
-import Toggler from './toggler/Toggler'
+import SidebarToggle from './toggler/SidebarToggle'
 import Links from './links/Links'
 
 import styles from './Sidebar.module.scss'
@@ -105,7 +105,7 @@ export default function Sidebar() {
   return (
     <aside className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
       <button className={styles.resizer} onMouseDown={handleMouseDown}></button>
-      <Toggler />
+      <SidebarToggle />
       <Nav />
       <Links />
     </aside>
