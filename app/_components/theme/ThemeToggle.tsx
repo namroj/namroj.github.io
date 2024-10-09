@@ -1,18 +1,14 @@
 'use client'
 
-import {
-  Theme,
-  ThemeLabel,
-  useThemeContext
-} from '@/providers/theme/ThemeProvider'
+import {Theme, ThemeLabel, useThemeContext} from '@/providers/theme/ThemeProvider'
 
-import { RiMacbookLine } from 'react-icons/ri'
-import { BsSun } from 'react-icons/bs'
-import { HiMoon } from 'react-icons/hi'
+import {RiMacbookLine} from 'react-icons/ri'
+import {BsSun} from 'react-icons/bs'
+import {HiMoon} from 'react-icons/hi'
 import styles from './ThemeToggle.module.scss'
 
 export default function ThemeToggle() {
-  const { theme, toggleTheme } = useThemeContext()
+  const {theme, toggleTheme} = useThemeContext()
 
   return (
     <>

@@ -1,14 +1,6 @@
 'use client'
 
-import {
-  FC,
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import React, {createContext, FC, ReactNode, useCallback, useContext, useEffect, useMemo, useState,} from 'react'
 
 export enum ExpandCollapseState {
   COLLAPSED = 'collapsed',
@@ -24,7 +16,7 @@ type ExpandCollapseContextType = {
 }
 
 export interface ExpandCollapseProviderProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY = 'expand_collapse_state'
@@ -50,7 +42,7 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
 }
 
 const ExpandCollapseContext = createContext<
-  ExpandCollapseContextType | undefined
+  ExpandCollapseContextType
 >(undefined)
 
 export const useExpandCollapseContext = () => {
@@ -65,8 +57,8 @@ export const useExpandCollapseContext = () => {
 }
 
 export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
-  children,
-}) => {
+                                                                                 children,
+                                                                               }) => {
   const [mounted, setMounted] = useState(false)
   const [expandCollapseState, setExpandCollapseState] =
     useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage)

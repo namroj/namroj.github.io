@@ -12,6 +12,7 @@ import Experience from './components/Experience'
 export const metadata: Metadata = {
   title: 'Experiencia | Jorman Espinoza',
 }
+
 export default async function ProfessionalExperiencePage() {
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Experiencia', icon: <MdLaptop /> },

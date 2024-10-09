@@ -1,14 +1,6 @@
 'use client'
 
-import {
-  FC,
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import {createContext, FC, ReactNode, useCallback, useContext, useEffect, useMemo, useState,} from 'react'
 
 export enum Theme {
   AUTO = 'auto',
@@ -28,7 +20,7 @@ type ThemeContextType = {
 }
 
 export interface ThemeProviderProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active'
@@ -71,7 +63,7 @@ export const useThemeContext = () => {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeContextProvider: FC<ThemeProviderProps> = ({children}) => {
   const [mounted, setMounted] = useState(false)
   const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage)
 

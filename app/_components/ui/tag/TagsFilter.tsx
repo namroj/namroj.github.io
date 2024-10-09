@@ -6,12 +6,14 @@ import TagButton from './TagButton'
 import { RiArrowGoBackFill } from 'react-icons/ri'
 import styles from './TagsFilter.module.scss'
 
-const TagsFilter: FC<{
+type Props = {
   tags: string[]
   selectedTags: string[]
   handleTagClick: (tag: string) => void
   handleClearTags: () => void
-}> = ({ tags, selectedTags, handleTagClick, handleClearTags }) => {
+};
+
+const TagsFilter: FC<Props> = ({ tags, selectedTags, handleTagClick, handleClearTags }) => {
   const sortedTags = tags.slice().sort((a, b) => normalizeAndCleanString(a).localeCompare(normalizeAndCleanString(b)))
 
   return (
