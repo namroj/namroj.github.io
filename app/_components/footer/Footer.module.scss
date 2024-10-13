@@ -45,10 +45,10 @@
     justify-content: center;
     gap: calc(var(--gap) / 4);
     color: var(--textColor);
-    font-family: var(--dankMonoFont);
+    font-family: var(--dankMonoFont), sans-serif;
 
     a {
-      font-family: var(--dankMonoFont);
+      font-family: var(--dankMonoFont), sans-serif;
       font-style: italic;
       font-weight: bold;
       color: var(--footerAnchorColor);
