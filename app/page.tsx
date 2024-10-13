@@ -7,10 +7,10 @@ export default function HomePage() {
       <br />
       Amante de las buenas prácticas, el código limpio y los patrones de diseño.
       <p>Desde páginas web hasta tiendas virtuales.</p>
-      <p>
-        <h3>Servicios</h3>
+      <section>
+        <h4>Servicios</h4>
         <ul>
-          <li>Maquetación</li>
+          <li>Maquetacióna</li>
           <li>Firmas de correo personalizadas HTML</li>
           <li>
             Desarrollo de páginas web
@@ -24,9 +24,9 @@ export default function HomePage() {
           <li>Gestión y mantenimiento de bases de datos</li>
           <li>Generación y personalización de sitios en WordPress</li>
         </ul>
-      </p>
-      <p>
-        <h3>Arsenal</h3>
+      </section>
+      <section>
+        <h4>Arsenal</h4>
         <ul>
           <li>Java</li>
           <li>Spring</li>
@@ -39,18 +39,18 @@ export default function HomePage() {
           <li>Laravel</li>
           <li>MySQL</li>
         </ul>
-      </p>
-      <p>
-        <h3>Herramientas</h3>
+      </section>
+      <section>
+        <h4>Herramientas</h4>
         <li>IntelliJ IDEA</li>
         <li>Visual Studio Code</li>
         <li>Terminal</li>
         <li>Postman</li>
         <li>DBeaver</li>
         <li>Draw.io</li>
-      </p>
-      <p>
-        <h3>Tipografías preferidas</h3>
+      </section>
+      <section>
+        <h4>Tipografías preferidas</h4>
         <ul>
           <li>
             <a href="https://philpl.gumroad.com/l/dank-mono" target="_blank">
@@ -95,7 +95,7 @@ export default function HomePage() {
             </a>
           </li>
         </ul>
-      </p>
+      </section>
     </>
   );
 }
