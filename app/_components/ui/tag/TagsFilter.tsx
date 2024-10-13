@@ -1,9 +1,8 @@
-import React, { FC } from 'react';
-import { normalizeAndCleanString } from '@/app/_utils/strings';
-
-import TagButton from './TagButton';
+import normalizeAndCleanString from '@/app/_utils/strings';
 
 import { RiArrowGoBackFill } from 'react-icons/ri';
+
+import TagButton from '@/components/ui/tag/TagButton';
 import styles from './TagsFilter.module.scss';
 
 type Props = {
@@ -13,12 +12,12 @@ type Props = {
   handleClearTags: () => void;
 };
 
-const TagsFilter: FC<Props> = ({
-  tags,
-  selectedTags,
-  handleTagClick,
-  handleClearTags,
-}) => {
+export default function TagsFilter({
+                                     tags,
+                                     selectedTags,
+                                     handleTagClick,
+                                     handleClearTags,
+                                   }: Props) {
   const sortedTags = tags
     .slice()
     .sort((a, b) =>
@@ -29,9 +28,9 @@ const TagsFilter: FC<Props> = ({
     <div className={styles['tags-filter']}>
       <span className={styles.title}>Filtrar por etiquetas</span>
       <div className={styles.tags}>
-        {sortedTags.map((tag, index) => (
+        {sortedTags.map((tag) => (
           <TagButton
-            key={index}
+            key={tag}
             tag={tag}
             handleTagClick={handleTagClick}
             selectedTags={selectedTags}
@@ -39,6 +38,7 @@ const TagsFilter: FC<Props> = ({
         ))}
       </div>
       <button
+        type="button"
         className={`${styles.clear} ${selectedTags.length > 0 && styles.visible}`}
         onClick={handleClearTags}
       >
@@ -46,6 +46,4 @@ const TagsFilter: FC<Props> = ({
       </button>
     </div>
   );
-};
-
-export default TagsFilter;
+}

@@ -29,8 +29,7 @@ const getMarkDownFileData = async (slug: string) => {
   try {
     const file = await readFile(`./app/_posts/${slug}.mdx`, 'utf8');
     return matter(file);
-  } catch (error) {
-    console.error(error);
+  } catch {
     return notFound();
   }
 };
@@ -61,7 +60,6 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
               rehypePlugins: [
                 rehypeSlug,
                 [
-                  // @ts-expect-error
                   rehypePrettyCode,
                   {
                     theme: {
@@ -71,7 +69,6 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
                   },
                 ],
                 [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-                // @ts-expect-error
                 rehypeHighlight,
               ],
             },

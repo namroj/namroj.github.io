@@ -1,21 +1,21 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
 
-import { normalizeAndCleanString } from '@/utils/strings';
+import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
-import FormationItem, { FormationItemType } from './FormationItem';
-import TagsFilter from '@/components/ui/tag/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
+import TagsFilter from '@/components/ui/tag/TagsFilter';
 
 import { LuPackageSearch } from 'react-icons/lu';
+import { FormationItem, FormationItemType } from './FormationItem';
 import styles from './Formation.module.scss';
 
 export default function Formation({
-  formationData,
-}: Readonly<{ formationData: FormationItemType[] }>) {
+                                    formationData,
+                                  }: Readonly<{ formationData: FormationItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -40,7 +40,7 @@ export default function Formation({
       <Highlighter
         highlightClassName={styles.highlight}
         searchWords={[searchTerm]}
-        autoEscape={true}
+        autoEscape
         textToHighlight={text}
       />
     );
@@ -65,7 +65,7 @@ export default function Formation({
   );
 
   const filteredFormation = formationData.filter((item) => {
-    const { certificate, entity, tags, ...rest } = item;
+    const { entity, tags, ...rest } = item;
     const itemValues = Object.values(rest).filter(
       (value) => typeof value !== 'object',
     );
@@ -95,9 +95,9 @@ export default function Formation({
         </span>
       </div>
     ) : (
-      filteredFormation.map((item: FormationItemType, index: number) => (
+      filteredFormation.map((item: FormationItemType) => (
         <FormationItem
-          key={index}
+          key={item.title}
           item={item}
           handleTagClick={handleTagClick}
           selectedTags={selectedTags}

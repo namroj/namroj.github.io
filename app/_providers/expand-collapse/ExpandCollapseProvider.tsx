@@ -1,6 +1,6 @@
 'use client';
 
-import React, {
+import {
   createContext,
   FC,
   ReactNode,
@@ -28,7 +28,8 @@ export interface ExpandCollapseProviderProps {
   children: ReactNode;
 }
 
-export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY = 'expand_collapse_state';
+export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY =
+  'expand_collapse_state';
 
 const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   if (typeof window === 'undefined') {
@@ -50,8 +51,9 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   return expandCollapseState as ExpandCollapseState;
 };
 
-const ExpandCollapseContext =
-  createContext<ExpandCollapseContextType>(undefined);
+const ExpandCollapseContext = createContext<ExpandCollapseContextType>(
+  undefined,
+);
 
 export const useExpandCollapseContext = () => {
   const context = useContext(ExpandCollapseContext);
@@ -64,12 +66,13 @@ export const useExpandCollapseContext = () => {
   return context;
 };
 
-export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
-  children,
-}) => {
+export const ExpandCollapseContextProvider: FC<
+  ExpandCollapseProviderProps
+> = ({ children }) => {
   const [mounted, setMounted] = useState(false);
-  const [expandCollapseState, setExpandCollapseState] =
-    useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage);
+  const [expandCollapseState, setExpandCollapseState] = useState<
+    ExpandCollapseState
+  >(getExpandCollapseStateFromLocalStorage);
   const [sidebarWidth, setSidebarWidth] = useState<number>(0);
   const [mainWidth, setMainWidth] = useState<number>(0);
 
@@ -85,7 +88,7 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
     expandCollapseState === ExpandCollapseState.COLLAPSED
       ? setMainWidth(window.innerWidth)
       : setMainWidth(window.innerWidth - sidebarWidth);
-  }, [expandCollapseState]);
+  }, [expandCollapseState, sidebarWidth]);
 
   useEffect(() => {
     setMainWidth(window.innerWidth - sidebarWidth);
@@ -118,7 +121,7 @@ export const ExpandCollapseContextProvider: FC<ExpandCollapseProviderProps> = ({
 
   return (
     <ExpandCollapseContext.Provider value={contextValue}>
-      {mounted && <>{children}</>}
+      {mounted && children}
     </ExpandCollapseContext.Provider>
   );
 };

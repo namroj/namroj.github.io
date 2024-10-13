@@ -15,12 +15,15 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
-  items = [{ label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> }, ...items];
+  const breadcrumbs = [
+    { label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> },
+    ...items,
+  ];
 
   return (
     <div className={styles.breadcrumbs}>
-      {items.map((item, index) => (
-        <div className={styles.item} key={index}>
+      {breadcrumbs.map((item, index) => (
+        <div key={item.label} className={styles.item}>
           {item.href ? (
             <Link href={item.href} className={styles.linked}>
               <>

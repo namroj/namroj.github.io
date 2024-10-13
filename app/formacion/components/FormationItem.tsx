@@ -1,8 +1,6 @@
-import React from 'react';
 import Image from 'next/image';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-
 import TagButton from '@/components/ui/tag/TagButton';
 
 import { TbExternalLink } from 'react-icons/tb';
@@ -20,12 +18,19 @@ export type FormationItemType = {
 
 const COMPONENT_MIN_WIDTH = 300;
 
-const FormationItem: React.FC<{
+type Props = {
   item: FormationItemType;
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
   highlightText: (text: string) => JSX.Element;
-}> = ({ item, handleTagClick, selectedTags, highlightText }) => {
+};
+
+export function FormationItem({
+  item,
+  selectedTags,
+  handleTagClick,
+  highlightText,
+}: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -35,7 +40,7 @@ const FormationItem: React.FC<{
       >
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.data}>
-          <a href={item.entity.url} target="_blank">
+          <a href={item.entity.url} target="_blank" rel="noreferrer">
             <Image
               src={item.entity.image}
               alt={item.entity.name}
@@ -48,7 +53,7 @@ const FormationItem: React.FC<{
             <h3 className={styles.title}>{highlightText(item.title)}</h3>
             <div className={styles.entity}>
               <h4>
-                <a href={item.entity.url} target="_blank">
+                <a href={item.entity.url} target="_blank" rel="noreferrer">
                   {highlightText(item.entity.name)}
                 </a>
               </h4>
@@ -61,8 +66,8 @@ const FormationItem: React.FC<{
 
         <div className={styles.tags}>
           <ul>
-            {item.tags.map((tag, index) => (
-              <li key={index}>
+            {item.tags.map((tag) => (
+              <li key={`li-${tag}`}>
                 <TagButton
                   tag={tag}
                   handleTagClick={handleTagClick}
@@ -74,7 +79,7 @@ const FormationItem: React.FC<{
           </ul>
           {item.certificate && (
             <code className={styles.certificate}>
-              <a href={item.certificate} target="_blank">
+              <a href={item.certificate} target="_blank" rel="noreferrer">
                 <TbExternalLink /> Certificado
               </a>
             </code>
@@ -83,6 +88,4 @@ const FormationItem: React.FC<{
       </article>
     </li>
   );
-};
-
-export default FormationItem;
+}

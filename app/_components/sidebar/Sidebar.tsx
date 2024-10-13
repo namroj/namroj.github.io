@@ -1,16 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-import {
-  ExpandCollapseState,
-  useExpandCollapseContext,
-} from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
 import Nav from './nav/Nav';
 import SidebarToggle from './toggler/SidebarToggle';
 import Links from './links/Links';
-
 import styles from './Sidebar.module.scss';
 
 const SIDEBAR_WIDTH_KEY = 'sidebar_width';
@@ -19,7 +15,10 @@ export default function Sidebar() {
   const { expandCollapseState, setSidebarWidth } = useExpandCollapseContext();
 
   const [isResizing, setIsResizing] = useState(false);
-  const [width, setWidth] = useState<string>('');
+  const [width, setWidth] = useState('');
+
+  const handleMouseDown = useCallback(() => setIsResizing(true), []);
+  const handleMouseUp = useCallback(() => setIsResizing(false), []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,7 +36,6 @@ export default function Sidebar() {
               windowWidth < 366 ? windowWidth : windowWidth * 0.56,
             );
           }
-
           return;
         }
 
@@ -58,7 +56,7 @@ export default function Sidebar() {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [expandCollapseState]);
+  }, [expandCollapseState, setSidebarWidth]);
 
   useEffect(() => {
     const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement;
@@ -109,15 +107,15 @@ export default function Sidebar() {
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isResizing]);
-
-  const handleMouseDown = () => setIsResizing(true);
-
-  const handleMouseUp = () => setIsResizing(false);
+  }, [isResizing, handleMouseUp, setSidebarWidth]);
 
   return (
     <aside className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
-      <button className={styles.resizer} onMouseDown={handleMouseDown}></button>
+      <button
+        className={styles.resizer}
+        type="button"
+        onClick={handleMouseDown}
+      />
       <SidebarToggle />
       <Nav />
       <Links />

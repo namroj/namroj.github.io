@@ -48,9 +48,14 @@ const links: NetworkLink[] = [
 export default function Links() {
   return (
     <ul className={styles.links}>
-      {links.map((link, index) => (
-        <li className={styles.link} key={index}>
-          <a href={link.href} title={link.title} target="_blank">
+      {links.map((link) => (
+        <li className={styles.link} key={link.title}>
+          <a
+            href={link.href}
+            title={link.title}
+            target="_blank"
+            rel="noreferrer"
+          >
             {link.icon}
           </a>
         </li>

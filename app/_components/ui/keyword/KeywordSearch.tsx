@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from 'react';
+import { ChangeEvent } from 'react';
 
 import { FaDeleteLeft } from 'react-icons/fa6';
 import styles from './KeywordSearch.module.scss';
@@ -9,11 +9,11 @@ type Props = {
   handleClearSearch: () => void;
 };
 
-const KeywordSearch: FC<Props> = ({
-  keyword,
-  handleSearchChange,
-  handleClearSearch,
-}) => {
+export default function KeywordSearch({
+                                        keyword,
+                                        handleSearchChange,
+                                        handleClearSearch,
+                                      }: Props) {
   return (
     <div className={styles['keyword-search']}>
       <span className={styles.title}>Filtrar por palabra clave</span>
@@ -25,6 +25,7 @@ const KeywordSearch: FC<Props> = ({
           placeholder="Escribe para buscar..."
         />
         <button
+          type="button"
           className={`${styles.clear} ${keyword ? styles.visible : ''}`}
           onClick={handleClearSearch}
         >
@@ -33,6 +34,4 @@ const KeywordSearch: FC<Props> = ({
       </div>
     </div>
   );
-};
-
-export default KeywordSearch;
+}

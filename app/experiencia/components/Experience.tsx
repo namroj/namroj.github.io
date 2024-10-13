@@ -1,22 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-
 import Highlighter from 'react-highlight-words';
 
-import { normalizeAndCleanString } from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import normalizeAndCleanString from '@/utils/strings';
 
-import ExperienceItem, { ExperienceItemType } from './ExperienceItem';
 import TagsFilter from '@/components/ui/tag/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 
 import { LuPackageSearch } from 'react-icons/lu';
+import { ExperienceItem, ExperienceItemType } from './ExperienceItem';
 import styles from './Experience.module.scss';
 
 export default function Experience({
-  experienceData,
-}: Readonly<{ experienceData: ExperienceItemType[] }>) {
+                                     experienceData,
+                                   }: Readonly<{ experienceData: ExperienceItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -41,7 +40,7 @@ export default function Experience({
       <Highlighter
         highlightClassName={styles.highlight}
         searchWords={[searchTerm]}
-        autoEscape={true}
+        autoEscape
         textToHighlight={text}
       />
     );
@@ -101,9 +100,8 @@ export default function Experience({
         </span>
       </div>
     ) : (
-      filteredExperience.map((item: ExperienceItemType, index: number) => (
+      filteredExperience.map((item: ExperienceItemType) => (
         <ExperienceItem
-          key={index}
           item={item}
           handleTagClick={handleTagClick}
           selectedTags={selectedTags}

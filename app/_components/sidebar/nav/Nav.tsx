@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import useMedia from 'use-media';
@@ -14,10 +14,19 @@ interface NavItem {
 
 export default function Nav() {
   const currentPath = usePathname();
-  const { toggleExpandCollapseState } = useExpandCollapseContext();
   const isMobile = useMedia({ maxWidth: '768px' });
+  const { toggleExpandCollapseState } = useExpandCollapseContext();
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
+
+  const items: NavItem[] = useMemo(() => [
+    { path: '/formacion', label: 'Formación' },
+    { path: '/experiencia', label: 'Experiencia' },
+    { path: '/proyectos', label: 'Proyectos' },
+    { path: '/tipografias', label: 'Tipografías' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contacto', label: 'Contacto' },
+  ], []);
 
   useEffect(() => {
     setActivePaths(
@@ -25,22 +34,13 @@ export default function Nav() {
         currentPath.startsWith(item.path) ? styles.active : '',
       ),
     );
-  }, [currentPath]);
+  }, [currentPath, items]);
 
   const handleLinkClick = () => {
     if (isMobile) {
       toggleExpandCollapseState();
     }
   };
-
-  const items: NavItem[] = [
-    { path: '/formacion', label: 'Formación' },
-    { path: '/experiencia', label: 'Experiencia' },
-    { path: '/proyectos', label: 'Proyectos' },
-    { path: '/tipografias', label: 'Tipografías' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contacto', label: 'Contacto' },
-  ];
 
   return (
     <nav className={styles.nav}>

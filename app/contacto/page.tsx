@@ -17,7 +17,7 @@ const MapWithNoSSR = dynamic(() => import('./components/GMap'), {
 
 export default function ContactPage() {
   const breadcrumbs: Breadcrumb[] = [
-    { label: 'Contacto', icon: <LuMessagesSquare /> },
+    { label: 'Contacto', href: '', icon: <LuMessagesSquare /> },
   ];
 
   return (
@@ -27,7 +27,11 @@ export default function ContactPage() {
       <h2>Contacto</h2>
 
       <p>
-        <a href="mailto:espinoza.dev@gmail.com" target="_blank">
+        <a
+          href="mailto:espinoza.dev@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           espinoza.dev@gmail.com
         </a>
       </p>

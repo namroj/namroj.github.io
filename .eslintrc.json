@@ -1,42 +1,56 @@
 {
   "extends": [
+    "eslint:recommended",
     "next/core-web-vitals",
     "airbnb",
     "airbnb/hooks",
-    "plugin:prettier/recommended"
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["import", "react", "@typescript-eslint", "prettier", "jsx-a11y"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "rules": {
-    "prettier/prettier": "error",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "prettier/prettier": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".jsx", ".tsx"]
+        "extensions": [".tsx", ".jsx"]
       }
     ],
-    "import/no-extraneous-dependencies": [
+    "import/extensions": [
       "error",
+      "ignorePackages",
       {
-        "devDependencies": true
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
-    ],
-    "react/react-in-jsx-scope": "off",
-    "import/prefer-default-export": "off"
+    ]
   },
   "settings": {
-    "react": {
-      "version": "detect"
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "env": {
     "browser": true,
-    "es2021": true
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "node": true,
+    "es6": true
   }
 }

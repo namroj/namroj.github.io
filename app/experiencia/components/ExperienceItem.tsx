@@ -1,10 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
 import TagButton from '@/components/ui/tag/TagButton';
-
 import styles from './ExperienceItem.module.scss';
 
 export type ExperienceItemType = {
@@ -23,12 +21,19 @@ export type ExperienceItemType = {
 
 const COMPONENT_MIN_WIDTH = 400;
 
-const ExperienceItem: React.FC<{
+type Props = {
   item: ExperienceItemType;
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
   highlightText: (text: string) => JSX.Element;
-}> = ({ item, handleTagClick, selectedTags, highlightText }) => {
+};
+
+export function ExperienceItem({
+  item,
+  selectedTags,
+  handleTagClick,
+  highlightText,
+}: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -38,7 +43,7 @@ const ExperienceItem: React.FC<{
       >
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.entity}>
-          <a href={item.entity.url} target="_blank">
+          <a href={item.entity.url} target="_blank" rel="noreferrer">
             <Image
               src={item.entity.image}
               alt={item.entity.name}
@@ -49,7 +54,7 @@ const ExperienceItem: React.FC<{
 
           <div className={styles.content}>
             <h3>
-              <a href={item.entity.url} target="_blank">
+              <a href={item.entity.url} target="_blank" rel="noreferrer">
                 {highlightText(item.entity.name)}
               </a>
             </h3>
@@ -60,10 +65,10 @@ const ExperienceItem: React.FC<{
         </div>
 
         <div className={styles.timeline}>
-          {item.positions.map((position, index) => (
-            <div key={index} className={styles.item}>
-              <div className={styles.circle}></div>
-              <div className={styles.line}></div>
+          {item.positions.map((position) => (
+            <div key={position.title} className={styles.item}>
+              <div className={styles.circle} />
+              <div className={styles.line} />
               <div className={styles.position}>
                 <h4>{highlightText(position.title)}</h4>
                 <p>{highlightText(position.interval)}</p>
@@ -71,8 +76,8 @@ const ExperienceItem: React.FC<{
                   {(() => {
                     const descriptionItems = position.description.split('||');
                     return descriptionItems.length > 1
-                      ? descriptionItems.map((desc, index) => (
-                          <li key={index}>{highlightText(desc)}</li>
+                      ? descriptionItems.map((desc) => (
+                          <li key={desc}>{highlightText(desc)}</li>
                         ))
                       : highlightText(position.description);
                   })()}
@@ -87,8 +92,8 @@ const ExperienceItem: React.FC<{
 
         <div className={styles.tags}>
           <ul>
-            {item.tags.map((tag, index) => (
-              <li key={index}>
+            {item.tags.map((tag) => (
+              <li key={tag}>
                 <TagButton
                   tag={tag}
                   handleTagClick={handleTagClick}
@@ -102,6 +107,4 @@ const ExperienceItem: React.FC<{
       </article>
     </li>
   );
-};
-
-export default ExperienceItem;
+}

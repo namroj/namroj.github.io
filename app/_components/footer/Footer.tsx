@@ -1,7 +1,6 @@
 'use client';
 
 import { Link } from 'next-view-transitions';
-import Image from 'next/image';
 
 import {
   ExpandCollapseState,
@@ -9,7 +8,7 @@ import {
 } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import ThemeToggle from '@/components/theme/ThemeToggle';
 
-import nextJsLogo from '@/assets/icons/next.svg';
+import { FaRegCopyright } from 'react-icons/fa';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -27,11 +26,8 @@ export default function Footer() {
     >
       <ThemeToggle />
       <span>
-        por <Link href="/">Jorman</Link> mediante{' '}
+        <FaRegCopyright /> <Link href="/">Jorman Espinoza</Link>
       </span>
-      <a href="https://nextjs.org/" target="_blank">
-        <Image src={nextJsLogo} alt="Next.js" width={20} height={20} />
-      </a>
     </footer>
   );
 }

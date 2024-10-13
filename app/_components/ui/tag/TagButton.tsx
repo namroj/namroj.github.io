@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import styles from './TagButton.module.scss';
 
 type Props = {
@@ -9,17 +7,21 @@ type Props = {
   highlightText?: (text: string) => JSX.Element;
 };
 
-const TagButton: FC<Props> = ({
+export default function TagButton({
   tag,
   handleTagClick,
   selectedTags,
   highlightText,
-}) => (
-  <button className={styles.tag} onClick={() => handleTagClick(tag)}>
-    <code className={selectedTags.includes(tag) ? styles.active : ''}>
-      {highlightText ? highlightText(tag) : tag}
-    </code>
-  </button>
-);
-
-export default TagButton;
+}: Props) {
+  return (
+    <button
+      type="button"
+      className={styles.tag}
+      onClick={() => handleTagClick(tag)}
+    >
+      <code className={selectedTags.includes(tag) ? styles.active : ''}>
+        {highlightText ? highlightText(tag) : tag}
+      </code>
+    </button>
+  );
+}

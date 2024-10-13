@@ -1,7 +1,4 @@
-import {
-  ExpandCollapseState,
-  useExpandCollapseContext,
-} from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
 import { BiCollapseAlt } from 'react-icons/bi';
 import { BsArrowsAngleExpand } from 'react-icons/bs';
@@ -13,6 +10,7 @@ export default function SidebarToggle() {
 
   return (
     <button
+      type="button"
       className={`${styles.toggle} ${styles[expandCollapseState]}`}
       onClick={toggleExpandCollapseState}
     >

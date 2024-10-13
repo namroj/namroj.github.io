@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  createContext,
-  FC,
-  ReactNode,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 
 export enum Theme {
   AUTO = 'auto',
@@ -23,14 +14,14 @@ export enum ThemeLabel {
   DARK = 'Oscuro',
 }
 
+export interface ThemeProviderProps {
+  children: ReactNode;
+}
+
 type ThemeContextType = {
   theme: Theme;
   toggleTheme: (theme: Theme) => void;
 };
-
-export interface ThemeProviderProps {
-  children: ReactNode;
-}
 
 export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active';
 
@@ -59,6 +50,8 @@ const setThemeAttribute = (theme: Theme) => {
   );
 };
 
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
 export const useThemeContext = () => {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -70,11 +63,11 @@ export const useThemeContext = () => {
   return context;
 };
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
+export function ThemeContextProvider({ children }: ThemeProviderProps) {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage);
+
+  const toggleTheme = useCallback((newTheme: Theme) => setTheme(newTheme), []);
 
   useEffect(() => setMounted(true), []);
 
@@ -98,9 +91,7 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
 
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme);
     setThemeAttribute(theme);
-  }, [theme]);
-
-  const toggleTheme = useCallback((theme: Theme) => setTheme(theme), []);
+  }, [theme, toggleTheme]);
 
   const contextValue = useMemo(
     () => ({
@@ -112,7 +103,7 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      {mounted && <>{children}</>}
+      {mounted && children}
     </ThemeContext.Provider>
   );
-};
+}
