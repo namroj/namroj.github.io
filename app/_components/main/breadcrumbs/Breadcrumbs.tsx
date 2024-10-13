@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
-import { Link } from 'next-view-transitions'
+import {ReactNode} from 'react'
+import {Link} from 'next-view-transitions'
 
-import { IoHeadsetSharp } from 'react-icons/io5'
+import {IoHeadsetSharp} from 'react-icons/io5'
 import styles from './Breadcrumbs.module.scss'
 
 export interface Breadcrumb {
@@ -14,8 +14,8 @@ interface BreadcrumbsProps {
   items: Breadcrumb[]
 }
 
-export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
-  items = [{ label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> }, ...items]
+export default function Breadcrumbs({items}: Readonly<BreadcrumbsProps>) {
+  items = [{label: 'Jorman', href: '/', icon: <IoHeadsetSharp/>}, ...items]
 
   return (
     <div className={styles.breadcrumbs}>
