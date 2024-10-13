@@ -1,18 +1,18 @@
-import { Metadata } from 'next'
-import { Link } from 'next-view-transitions'
+import { Metadata } from 'next';
+import { Link } from 'next-view-transitions';
 
 import Breadcrumbs, {
   Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs'
+} from '@/components/main/breadcrumbs/Breadcrumbs';
 
-import { FaKeyboard } from 'react-icons/fa6'
+import { FaKeyboard } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
   title: 'Blog | Jorman Espinoza',
-}
+};
 
 export default function BlogPage() {
-  const breadcrumbs: Breadcrumb[] = [{ label: 'Blog', icon: <FaKeyboard /> }]
+  const breadcrumbs: Breadcrumb[] = [{ label: 'Blog', icon: <FaKeyboard /> }];
 
   return (
     <>
@@ -22,18 +22,18 @@ export default function BlogPage() {
 
       <br />
       <Link
-        href='/blog/prueba'
+        href="/blog/prueba"
         style={{ textDecoration: 'underline', fontSize: 'italic' }}
       >
         Prueba
       </Link>
       <br />
       <Link
-        href='/blog/domingos'
+        href="/blog/domingos"
         style={{ textDecoration: 'underline', fontSize: 'italic' }}
       >
         Domingos
       </Link>
     </>
-  )
+  );
 }

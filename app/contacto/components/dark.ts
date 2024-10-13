@@ -134,6 +134,6 @@ const mapDarkStyles = [
       },
     ],
   },
-]
+];
 
-export default mapDarkStyles
+export default mapDarkStyles;

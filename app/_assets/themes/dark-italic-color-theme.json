@@ -22,10 +22,7 @@
   },
   "tokenColors": [
     {
-      "scope": [
-        "meta.embedded",
-        "source.groovy.embedded"
-      ],
+      "scope": ["meta.embedded", "source.groovy.embedded"],
       "settings": {
         "foreground": "#D4D4D4"
       }
@@ -186,10 +183,7 @@
       }
     },
     {
-      "scope": [
-        "meta.preprocessor",
-        "entity.name.function.preprocessor"
-      ],
+      "scope": ["meta.preprocessor", "entity.name.function.preprocessor"],
       "settings": {
         "foreground": "#569CD6"
       }
@@ -232,20 +226,14 @@
       }
     },
     {
-      "scope": [
-        "storage.modifier",
-        "keyword.operator.noexcept"
-      ],
+      "scope": ["storage.modifier", "keyword.operator.noexcept"],
       "settings": {
         "fontStyle": "italic",
         "foreground": "#569CD6"
       }
     },
     {
-      "scope": [
-        "string",
-        "meta.embedded.assembly"
-      ],
+      "scope": ["string", "meta.embedded.assembly"],
       "settings": {
         "foreground": "#CDA48C"
       }
@@ -280,9 +268,7 @@
       }
     },
     {
-      "scope": [
-        "meta.template.expression"
-      ],
+      "scope": ["meta.template.expression"],
       "settings": {
         "foreground": "#D4D4D4"
       }
@@ -472,10 +458,7 @@
       }
     },
     {
-      "scope": [
-        "variable.other.constant",
-        "variable.other.enummember"
-      ],
+      "scope": ["variable.other.constant", "variable.other.enummember"],
       "settings": {
         "foreground": "#4FC1FF"
       }
@@ -532,10 +515,7 @@
       }
     },
     {
-      "scope": [
-        "keyword.operator.or.regexp",
-        "keyword.control.anchor.regexp"
-      ],
+      "scope": ["keyword.operator.or.regexp", "keyword.control.anchor.regexp"],
       "settings": {
         "foreground": "#FFECB3"
       }
@@ -590,18 +570,13 @@
     },
     {
       "name": "@Decorator",
-      "scope": [
-        "meta.decorator punctuation.decorator"
-      ],
+      "scope": ["meta.decorator punctuation.decorator"],
       "settings": {
         "fontStyle": "italic"
       }
     },
     {
-      "scope": [
-        "keyword.operator.logical",
-        "punctuation.accessor.optional"
-      ],
+      "scope": ["keyword.operator.logical", "punctuation.accessor.optional"],
       "settings": {
         "foreground": "#EC407A"
       }

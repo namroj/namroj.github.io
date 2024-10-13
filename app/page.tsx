@@ -2,15 +2,11 @@ export default function HomePage() {
   return (
     <>
       Desarrollador Full Stack
-      <br/>
+      <br />
       Desarrollando profesionalmente desde 2015.
-      <br/>
+      <br />
       Amante de las buenas prácticas, el código limpio y los patrones de diseño.
-
-      <p>
-        Desde páginas web hasta tiendas virtuales.
-      </p>
-
+      <p>Desde páginas web hasta tiendas virtuales.</p>
       <p>
         <h3>Servicios</h3>
         <ul>
@@ -29,7 +25,6 @@ export default function HomePage() {
           <li>Generación y personalización de sitios en WordPress</li>
         </ul>
       </p>
-
       <p>
         <h3>Arsenal</h3>
         <ul>
@@ -45,7 +40,6 @@ export default function HomePage() {
           <li>MySQL</li>
         </ul>
       </p>
-
       <p>
         <h3>Herramientas</h3>
         <li>IntelliJ IDEA</li>
@@ -55,54 +49,53 @@ export default function HomePage() {
         <li>DBeaver</li>
         <li>Draw.io</li>
       </p>
-
       <p>
         <h3>Tipografías preferidas</h3>
         <ul>
           <li>
-            <a href='https://philpl.gumroad.com/l/dank-mono' target='_blank'>
+            <a href="https://philpl.gumroad.com/l/dank-mono" target="_blank">
               Dank Mono
             </a>{' '}
             - by{' '}
-            <a href='https://philpl.gumroad.com' target='_blank'>
+            <a href="https://philpl.gumroad.com" target="_blank">
               Phil Pluckthun
             </a>
           </li>
           <li>
-            <a href='https://www.jetbrains.com/es-es/lp/mono' target='_blank'>
+            <a href="https://www.jetbrains.com/es-es/lp/mono" target="_blank">
               JetBrains Mono
             </a>{' '}
             - by{' '}
-            <a href='https://www.jetbrains.com/' target='_blank'>
+            <a href="https://www.jetbrains.com/" target="_blank">
               JetBrains
             </a>
           </li>
           <li>
             <a
-              href='https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions'
-              target='_blank'
+              href="https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions"
+              target="_blank"
             >
               Cascadia Code
             </a>{' '}
             - by{' '}
-            <a href='https://www.microsoft.com/es-ar' target='_blank'>
+            <a href="https://www.microsoft.com/es-ar" target="_blank">
               Microsoft
             </a>
           </li>
           <li>
             <a
-              href='https://github.com/tonsky/FiraCode/blob/master/LEEME.md'
-              target='_blank'
+              href="https://github.com/tonsky/FiraCode/blob/master/LEEME.md"
+              target="_blank"
             >
               Fira Code
             </a>{' '}
             - by{' '}
-            <a href='https://github.com/tonsky' target='_blank'>
+            <a href="https://github.com/tonsky" target="_blank">
               Nikita Prokopov [tonsky]
             </a>
           </li>
         </ul>
       </p>
     </>
-  )
+  );
 }

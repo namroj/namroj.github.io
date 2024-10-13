@@ -356,6 +356,6 @@ const mapLightStyles = [
       },
     ],
   },
-]
+];
 
-export default mapLightStyles
+export default mapLightStyles;

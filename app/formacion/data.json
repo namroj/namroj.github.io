@@ -9,14 +9,7 @@
     },
     "location": "En línea",
     "description": "Curso de Next.js 14 & React --con 40.5 horas de duración.",
-    "tags": [
-      "Desarrollo",
-      "JS",
-      "Javascript",
-      "React",
-      "Next.js",
-      "En curso"
-    ],
+    "tags": ["Desarrollo", "JS", "Javascript", "React", "Next.js", "En curso"],
     "certificate": ""
   },
   {
@@ -50,12 +43,7 @@
     },
     "location": "En línea",
     "description": "Curso Principios SOLID y Clean Code --con 6.5 horas de duración.",
-    "tags": [
-      "Desarrollo",
-      "SOLID",
-      "Código limpio",
-      "2022"
-    ],
+    "tags": ["Desarrollo", "SOLID", "Código limpio", "2022"],
     "certificate": "https://drive.google.com/file/d/1VsClfbDQU8s-RGx7cLapIaNZtXITDSdi/view?usp=drive_link"
   },
   {
@@ -68,13 +56,7 @@
     },
     "location": "En línea",
     "description": "Curso Profesional de React Hooks --con 26 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "JS",
-      "Javascript",
-      "React",
-      "2022"
-    ],
+    "tags": ["Desarrollo", "JS", "Javascript", "React", "2022"],
     "certificate": "https://drive.google.com/file/d/1UMM-DBbPs6tyiyTFXe0rqYWa8Plr12cM/view?usp=drive_link"
   },
   {
@@ -87,13 +69,7 @@
     },
     "location": "En línea",
     "description": "Curso de Vue.js --con 12 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "JS",
-      "Javascript",
-      "Vue.js",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "JS", "Javascript", "Vue.js", "2021"],
     "certificate": "https://drive.google.com/file/d/1NuckLoKnkssNLjFmc7VIic_6HtY_kx0f/view?usp=drive_link"
   },
   {
@@ -106,13 +82,7 @@
     },
     "location": "En línea",
     "description": "Curso de PostgreSQL --con 15 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Base de Datos",
-      "SQL",
-      "PostgreSQL",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Base de Datos", "SQL", "PostgreSQL", "2021"],
     "certificate": "https://drive.google.com/file/d/1R_eqBrSoJYa1xU10J5NhTJtLi6bF-GKN/view?usp=drive_link"
   },
   {
@@ -125,12 +95,7 @@
     },
     "location": "En línea",
     "description": "Curso de Programación Funcional con Java SE --con 16 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Funcional",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Java", "Funcional", "2021"],
     "certificate": "https://drive.google.com/file/d/1Ggzsj8lILPCrqWn7Qn7qYa-4LS7yxw22/view?usp=drive_link"
   },
   {
@@ -143,13 +108,7 @@
     },
     "location": "En línea",
     "description": "Curso Básico de Testing en Java --con 26 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Testing",
-      "TDD",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Java", "Testing", "TDD", "2021"],
     "certificate": "https://drive.google.com/file/d/1NNWwOacRwBlxhmI2Vmb4dEUQi3qIdBSm/view?usp=drive_link"
   },
   {
@@ -162,13 +121,7 @@
     },
     "location": "En línea",
     "description": "Curso de Fundamentos de Bases de Datos --con 26 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Base de Datos",
-      "SQL",
-      "NoSQL",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Base de Datos", "SQL", "NoSQL", "2021"],
     "certificate": "https://drive.google.com/file/d/1KXaxVpSJ3qcNe2S9XwYNInY9JdGeuKL1/view?usp=drive_link"
   },
   {
@@ -181,11 +134,7 @@
     },
     "location": "En línea",
     "description": "Curso de Introducción a la Terminal y Línea de Comandos --con 11 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Terminal",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Terminal", "2021"],
     "certificate": "https://drive.google.com/file/d/1hvAKRBcPU-id1dOG8kBKAlgQnMhpJODT/view?usp=drive_link"
   },
   {
@@ -198,12 +147,7 @@
     },
     "location": "En línea",
     "description": "Curso de Programación Orientada a Objetos --con 16 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "POO",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Java", "POO", "2021"],
     "certificate": "https://drive.google.com/file/d/1OyeAgOWWViesltmXISPe7YZgIAs-94sY/view?usp=drive_link"
   },
   {
@@ -216,12 +160,7 @@
     },
     "location": "En línea",
     "description": "Curso Profesional de Git y GitHub --con 22 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Git",
-      "GitHub",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Git", "GitHub", "2021"],
     "certificate": "https://drive.google.com/file/d/1-FRTn_NGHxQq7v2VzII1D7zAH9Np7eaV/view?usp=drive_link"
   },
   {
@@ -234,9 +173,7 @@
     },
     "location": "En línea",
     "description": "Curso de Buenas Prácticas para Escritura de Código --con 20 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo"
-    ],
+    "tags": ["Desarrollo"],
     "certificate": "https://drive.google.com/file/d/1ogqOzew9NpFKDc7g2S25ATsuI85K0fxX/view?usp=drive_link"
   },
   {
@@ -249,12 +186,7 @@
     },
     "location": "En línea",
     "description": "Curso de Java Spring --con 19 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Java",
-      "Spring",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Java", "Spring", "2021"],
     "certificate": "https://drive.google.com/file/d/1DWoZ0SCyz1_y4YQegtsBj5wdsXQPBFZt/view?usp=drive_link"
   },
   {
@@ -267,11 +199,7 @@
     },
     "location": "En línea",
     "description": "Curso de Postman --con 10 horas de teoría y práctica.",
-    "tags": [
-      "Desarrollo",
-      "Postman",
-      "2021"
-    ],
+    "tags": ["Desarrollo", "Postman", "2021"],
     "certificate": "https://drive.google.com/file/d/13njJ6CeCXkJxVsDAIzH7kUVyoNNnO1hJ/view?usp=drive_link"
   },
   {
@@ -284,12 +212,7 @@
     },
     "location": "En línea",
     "description": "Tutorial de Symfony 4. Nivel 1.",
-    "tags": [
-      "Desarrollo",
-      "PHP",
-      "Symfony",
-      "2018"
-    ],
+    "tags": ["Desarrollo", "PHP", "Symfony", "2018"],
     "certificate": "https://symfonycasts.com/certificates/FF568D75C101"
   },
   {
@@ -302,13 +225,7 @@
     },
     "location": "En línea",
     "description": "Curso de fundamentos de jQuery.",
-    "tags": [
-      "Desarrollo",
-      "JS",
-      "Javascript",
-      "jQuery",
-      "2018"
-    ],
+    "tags": ["Desarrollo", "JS", "Javascript", "jQuery", "2018"],
     "certificate": "https://www.sololearn.com/es/certificates/CT-WFNEYSBP"
   },
   {
@@ -321,10 +238,7 @@
     },
     "location": "En línea",
     "description": "Curso de Introducción al Desarrollo Web --con una duración de 40 horas.",
-    "tags": [
-      "Desarrollo",
-      "2017"
-    ],
+    "tags": ["Desarrollo", "2017"],
     "certificate": "https://drive.google.com/file/d/1-L-SfoptU2mxqVlGUSthURccUffBy33_/view?usp=drive_link"
   },
   {
@@ -337,10 +251,7 @@
     },
     "location": "En línea",
     "description": "Curso básico de Marketing Digital con una duración de 40 horas.",
-    "tags": [
-      "Marketing",
-      "2017"
-    ],
+    "tags": ["Marketing", "2017"],
     "certificate": "https://drive.google.com/file/d/1SmioQfmPLJzAONGDQcnJ5x_vF8If9cvX/view?usp=drive_link"
   },
   {
@@ -353,12 +264,7 @@
     },
     "location": "En línea",
     "description": "Curso de fundamentos de Javascript.",
-    "tags": [
-      "Desarrollo",
-      "JS",
-      "Javascript",
-      "2016"
-    ],
+    "tags": ["Desarrollo", "JS", "Javascript", "2016"],
     "certificate": "https://www.sololearn.com/es/certificates/CT-8M64MHZW"
   },
   {
@@ -371,11 +277,7 @@
     },
     "location": "En línea",
     "description": "Curso de fundamentos de CSS.",
-    "tags": [
-      "Desarrollo",
-      "CSS",
-      "2016"
-    ],
+    "tags": ["Desarrollo", "CSS", "2016"],
     "certificate": "https://www.sololearn.com/es/certificates/CT-QLHQIDUE"
   },
   {
@@ -388,11 +290,7 @@
     },
     "location": "En línea",
     "description": "Curso de fundamentos de HTML.",
-    "tags": [
-      "Desarrollo",
-      "HTML",
-      "2016"
-    ],
+    "tags": ["Desarrollo", "HTML", "2016"],
     "certificate": "https://www.sololearn.com/es/certificates/CT-ASTWZQTM"
   },
   {
@@ -405,12 +303,7 @@
     },
     "location": "Caracas, Venezuela",
     "description": "Programa de Inglés como Lengua Extranjera. Nivel Intermedio.",
-    "tags": [
-      "Idiomas",
-      "Inglés",
-      "2016",
-      "2017"
-    ]
+    "tags": ["Idiomas", "Inglés", "2016", "2017"]
   },
   {
     "title": "Ingeniería Informática",
@@ -422,13 +315,7 @@
     },
     "location": "Caracas, Venezuela",
     "description": "Técnico Superior en Desarrollo de Aplicaciones Informáticas.",
-    "tags": [
-      "Universitaria",
-      "Informática",
-      "PHP",
-      "2010",
-      "2014"
-    ]
+    "tags": ["Universitaria", "Informática", "PHP", "2010", "2014"]
   },
   {
     "title": "Licenciatura en Computación",
@@ -440,12 +327,6 @@
     },
     "location": "Caracas, Venezuela",
     "description": "Estudiante de la carrera de Licenciatura en Computación.",
-    "tags": [
-      "Universitaria",
-      "Computación",
-      "Java",
-      "2007",
-      "2009"
-    ]
+    "tags": ["Universitaria", "Computación", "Java", "2007", "2009"]
   }
 ]

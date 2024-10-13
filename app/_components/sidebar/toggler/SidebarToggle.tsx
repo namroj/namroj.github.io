@@ -1,11 +1,15 @@
-import {ExpandCollapseState, useExpandCollapseContext} from '@/providers/expand-collapse/ExpandCollapseProvider'
+import {
+  ExpandCollapseState,
+  useExpandCollapseContext,
+} from '@/providers/expand-collapse/ExpandCollapseProvider';
 
-import {BiCollapseAlt} from 'react-icons/bi'
-import {BsArrowsAngleExpand} from 'react-icons/bs'
-import styles from './SidebarToggle.module.scss'
+import { BiCollapseAlt } from 'react-icons/bi';
+import { BsArrowsAngleExpand } from 'react-icons/bs';
+import styles from './SidebarToggle.module.scss';
 
 export default function SidebarToggle() {
-  const {expandCollapseState, toggleExpandCollapseState} = useExpandCollapseContext()
+  const { expandCollapseState, toggleExpandCollapseState } =
+    useExpandCollapseContext();
 
   return (
     <button
@@ -13,10 +17,10 @@ export default function SidebarToggle() {
       onClick={toggleExpandCollapseState}
     >
       {expandCollapseState === ExpandCollapseState.COLLAPSED ? (
-        <BsArrowsAngleExpand size={15}/>
+        <BsArrowsAngleExpand size={15} />
       ) : (
-        <BiCollapseAlt size={16}/>
+        <BiCollapseAlt size={16} />
       )}
     </button>
-  )
+  );
 }

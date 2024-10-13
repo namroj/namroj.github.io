@@ -1,40 +1,40 @@
-import {Metadata} from 'next'
-import dynamic from 'next/dynamic'
+import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
-import Breadcrumbs, {Breadcrumb,} from '@/components/main/breadcrumbs/Breadcrumbs'
+import Breadcrumbs, {
+  Breadcrumb,
+} from '@/components/main/breadcrumbs/Breadcrumbs';
 
-import {LuMessagesSquare} from 'react-icons/lu'
+import { LuMessagesSquare } from 'react-icons/lu';
 
 export const metadata: Metadata = {
   title: 'Contacto | Jorman Espinoza',
-}
+};
 
 const MapWithNoSSR = dynamic(() => import('./components/GMap'), {
   ssr: false,
-})
+});
 
 export default function ContactPage() {
   const breadcrumbs: Breadcrumb[] = [
-    {label: 'Contacto', icon: <LuMessagesSquare/>},
-  ]
+    { label: 'Contacto', icon: <LuMessagesSquare /> },
+  ];
 
   return (
     <>
-      <Breadcrumbs items={breadcrumbs}/>
+      <Breadcrumbs items={breadcrumbs} />
 
       <h2>Contacto</h2>
 
       <p>
-        <a href='mailto:espinoza.dev@gmail.com' target='_blank'>
+        <a href="mailto:espinoza.dev@gmail.com" target="_blank">
           espinoza.dev@gmail.com
         </a>
       </p>
 
-      <p>
-        Actualmente resido en Buenos Aires, Argentina.
-      </p>
+      <p>Actualmente resido en Buenos Aires, Argentina.</p>
 
-      <MapWithNoSSR/>
+      <MapWithNoSSR />
     </>
-  )
+  );
 }

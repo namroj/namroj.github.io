@@ -481,60 +481,42 @@
       }
     },
     {
-      "scope": [
-        "comment",
-        "punctuation.definition.markdown"
-      ],
+      "scope": ["comment", "punctuation.definition.markdown"],
       "settings": {
         "foreground": "#666666",
         "fontStyle": ""
       }
     },
     {
-      "scope": [
-        "comment.block",
-        "punctuation.definition.comment"
-      ],
+      "scope": ["comment.block", "punctuation.definition.comment"],
       "settings": {
         "foreground": "#7F0000",
         "fontStyle": ""
       }
     },
     {
-      "scope": [
-        "entity.name.variable",
-        "variable"
-      ],
+      "scope": ["entity.name.variable", "variable"],
       "settings": {
         "foreground": "#7EFFFF",
         "fontStyle": ""
       }
     },
     {
-      "scope": [
-        "Keyword",
-        "Storage"
-      ],
+      "scope": ["Keyword", "Storage"],
       "settings": {
         "foreground": "",
         "fontStyle": "italic"
       }
     },
     {
-      "scope": [
-        "entity.name.function",
-        "keyword.other.fn.rust"
-      ],
+      "scope": ["entity.name.function", "keyword.other.fn.rust"],
       "settings": {
         "foreground": "#7FFF00",
         "fontStyle": "italic"
       }
     },
     {
-      "scope": [
-        "variable.language.arguments",
-        "variable.parameter"
-      ],
+      "scope": ["variable.language.arguments", "variable.parameter"],
       "settings": {
         "foreground": "#CBF2FF",
         "fontStyle": "italic bold"
@@ -551,20 +533,14 @@
       }
     },
     {
-      "scope": [
-        "keyword.operator.quantifier.regexp",
-        "punctuation.accessor"
-      ],
+      "scope": ["keyword.operator.quantifier.regexp", "punctuation.accessor"],
       "settings": {
         "foreground": "#FFFFFF",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": [
-        "storage.type.class",
-        "storage.type.function"
-      ],
+      "scope": ["storage.type.class", "storage.type.function"],
       "settings": {
         "foreground": "#0077FF",
         "fontStyle": "italic"
@@ -581,20 +557,14 @@
       }
     },
     {
-      "scope": [
-        "storage.modifier.async",
-        "support.class.promise"
-      ],
+      "scope": ["storage.modifier.async", "support.class.promise"],
       "settings": {
         "foreground": "#CC77FF",
         "fontStyle": "bold"
       }
     },
     {
-      "scope": [
-        "fenced_code.block.language.markdown",
-        "markup.bold.markdown"
-      ],
+      "scope": ["fenced_code.block.language.markdown", "markup.bold.markdown"],
       "settings": {
         "foreground": "#20B3DF",
         "fontStyle": ""
@@ -623,11 +593,7 @@
       }
     },
     {
-      "scope": [
-        "entity.name.class",
-        "keyword.control",
-        "support.type"
-      ],
+      "scope": ["entity.name.class", "keyword.control", "support.type"],
       "settings": {
         "foreground": "#FF3B3B",
         "fontStyle": ""
@@ -645,11 +611,7 @@
       }
     },
     {
-      "scope": [
-        "*link*",
-        "*uri*",
-        "*url*"
-      ],
+      "scope": ["*link*", "*uri*", "*url*"],
       "settings": {
         "foreground": "",
         "fontStyle": "underline"

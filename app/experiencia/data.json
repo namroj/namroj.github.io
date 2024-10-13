@@ -326,14 +326,7 @@
         "interval": "Ene 2010 - Mar 2010"
       }
     ],
-    "tags": [
-      "CANTV",
-      "Comunicación",
-      "Atención",
-      "Cliente",
-      "Gestión",
-      "2010"
-    ]
+    "tags": ["CANTV", "Comunicación", "Atención", "Cliente", "Gestión", "2010"]
   },
   {
     "entity": {
@@ -357,13 +350,6 @@
         "interval": "Ene 2009 - Jun 2009"
       }
     ],
-    "tags": [
-      "DIRECTV",
-      "Comunicación",
-      "Atención",
-      "Cliente",
-      "2009",
-      "2010"
-    ]
+    "tags": ["DIRECTV", "Comunicación", "Atención", "Cliente", "2009", "2010"]
   }
 ]

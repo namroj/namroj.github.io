@@ -1,21 +1,21 @@
-import {ReactNode} from 'react'
-import {Link} from 'next-view-transitions'
+import { ReactNode } from 'react';
+import { Link } from 'next-view-transitions';
 
-import {IoHeadsetSharp} from 'react-icons/io5'
-import styles from './Breadcrumbs.module.scss'
+import { IoHeadsetSharp } from 'react-icons/io5';
+import styles from './Breadcrumbs.module.scss';
 
 export interface Breadcrumb {
-  label: string
-  href?: string
-  icon: ReactNode
+  label: string;
+  href?: string;
+  icon: ReactNode;
 }
 
 interface BreadcrumbsProps {
-  items: Breadcrumb[]
+  items: Breadcrumb[];
 }
 
-export default function Breadcrumbs({items}: Readonly<BreadcrumbsProps>) {
-  items = [{label: 'Jorman', href: '/', icon: <IoHeadsetSharp/>}, ...items]
+export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
+  items = [{ label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> }, ...items];
 
   return (
     <div className={styles.breadcrumbs}>
@@ -32,9 +32,11 @@ export default function Breadcrumbs({items}: Readonly<BreadcrumbsProps>) {
               {item.icon} <span>{item.label}</span>
             </span>
           )}
-          {index < items.length - 1 && <span className={styles.connector}>{'>'}</span>}
+          {index < items.length - 1 && (
+            <span className={styles.connector}>{'>'}</span>
+          )}
         </div>
       ))}
     </div>
-  )
+  );
 }

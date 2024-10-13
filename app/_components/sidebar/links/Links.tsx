@@ -1,60 +1,60 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
-import { IoLogoGithub } from 'react-icons/io5'
-import { FaXTwitter, FaThreads } from 'react-icons/fa6'
-import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
-import { PiButterfly } from 'react-icons/pi'
-import styles from './Links.module.scss'
+import { IoLogoGithub } from 'react-icons/io5';
+import { FaXTwitter, FaThreads } from 'react-icons/fa6';
+import { FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { PiButterfly } from 'react-icons/pi';
+import styles from './Links.module.scss';
 
 interface NetworkLink {
-  href: string
-  title: string
-  icon: ReactNode
+  href: string;
+  title: string;
+  icon: ReactNode;
 }
 
 const links: NetworkLink[] = [
   {
     href: 'https://github.com/namroj',
     title: 'GitHub',
-    icon: <IoLogoGithub />
+    icon: <IoLogoGithub />,
   },
   {
     href: 'https://www.linkedin.com/in/jormanespinoza',
     title: 'LinkedIn',
-    icon: <FaLinkedinIn />
+    icon: <FaLinkedinIn />,
   },
   {
     href: 'https://twitter.com/jormandev',
     title: 'Twitter',
-    icon: <FaXTwitter />
+    icon: <FaXTwitter />,
   },
   {
     href: 'https://instagram.com/jorman.dev',
     title: 'Instagram',
-    icon: <FaInstagram />
+    icon: <FaInstagram />,
   },
   {
     href: 'https://www.threads.net/@jorman.dev',
     title: 'Threads',
-    icon: <FaThreads />
+    icon: <FaThreads />,
   },
   {
     href: 'https://bsky.app/profile/jormandev.bsky.social',
     title: 'Bsky',
-    icon: <PiButterfly />
-  }
-]
+    icon: <PiButterfly />,
+  },
+];
 
 export default function Links() {
   return (
     <ul className={styles.links}>
       {links.map((link, index) => (
         <li className={styles.link} key={index}>
-          <a href={link.href} title={link.title} target='_blank'>
+          <a href={link.href} title={link.title} target="_blank">
             {link.icon}
           </a>
         </li>
       ))}
     </ul>
-  )
+  );
 }

@@ -1,6 +1,15 @@
-'use client'
+'use client';
 
-import {createContext, FC, ReactNode, useCallback, useContext, useEffect, useMemo, useState,} from 'react'
+import {
+  createContext,
+  FC,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 export enum Theme {
   AUTO = 'auto',
@@ -15,83 +24,83 @@ export enum ThemeLabel {
 }
 
 type ThemeContextType = {
-  theme: Theme
-  toggleTheme: (theme: Theme) => void
-}
+  theme: Theme;
+  toggleTheme: (theme: Theme) => void;
+};
 
 export interface ThemeProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
-export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active'
+export const THEME_ACTIVE_LOCAL_STORAGE_KEY = 'theme_active';
 
 const getThemeFromLocalStorage = (): Theme => {
   if (typeof window === 'undefined') {
-    return Theme.AUTO
+    return Theme.AUTO;
   }
 
-  const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY)
+  const theme = localStorage.getItem(THEME_ACTIVE_LOCAL_STORAGE_KEY);
   if (!theme || !Object.values(Theme).includes(theme as Theme)) {
-    return Theme.AUTO
+    return Theme.AUTO;
   }
 
-  return theme as Theme
-}
+  return theme as Theme;
+};
 
 const setThemeAttribute = (theme: Theme) => {
-  document.body.setAttribute('data-theme', theme)
+  document.body.setAttribute('data-theme', theme);
   document.body.setAttribute(
     'data-darkreader-mode',
     theme === Theme.DARK ? 'dark' : 'light',
-  )
+  );
   document.body.setAttribute(
     'data-darkreader-scheme',
     theme === Theme.DARK ? 'dark' : 'light',
-  )
-}
+  );
+};
 
 export const useThemeContext = () => {
-  const context = useContext(ThemeContext)
+  const context = useContext(ThemeContext);
   if (!context) {
     throw new Error(
       'useThemeContext must be used within a ThemeContextProvider',
-    )
+    );
   }
 
-  return context
-}
+  return context;
+};
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeContextProvider: FC<ThemeProviderProps> = ({children}) => {
-  const [mounted, setMounted] = useState(false)
-  const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage)
+export const ThemeContextProvider: FC<ThemeProviderProps> = ({ children }) => {
+  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState<Theme>(getThemeFromLocalStorage);
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (theme === Theme.AUTO) {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const prefersColorSchemeListener = (event: MediaQueryListEvent) => {
-        const currentTheme = event.matches ? Theme.DARK : Theme.LIGHT
-        localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO)
-        toggleTheme(Theme.AUTO)
-        setThemeAttribute(currentTheme)
-      }
+        const currentTheme = event.matches ? Theme.DARK : Theme.LIGHT;
+        localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO);
+        toggleTheme(Theme.AUTO);
+        setThemeAttribute(currentTheme);
+      };
 
-      localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO)
-      setThemeAttribute(mediaQuery.matches ? Theme.DARK : Theme.LIGHT)
+      localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, Theme.AUTO);
+      setThemeAttribute(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
 
-      mediaQuery.addEventListener('change', prefersColorSchemeListener)
+      mediaQuery.addEventListener('change', prefersColorSchemeListener);
       return () =>
-        mediaQuery.removeEventListener('change', prefersColorSchemeListener)
+        mediaQuery.removeEventListener('change', prefersColorSchemeListener);
     }
 
-    localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme)
-    setThemeAttribute(theme)
-  }, [theme])
+    localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme);
+    setThemeAttribute(theme);
+  }, [theme]);
 
-  const toggleTheme = useCallback((theme: Theme) => setTheme(theme), [])
+  const toggleTheme = useCallback((theme: Theme) => setTheme(theme), []);
 
   const contextValue = useMemo(
     () => ({
@@ -99,11 +108,11 @@ export const ThemeContextProvider: FC<ThemeProviderProps> = ({children}) => {
       toggleTheme,
     }),
     [theme, toggleTheme],
-  )
+  );
 
   return (
     <ThemeContext.Provider value={contextValue}>
       {mounted && <>{children}</>}
     </ThemeContext.Provider>
-  )
-}
+  );
+};

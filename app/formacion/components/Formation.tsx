@@ -1,32 +1,39 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import Highlighter from 'react-highlight-words'
+import { useState } from 'react';
+import Highlighter from 'react-highlight-words';
 
-import { normalizeAndCleanString } from '@/utils/strings'
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import { normalizeAndCleanString } from '@/utils/strings';
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
-import FormationItem, { FormationItemType } from './FormationItem'
-import TagsFilter from '@/components/ui/tag/TagsFilter'
-import KeywordSearch from '@/components/ui/keyword/KeywordSearch'
+import FormationItem, { FormationItemType } from './FormationItem';
+import TagsFilter from '@/components/ui/tag/TagsFilter';
+import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 
-import { LuPackageSearch } from 'react-icons/lu'
-import styles from './Formation.module.scss'
+import { LuPackageSearch } from 'react-icons/lu';
+import styles from './Formation.module.scss';
 
-export default function Formation({ formationData }: Readonly<{ formationData: FormationItemType[] }>) {
-  const { mainWidth } = useExpandCollapseContext()
+export default function Formation({
+  formationData,
+}: Readonly<{ formationData: FormationItemType[] }>) {
+  const { mainWidth } = useExpandCollapseContext();
 
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleClearTags = () => setSelectedTags([])
+  const handleClearTags = () => setSelectedTags([]);
 
-  const handleClearSearch = () => setSearchTerm('')
+  const handleClearSearch = () => setSearchTerm('');
 
   const handleTagClick = (tag: string) =>
-    setSelectedTags((prevTags) => (prevTags.includes(tag) ? prevTags.filter((t) => t !== tag) : [...prevTags, tag]))
+    setSelectedTags((prevTags) =>
+      prevTags.includes(tag)
+        ? prevTags.filter((t) => t !== tag)
+        : [...prevTags, tag],
+    );
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value)
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setSearchTerm(event.target.value);
 
   const highlightText = (text: string) => {
     return (
@@ -36,11 +43,13 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
         autoEscape={true}
         textToHighlight={text}
       />
-    )
-  }
+    );
+  };
 
   const filters = (
-    <div className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}>
+    <div
+      className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
+    >
       <TagsFilter
         tags={Array.from(new Set(formationData.flatMap((item) => item.tags)))}
         selectedTags={selectedTags}
@@ -53,19 +62,27 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
         handleClearSearch={handleClearSearch}
       />
     </div>
-  )
+  );
 
   const filteredFormation = formationData.filter((item) => {
-    const { certificate, entity, tags, ...rest } = item
-    const itemValues = Object.values(rest).filter((value) => typeof value !== 'object')
-    const tagsKeywords = tags.join(' ')
-    const itemKeywords = normalizeAndCleanString([...itemValues, entity.name, tagsKeywords].join('').toLowerCase())
+    const { certificate, entity, tags, ...rest } = item;
+    const itemValues = Object.values(rest).filter(
+      (value) => typeof value !== 'object',
+    );
+    const tagsKeywords = tags.join(' ');
+    const itemKeywords = normalizeAndCleanString(
+      [...itemValues, entity.name, tagsKeywords].join('').toLowerCase(),
+    );
 
-    const isTagSelected = selectedTags.length === 0 || selectedTags.some((tag) => item.tags.includes(tag))
-    const isSearchTermPresent = searchTerm === '' || itemKeywords.includes(normalizeAndCleanString(searchTerm))
+    const isTagSelected =
+      selectedTags.length === 0 ||
+      selectedTags.some((tag) => item.tags.includes(tag));
+    const isSearchTermPresent =
+      searchTerm === '' ||
+      itemKeywords.includes(normalizeAndCleanString(searchTerm));
 
-    return isTagSelected && isSearchTermPresent
-  })
+    return isTagSelected && isSearchTermPresent;
+  });
 
   const formationList =
     filteredFormation.length === 0 ? (
@@ -73,7 +90,9 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
         <span className={styles.icon}>
           <LuPackageSearch />
         </span>
-        <span>No se encontraron resultados. Prueba con otra palabra clave.</span>
+        <span>
+          No se encontraron resultados. Prueba con otra palabra clave.
+        </span>
       </div>
     ) : (
       filteredFormation.map((item: FormationItemType, index: number) => (
@@ -85,15 +104,19 @@ export default function Formation({ formationData }: Readonly<{ formationData: F
           highlightText={highlightText}
         />
       ))
-    )
+    );
 
   return (
-    <div className={`${styles.formation} ${mainWidth < 768 && styles['main-reduced']}`}>
+    <div
+      className={`${styles.formation} ${mainWidth < 768 && styles['main-reduced']}`}
+    >
       {filters}
-      <div className={`${styles.timeline} ${mainWidth < 768 && styles['main-reduced']}`}>
+      <div
+        className={`${styles.timeline} ${mainWidth < 768 && styles['main-reduced']}`}
+      >
         <hr />
         <ul>{formationList}</ul>
       </div>
     </div>
-  )
+  );
 }

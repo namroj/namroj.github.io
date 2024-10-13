@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -22,33 +18,14 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/assets/*": [
-        "./app/_assets/*"
-      ],
-      "@/components/*": [
-        "./app/_components/*"
-      ],
-      "@/providers/*": [
-        "./app/_providers/*"
-      ],
-      "@/fonts/*": [
-        "./app/_assets/fonts/*"
-      ],
-      "@/utils/*": [
-        "./app/_utils/*"
-      ]
+      "@/*": ["./*"],
+      "@/assets/*": ["./app/_assets/*"],
+      "@/components/*": ["./app/_components/*"],
+      "@/providers/*": ["./app/_providers/*"],
+      "@/fonts/*": ["./app/_assets/fonts/*"],
+      "@/utils/*": ["./app/_utils/*"]
     }
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

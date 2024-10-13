@@ -74,7 +74,7 @@
         transition: var(--transition);
 
         &:hover {
-          box-shadow: 0 0 15px var(--bgHoverAccentColor)
+          box-shadow: 0 0 15px var(--bgHoverAccentColor);
         }
       }
     }

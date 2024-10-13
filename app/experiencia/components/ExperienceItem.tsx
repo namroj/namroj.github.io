@@ -1,35 +1,35 @@
-import React from 'react'
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider'
+import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
-import TagButton from '@/components/ui/tag/TagButton'
+import TagButton from '@/components/ui/tag/TagButton';
 
-import styles from './ExperienceItem.module.scss'
+import styles from './ExperienceItem.module.scss';
 
 export type ExperienceItemType = {
-  entity: { name: string; image: string; url: string }
-  location: string
-  interval: string
+  entity: { name: string; image: string; url: string };
+  location: string;
+  interval: string;
   positions: {
-    title: string
-    extract: string
-    description: string
-    highlight: string
-    interval: string
-  }[]
-  tags: string[]
-}
+    title: string;
+    extract: string;
+    description: string;
+    highlight: string;
+    interval: string;
+  }[];
+  tags: string[];
+};
 
-const COMPONENT_MIN_WIDTH = 400
+const COMPONENT_MIN_WIDTH = 400;
 
 const ExperienceItem: React.FC<{
-  item: ExperienceItemType
-  selectedTags: string[]
-  handleTagClick: (tag: string) => void
-  highlightText: (text: string) => JSX.Element
+  item: ExperienceItemType;
+  selectedTags: string[];
+  handleTagClick: (tag: string) => void;
+  highlightText: (text: string) => JSX.Element;
 }> = ({ item, handleTagClick, selectedTags, highlightText }) => {
-  const { mainWidth } = useExpandCollapseContext()
+  const { mainWidth } = useExpandCollapseContext();
 
   return (
     <li className={styles.item}>
@@ -38,7 +38,7 @@ const ExperienceItem: React.FC<{
       >
         <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.entity}>
-          <a href={item.entity.url} target='_blank'>
+          <a href={item.entity.url} target="_blank">
             <Image
               src={item.entity.image}
               alt={item.entity.name}
@@ -49,7 +49,7 @@ const ExperienceItem: React.FC<{
 
           <div className={styles.content}>
             <h3>
-              <a href={item.entity.url} target='_blank'>
+              <a href={item.entity.url} target="_blank">
                 {highlightText(item.entity.name)}
               </a>
             </h3>
@@ -69,12 +69,12 @@ const ExperienceItem: React.FC<{
                 <p>{highlightText(position.interval)}</p>
                 <p className={styles.description}>
                   {(() => {
-                    const descriptionItems = position.description.split('||')
+                    const descriptionItems = position.description.split('||');
                     return descriptionItems.length > 1
                       ? descriptionItems.map((desc, index) => (
                           <li key={index}>{highlightText(desc)}</li>
                         ))
-                      : highlightText(position.description)
+                      : highlightText(position.description);
                   })()}
                 </p>
                 <p className={styles['highlight-text']}>
@@ -101,7 +101,7 @@ const ExperienceItem: React.FC<{
         </div>
       </article>
     </li>
-  )
-}
+  );
+};
 
-export default ExperienceItem
+export default ExperienceItem;

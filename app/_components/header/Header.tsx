@@ -1,24 +1,28 @@
-import {Link} from 'next-view-transitions'
-import Image from 'next/image'
+import { Link } from 'next-view-transitions';
+import Image from 'next/image';
 
-import profileImage from '@/assets/images/profile.jpeg'
-import styles from './Header.module.scss'
+import profileImage from '@/assets/images/profile.jpeg';
+import styles from './Header.module.scss';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.id}>
-        <Link href='/' className={styles['profile-image']}>
-          <Image src={profileImage} alt='Jorman Espinoza - Imagen de perfil' priority/>
+        <Link href="/" className={styles['profile-image']}>
+          <Image
+            src={profileImage}
+            alt="Jorman Espinoza - Imagen de perfil"
+            priority
+          />
         </Link>
         <div>
-          <Link href='/'>
+          <Link href="/">
             <h1>Jorman Espinoza</h1>
           </Link>
           <div className={styles.data}>
             {'['}
             <code>
-              <Link href='/'>namroj</Link>
+              <Link href="/">namroj</Link>
             </code>
             {']'}
             <span>Desarrollador Full Stack</span>
@@ -26,5 +30,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

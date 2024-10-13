@@ -1,21 +1,24 @@
-'use client'
+'use client';
 
-import {Link} from 'next-view-transitions'
-import Image from 'next/image'
+import { Link } from 'next-view-transitions';
+import Image from 'next/image';
 
-import {ExpandCollapseState, useExpandCollapseContext} from '@/providers/expand-collapse/ExpandCollapseProvider'
-import ThemeToggle from "@/components/theme/ThemeToggle";
+import {
+  ExpandCollapseState,
+  useExpandCollapseContext,
+} from '@/providers/expand-collapse/ExpandCollapseProvider';
+import ThemeToggle from '@/components/theme/ThemeToggle';
 
-import nextJsLogo from '@/assets/icons/next.svg'
-import styles from './Footer.module.scss'
+import nextJsLogo from '@/assets/icons/next.svg';
+import styles from './Footer.module.scss';
 
 export default function Footer() {
-  const {expandCollapseState} = useExpandCollapseContext()
+  const { expandCollapseState } = useExpandCollapseContext();
 
   const getCollapsedOrExpandedState = () =>
     expandCollapseState === ExpandCollapseState.COLLAPSED
       ? ExpandCollapseState.EXPANDED
-      : ExpandCollapseState.COLLAPSED
+      : ExpandCollapseState.COLLAPSED;
 
   return (
     <footer
@@ -24,11 +27,11 @@ export default function Footer() {
     >
       <ThemeToggle />
       <span>
-        por <Link href='/'>Jorman</Link> mediante{' '}
+        por <Link href="/">Jorman</Link> mediante{' '}
       </span>
-      <a href='https://nextjs.org/' target='_blank'>
-        <Image src={nextJsLogo} alt='Next.js' width={20} height={20}/>
+      <a href="https://nextjs.org/" target="_blank">
+        <Image src={nextJsLogo} alt="Next.js" width={20} height={20} />
       </a>
     </footer>
-  )
+  );
 }

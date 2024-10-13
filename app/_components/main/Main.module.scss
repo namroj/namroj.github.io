@@ -3,7 +3,8 @@
   position: relative;
   min-width: 300px;
   min-height: 100svh;
-  padding: calc(var(--headerHeight) + var(--gap)) var(--gap) calc(var(--gap) * 2);
+  padding: calc(var(--headerHeight) + var(--gap)) var(--gap)
+    calc(var(--gap) * 2);
   background-color: var(--mainBgColor);
   color: var(--textColor);
   transition: var(--expandCollapseTransition);

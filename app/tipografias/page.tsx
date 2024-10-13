@@ -1,19 +1,19 @@
-import { Metadata } from 'next'
+import { Metadata } from 'next';
 
 import Breadcrumbs, {
   Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs'
+} from '@/components/main/breadcrumbs/Breadcrumbs';
 
-import { RxFontFamily } from 'react-icons/rx'
+import { RxFontFamily } from 'react-icons/rx';
 
 export const metadata: Metadata = {
   title: 'Tipografías preferidas | Jorman Espinoza',
-}
+};
 
 export default function FontsPage() {
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Tipografías', icon: <RxFontFamily /> },
-  ]
+  ];
 
   return (
     <>
@@ -21,48 +21,48 @@ export default function FontsPage() {
       <h2>Tipografías preferidas</h2>
       <ul>
         <li>
-          <a href='https://philpl.gumroad.com/l/dank-mono' target='_blank'>
+          <a href="https://philpl.gumroad.com/l/dank-mono" target="_blank">
             Dank Mono
           </a>{' '}
           - by{' '}
-          <a href='https://philpl.gumroad.com' target='_blank'>
+          <a href="https://philpl.gumroad.com" target="_blank">
             Phil Pluckthun
           </a>
         </li>
         <li>
-          <a href='https://www.jetbrains.com/es-es/lp/mono' target='_blank'>
+          <a href="https://www.jetbrains.com/es-es/lp/mono" target="_blank">
             JetBrains Mono
           </a>{' '}
           - by{' '}
-          <a href='https://www.jetbrains.com/' target='_blank'>
+          <a href="https://www.jetbrains.com/" target="_blank">
             JetBrains
           </a>
         </li>
         <li>
           <a
-            href='https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions'
-            target='_blank'
+            href="https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions"
+            target="_blank"
           >
             Cascadia Code
           </a>{' '}
           - by{' '}
-          <a href='https://www.microsoft.com/es-ar' target='_blank'>
+          <a href="https://www.microsoft.com/es-ar" target="_blank">
             Microsoft
           </a>
         </li>
         <li>
           <a
-            href='https://github.com/tonsky/FiraCode/blob/master/LEEME.md'
-            target='_blank'
+            href="https://github.com/tonsky/FiraCode/blob/master/LEEME.md"
+            target="_blank"
           >
             Fira Code
           </a>{' '}
           - by{' '}
-          <a href='https://github.com/tonsky' target='_blank'>
+          <a href="https://github.com/tonsky" target="_blank">
             Nikita Prokopov [tonsky]
           </a>
         </li>
       </ul>
     </>
-  )
+  );
 }

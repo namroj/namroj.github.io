@@ -1,9 +1,9 @@
-import path from 'path'
-import { readFile } from 'fs/promises'
+import path from 'path';
+import { readFile } from 'fs/promises';
 
 export const readJsonFile = async (filePath: string, fileName: string) => {
-  const file = path.join(process.cwd(), filePath, fileName)
-  const jsonData = await readFile(file)
+  const file = path.join(process.cwd(), filePath, fileName);
+  const jsonData = await readFile(file);
 
-  return JSON.parse(jsonData.toString())
-}
+  return JSON.parse(jsonData.toString());
+};
