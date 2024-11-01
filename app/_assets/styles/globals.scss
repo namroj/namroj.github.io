@@ -4,7 +4,7 @@
 // -- root -----
 :root {
   // colors
-  --purpleColor: #c678dd;
+  --purpleColor: gray;
   --blueColor: #6087cf;
   --greenColor: #98c379;
   --orangeColor: #d09965;
@@ -21,11 +21,11 @@
   --textColor: var(--lightColor);
   // dimensions
   --headerHeight: 60px;
-  --sidebarWidth: 50vw;
+  --sidebarWidth: 310px;
   --mainWidth: calc(100vw - var(--sidebarWidth));
   --gap: 20px;
   --expandCollapseTransition: width 0.5s ease-in-out,
-    margin-left 0.5s ease-in-out;
+  margin-left 0.5s ease-in-out;
   --dankMonoFont: 'Dank Mono';
   // breakpoints
   --sm: 576px;
@@ -49,8 +49,9 @@
   margin: 0;
   padding: 0;
   font-family: var(--jetBrainsMonoFont), var(--cascadiaCodeFont),
-    var(--dankMonoFont), monospace;
+  var(--dankMonoFont), monospace;
 }
+
 main html,
 body {
   max-width: 100svw;

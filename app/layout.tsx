@@ -30,7 +30,6 @@ export default function RootLayout({
       >
       <ThemeContextProvider>
         <ExpandCollapseContextProvider>
-          <Header />
           <Sidebar />
           <Main>{children}</Main>
           <Footer />

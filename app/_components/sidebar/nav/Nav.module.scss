@@ -1,4 +1,4 @@
-// --nav -----
+// -- nav -----
 .nav {
   padding-right: var(--gap);
   display: flex;
@@ -6,10 +6,14 @@
   gap: calc(var(--gap) / 2);
 
   a {
-    font-family: var(--dankMonoFont);
-    font-style: italic;
-    font-size: 0.89rem;
+    font-family: var(--jetBrainsMonoFont), monospace;
+    font-size: 0.8rem;
     color: var(--navTextColor);
+    display: inline-block;
+
+    @media (width > 768px) {
+      font-size: 1rem;
+    }
 
     &:hover {
       color: var(--navHoverTextColor);

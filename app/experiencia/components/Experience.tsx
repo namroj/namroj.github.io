@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import Highlighter from 'react-highlight-words';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
@@ -32,7 +32,7 @@ export default function Experience({
         : [...prevTags, tag],
     );
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) =>
     setSearchTerm(event.target.value);
 
   const highlightText = (text: string) => {

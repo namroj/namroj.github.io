@@ -20,11 +20,7 @@ export default function Header() {
             <h1>Jorman Espinoza</h1>
           </Link>
           <div className={styles.data}>
-            [
-            <code>
-              <Link href="/">namroj</Link>
-            </code>
-            ]<span>Desarrollador Full Stack</span>
+            <span>Desarrollador Full Stack</span>
           </div>
         </div>
       </div>

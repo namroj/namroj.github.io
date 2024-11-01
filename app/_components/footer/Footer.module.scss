@@ -1,7 +1,7 @@
 // -- footer -----
 .footer {
   width: calc(100vw - var(--sidebarWidth));
-  height: calc(var(--gap) * 1.25);
+  height: calc(var(--gap) * 2);
   position: fixed;
   right: 0;
   bottom: 0;
@@ -14,6 +14,7 @@
   color: var(--footerBorderColor);
   font-size: 0.5rem;
   transition: var(--expandCollapseTransition);
+  z-index: 0;
 
   @media (width < 250px) {
     font-size: 0.5rem;
@@ -45,10 +46,10 @@
     justify-content: center;
     gap: calc(var(--gap) / 4);
     color: var(--textColor);
-    font-family: var(--dankMonoFont), serif;
+    font-family: var(--dankMonoFont), monospace;
 
     a {
-      font-family: var(--dankMonoFont), serif;
+      font-family: var(--dankMonoFont), monospace;
       font-style: italic;
       font-weight: bold;
       color: var(--footerAnchorColor);

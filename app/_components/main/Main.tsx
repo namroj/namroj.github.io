@@ -19,7 +19,9 @@ export default function Main({ children }: Readonly<{ children: ReactNode }>) {
 
   return (
     <main className={`${styles.main} ${styles[getCollapsedOrExpandedState()]}`}>
-      {children}
+      <div className={styles['main-content']}>
+        {children}
+      </div>
     </main>
   );
 }

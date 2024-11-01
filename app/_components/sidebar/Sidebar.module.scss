@@ -2,8 +2,7 @@
 .sidebar {
   position: fixed;
   width: var(--sidebarWidth);
-  height: calc(100vh - var(--headerHeight));
-  margin-top: var(--headerHeight);
+  height: 100dvh;
   padding: var(--gap);
   display: flex;
   flex-direction: column;
@@ -18,39 +17,5 @@
 
   &.collapsed {
     margin-left: calc((var(--sidebarWidth) * -1) + var(--gap));
-
-    .resizer {
-      display: none;
-    }
-  }
-
-  .resizer {
-    position: absolute;
-    top: 0;
-    right: -1px;
-    width: 10px;
-    height: 100%;
-    background-color: var(--headerBorderColor);
-    border: none;
-    cursor: col-resize;
-    animation: resizerAnimation 5.2s ease infinite;
-  }
-
-  @keyframes resizerAnimation {
-    0% {
-      background-color: var(--headerBorderColor);
-    }
-    1% {
-      background-color: var(--sidebarResizerBlinkColor);
-    }
-    9% {
-      background-color: var(--sidebarResizerBlinkColor);
-    }
-    10% {
-      background-color: var(--headerBorderColor);
-    }
-    100% {
-      background-color: var(--headerBorderColor);
-    }
   }
 }

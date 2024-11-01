@@ -14,7 +14,7 @@ interface NavItem {
 
 export default function Nav() {
   const currentPath = usePathname();
-  const isMobile = useMedia({ maxWidth: '768px' });
+  const isMobile = useMedia({ maxWidth: 768 });
   const { toggleExpandCollapseState } = useExpandCollapseContext();
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
@@ -23,7 +23,6 @@ export default function Nav() {
     { path: '/formacion', label: 'Formación' },
     { path: '/experiencia', label: 'Experiencia' },
     { path: '/proyectos', label: 'Proyectos' },
-    { path: '/tipografias', label: 'Tipografías' },
     { path: '/blog', label: 'Blog' },
     { path: '/contacto', label: 'Contacto' },
   ], []);

@@ -1,7 +1,7 @@
-import { JetBrains_Mono as jetBrainsMono } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 
-const jetBrainsMonoFont = jetBrainsMono({
+const jetBrainsMonoFont = JetBrains_Mono({
   subsets: ['latin'],
   display: 'swap',
   variable: '--jetBrainsMonoFont',
