@@ -11,10 +11,6 @@
     color: var(--navTextColor);
     display: inline-block;
 
-    @media (width > 768px) {
-      font-size: 1rem;
-    }
-
     &:hover {
       color: var(--navHoverTextColor);
       opacity: 0.65;

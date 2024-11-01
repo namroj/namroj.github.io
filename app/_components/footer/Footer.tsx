@@ -26,7 +26,7 @@ export default function Footer() {
     >
       <ThemeToggle />
       <span>
-        <FaRegCopyright /> <Link href="/">Jorman Espinoza</Link>
+        <FaRegCopyright /> por <Link href="/">Jorman Espinoza</Link>
       </span>
     </footer>
   );

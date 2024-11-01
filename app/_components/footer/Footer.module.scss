@@ -28,15 +28,16 @@
   &.expanded {
     width: calc(100vw - var(--gap));
     margin-left: var(--gap);
+    padding-right: var(--gap);
   }
 
   &.collapsed {
     width: 100vw;
     margin-left: var(--sidebarWidth);
+    padding-right: var(--gap);
 
     @media (width > 768px) {
       width: calc(100vw - var(--sidebarWidth));
-      margin-left: var(--sidebarWidth);
     }
   }
 
@@ -66,6 +67,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid transparent;
+    font-family: monospace;
 
     img {
       border: 2px solid var(--footerBorderColor);
