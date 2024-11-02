@@ -28,6 +28,7 @@ export default function HomePage() {
       <section>
         <h4>Arsenal</h4>
         <ul>
+          <li>GIT</li>
           <li>Java</li>
           <li>Spring</li>
           <li>Javascript</li>
@@ -48,6 +49,13 @@ export default function HomePage() {
         <li>Postman</li>
         <li>DBeaver</li>
         <li>Draw.io</li>
+      </section>
+      <section>
+        <h4>Gestión</h4>
+        <li>Github</li>
+        <li>Bitbucket</li>
+        <li>AWS</li>
+        <li>Jira</li>
       </section>
       <section>
         <h4>Tipografías preferidas</h4>

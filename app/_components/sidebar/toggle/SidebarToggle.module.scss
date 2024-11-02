@@ -13,26 +13,37 @@
   color: var(--sidebarTogglerTextColor);
   font-weight: bold;
   cursor: pointer;
-  transition:
-    background-color 0.25s ease-in-out,
-    color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out,
+  color 0.25s ease-in-out;
+
+  svg {
+    fill: var(--bgColor);
+  }
 
   &:hover {
     background-color: var(--sidebarTogglerHoverBgColor);
     color: var(--sidebarTogglerHoverTextColor);
-  }
 
-  &.expanded {
-    background-color: var(--sidebarTogglerHoverBgColor);
-    color: var(--sidebarTogglerHoverTextColor);
-
-    &:hover {
-      background-color: var(--sidebarTogglerBgColor);
-      color: var(--sidebarTogglerTextColor);
+    svg {
+      fill: var(--sidebarToggleIconColor);
     }
   }
 
-  svg {
-    fill: var(--sidebarToggleIconColor);
+  &.expanded {
+    background-color: transparent;
+    color: var(--sidebarTogglerHoverTextColor);
+
+    svg {
+      fill: var(--sidebarToggleIconColor);
+    }
+
+    &:hover {
+      background-color: var(--sidebarTogglerBgColor);
+      color: var(--bgColor);
+
+      svg {
+        fill: var(--bgColor);
+      }
+    }
   }
 }

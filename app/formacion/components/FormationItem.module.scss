@@ -26,7 +26,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      color: var(--bgAccentColor);
+      color: var(--bgHoverAccentColor);
       font-size: 0.8rem;
     }
 
@@ -39,7 +39,7 @@
         width: calc(var(--gap) * 2);
         height: calc(var(--gap) * 2);
         border-radius: 50%;
-        box-shadow: 0 0 2px var(--textColor);
+        box-shadow: 0 0 2px var(--bgHoverAccentColor);
         object-fit: cover;
         transition: var(--transition);
 
@@ -127,7 +127,7 @@
 
       code.certificate {
         padding: 0;
-        border-radius: none;
+        border-radius: unset;
         display: inline-flex;
         align-items: center;
         background-color: transparent;
@@ -147,7 +147,6 @@
         a {
           display: flex;
           gap: calc(var(--gap) / 4);
-          font-family: var(--dankMonoFont);
           font-style: italic;
         }
       }

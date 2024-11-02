@@ -5,7 +5,6 @@ import { ViewTransitions } from 'next-view-transitions';
 import { ThemeContextProvider } from '@/providers/theme/ThemeProvider';
 import { ExpandCollapseContextProvider } from '@/providers/expand-collapse/ExpandCollapseProvider';
 
-import Header from '@/components/header/Header';
 import Sidebar from '@/components/sidebar/Sidebar';
 import Main from '@/components/main/Main';
 import Footer from '@/components/footer/Footer';
@@ -31,7 +30,9 @@ export default function RootLayout({
       <ThemeContextProvider>
         <ExpandCollapseContextProvider>
           <Sidebar />
-          <Main>{children}</Main>
+          <Main>
+            {children}
+          </Main>
           <Footer />
         </ExpandCollapseContextProvider>
       </ThemeContextProvider>

@@ -11,7 +11,7 @@
   --textAccentColor: var(--lightGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
   --bgAccentColor: var(--blueColor);
-  --bgHoverAccentColor: var(--orangeColor);
+  --bgHoverAccentColor: var(--blueColor);
   // scrollbar
   --scrollbarTrackColor: var(--lightGrayColor);
   --scrollbarThumbColor: var(--blueColor);
@@ -27,8 +27,7 @@
   --sidebarTogglerHoverTextColor: var(--lightSemiColor);
   --sidebarTogglerBgColor: var(--blueColor);
   --sidebarTogglerHoverBgColor: var(--purpleColor);
-  --sidebarToggleIconColor: var(--lightColor);
-  --sidebarResizerBlinkColor: var(--darkSemiColor);
+  --sidebarToggleIconColor: var(--darkSemiColor);
   // nav
   --navBgColor: var(--lightSemiColor);
   --navTextColor: var(--darkSemiColor);
@@ -49,6 +48,9 @@
   --footerBorderColor: var(--lightGrayColor);
   --footerAnchorColor: var(--blueColor);
   --footerAnchorHoverColor: var(--greenColor);
+  // tag
+  --tagAccentColor: var(--lightGrayColor);
+  --tagBgHoverAccentColor: var(--blueColor);
 }
 
 [data-theme='dark'] {
@@ -59,7 +61,7 @@
   --textAccentColor: var(--darkGrayColor);
   --textSecondaryAccentColor: var(--purpleColor);
   --bgAccentColor: var(--blueColor);
-  --bgHoverAccentColor: var(--orangeColor);
+  --bgHoverAccentColor: var(--purpleColor);
   // scrollbar
   --scrollbarTrackColor: var(--darkGrayColor);
   --scrollbarThumbColor: var(--purpleColor);
@@ -76,7 +78,6 @@
   --sidebarTogglerBgColor: var(--purpleColor);
   --sidebarTogglerHoverBgColor: var(--blueColor);
   --sidebarToggleIconColor: var(--lightColor);
-  --sidebarResizerBlinkColor: var(--grayColor);
   // nav
   --navBgColor: var(--darkSemiColor);
   --navTextColor: var(--grayColor);
@@ -94,9 +95,12 @@
   --breadcrumbBorderColor: var(--purpleColor);
   // footer
   --footerBgColor: var(--darkSemiColor);
-  --footerBorderColor: var(--darkGrayColor);
+  --footerBorderColor: var(--darkSemiColor);
   --footerAnchorColor: var(--blueColor);
   --footerAnchorHoverColor: var(--orangeColor);
+  // tag
+  --tagAccentColor: var(--darkGrayColor);
+  --tagBgHoverAccentColor: var(--purpleColor);
 }
 
 // markdown themes

@@ -6,7 +6,7 @@ import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandColl
 
 import Header from '@/components/header/Header';
 import Nav from './nav/Nav';
-import SidebarToggle from './toggler/SidebarToggle';
+import SidebarToggle from '@/components/sidebar/toggle/SidebarToggle';
 import Links from './links/Links';
 import styles from './Sidebar.module.scss';
 
@@ -15,7 +15,6 @@ export default function Sidebar() {
 
   const [isResizing, setIsResizing] = useState(false);
 
-  const handleMouseDown = useCallback(() => setIsResizing(true), []);
   const handleMouseUp = useCallback(() => setIsResizing(false), []);
 
   useEffect(() => {

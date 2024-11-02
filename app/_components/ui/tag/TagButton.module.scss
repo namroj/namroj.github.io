@@ -9,13 +9,14 @@
   code {
     padding: 2px 3px;
     border-radius: 3px;
-    background-color: var(--bgAccentColor);
-    color: var(--darkColor);
+    background-color: var(--tagAccentColor);
+    color: var(--textColor);
     font-size: 0.7rem;
 
     &:hover,
     &.active {
-      background-color: var(--bgHoverAccentColor);
+      background-color: var(--tagBgHoverAccentColor);
+      color: var(--bgColor);
     }
   }
 }

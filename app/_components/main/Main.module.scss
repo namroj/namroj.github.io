@@ -21,7 +21,6 @@
 
   &.expanded {
     width: calc(100vw - var(--gap));
-    margin-left: var(--gap);
   }
 
   &.collapsed {
@@ -30,7 +29,11 @@
   }
 
   * {
-    font-family: var(--jetBrainsMonoFont), monospace;
+    font-family: var(--dankMonoFont), var(--jetBrainsMonoFont), monospace;
+  }
+
+  section {
+    margin-bottom: var(--gap);
   }
 
   h2 {

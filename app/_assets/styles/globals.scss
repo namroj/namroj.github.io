@@ -4,7 +4,7 @@
 // -- root -----
 :root {
   // colors
-  --purpleColor: gray;
+  --purpleColor: #c678dd;
   --blueColor: #6087cf;
   --greenColor: #98c379;
   --orangeColor: #d09965;
@@ -15,12 +15,12 @@
   --lightGrayColor: #d4d4d4;
   --darkColor: #000;
   --darkSemiColor: #1a1a1a;
-  --darkGrayColor: #2b2b2b;
+  --darkGrayColor: #404040;
   --darkGrayAlternativeColor: #232327;
   --bgColor: var(--darkColor);
   --textColor: var(--lightColor);
   // dimensions
-  --headerHeight: 60px;
+  --headerHeight: 50px;
   --sidebarWidth: 310px;
   --mainWidth: calc(100vw - var(--sidebarWidth));
   --gap: 20px;

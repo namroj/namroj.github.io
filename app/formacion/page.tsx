@@ -4,9 +4,10 @@ import readJsonFile from '@/utils/files';
 import Breadcrumbs, {
   Breadcrumb,
 } from '@/components/main/breadcrumbs/Breadcrumbs';
-import { ImBooks } from 'react-icons/im';
 import Formation from './components/Formation';
 import { FormationItemType } from './components/FormationItem';
+
+import { ImBooks } from 'react-icons/im';
 
 export const metadata: Metadata = {
   title: 'Formación | Jorman Espinoza',

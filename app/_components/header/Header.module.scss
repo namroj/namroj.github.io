@@ -3,7 +3,6 @@
   height: var(--headerHeight);
   display: flex;
   justify-content: space-between;
-  background-color: var(--navBgColor);
   color: var(--textColor);
   z-index: 1;
 
@@ -40,7 +39,7 @@
         font-size: 0.7rem;
         font-weight: 300;
         color: var(--headerProfessionTextColor);
-        
+
         @media (width > 768px) {
           font-size: 0.8rem;
         }

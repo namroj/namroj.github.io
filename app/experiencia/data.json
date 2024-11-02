@@ -11,7 +11,7 @@
       {
         "title": "Desarrollador Full Stack",
         "description": "Desarrollo de sitios web, landing pages, portafolios, blogs, tiendas virtuales, sistemas de gestión de contenido, entre otros.Modelado de bases de datos.||Despliegue de sitios a nivel Hosting.||Configuración de dominios y DNSs.||Configuración de cuentas de correo.||Instalación/configuración y aplicación de WordPress, incluyendo personalización de temas y edición y aplicación de plugins PHP.||Armado de firmas de correo electrónico con HTML.",
-        "highlight": "Desarrollador autónomo en paralelo -clientes generados a través de networking y recomendaciones por compañeros de trabajo y referencias de clientes previos.||Maquetado.||Desarrollo de API con Java|Spring Boot.",
+        "highlight": "Desarrollador autónomo en paralelo -clientes generados a través de networking y recomendaciones por compañeros de trabajo y referencias de clientes previos. Maquetado|Desarrollo de API con Java|Spring Boot.",
         "interval": "Abr 2018 - Presente"
       }
     ],
@@ -326,7 +326,14 @@
         "interval": "Ene 2010 - Mar 2010"
       }
     ],
-    "tags": ["CANTV", "Comunicación", "Atención", "Cliente", "Gestión", "2010"]
+    "tags": [
+      "CANTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "Gestión",
+      "2010"
+    ]
   },
   {
     "entity": {
@@ -350,6 +357,13 @@
         "interval": "Ene 2009 - Jun 2009"
       }
     ],
-    "tags": ["DIRECTV", "Comunicación", "Atención", "Cliente", "2009", "2010"]
+    "tags": [
+      "DIRECTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "2009",
+      "2010"
+    ]
   }
 ]
