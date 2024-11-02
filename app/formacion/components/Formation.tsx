@@ -73,7 +73,6 @@ export default function Formation({
     const itemKeywords = normalizeAndCleanString(
       [...itemValues, entity.name, tagsKeywords].join('').toLowerCase(),
     );
-
     const isTagSelected =
       selectedTags.length === 0 ||
       selectedTags.some((tag) => item.tags.includes(tag));

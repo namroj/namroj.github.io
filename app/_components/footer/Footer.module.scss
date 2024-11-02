@@ -12,13 +12,13 @@
   border-top: 1px solid var(--footerBorderColor);
   background-color: var(--footerBgColor);
   color: var(--footerBorderColor);
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   transition: var(--expandCollapseTransition);
   z-index: 0;
 
   @media (width > 768px) {
     padding: calc(var(--gap) / 8) calc(var(--gap) / 4);
-    font-size: 0.89rem;
+    font-size: 1rem;
   }
 
   &.expanded {

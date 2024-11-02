@@ -10,7 +10,7 @@
   background-color: var(--sidebarBgColor);
   transition: var(--expandCollapseTransition);
   z-index: 1;
-
+  
   &.expanded {
     width: var(--sidebarWidth);
   }

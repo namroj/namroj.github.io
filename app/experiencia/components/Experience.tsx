@@ -78,7 +78,6 @@ export default function Experience({
         .join('')
         .toLowerCase(),
     );
-
     const isTagSelected =
       selectedTags.length === 0 ||
       selectedTags.some((tag) => item.tags.includes(tag));
