@@ -11,6 +11,7 @@ import Footer from '@/components/footer/Footer';
 
 import { cascadiaCodeFont, jetBrainsMonoFont } from '@/fonts/Fonts';
 import '@/assets/styles/globals.scss';
+import { NavigationContextProvider } from '@/providers/navigation/NavigationProvider';
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',
@@ -29,11 +30,13 @@ export default function RootLayout({
       >
       <ThemeContextProvider>
         <ExpandCollapseContextProvider>
-          <Sidebar />
-          <Main>
-            {children}
-          </Main>
-          <Footer />
+          <NavigationContextProvider>
+            <Sidebar />
+            <Main>
+              {children}
+            </Main>
+            <Footer />
+          </NavigationContextProvider>
         </ExpandCollapseContextProvider>
       </ThemeContextProvider>
       </body>

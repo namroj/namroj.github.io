@@ -51,6 +51,10 @@
   // tag
   --tagAccentColor: var(--lightGrayColor);
   --tagBgHoverAccentColor: var(--blueColor);
+  // footer - breadcrumbs
+  --footerBreadcrumbItemColor: var(--darkGrayColor);
+  --footerBreadcrumbLinkedItemColor: var(--blueColor);
+  --footerBreadcrumbLinkedItemHoverColor: var(--blueColor);
 }
 
 [data-theme='dark'] {
@@ -101,6 +105,10 @@
   // tag
   --tagAccentColor: var(--darkGrayColor);
   --tagBgHoverAccentColor: var(--purpleColor);
+  // footer - breadcrumbs
+  --footerBreadcrumbItemColor: var(--grayColor);
+  --footerBreadcrumbLinkedItemColor: var(--purpleColor);
+  --footerBreadcrumbLinkedItemHoverColor: var(--purpleColor);
 }
 
 // markdown themes

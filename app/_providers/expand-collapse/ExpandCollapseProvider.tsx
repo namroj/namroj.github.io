@@ -40,6 +40,7 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   const expandCollapseState = localStorage.getItem(
     EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
   );
+
   if (
     !expandCollapseState ||
     !Object.values(ExpandCollapseState).includes(
@@ -67,9 +68,7 @@ export const useExpandCollapseContext = () => {
   return context;
 };
 
-export const ExpandCollapseContextProvider: FC<
-  ExpandCollapseProviderProps
-> = ({ children }) => {
+export function ExpandCollapseContextProvider({ children }: ExpandCollapseProviderProps) {
   const [mounted, setMounted] = useState(false);
   const [expandCollapseState, setExpandCollapseState] = useState<
     ExpandCollapseState

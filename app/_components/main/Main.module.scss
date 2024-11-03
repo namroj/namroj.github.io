@@ -26,10 +26,6 @@
 
   &.expanded {
     width: 100dvw;
-
-    @media (width > 1024px) {
-      width: calc(100vw - var(--gap));
-    }
   }
 
   &.collapsed {
