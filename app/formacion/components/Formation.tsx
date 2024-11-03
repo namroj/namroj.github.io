@@ -9,8 +9,9 @@ import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandColl
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import TagsFilter from '@/components/ui/tag/TagsFilter';
 
-import { LuPackageSearch } from 'react-icons/lu';
 import { FormationItem, FormationItemType } from './FormationItem';
+
+import { LuPackageSearch } from 'react-icons/lu';
 import styles from './Formation.module.scss';
 
 export default function Formation({
@@ -45,7 +46,7 @@ export default function Formation({
       />
     );
   };
-
+  
   const filters = (
     <div
       className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}

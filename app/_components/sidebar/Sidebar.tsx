@@ -1,9 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-
-import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-
+import { useEffect, useState } from 'react';
+import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import Header from '@/components/header/Header';
 import Nav from './nav/Nav';
 import SidebarToggle from '@/components/sidebar/toggle/SidebarToggle';
@@ -11,49 +9,42 @@ import Links from './links/Links';
 import styles from './Sidebar.module.scss';
 
 export default function Sidebar() {
-  const { expandCollapseState, setSidebarWidth } = useExpandCollapseContext();
+  const { expandCollapseState, setMainWidth, sidebarWidth, setSidebarWidth } = useExpandCollapseContext();
 
-  const [isResizing, setIsResizing] = useState(false);
-
-  const handleMouseUp = useCallback(() => setIsResizing(false), []);
+  const detectSidebarWidth = () => {
+    const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement;
+    if (sidebar) {
+      const sidebarWidth = sidebar.getBoundingClientRect().width;
+      setSidebarWidth(sidebarWidth);
+    }
+  };
 
   useEffect(() => {
-    if (!isResizing) {
-      return;
-    }
+    const handleResize = () => {
+      setTimeout(() => {
+        const windowWidth = window.innerWidth;
+        if (windowWidth < 1024) {
+          if (expandCollapseState === ExpandCollapseState.EXPANDED) {
+            setMainWidth(windowWidth - sidebarWidth);
+          } else {
+            setMainWidth(windowWidth);
+          }
 
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isResizing) {
-        return;
-      }
+          return;
+        }
 
-      const sidebar = document.querySelector(
-        `.${styles.sidebar}`,
-      ) as HTMLElement;
-      const newWidth = e.pageX - sidebar.offsetLeft;
-      const minWidth = 230;
-      const maxWidth = Math.max(window.innerWidth * 0.5, 500);
-      const resizedSidebarWidth = Math.min(
-        Math.max(newWidth, minWidth),
-        maxWidth,
-      );
-
-      document.documentElement.style.setProperty(
-        '--sidebarWidth',
-        `${resizedSidebarWidth}px`,
-      );
-      setSidebarWidth(resizedSidebarWidth);
-      sidebar.style.transition = 'none';
+        setMainWidth(windowWidth);
+      }, 250);
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [expandCollapseState]);
 
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, [isResizing, handleMouseUp, setSidebarWidth]);
+  useEffect(() => {
+    detectSidebarWidth();
+  }, [expandCollapseState]);
 
   return (
     <aside className={`${styles.sidebar} ${styles[expandCollapseState]}`}>

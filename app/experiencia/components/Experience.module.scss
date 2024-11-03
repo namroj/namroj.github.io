@@ -5,7 +5,7 @@
   gap: var(--gap);
   margin-top: var(--gap);
 
-  @media (width > 1280px) {
+  @media (width > 768px) {
     min-width: calc(var(--md) - var(--gap));
     flex-direction: row-reverse;
 
@@ -23,7 +23,7 @@
   .timeline {
     width: 100%;
 
-    @media (width > 1280px) {
+    @media (width > 768px) {
       width: 70%;
 
       &.main-reduced {
@@ -58,7 +58,7 @@
     width: 100%;
     margin-top: var(--gap);
 
-    @media (width > 1280px) {
+    @media (width > 768px) {
       width: 30%;
       margin-top: unset;
 

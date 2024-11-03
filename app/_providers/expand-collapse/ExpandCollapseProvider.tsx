@@ -21,6 +21,7 @@ type ExpandCollapseContextType = {
   toggleExpandCollapseState: () => void;
   sidebarWidth: number;
   setSidebarWidth: (width: number) => void;
+  setMainWidth: (width: number) => void;
   mainWidth: number;
 };
 
@@ -76,23 +77,18 @@ export const ExpandCollapseContextProvider: FC<
   const [sidebarWidth, setSidebarWidth] = useState<number>(0);
   const [mainWidth, setMainWidth] = useState<number>(0);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     localStorage.setItem(
       EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
       expandCollapseState,
     );
-    expandCollapseState === ExpandCollapseState.COLLAPSED
-      ? setMainWidth(window.innerWidth)
-      : setMainWidth(window.innerWidth - sidebarWidth);
   }, [expandCollapseState, sidebarWidth]);
 
   useEffect(() => {
-    setMainWidth(window.innerWidth - sidebarWidth);
-  }, [sidebarWidth]);
+    setMainWidth(mainWidth - sidebarWidth);
+  }, [expandCollapseState]);
 
   const toggleExpandCollapseState = useCallback(() => {
     setExpandCollapseState((prevState) =>
@@ -108,6 +104,7 @@ export const ExpandCollapseContextProvider: FC<
       toggleExpandCollapseState,
       sidebarWidth,
       setSidebarWidth,
+      setMainWidth,
       mainWidth,
     }),
     [
@@ -115,6 +112,7 @@ export const ExpandCollapseContextProvider: FC<
       toggleExpandCollapseState,
       sidebarWidth,
       setSidebarWidth,
+      setMainWidth,
       mainWidth,
     ],
   );
