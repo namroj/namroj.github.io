@@ -54,7 +54,6 @@
   // footer - breadcrumbs
   --footerBreadcrumbItemColor: var(--darkGrayColor);
   --footerBreadcrumbLinkedItemColor: var(--blueColor);
-  --footerBreadcrumbLinkedItemHoverColor: var(--blueColor);
 }
 
 [data-theme='dark'] {
@@ -106,9 +105,8 @@
   --tagAccentColor: var(--darkGrayColor);
   --tagBgHoverAccentColor: var(--purpleColor);
   // footer - breadcrumbs
-  --footerBreadcrumbItemColor: var(--grayColor);
+  --footerBreadcrumbItemColor: var(--textColor);
   --footerBreadcrumbLinkedItemColor: var(--purpleColor);
-  --footerBreadcrumbLinkedItemHoverColor: var(--purpleColor);
 }
 
 // markdown themes

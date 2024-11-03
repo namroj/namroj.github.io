@@ -13,11 +13,11 @@ export default function Breadcrumbs() {
         <div key={item.label} className={styles.item}>
           {item.href ? (
             <Link href={item.href} className={styles.linked}>
-              <span>{item.label}</span>
+              {item.label}
             </Link>
           ) : (
             <span className={styles.current}>
-              <span>{item.label}</span>
+             {item.label}
             </span>
           )}
           {index < breadcrumbs.length - 1 && (

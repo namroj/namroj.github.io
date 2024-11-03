@@ -1,6 +1,10 @@
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
+
 export default function HomePage() {
   return (
     <>
+      <Breadcrumbs items={[]} />
+
       Desarrollador Full Stack
       <br />
       Desarrollando profesionalmente desde 2015.
@@ -10,7 +14,7 @@ export default function HomePage() {
       <section>
         <h4>Servicios</h4>
         <ul>
-          <li>Maquetacióna</li>
+          <li>Maquetación</li>
           <li>Firmas de correo personalizadas HTML</li>
           <li>
             Desarrollo de páginas web

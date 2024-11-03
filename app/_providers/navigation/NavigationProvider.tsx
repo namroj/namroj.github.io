@@ -39,10 +39,16 @@ export function NavigationContextProvider({ children }: NavigationProviderProps)
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
+    if (breadcrumbs.length === 0) {
+      setEnhancedBreadcrumbs([]);
+      return;
+    }
+
     setEnhancedBreadcrumbs([
       { label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> },
       ...breadcrumbs,
     ]);
+
   }, [breadcrumbs]);
 
   const contextValue = useMemo(
