@@ -16,7 +16,7 @@ export type FormationItemType = {
   certificate?: string;
 };
 
-const COMPONENT_MIN_WIDTH = 300;
+const COMPONENT_MIN_WIDTH = 400;
 
 type Props = {
   item: FormationItemType;
@@ -26,11 +26,11 @@ type Props = {
 };
 
 export function FormationItem({
-  item,
-  selectedTags,
-  handleTagClick,
-  highlightText,
-}: Props) {
+                                item,
+                                selectedTags,
+                                handleTagClick,
+                                highlightText,
+                              }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -66,8 +66,8 @@ export function FormationItem({
 
         <div className={styles.tags}>
           <ul>
-            {item.tags.map((tag) => (
-              <li key={`li-${tag}`}>
+            {item.tags.map((tag, index) => (
+              <li key={`li-${tag}-${index}`}>
                 <TagButton
                   tag={tag}
                   handleTagClick={handleTagClick}

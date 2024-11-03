@@ -101,6 +101,7 @@ export default function Experience({
     ) : (
       filteredExperience.map((item: ExperienceItemType) => (
         <ExperienceItem
+          key={item.entity.name}
           item={item}
           handleTagClick={handleTagClick}
           selectedTags={selectedTags}
@@ -111,11 +112,11 @@ export default function Experience({
 
   return (
     <div
-      className={`${styles.experience} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
+      className={`${styles.experience} ${mainWidth < 900 ? styles['main-reduced'] : ''}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
+        className={`${styles.timeline} ${mainWidth < 900 ? styles['main-reduced'] : ''}`}
       >
         <hr />
         <ul>{experienceList}</ul>

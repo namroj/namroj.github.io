@@ -29,11 +29,11 @@ type Props = {
 };
 
 export function ExperienceItem({
-  item,
-  selectedTags,
-  handleTagClick,
-  highlightText,
-}: Props) {
+                                 item,
+                                 selectedTags,
+                                 handleTagClick,
+                                 highlightText,
+                               }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -77,8 +77,8 @@ export function ExperienceItem({
                     const descriptionItems = position.description.split('||');
                     return descriptionItems.length > 1
                       ? descriptionItems.map((desc) => (
-                          <li key={desc}>{highlightText(desc)}</li>
-                        ))
+                        <li key={desc}>{highlightText(desc)}</li>
+                      ))
                       : highlightText(position.description);
                   })()}
                 </p>
@@ -92,8 +92,8 @@ export function ExperienceItem({
 
         <div className={styles.tags}>
           <ul>
-            {item.tags.map((tag) => (
-              <li key={tag}>
+            {item.tags.map((tag, index) => (
+              <li key={`li-${tag}-${index}`}>
                 <TagButton
                   tag={tag}
                   handleTagClick={handleTagClick}
