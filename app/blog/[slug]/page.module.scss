@@ -1,7 +1,12 @@
 // -- post/article -----
 .article {
+  @media (width > 1024px) {
+    max-width: 60dvw;
+    padding: var(--headerHeight) calc(var(--gap) * 1.5) calc(var(--headerHeight) + var(--gap));
+  }
+
   * {
-    font-family: 'Inter', sans-monospace;
+    font-family: var(--dankMonoFont), monospace;
   }
 
   h1[id] {
@@ -55,7 +60,12 @@
       counter-reset: line;
 
       * {
-        font-family: var(--dankMonoFont);
+        font-family: var(--jetBrainsMonoFont), monospace;
+        font-size: 0.7rem;
+
+        @media (width > 768px) {
+          font-size: 1rem;
+        }
       }
 
       > [data-line]::before {

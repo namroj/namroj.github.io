@@ -8,12 +8,11 @@ import rehypeHighlight from 'rehype-highlight';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 
-import Breadcrumbs, {
-  Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs';
-
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json';
 import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json';
+
+import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 
 import { FaKeyboard } from 'react-icons/fa6';
 import { LuFileTerminal } from 'react-icons/lu';
