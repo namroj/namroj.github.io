@@ -16,9 +16,7 @@ export default function Breadcrumbs() {
               {item.label}
             </Link>
           ) : (
-            <span className={styles.current}>
-             {item.label}
-            </span>
+            <span className={styles.current}>{item.label}</span>
           )}
           {index < breadcrumbs.length - 1 && (
             <span className={styles.connector}>{'>'}</span>

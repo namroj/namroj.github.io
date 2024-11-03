@@ -1,6 +1,14 @@
 'use client';
 
-import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 export enum Theme {
   AUTO = 'auto',

@@ -54,7 +54,10 @@ export default function GMap() {
     const airplaneIcon = createIcon(<FaPlane color="black" />);
     const destinationIcon = createIcon(<FaMapMarker color="black" />);
 
-    const createMarker = (position: google.maps.LatLngLiteral, icon: google.maps.Icon) => {
+    const createMarker = (
+      position: google.maps.LatLngLiteral,
+      icon: google.maps.Icon,
+    ) => {
       new google.maps.Marker({
         position,
         map,

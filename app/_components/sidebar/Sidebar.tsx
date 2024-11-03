@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import {
+  ExpandCollapseState,
+  useExpandCollapseContext,
+} from '@/providers/expand-collapse/ExpandCollapseProvider';
 import Header from '@/components/header/Header';
 import Nav from './nav/Nav';
 import SidebarToggle from '@/components/sidebar/toggle/SidebarToggle';
@@ -9,7 +12,8 @@ import Links from './links/Links';
 import styles from './Sidebar.module.scss';
 
 export default function Sidebar() {
-  const { expandCollapseState, setMainWidth, sidebarWidth, setSidebarWidth } = useExpandCollapseContext();
+  const { expandCollapseState, setMainWidth, sidebarWidth, setSidebarWidth } =
+    useExpandCollapseContext();
 
   const detectSidebarWidth = () => {
     const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement;

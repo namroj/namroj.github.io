@@ -1,4 +1,7 @@
-import { ExpandCollapseState, useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import {
+  ExpandCollapseState,
+  useExpandCollapseContext,
+} from '@/providers/expand-collapse/ExpandCollapseProvider';
 
 import { BiCollapseAlt } from 'react-icons/bi';
 import { BsArrowsAngleExpand } from 'react-icons/bs';

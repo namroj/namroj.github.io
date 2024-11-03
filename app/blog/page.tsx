@@ -19,7 +19,7 @@ export default function BlogPage() {
       <h2>Blog</h2>
 
       <br />
-      
+
       <Link
         href="/blog/prueba"
         style={{ textDecoration: 'underline', fontSize: 'italic' }}

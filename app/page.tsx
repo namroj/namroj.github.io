@@ -4,7 +4,6 @@ export default function HomePage() {
   return (
     <>
       <Breadcrumbs items={[]} />
-
       Desarrollador Full Stack
       <br />
       Desarrollando profesionalmente desde 2015.

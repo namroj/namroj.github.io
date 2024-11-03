@@ -19,13 +19,16 @@ export default function Nav() {
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
 
-  const items: NavItem[] = useMemo(() => [
-    { path: '/formacion', label: 'Formación' },
-    { path: '/experiencia', label: 'Experiencia' },
-    { path: '/proyectos', label: 'Proyectos' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/contacto', label: 'Contacto' },
-  ], []);
+  const items: NavItem[] = useMemo(
+    () => [
+      { path: '/formacion', label: 'Formación' },
+      { path: '/experiencia', label: 'Experiencia' },
+      { path: '/proyectos', label: 'Proyectos' },
+      { path: '/blog', label: 'Blog' },
+      { path: '/contacto', label: 'Contacto' },
+    ],
+    [],
+  );
 
   useEffect(() => {
     setActivePaths(

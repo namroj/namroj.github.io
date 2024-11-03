@@ -1,6 +1,10 @@
 'use client';
 
-import { Theme, ThemeLabel, useThemeContext } from '@/providers/theme/ThemeProvider';
+import {
+  Theme,
+  ThemeLabel,
+  useThemeContext,
+} from '@/providers/theme/ThemeProvider';
 
 import { RiMacbookLine } from 'react-icons/ri';
 import { BsSun } from 'react-icons/bs';
@@ -12,10 +16,7 @@ export default function ThemeToggle() {
 
   return (
     <div className={styles.toggle}>
-      <button
-        key={Theme.AUTO}
-        type="button"
-      >
+      <button key={Theme.AUTO} type="button">
         <div
           className={`${styles.btn} ${theme === Theme.AUTO && styles.active}`}
         >
@@ -26,11 +27,7 @@ export default function ThemeToggle() {
         </div>
       </button>
 
-      <button
-        key={Theme.LIGHT}
-        type="button"
-        className={styles.toggle}
-      >
+      <button key={Theme.LIGHT} type="button" className={styles.toggle}>
         <div
           className={`${styles.btn} ${theme === Theme.LIGHT && styles.active}`}
         >
@@ -41,11 +38,7 @@ export default function ThemeToggle() {
         </div>
       </button>
 
-      <button
-        key={Theme.DARK}
-        type="button"
-        className={styles.toggle
-        }>
+      <button key={Theme.DARK} type="button" className={styles.toggle}>
         <div
           className={`${styles.btn} ${theme === Theme.DARK && styles.active}`}
         >

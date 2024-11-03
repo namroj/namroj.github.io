@@ -19,27 +19,25 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{ children: ReactNode }>) {
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <ViewTransitions>
       <html lang="es">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <body
-        className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
-      >
-      <ThemeContextProvider>
-        <ExpandCollapseContextProvider>
-          <NavigationContextProvider>
-            <Sidebar />
-            <Main>
-              {children}
-            </Main>
-            <Footer />
-          </NavigationContextProvider>
-        </ExpandCollapseContextProvider>
-      </ThemeContextProvider>
-      </body>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <body
+          className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
+        >
+          <ThemeContextProvider>
+            <ExpandCollapseContextProvider>
+              <NavigationContextProvider>
+                <Sidebar />
+                <Main>{children}</Main>
+                <Footer />
+              </NavigationContextProvider>
+            </ExpandCollapseContextProvider>
+          </ThemeContextProvider>
+        </body>
       </html>
     </ViewTransitions>
   );

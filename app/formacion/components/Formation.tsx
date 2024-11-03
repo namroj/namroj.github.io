@@ -15,8 +15,8 @@ import { LuPackageSearch } from 'react-icons/lu';
 import styles from './Formation.module.scss';
 
 export default function Formation({
-                                    formationData,
-                                  }: Readonly<{ formationData: FormationItemType[] }>) {
+  formationData,
+}: Readonly<{ formationData: FormationItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -46,7 +46,7 @@ export default function Formation({
       />
     );
   };
-  
+
   const filters = (
     <div
       className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}

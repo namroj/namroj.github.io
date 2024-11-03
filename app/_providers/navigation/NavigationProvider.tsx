@@ -1,6 +1,13 @@
 'use client';
 
-import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import { IoHeadsetSharp } from 'react-icons/io5';
 
 export interface NavigationProviderProps {
@@ -18,7 +25,9 @@ type NavigationContextType = {
   setBreadcrumbs: (breadcrumbs: Breadcrumb[]) => void;
 };
 
-const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
+const NavigationContext = createContext<NavigationContextType | undefined>(
+  undefined,
+);
 
 export const useNavigationContext = () => {
   const context = useContext(NavigationContext);
@@ -31,10 +40,14 @@ export const useNavigationContext = () => {
   return context;
 };
 
-export function NavigationContextProvider({ children }: NavigationProviderProps) {
+export function NavigationContextProvider({
+  children,
+}: NavigationProviderProps) {
   const [mounted, setMounted] = useState(false);
   const [breadcrumbs, setBreadcrumbs] = useState<Breadcrumb[]>([]);
-  const [enhancedBreadcrumbs, setEnhancedBreadcrumbs] = useState<Breadcrumb[]>([]);
+  const [enhancedBreadcrumbs, setEnhancedBreadcrumbs] = useState<Breadcrumb[]>(
+    [],
+  );
 
   useEffect(() => setMounted(true), []);
 
@@ -48,7 +61,6 @@ export function NavigationContextProvider({ children }: NavigationProviderProps)
       { label: 'Jorman', href: '/', icon: <IoHeadsetSharp /> },
       ...breadcrumbs,
     ]);
-
   }, [breadcrumbs]);
 
   const contextValue = useMemo(

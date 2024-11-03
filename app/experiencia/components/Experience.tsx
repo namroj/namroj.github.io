@@ -14,8 +14,8 @@ import { ExperienceItem, ExperienceItemType } from './ExperienceItem';
 import styles from './Experience.module.scss';
 
 export default function Experience({
-                                     experienceData,
-                                   }: Readonly<{ experienceData: ExperienceItemType[] }>) {
+  experienceData,
+}: Readonly<{ experienceData: ExperienceItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

@@ -13,8 +13,9 @@
   color: var(--sidebarTogglerTextColor);
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.25s ease-in-out,
-  color 0.25s ease-in-out;
+  transition:
+    background-color 0.25s ease-in-out,
+    color 0.25s ease-in-out;
 
   svg {
     fill: var(--bgColor);

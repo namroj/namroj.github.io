@@ -2,7 +2,10 @@
 
 import { useEffect } from 'react';
 import { Link } from 'next-view-transitions';
-import { Breadcrumb, useNavigationContext } from '@/providers/navigation/NavigationProvider';
+import {
+  Breadcrumb,
+  useNavigationContext,
+} from '@/providers/navigation/NavigationProvider';
 import styles from './Breadcrumbs.module.scss';
 
 interface BreadcrumbsProps {

@@ -29,8 +29,7 @@ export interface ExpandCollapseProviderProps {
   children: ReactNode;
 }
 
-export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY =
-  'expand_collapse_state';
+export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY = 'expand_collapse_state';
 
 const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   if (typeof window === 'undefined') {
@@ -53,9 +52,8 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   return expandCollapseState as ExpandCollapseState;
 };
 
-const ExpandCollapseContext = createContext<ExpandCollapseContextType>(
-  undefined,
-);
+const ExpandCollapseContext =
+  createContext<ExpandCollapseContextType>(undefined);
 
 export const useExpandCollapseContext = () => {
   const context = useContext(ExpandCollapseContext);
@@ -68,11 +66,12 @@ export const useExpandCollapseContext = () => {
   return context;
 };
 
-export function ExpandCollapseContextProvider({ children }: ExpandCollapseProviderProps) {
+export function ExpandCollapseContextProvider({
+  children,
+}: ExpandCollapseProviderProps) {
   const [mounted, setMounted] = useState(false);
-  const [expandCollapseState, setExpandCollapseState] = useState<
-    ExpandCollapseState
-  >(getExpandCollapseStateFromLocalStorage);
+  const [expandCollapseState, setExpandCollapseState] =
+    useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage);
   const [sidebarWidth, setSidebarWidth] = useState<number>(0);
   const [mainWidth, setMainWidth] = useState<number>(0);
 
@@ -121,4 +120,4 @@ export function ExpandCollapseContextProvider({ children }: ExpandCollapseProvid
       {mounted && children}
     </ExpandCollapseContext.Provider>
   );
-};
+}
