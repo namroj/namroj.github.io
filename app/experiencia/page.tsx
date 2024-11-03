@@ -2,13 +2,12 @@ import { Metadata } from 'next';
 
 import readJsonFile from '@/utils/files';
 
-import Breadcrumbs, {
-  Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs';
+import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
+import { ExperienceItemType } from '@/app/experiencia/components/ExperienceItem';
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
+import Experience from './components/Experience';
 
 import { MdLaptop } from 'react-icons/md';
-import { ExperienceItemType } from '@/app/experiencia/components/ExperienceItem';
-import Experience from './components/Experience';
 
 export const metadata: Metadata = {
   title: 'Experiencia | Jorman Espinoza',

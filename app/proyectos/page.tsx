@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
-import Breadcrumbs, {
-  Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs';
+
+import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
+
 import { FaCode } from 'react-icons/fa6';
 
 export const metadata: Metadata = {

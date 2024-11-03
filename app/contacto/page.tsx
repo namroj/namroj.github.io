@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
-import Breadcrumbs, {
-  Breadcrumb,
-} from '@/components/main/breadcrumbs/Breadcrumbs';
+import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 
 import { LuMessagesSquare } from 'react-icons/lu';
 
