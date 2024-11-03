@@ -11,11 +11,10 @@ export default function ThemeToggle() {
   const { theme, toggleTheme } = useThemeContext();
 
   return (
-    <>
+    <div className={styles.toggle}>
       <button
         key={Theme.AUTO}
         type="button"
-        className={styles.toggle}
       >
         <div
           className={`${styles.btn} ${theme === Theme.AUTO && styles.active}`}
@@ -56,6 +55,6 @@ export default function ThemeToggle() {
           />
         </div>
       </button>
-    </>
+    </div>
   );
 }
