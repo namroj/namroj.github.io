@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
 
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
-
+import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 import { FaKeyboard } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
