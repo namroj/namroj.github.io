@@ -19,9 +19,13 @@ export default function ProjectsPage() {
       <h2>Proyectos</h2>
 
       <ul>
-        <li>https://www.bocadetoro.com</li>
-        <li>https://lasyungas.com</li>
-        <li>https://www.friggorina.com</li>
+        <li><a href="https://www.bocadetoro.com" target="_blank">Boca de Toro</a></li>
+        <li><a href="ttps://lasyungas.com" target="_blank">Las Yungas</a></li>
+        <li><a href="https://www.friggorina.com" target="_blank">Friggorina</a></li>
+        <li><a href="https://www.dazarealestate.com" target="_blank">Daza</a></li>
+        <li><a href="https://www.dazarealestate.com/proper" target="_blank">Proper</a></li>
+        <li><a href="https://codigonatural.com.ar" target="_blank">Código Natural</a></li>
+        <li><a href="https://www.dub.com.ar" target="_blank">Dub</a></li>
       </ul>
     </>
   );
