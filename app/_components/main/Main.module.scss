@@ -54,4 +54,13 @@
   p {
     margin-bottom: var(--gap);
   }
+
+  a {
+    color: var(--bgAccentColor);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--bgHoverAccentColor);
+    }
+  }
 }

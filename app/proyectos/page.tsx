@@ -18,14 +18,17 @@ export default function ProjectsPage() {
 
       <h2>Proyectos</h2>
 
+      <p>Acá una lista de alguno de los proyectos que desarrollé:</p>
+
       <ul>
         <li><a href="https://www.bocadetoro.com" target="_blank">Boca de Toro</a></li>
         <li><a href="ttps://lasyungas.com" target="_blank">Las Yungas</a></li>
         <li><a href="https://www.friggorina.com" target="_blank">Friggorina</a></li>
         <li><a href="https://www.dazarealestate.com" target="_blank">Daza</a></li>
-        <li><a href="https://www.dazarealestate.com/proper" target="_blank">Proper</a></li>
+        <li><a href="https://www.dazarealestate.com/proper" target="_blank">Daza - Proper</a></li>
         <li><a href="https://codigonatural.com.ar" target="_blank">Código Natural</a></li>
         <li><a href="https://www.dub.com.ar" target="_blank">Dub</a></li>
+        <li><a href="https://pablomanso.com" target="_blank">Pablo Manso</a></li>
       </ul>
     </>
   );
