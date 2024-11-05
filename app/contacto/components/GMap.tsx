@@ -34,7 +34,7 @@ export default function GMap() {
     const point2 = { lat: 7.74957, lng: -72.23547 }; // Táchira, Venezuela
     const point3 = { lat: 7.92802, lng: -72.507 }; // Cúcuta, Colombia
     const point4 = { lat: 4.70118, lng: -74.14588 }; // Bogota, Colombia
-    const point5 = { lat: -34.81576, lng: -58.53542 }; // Buenos Aires, Argentina
+    const point5 = { lat: -34.51491, lng: -58.47647 }; // Buenos Aires, Argentina
 
     const mapElement = document.getElementById('map');
     if (!mapElement) return;

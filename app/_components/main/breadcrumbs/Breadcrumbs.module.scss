@@ -24,7 +24,6 @@
       display: flex;
 
       &.linked {
-        padding-right: calc(var(--gap) / 2);
         font-weight: bold;
         color: var(--breadcrumbLinkedItemColor);
         transition: color 0.25s ease-in-out;

@@ -1,9 +1,6 @@
-import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-
 export default function HomePage() {
   return (
     <>
-      <Breadcrumbs items={[]} />
       Desarrollador Full Stack
       <br />
       Desarrollando profesionalmente desde 2015.
@@ -13,7 +10,7 @@ export default function HomePage() {
       <section>
         <h4>Servicios</h4>
         <ul>
-          <li>Maquetación</li>
+          <li>Maquetacióna</li>
           <li>Firmas de correo personalizadas HTML</li>
           <li>
             Desarrollo de páginas web
@@ -31,7 +28,6 @@ export default function HomePage() {
       <section>
         <h4>Arsenal</h4>
         <ul>
-          <li>GIT</li>
           <li>Java</li>
           <li>Spring</li>
           <li>Javascript</li>
@@ -42,6 +38,12 @@ export default function HomePage() {
           <li>Symphony</li>
           <li>Laravel</li>
           <li>MySQL</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SASS</li>
+          <li>Ant Design</li>
+          <li>Bootstrap</li>
+          <li>Tailwind</li>
         </ul>
       </section>
       <section>
@@ -52,13 +54,6 @@ export default function HomePage() {
         <li>Postman</li>
         <li>DBeaver</li>
         <li>Draw.io</li>
-      </section>
-      <section>
-        <h4>Gestión</h4>
-        <li>Github</li>
-        <li>Bitbucket</li>
-        <li>AWS</li>
-        <li>Jira</li>
       </section>
       <section>
         <h4>Tipografías preferidas</h4>
