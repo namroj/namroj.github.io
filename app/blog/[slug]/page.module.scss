@@ -2,8 +2,6 @@
 .article {
   @media (width > 1024px) {
     max-width: 60dvw;
-    padding: var(--headerHeight) calc(var(--gap) * 1.5)
-      calc(var(--headerHeight) + var(--gap));
   }
 
   * {
