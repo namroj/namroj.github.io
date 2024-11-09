@@ -3,17 +3,17 @@ import { ChangeEvent } from 'react';
 import { FaDeleteLeft } from 'react-icons/fa6';
 import styles from './KeywordSearch.module.scss';
 
-type Props = {
+interface Props {
   keyword: string;
-  handleSearchChange: (event: ChangeEvent) => void;
+  handleSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
   handleClearSearch: () => void;
-};
+}
 
 export default function KeywordSearch({
-  keyword,
-  handleSearchChange,
-  handleClearSearch,
-}: Props) {
+                                        keyword,
+                                        handleSearchChange,
+                                        handleClearSearch,
+                                      }: Props) {
   return (
     <div className={styles['keyword-search']}>
       <span className={styles.title}>Filtrar por palabra clave</span>
