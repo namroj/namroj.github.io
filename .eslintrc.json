@@ -10,7 +10,13 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "plugins": ["import", "react", "@typescript-eslint", "prettier", "jsx-a11y"],
+  "plugins": [
+    "import",
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "jsx-a11y"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -27,7 +33,10 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".tsx", ".jsx"]
+        "extensions": [
+          ".tsx",
+          ".jsx"
+        ]
       }
     ],
     "import/extensions": [
@@ -39,12 +48,21 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "no-new": "off",
+    "react/require-default-props": [
+      "off"
     ]
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   },

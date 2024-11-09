@@ -1,3 +1,4 @@
+// eslint-disable-next-line camelcase
 import { JetBrains_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 

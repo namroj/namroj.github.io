@@ -93,12 +93,15 @@ export function ThemeContextProvider({ children }: ThemeProviderProps) {
       setThemeAttribute(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
 
       mediaQuery.addEventListener('change', prefersColorSchemeListener);
-      return () =>
+      return () => {
         mediaQuery.removeEventListener('change', prefersColorSchemeListener);
+        return undefined;
+      };
     }
 
     localStorage.setItem(THEME_ACTIVE_LOCAL_STORAGE_KEY, theme);
     setThemeAttribute(theme);
+    return undefined;
   }, [theme, toggleTheme]);
 
   const contextValue = useMemo(

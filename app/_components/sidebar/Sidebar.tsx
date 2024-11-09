@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import {
   ExpandCollapseState,
   useExpandCollapseContext,
 } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import Header from '@/components/header/Header';
-import Nav from './nav/Nav';
 import SidebarToggle from '@/components/sidebar/toggle/SidebarToggle';
+import Nav from './nav/Nav';
 import Links from './links/Links';
 import styles from './Sidebar.module.scss';
 
@@ -15,13 +15,14 @@ export default function Sidebar() {
   const { expandCollapseState, setMainWidth, sidebarWidth, setSidebarWidth } =
     useExpandCollapseContext();
 
-  const detectSidebarWidth = () => {
-    const sidebar = document.querySelector(`.${styles.sidebar}`) as HTMLElement;
-    if (sidebar) {
-      const sidebarWidth = sidebar.getBoundingClientRect().width;
-      setSidebarWidth(sidebarWidth);
+  const sidebarRef = useRef<HTMLElement | null>(null);
+
+  const detectSidebarWidth = useCallback(() => {
+    if (sidebarRef.current) {
+      const currentSidebarWidth = sidebarRef.current.getBoundingClientRect().width;
+      setSidebarWidth(currentSidebarWidth);
     }
-  };
+  }, [setSidebarWidth]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -46,10 +47,10 @@ export default function Sidebar() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [expandCollapseState]);
-  
+  }, [detectSidebarWidth, expandCollapseState, setMainWidth, sidebarWidth]);
+
   return (
-    <aside className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
+    <aside ref={sidebarRef} className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
       <Header />
       <SidebarToggle />
       <Nav />

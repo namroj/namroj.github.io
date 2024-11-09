@@ -8,11 +8,11 @@ type Props = {
 };
 
 export default function TagButton({
-  tag,
-  handleTagClick,
-  selectedTags,
-  highlightText,
-}: Props) {
+                                    tag,
+                                    handleTagClick,
+                                    selectedTags,
+                                    highlightText,
+                                  }: Props) {
   return (
     <button
       type="button"

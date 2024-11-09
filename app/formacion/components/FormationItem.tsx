@@ -26,11 +26,11 @@ type Props = {
 };
 
 export function FormationItem({
-  item,
-  selectedTags,
-  handleTagClick,
-  highlightText,
-}: Props) {
+                                item,
+                                selectedTags,
+                                handleTagClick,
+                                highlightText,
+                              }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -66,8 +66,8 @@ export function FormationItem({
 
         <div className={styles.tags}>
           <ul>
-            {item.tags.map((tag, index) => (
-              <li key={`li-${tag}-${index}`}>
+            {item.tags.map((tag) => (
+              <li key={`li-${tag}`}>
                 <TagButton
                   tag={tag}
                   handleTagClick={handleTagClick}

@@ -33,6 +33,13 @@ const getMarkDownFileData = async (slug: string) => {
   }
 };
 
+const prettyCodeOptions = {
+  theme: {
+    dark: DarkItalic,
+    light: NightOwlLight,
+  },
+};
+
 export default async function PostPage({ params }: Readonly<PostProps>) {
   if (!params?.slug) {
     return notFound();
@@ -42,7 +49,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
-    { label: data.title, icon: <LuFileTerminal /> },
+    { label: data.title as string, icon: <LuFileTerminal /> },
   ];
 
   return (
@@ -58,15 +65,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
               remarkPlugins: [remarkGfm],
               rehypePlugins: [
                 rehypeSlug,
-                [
-                  rehypePrettyCode,
-                  {
-                    theme: {
-                      dark: DarkItalic,
-                      light: NightOwlLight,
-                    },
-                  },
-                ],
+                [rehypePrettyCode as never, prettyCodeOptions],
                 [rehypeAutolinkHeadings, { behavior: 'wrap' }],
                 rehypeHighlight,
               ],
@@ -83,6 +82,6 @@ export async function generateMetadata({ params }: Readonly<PostProps>) {
 
   return {
     title: `${data.title} | Jorman Espinoza`,
-    description: data.summary,
+    description: data.summary as string,
   };
 }

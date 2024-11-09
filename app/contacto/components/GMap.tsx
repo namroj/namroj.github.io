@@ -8,10 +8,9 @@ import { FaBus, FaMapMarker, FaPlane } from 'react-icons/fa';
 import mapDarkStyles from './dark';
 import mapLightStyles from './light';
 
-// Import types from the Google Maps package
 declare global {
   interface Window {
-    google: typeof google;  // Use the google.maps namespace type
+    google: typeof google;
     initMap: () => void;
   }
 }

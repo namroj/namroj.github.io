@@ -3,10 +3,10 @@ import readJsonFile from '@/utils/files';
 
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-import { FormationItemType } from './components/FormationItem';
 
 import { ImBooks } from 'react-icons/im';
 import Formation from '@/app/formacion/components/Formation';
+import { FormationItemType } from './components/FormationItem';
 
 export const metadata: Metadata = {
   title: 'Formación | Jorman Espinoza',
@@ -15,10 +15,7 @@ export const metadata: Metadata = {
 export default async function FormationPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Formación', icon: <ImBooks /> }];
 
-  const data: FormationItemType[] = await readJsonFile(
-    'app/formacion',
-    'data.json',
-  );
+  const formation = await readJsonFile('app/formacion', 'data.json') as FormationItemType[] | [];
 
   return (
     <>
@@ -41,7 +38,7 @@ export default async function FormationPage() {
         <li>Proyectos laborales/personales</li>
       </ul>
 
-      <Formation formationData={data} />
+      <Formation formationData={formation} />
     </>
   );
 }

@@ -2,7 +2,6 @@
 
 import {
   createContext,
-  FC,
   ReactNode,
   useCallback,
   useContext,
@@ -86,7 +85,7 @@ export function ExpandCollapseContextProvider({
 
   useEffect(() => {
     setMainWidth(mainWidth - sidebarWidth);
-  }, [expandCollapseState]);
+  }, [expandCollapseState, mainWidth, sidebarWidth]);
 
   const toggleExpandCollapseState = useCallback(() => {
     setExpandCollapseState((prevState) =>
