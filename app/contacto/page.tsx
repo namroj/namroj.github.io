@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const MapWithNoSSR = dynamic(() => import('./components/GMap'), {
-  ssr: false,
+  ssr: true,
 });
 
 export default function ContactPage() {

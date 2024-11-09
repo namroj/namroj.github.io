@@ -10,7 +10,7 @@ export default function HomePage() {
       <section>
         <h4>Servicios</h4>
         <ul>
-          <li>Maquetacióna</li>
+          <li>Maquetación</li>
           <li>Firmas de correo personalizadas HTML</li>
           <li>
             Desarrollo de páginas web
