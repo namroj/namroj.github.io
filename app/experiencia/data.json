@@ -166,7 +166,7 @@
       {
         "title": "Desarrollador Web",
         "description": "Generación de sitios web personalizados incluyendo sistemas gestores de contenido (CMS) específicos para cada proyecto/cliente basados en un framework PHP específico de la organización, así como también el uso de Symfony 4.||Maquetación, corrección y mantenimiento de los mismos.||Generación de firmas de mail (HTML).||Diseño/creación/gestión de bases de datos.||Manejo de herramientas de diseño como Adobe Photoshop e Illustrator para la gestión de imágenes y elementos de diseño a llevar a los sitios.||Integración con la API de Google Maps junto con Snazzy Maps para generar/aplicar mapas personalizados.||Generación de manuales de usuario e inducción online/presencial a clientes acerca del manejo de sus respectivos sitios.",
-        "highlight": "Primer trabajo en Argentina. Desarrollo continuo de sitios para clientes variados mayoritariamente en las áreas de Marketing/Diseño y Real Estate, tanto nacionales como internacionales -esto representó un reto por la diversidad de requerimientos y necesidades de los clientes. Al ser un equipo pequeño de desarrolladores, se requería de un alto grado de comunicación y organización para llevar a cabo los proyectos de manera exitosa - destacar el buen manejo del líder de tecnología (gracias Tomy!) quien trajo mucho aprendizaje no sólo a nivel técnico sino también en cuanto a la gestión del equipo/tiempos/priorización de tareas así como habilidades blandas .",
+        "highlight": "Primer trabajo en Argentina. Desarrollo continuo de sitios para clientes variados mayoritariamente en las áreas de Marketing/Diseño y Real Estate, tanto nacionales como internacionales -esto representó un reto por la diversidad de requerimientos y necesidades de los clientes. Al ser un equipo pequeño de desarrolladores, se requería de un alto grado de comunicación y organización para llevar a cabo los proyectos de manera exitosa - destacar el buen manejo del líder de tecnología (gracias Tomy!) quien trajo mucho aprendizaje no sólo a nivel técnico sino también en cuanto a la gestión del equipo/tiempos/priorización de tareas así como habilidades blandas.",
         "interval": "Oct 2017 - Jun 2020"
       }
     ],
@@ -326,7 +326,14 @@
         "interval": "Ene 2010 - Mar 2010"
       }
     ],
-    "tags": ["CANTV", "Comunicación", "Atención", "Cliente", "Gestión", "2010"]
+    "tags": [
+      "CANTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "Gestión",
+      "2010"
+    ]
   },
   {
     "entity": {
@@ -350,6 +357,13 @@
         "interval": "Ene 2009 - Jun 2009"
       }
     ],
-    "tags": ["DIRECTV", "Comunicación", "Atención", "Cliente", "2009", "2010"]
+    "tags": [
+      "DIRECTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "2009",
+      "2010"
+    ]
   }
 ]
