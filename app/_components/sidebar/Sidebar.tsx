@@ -42,14 +42,12 @@ export default function Sidebar() {
     };
 
     handleResize();
+    detectSidebarWidth();
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [expandCollapseState]);
-
-  useEffect(() => {
-    detectSidebarWidth();
-  }, [expandCollapseState]);
-
+  
   return (
     <aside className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
       <Header />
