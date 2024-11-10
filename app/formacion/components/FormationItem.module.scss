@@ -36,8 +36,8 @@
       gap: calc(var(--gap) / 4);
 
       img {
-        width: calc(var(--gap) * 2);
-        height: calc(var(--gap) * 2);
+        width: calc(var(--gap) * 2.25);
+        height: calc(var(--gap) * 2.25);
         border-radius: 50%;
         box-shadow: 0 0 2px var(--bgHoverAccentColor);
         object-fit: cover;

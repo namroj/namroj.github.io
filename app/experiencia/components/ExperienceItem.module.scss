@@ -65,9 +65,9 @@
       }
 
       img {
-        width: calc(var(--gap) * 2);
-        height: calc(var(--gap) * 2);
-        border-radius: 50%;
+        width: calc(var(--gap) * 2.25);
+        height: calc(var(--gap) * 2.25);
+        border-radius: 75%;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
         background: var(--textSecondaryColor);
         object-fit: cover;

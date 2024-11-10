@@ -3,7 +3,7 @@
     "entity": {
       "name": "Freelance",
       "url": "https//jorman.dev/proyectos/freelance",
-      "image": "https://cdn.dribbble.com/users/3912043/screenshots/17208456/media/d40a8905af594ed92091ea03560f144b.jpg?resize=1600x1200&vertical=center"
+      "image": "/images/experience/freelance.jpg"
     },
     "location": "Buenos Aires, Argentina",
     "interval": "Abr 2018 - Presente",
@@ -52,7 +52,7 @@
     "entity": {
       "name": "Accenture",
       "url": "https://www.accenture.com/ar-es/services/song/commerce-transformation",
-      "image": "https://media.licdn.com/dms/image/D4E0BAQF4xYO4nr649w/company-logo_200_200/0/1685628275969/accenture_song_logo?e=1723075200&v=beta&t=iwUtbZk1KqvTKNJk5f-FD5c9FPPy0wW6Hh6aLgv3GkI"
+      "image": "/images/experience/accenture-song.jpeg"
     },
     "location": "Buenos Aires, Argentina",
     "interval": "Abr 2022 - Presente",
@@ -105,7 +105,7 @@
     "entity": {
       "name": "Glamit",
       "url": "https://www.linkedin.com/company/glamit",
-      "image": "https://media.licdn.com/dms/image/C560BAQFBrPi3WVtj8w/company-logo_200_200/0/1634321423373?e=1723075200&v=beta&t=gWQtlbqeHlKT7HJtrkUkNI-MlqGlTyFYUFdH9u1hu6E"
+      "image": "/images/experience/glamit.jpeg"
     },
     "location": "Buenos Aires, Argentina",
     "interval": "Jul 2020 - Abr 2022",
@@ -158,7 +158,7 @@
     "entity": {
       "name": "REMOLINO",
       "url": "https://remolino.org/es",
-      "image": "https://media.licdn.com/dms/image/C4D0BAQEkp5RM-DP12A/company-logo_200_200/0/1631334515223?e=1723075200&v=beta&t=zek3swZUp-trUcSHWYtB73v4GxVJQ9LotWP_VziIE14"
+      "image": "/images/experience/remolino.jpeg"
     },
     "location": "Buenos Aires, Argentina",
     "interval": "Oct 2017 - Jun 2020",
@@ -200,7 +200,7 @@
     "entity": {
       "name": "3D LINK",
       "url": "https://www.3dlinkweb.com",
-      "image": "https://media.licdn.com/dms/image/v2/D4E0BAQFtFSeFYB0uCA/company-logo_100_100/company-logo_100_100/0/1687792832896/3dlink_logo?e=1738800000&v=beta&t=mHXXc3uLBwiXGzn5T26ln05AjGmhxpTeSDVneGLwyFA"
+      "image": "/images/experience/3dlink.jpeg"
     },
     "location": "Caracas, Venezuela",
     "interval": "Ene 2017 - Dic 2018",
@@ -239,7 +239,7 @@
     "entity": {
       "name": "Key Systems",
       "url": "https://twitter.com/keysystemsca",
-      "image": "https://pbs.twimg.com/profile_images/645284132134612994/a1ts_JTj_400x400.jpg"
+      "image": "/images/experience/key-systems.jpeg"
     },
     "location": "Estado Miranda, Venezuela",
     "interval": "Abr 2014 - Dic 2016",
@@ -276,7 +276,7 @@
     "entity": {
       "name": "BBVA Provincial",
       "url": "https://www.provincial.com",
-      "image": "https://media.licdn.com/dms/image/D4E0BAQFPRE9wZRBCtw/company-logo_200_200/0/1690474044748/bbva_banco_provincial_logo?e=1723075200&v=beta&t=Nojabh2YTVi_BSdMvX-9m_FWAHXI8k1hTvrUFrUMkM4"
+      "image": "/images/experience/bbva-provincial.jpeg"
     },
     "location": "Caracas, Venezuela",
     "interval": "Mar 2010 - Sep 2014",
@@ -314,7 +314,7 @@
     "entity": {
       "name": "CANTV",
       "url": "https://www.cantv.com.ve",
-      "image": "https://media.licdn.com/dms/image/C4E0BAQEHY9sZA70Iiw/company-logo_200_200/0/1631312690802?e=1723075200&v=beta&t=lGqXnh7eI9059iWnxPnxPxPfcmk8kN4eti7ojXM6r6c"
+      "image": "/images/experience/cantv.jpeg"
     },
     "location": "Caracas, Venezuela",
     "interval": "Ene 2010 - Mar 2010",
@@ -326,13 +326,20 @@
         "interval": "Ene 2010 - Mar 2010"
       }
     ],
-    "tags": ["CANTV", "Comunicación", "Atención", "Cliente", "Gestión", "2010"]
+    "tags": [
+      "CANTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "Gestión",
+      "2010"
+    ]
   },
   {
     "entity": {
       "name": "DIRECTV",
       "url": "https://www.directvla.com/es.html",
-      "image": "https://media.licdn.com/dms/image/C4D0BAQGTqyJ23-hSWA/company-logo_200_200/0/1630549667238/directv_logo?e=1722470400&v=beta&t=Nb92fNc5hOg4gGfqp62Igw0Ov0R0FdHqbJSDlsB2-pY"
+      "image": "/images/experience/directv.jpeg"
     },
     "location": "Caracas, Venezuela",
     "interval": "Ene 2009 - Dic 2009",
@@ -350,6 +357,13 @@
         "interval": "Ene 2009 - Jun 2009"
       }
     ],
-    "tags": ["DIRECTV", "Comunicación", "Atención", "Cliente", "2009", "2010"]
+    "tags": [
+      "DIRECTV",
+      "Comunicación",
+      "Atención",
+      "Cliente",
+      "2009",
+      "2010"
+    ]
   }
 ]
