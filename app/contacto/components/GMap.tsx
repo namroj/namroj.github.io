@@ -92,20 +92,34 @@ export default function GMap() {
 
   useEffect(() => {
     const loadScript = () => {
-      if (!document.querySelector(`script[src^="https://maps.googleapis.com/maps/api/js?key="]`)) {
+      const existingScript = document.querySelector(`script[src^="https://maps.googleapis.com/maps/api/js?key="]`);
+
+      if (!existingScript) {
         const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&callback=initMap`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
         script.async = true;
         script.defer = true;
-        window.initMap = initMap;
+
+        script.onload = () => {
+          if (window.google) {
+            window.initMap = initMap;
+            initMap();
+          }
+        };
+
         document.head.appendChild(script);
 
+        // Cleanup function to remove the script if the component unmounts
         return () => {
           document.head.removeChild(script);
         };
-      } else if (typeof google !== 'undefined' && google.maps) {
+      }
+
+      if (window.google && window.google.maps) {
         initMap();
       }
+
+      return undefined;
     };
 
     loadScript();
