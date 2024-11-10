@@ -13,11 +13,11 @@ type Props = {
 };
 
 export default function TagsFilter({
-                                     tags,
-                                     selectedTags,
-                                     handleTagClick,
-                                     handleClearTags,
-                                   }: Props) {
+  tags,
+  selectedTags,
+  handleTagClick,
+  handleClearTags,
+}: Props) {
   const sortedTags = tags
     .slice()
     .sort((a, b) =>

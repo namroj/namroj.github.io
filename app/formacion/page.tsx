@@ -15,7 +15,9 @@ export const metadata: Metadata = {
 export default async function FormationPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Formación', icon: <ImBooks /> }];
 
-  const formation = await readJsonFile('app/formacion', 'data.json') as FormationItemType[] | [];
+  const formation = (await readJsonFile('app/formacion', 'data.json')) as
+    | FormationItemType[]
+    | [];
 
   return (
     <>

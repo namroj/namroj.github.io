@@ -14,8 +14,8 @@ import { FormationItem, FormationItemType } from './FormationItem';
 import styles from './Formation.module.scss';
 
 export default function Formation({
-                                    formationData,
-                                  }: Readonly<{ formationData: FormationItemType[] }>) {
+  formationData,
+}: Readonly<{ formationData: FormationItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

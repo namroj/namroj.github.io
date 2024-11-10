@@ -51,8 +51,9 @@ const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   return expandCollapseState as ExpandCollapseState;
 };
 
-const ExpandCollapseContext =
-  createContext<ExpandCollapseContextType | undefined>(undefined);
+const ExpandCollapseContext = createContext<
+  ExpandCollapseContextType | undefined
+>(undefined);
 
 export const useExpandCollapseContext = () => {
   const context = useContext(ExpandCollapseContext);
@@ -66,8 +67,8 @@ export const useExpandCollapseContext = () => {
 };
 
 export function ExpandCollapseContextProvider({
-                                                children,
-                                              }: ExpandCollapseProviderProps) {
+  children,
+}: ExpandCollapseProviderProps) {
   const [mounted, setMounted] = useState(false);
   const [expandCollapseState, setExpandCollapseState] =
     useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage);

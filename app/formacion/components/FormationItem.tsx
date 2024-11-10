@@ -26,11 +26,11 @@ type Props = {
 };
 
 export function FormationItem({
-                                item,
-                                selectedTags,
-                                handleTagClick,
-                                highlightText,
-                              }: Props) {
+  item,
+  selectedTags,
+  handleTagClick,
+  highlightText,
+}: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (

@@ -10,13 +10,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
-  "plugins": [
-    "import",
-    "react",
-    "@typescript-eslint",
-    "prettier",
-    "jsx-a11y"
-  ],
+  "plugins": ["import", "react", "@typescript-eslint", "prettier", "jsx-a11y"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
@@ -27,16 +21,11 @@
     }
   },
   "rules": {
-    "@typescript-eslint/lines-between-class-members": "off",
-    "@typescript-eslint/no-throw-literal": "off",
     "prettier/prettier": "off",
     "react/jsx-filename-extension": [
-      1,
+      "warn",
       {
-        "extensions": [
-          ".tsx",
-          ".jsx"
-        ]
+        "extensions": [".tsx", ".jsx"]
       }
     ],
     "import/extensions": [
@@ -50,20 +39,15 @@
       }
     ],
     "no-new": "off",
-    "react/require-default-props": [
-      "off"
-    ],
-    "react-hooks/exhaustive-deps": "off"
+    "react/require-default-props": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-throw-literal": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },

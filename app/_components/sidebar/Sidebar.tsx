@@ -24,9 +24,11 @@ export default function Sidebar() {
 
   const updateMainWidth = useCallback(() => {
     const windowWidth = window.innerWidth;
-    const mainWidth = expandCollapseState === ExpandCollapseState.EXPANDED && windowWidth >= 1024
-      ? windowWidth - sidebarWidth
-      : windowWidth;
+    const mainWidth =
+      expandCollapseState === ExpandCollapseState.EXPANDED &&
+      windowWidth >= 1024
+        ? windowWidth - sidebarWidth
+        : windowWidth;
 
     setMainWidth(mainWidth);
   }, [expandCollapseState]);
@@ -44,7 +46,10 @@ export default function Sidebar() {
   }, [updateSidebarWidth, updateMainWidth]);
 
   return (
-    <aside ref={sidebarRef} className={`${styles.sidebar} ${styles[expandCollapseState]}`}>
+    <aside
+      ref={sidebarRef}
+      className={`${styles.sidebar} ${styles[expandCollapseState]}`}
+    >
       <Header />
       <SidebarToggle />
       <Nav />
