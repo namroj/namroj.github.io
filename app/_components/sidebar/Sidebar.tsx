@@ -14,40 +14,34 @@ import styles from './Sidebar.module.scss';
 export default function Sidebar() {
   const { expandCollapseState, setMainWidth, sidebarWidth, setSidebarWidth } =
     useExpandCollapseContext();
-
   const sidebarRef = useRef<HTMLElement | null>(null);
 
-  const detectSidebarWidth = useCallback(() => {
+  const updateSidebarWidth = useCallback(() => {
     if (sidebarRef.current) {
-      const currentSidebarWidth = sidebarRef.current.getBoundingClientRect().width;
-      setSidebarWidth(currentSidebarWidth);
+      setSidebarWidth(sidebarRef.current.getBoundingClientRect().width);
     }
-  }, [setSidebarWidth]);
+  }, [expandCollapseState]);
+
+  const updateMainWidth = useCallback(() => {
+    const windowWidth = window.innerWidth;
+    const mainWidth = expandCollapseState === ExpandCollapseState.EXPANDED && windowWidth >= 1024
+      ? windowWidth - sidebarWidth
+      : windowWidth;
+
+    setMainWidth(mainWidth);
+  }, [expandCollapseState]);
 
   useEffect(() => {
+    updateSidebarWidth();
+    updateMainWidth();
+
     const handleResize = () => {
-      setTimeout(() => {
-        const windowWidth = window.innerWidth;
-        if (windowWidth < 1024) {
-          if (expandCollapseState === ExpandCollapseState.EXPANDED) {
-            setMainWidth(windowWidth - sidebarWidth);
-          } else {
-            setMainWidth(windowWidth);
-          }
-
-          return;
-        }
-
-        setMainWidth(windowWidth);
-      }, 250);
+      updateMainWidth();
     };
-
-    handleResize();
-    detectSidebarWidth();
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [detectSidebarWidth, expandCollapseState, setMainWidth, sidebarWidth]);
+  }, [updateSidebarWidth, updateMainWidth]);
 
   return (
     <aside ref={sidebarRef} className={`${styles.sidebar} ${styles[expandCollapseState]}`}>

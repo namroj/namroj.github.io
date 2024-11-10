@@ -81,11 +81,11 @@ export function ExpandCollapseContextProvider({
       EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
       expandCollapseState,
     );
-  }, [expandCollapseState, sidebarWidth]);
+  }, [expandCollapseState]);
 
   useEffect(() => {
     setMainWidth(mainWidth - sidebarWidth);
-  }, [expandCollapseState, mainWidth, sidebarWidth]);
+  }, [expandCollapseState]);
 
   const toggleExpandCollapseState = useCallback(() => {
     setExpandCollapseState((prevState) =>
