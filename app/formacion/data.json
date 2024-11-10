@@ -1,5 +1,42 @@
 [
   {
+    "title": "SI Associate Certification",
+    "interval": "2024",
+    "entity": {
+      "name": "MongoDB",
+      "image": "/images/formation/mongodb.jpeg",
+      "url": "https://www.mongodb.com"
+    },
+    "location": "En línea",
+    "description": "Curso de certificación en MongoDB abarcado: arquitectura, operaciones CRUD, modelado de datos, consultas, rendimiento, replicación y seguridad.",
+    "tags": [
+      "Desarrollo",
+      "BD",
+      "Base de datos",
+      "MongoDB",
+      "NoSQL",
+      "2024"
+    ],
+    "certificate": "/certificates/certificado-mongodb-si-associate.pdf"
+  },
+  {
+    "title": "Certificación de inglés conversacional - Intermedio",
+    "interval": "2024",
+    "entity": {
+      "name": "UBA",
+      "image": "/images/formation/uba.jpeg",
+      "url": "https://www.uba.ar"
+    },
+    "location": "CABA, Argentina",
+    "description": "Certificación de nivel intermedio en inglés conversacional, otorgada por la Facultad de Derecho de la UBA --con 12 horas de duración.",
+    "tags": [
+      "Idiomas",
+      "Inglés",
+      "2024"
+    ],
+    "certificate": "/certificates/certificado-ingles-conversacional-intermedio.pdf"
+  },
+  {
     "title": "Next.js 15 & React",
     "interval": "En curso",
     "entity": {
@@ -38,7 +75,7 @@
       "Laravel",
       "2024"
     ],
-    "certificate": "https://drive.google.com/file/d/1wc5riJM58hCuSbUlJUe1FWbq-_coIPU6/view?usp=drive_link"
+    "certificate": "/certificates/certificado-arquitectura-hexagonal-ddd-laravel.pdf"
   },
   {
     "title": "Principios SOLID y Clean Code",
@@ -56,7 +93,7 @@
       "Código limpio",
       "2022"
     ],
-    "certificate": "https://drive.google.com/file/d/1VsClfbDQU8s-RGx7cLapIaNZtXITDSdi/view?usp=drive_link"
+    "certificate": "/certificates/certificado-solid-y-clean-code.pdf"
   },
   {
     "title": "React Hooks",
@@ -75,7 +112,7 @@
       "React",
       "2022"
     ],
-    "certificate": "https://drive.google.com/file/d/1UMM-DBbPs6tyiyTFXe0rqYWa8Plr12cM/view?usp=drive_link"
+    "certificate": "/certificates/certificado-react-hooks.pdf"
   },
   {
     "title": "Vue.js",
@@ -94,7 +131,7 @@
       "Vue.js",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1NuckLoKnkssNLjFmc7VIic_6HtY_kx0f/view?usp=drive_link"
+    "certificate": "/certificates/certificado-avanzado-vue.pdf"
   },
   {
     "title": "PostgreSQL",
@@ -108,12 +145,13 @@
     "description": "Curso de PostgreSQL --con 15 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
-      "Base de Datos",
+      "BD",
+      "Base de datos",
       "SQL",
       "PostgreSQL",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1R_eqBrSoJYa1xU10J5NhTJtLi6bF-GKN/view?usp=drive_link"
+    "certificate": "/certificates/certificado-postgresql.pdf"
   },
   {
     "title": "Programación Funcional con Java SE",
@@ -131,7 +169,7 @@
       "Funcional",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1Ggzsj8lILPCrqWn7Qn7qYa-4LS7yxw22/view?usp=drive_link"
+    "certificate": "/certificates/certificado-java-funcional.pdf"
   },
   {
     "title": "Testing en Java",
@@ -150,7 +188,7 @@
       "TDD",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1NNWwOacRwBlxhmI2Vmb4dEUQi3qIdBSm/view?usp=drive_link"
+    "certificate": "/certificates/certificado-testing-java.pdf"
   },
   {
     "title": "Bases de Datos",
@@ -164,12 +202,13 @@
     "description": "Curso de Fundamentos de Bases de Datos --con 26 horas de teoría y práctica.",
     "tags": [
       "Desarrollo",
-      "Base de Datos",
+      "BD",
+      "Base de datos",
       "SQL",
       "NoSQL",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1KXaxVpSJ3qcNe2S9XwYNInY9JdGeuKL1/view?usp=drive_link"
+    "certificate": "/certificates/certificado-db.pdf"
   },
   {
     "title": "Terminal y Línea de Comandos",
@@ -186,7 +225,7 @@
       "Terminal",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1hvAKRBcPU-id1dOG8kBKAlgQnMhpJODT/view?usp=drive_link"
+    "certificate": "/certificates/certificado-terminal.pdf"
   },
   {
     "title": "Programación Orientada a Objetos [POO]",
@@ -204,7 +243,7 @@
       "POO",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1OyeAgOWWViesltmXISPe7YZgIAs-94sY/view?usp=drive_link"
+    "certificate": "/certificates/certificado-java-oop.pdf"
   },
   {
     "title": "Git y GitHub",
@@ -222,7 +261,7 @@
       "GitHub",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1-FRTn_NGHxQq7v2VzII1D7zAH9Np7eaV/view?usp=drive_link"
+    "certificate": "/certificates/certificado-git-github.pdf"
   },
   {
     "title": "Escritura de Código - Buenas Prácticas",
@@ -237,7 +276,7 @@
     "tags": [
       "Desarrollo"
     ],
-    "certificate": "https://drive.google.com/file/d/1ogqOzew9NpFKDc7g2S25ATsuI85K0fxX/view?usp=drive_link"
+    "certificate": "/certificates/certificado-mejor-codigo.pdf"
   },
   {
     "title": "Java Spring",
@@ -255,7 +294,7 @@
       "Spring",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/1DWoZ0SCyz1_y4YQegtsBj5wdsXQPBFZt/view?usp=drive_link"
+    "certificate": "/certificates/certificado-java-spring.pdf"
   },
   {
     "title": "Postman",
@@ -272,7 +311,7 @@
       "Postman",
       "2021"
     ],
-    "certificate": "https://drive.google.com/file/d/13njJ6CeCXkJxVsDAIzH7kUVyoNNnO1hJ/view?usp=drive_link"
+    "certificate": "/certificates/certificado-postman.pdf"
   },
   {
     "title": "Symfony 4 Level 1",
@@ -309,7 +348,8 @@
       "jQuery",
       "2018"
     ],
-    "certificate": "https://www.sololearn.com/es/certificates/CT-WFNEYSBP"
+    "certificate": "/certificates/certificado-jquery.jpeg",
+    "certificate_origin_url": "https://www.sololearn.com/es/certificates/CT-WFNEYSBP"
   },
   {
     "title": "Desarrollo Web",
@@ -325,7 +365,7 @@
       "Desarrollo",
       "2017"
     ],
-    "certificate": "https://drive.google.com/file/d/1-L-SfoptU2mxqVlGUSthURccUffBy33_/view?usp=drive_link"
+    "certificate": "/certificates/certificado-Intro-desarrollo-web.pdf"
   },
   {
     "title": "Marketing Digital Básico",
@@ -341,7 +381,7 @@
       "Marketing",
       "2017"
     ],
-    "certificate": "https://drive.google.com/file/d/1SmioQfmPLJzAONGDQcnJ5x_vF8If9cvX/view?usp=drive_link"
+    "certificate": "/certificates/certificado-marketing-digital.pdf"
   },
   {
     "title": "Javascript Fundamentals",
@@ -359,7 +399,8 @@
       "Javascript",
       "2016"
     ],
-    "certificate": "https://www.sololearn.com/es/certificates/CT-8M64MHZW"
+    "certificate": "/certificates/certificado-fundamentos-javascript.jpeg",
+    "certificate_origin_url": "https://www.sololearn.com/es/certificates/CT-8M64MHZW"
   },
   {
     "title": "CSS Fundamentals",
@@ -376,7 +417,8 @@
       "CSS",
       "2016"
     ],
-    "certificate": "https://www.sololearn.com/es/certificates/CT-QLHQIDUE"
+    "certificate": "/certificates/certificado-css.jpeg",
+    "certificate_origin_url": "https://www.sololearn.com/es/certificates/CT-QLHQIDUE"
   },
   {
     "title": "HTML Fundamentals",
@@ -393,10 +435,11 @@
       "HTML",
       "2016"
     ],
-    "certificate": "https://www.sololearn.com/es/certificates/CT-ASTWZQTM"
+    "certificate": "/certificates/certificado-html.jpeg",
+    "certificate_origin_url": "https://www.sololearn.com/es/certificates/CT-ASTWZQTM"
   },
   {
-    "title": "Inglés Intermedio",
+    "title": "Certificación de inglés - Intermedio",
     "interval": "2016 - 2017",
     "entity": {
       "name": "CVA",
@@ -404,13 +447,14 @@
       "url": "https://centrovenezolanoamericano.org"
     },
     "location": "Caracas, Venezuela",
-    "description": "Programa de Inglés como Lengua Extranjera. Nivel Intermedio.",
+    "description": "Programa de Inglés como Lengua Extranjera. Nivel Intermedio --con 416 horas de duración.",
     "tags": [
       "Idiomas",
       "Inglés",
       "2016",
       "2017"
-    ]
+    ],
+    "certificate": "/certificates/certificado-cva.pdf"
   },
   {
     "title": "Ingeniería Informática",
