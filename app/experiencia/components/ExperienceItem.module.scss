@@ -26,7 +26,7 @@
     .entity {
       display: inline-flex;
       align-items: center;
-      margin-top: var(--gap);
+      margin: var(--gap) 0 calc(var(--gap) / 2);
       gap: 5px;
 
       @media (width > 768px) {
