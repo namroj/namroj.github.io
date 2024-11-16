@@ -1,5 +1,5 @@
-// -- formation timeline -----
-.formation {
+// -- post list -----
+.post-list {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
@@ -8,11 +8,6 @@
   @media (width > 1280px) {
     min-width: calc(var(--md) - var(--gap));
     flex-direction: row-reverse;
-
-    &.main-reduced {
-      min-width: unset;
-      flex-direction: column;
-    }
   }
 
   hr {
@@ -67,5 +62,11 @@
         width: 100%;
       }
     }
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
   }
 }

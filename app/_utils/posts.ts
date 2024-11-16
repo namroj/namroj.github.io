@@ -7,6 +7,8 @@ export type PostMetaData = {
   date: string;
   summary: string;
   slug: string;
+  tags: string[];
+  cover_image: string;
 };
 
 async function getPosts(): Promise<PostMetaData[]> {
@@ -24,6 +26,8 @@ async function getPosts(): Promise<PostMetaData[]> {
         date: data.date as string,
         summary: data.summary as string,
         slug: data.slug as string,
+        tags: data.tags as string[],
+        cover_image: data.cover_image as string,
       };
 
       return postMetaData;

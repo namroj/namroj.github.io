@@ -3,19 +3,15 @@
   position: relative;
   min-width: 300px;
   min-height: 100svh;
-  padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5)
-    calc(var(--headerHeight));
-  padding-left: calc(var(--gap) * 2.5);
+  padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5) calc(var(--headerHeight));
   background-color: var(--mainBgColor);
   color: var(--textColor);
-  transition: var(--expandCollapseTransition);
   display: flex;
   justify-content: center;
+  transition: var(--expandCollapseTransition);
 
   @media (width > 1024px) {
-    padding: calc(var(--headerHeight) / 2)
-      calc(var(--headerHeight) + var(--gap)) var(--headerHeight)
-      calc(var(--gap) * 2);
+    padding: calc(var(--headerHeight) / 2) calc(var(--headerHeight) + var(--gap)) var(--headerHeight) calc(var(--gap) * 2);
   }
 
   &-content {
@@ -30,6 +26,7 @@
 
   &.expanded {
     width: 100dvw;
+    padding-left: calc(var(--gap) * 2.5);
   }
 
   &.collapsed {

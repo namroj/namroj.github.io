@@ -6,18 +6,10 @@
 
   article {
     position: relative;
-    padding: 10px;
-    border-radius: 10px;
+    padding: var(--gap);
+    border-radius: var(--gap);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
     transition: var(--transition);
-
-    @media (width > 768px) {
-      padding: 10px;
-    }
-
-    &.main-reduced {
-      padding: 30px 10px 30px;
-    }
 
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -166,8 +158,8 @@
 
     .date {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: var(--gap);
+      right: var(--gap);
       color: var(--bgHoverAccentColor);
       font-size: 0.8rem;
     }
