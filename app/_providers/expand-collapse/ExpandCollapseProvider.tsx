@@ -67,8 +67,8 @@ export const useExpandCollapseContext = () => {
 };
 
 export function ExpandCollapseContextProvider({
-  children,
-}: ExpandCollapseProviderProps) {
+                                                children,
+                                              }: ExpandCollapseProviderProps) {
   const [mounted, setMounted] = useState(false);
   const [expandCollapseState, setExpandCollapseState] =
     useState<ExpandCollapseState>(getExpandCollapseStateFromLocalStorage);
@@ -82,10 +82,6 @@ export function ExpandCollapseContextProvider({
       EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY,
       expandCollapseState,
     );
-  }, [expandCollapseState]);
-
-  useEffect(() => {
-    setMainWidth(mainWidth - sidebarWidth);
   }, [expandCollapseState]);
 
   const toggleExpandCollapseState = useCallback(() => {
