@@ -39,7 +39,7 @@ export default function PostItem({
           </Link>
         )}
 
-        <div>
+        <div className={styles.text}>
           <span className={styles.date}>{highlightText(moment(item.date).format('MMMM D, YYYY'))}</span>
 
           <h3 className={styles.title}>

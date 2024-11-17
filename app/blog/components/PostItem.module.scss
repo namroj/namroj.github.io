@@ -2,7 +2,7 @@
 .post-item {
   display: flex;
   flex-direction: column;
-  padding: var(--gap);
+  padding: 0;
   border-radius: var(--gap);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
   transition: var(--transition);
@@ -33,14 +33,32 @@
       overflow: hidden;
 
       @media (width > 768px) {
-        max-width: 200px;
-        height: 100px;
+        max-width: 180px;
+        height: 130px;
         margin-bottom: unset;
       }
 
       img {
         border-radius: var(--gap);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
         object-fit: cover;
+
+        @media (width > 768px) {
+          padding: 0;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: var(--gap);
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+      padding: 0 var(--gap) var(--gap);
+
+      @media (width > 768px) {
+        padding: 0;
       }
     }
 
@@ -51,10 +69,11 @@
     }
 
     .summary {
-      font-size: 0.8rem;
-      color: var(--textSecondaryColor);
-      text-wrap: pretty;
       margin-bottom: calc(var(--gap) / 2);
+      color: var(--textSecondaryColor);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-wrap: pretty;
     }
 
     .date {
@@ -65,8 +84,8 @@
 
       @media (width > 768px) {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: var(--gap);
+        right: var(--gap);
       }
     }
   }
@@ -75,10 +94,6 @@
     display: inline-flex;
     flex-wrap: wrap;
     gap: calc(var(--gap) / 2);
-  }
-
-  a {
-    color: var(--textColor);
   }
 
   &.main-reduced {
@@ -90,12 +105,23 @@
 
         .cover {
           width: 100%;
-          height: 189px;
+          height: 200px;
           max-width: 100%;
+
+          img {
+            border-radius: var(--gap);
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
         }
 
-        .date {
-          position: unset;
+        .text {
+          padding: 0 var(--gap) var(--gap);
+
+          .date {
+            position: unset;
+            float: right;
+          }
         }
       }
     }
