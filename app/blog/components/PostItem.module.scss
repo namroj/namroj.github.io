@@ -1,10 +1,10 @@
-// -- post card -----
-.post-card {
+// -- post item -----
+.post-item {
   display: flex;
   flex-direction: column;
   padding: var(--gap);
   border-radius: var(--gap);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
   transition: var(--transition);
 
   &:hover {
@@ -29,7 +29,6 @@
       width: 100%;
       height: 189px;
       max-width: 100%;
-      border-radius: var(--gap);
       margin-bottom: calc(var(--gap) / 2);
       overflow: hidden;
 

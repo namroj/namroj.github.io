@@ -11,7 +11,7 @@ import TagsFilter from '@/components/ui/tag/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 
 import { LuPackageSearch } from 'react-icons/lu';
-import PostCard from './PostCard';
+import PostItem from './PostItem';
 import styles from './PostList.module.scss';
 
 interface Props {
@@ -99,7 +99,7 @@ export default function PostList({ posts }: Props) {
     ) : (
       <div className={styles.posts}>
         {filteredPosts.map((item: PostMetaData) => (
-          <PostCard
+          <PostItem
             key={item.title}
             item={item}
             handleTagClick={handleTagClick}

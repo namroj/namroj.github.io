@@ -7,7 +7,7 @@ import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandColl
 import TagButton from '@/components/ui/tag/TagButton';
 
 import { PostMetaData } from '@/utils/posts';
-import styles from './PostCard.module.scss';
+import styles from './PostItem.module.scss';
 
 const COMPONENT_MIN_WIDTH = 767;
 
@@ -18,7 +18,7 @@ type Props = {
   highlightText: (text: string) => JSX.Element;
 };
 
-export default function PostCard({
+export default function PostItem({
                                    item,
                                    selectedTags,
                                    handleTagClick,
@@ -26,7 +26,7 @@ export default function PostCard({
                                  }: Props) {
   const { mainWidth } = useExpandCollapseContext();
   return (
-    <li className={`${styles['post-card']} ${mainWidth < COMPONENT_MIN_WIDTH && styles['main-reduced']}`}>
+    <li className={`${styles['post-item']} ${mainWidth < COMPONENT_MIN_WIDTH && styles['main-reduced']}`}>
       <div className={styles.data}>
         {item.cover_image && (
           <Link href={`/blog/${item.slug}`} className={styles.cover}>
