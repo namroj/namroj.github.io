@@ -27,7 +27,7 @@ export default async function ProfessionalExperiencePage() {
 
       <p>Registro de mi experiencia laboral.</p>
 
-      <Experience experienceData={experience} />
+      <Experience data={experience} />
     </>
   );
 }

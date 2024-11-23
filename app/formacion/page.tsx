@@ -40,7 +40,7 @@ export default async function FormationPage() {
         <li>Proyectos laborales/personales</li>
       </ul>
 
-      <Formation formationData={formation} />
+      <Formation data={formation} />
     </>
   );
 }

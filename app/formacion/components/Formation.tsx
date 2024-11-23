@@ -14,8 +14,8 @@ import { FormationItem, FormationItemType } from './FormationItem';
 import styles from './Formation.module.scss';
 
 export default function Formation({
-  formationData,
-}: Readonly<{ formationData: FormationItemType[] }>) {
+                                    data,
+                                  }: Readonly<{ data: FormationItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -51,7 +51,7 @@ export default function Formation({
       className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(formationData.flatMap((item) => item.tags)))}
+        tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -64,7 +64,7 @@ export default function Formation({
     </div>
   );
 
-  const filteredFormation = formationData.filter((item) => {
+  const filteredFormation = data.filter((item) => {
     const { entity, tags, ...rest } = item;
     const itemValues = Object.values(rest).filter(
       (value) => typeof value !== 'object',

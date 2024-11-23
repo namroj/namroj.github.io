@@ -14,8 +14,8 @@ import { ExperienceItem, ExperienceItemType } from './ExperienceItem';
 import styles from './Experience.module.scss';
 
 export default function Experience({
-  experienceData,
-}: Readonly<{ experienceData: ExperienceItemType[] }>) {
+                                     data,
+                                   }: Readonly<{ data: ExperienceItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -51,7 +51,7 @@ export default function Experience({
       className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(experienceData.flatMap((item) => item.tags)))}
+        tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -64,7 +64,7 @@ export default function Experience({
     </div>
   );
 
-  const filteredExperience = experienceData.filter((item) => {
+  const filteredExperience = data.filter((item) => {
     const { entity, tags, positions, ...rest } = item;
     const itemValues = Object.values(rest).filter(
       (value) => typeof value !== 'object',
