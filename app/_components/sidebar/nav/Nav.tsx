@@ -21,11 +21,11 @@ export default function Nav() {
 
   const items: NavItem[] = useMemo(
     () => [
-      { path: '/formacion', label: 'Formación' },
-      { path: '/experiencia', label: 'Experiencia' },
-      { path: '/proyectos', label: 'Proyectos' },
+      { path: '/formation', label: 'Formación' },
+      { path: '/experience', label: 'Experiencia' },
+      { path: '/projects', label: 'Proyectos' },
       { path: '/blog', label: 'Blog' },
-      { path: '/contacto', label: 'Contacto' },
+      { path: '/contact', label: 'Contacto' },
     ],
     [],
   );

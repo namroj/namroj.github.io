@@ -12,7 +12,7 @@ interface NetworkLink {
   icon: ReactNode;
 }
 
-const links: NetworkLink[] = [
+export const links: NetworkLink[] = [
   {
     href: 'https://github.com/namroj',
     title: 'GitHub',
@@ -40,7 +40,7 @@ const links: NetworkLink[] = [
   },
   {
     href: 'https://bsky.app/profile/jormandev.bsky.social',
-    title: 'Bsky',
+    title: 'Bluesky',
     icon: <PiButterfly />,
   },
 ];

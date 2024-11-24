@@ -5,7 +5,7 @@ import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 
 import { ImBooks } from 'react-icons/im';
-import Formation from '@/app/formacion/components/Formation';
+import Formation from '@/app/formation/components/Formation';
 import { FormationItemType } from './components/FormationItem';
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default async function FormationPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Formación', icon: <ImBooks /> }];
 
-  const formation = (await readJsonFile('app/formacion', 'data.json')) as
+  const formation = (await readJsonFile('app/formation', 'data.json')) as
     | FormationItemType[]
     | [];
 

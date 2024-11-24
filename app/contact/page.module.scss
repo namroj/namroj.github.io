@@ -1,0 +1,46 @@
+// -- contact -----
+$colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor) var(--grayColor);
+
+.contact {
+
+  li {
+    list-style: none;
+    margin: 0 0 var(--gap);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    a {
+      width: 100%;
+      padding: var(--gap);
+      border: 1px solid var(--footerBorderColor);
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+      border-radius: calc(var(--gap) / 2);
+      color: var(--textSecondaryColor);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--gap);
+      transition: var(--transition);
+
+      @media (width > 768px) {
+        max-width: 60%;
+      }
+
+      svg {
+        @media (width > 768px) {
+          width: var(--gap);
+          height: var(--gap);
+        }
+      }
+    }
+
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) a:hover {
+        color: nth($colors, $i);
+        border: 1px solid nth($colors, $i);
+        box-shadow: 0 0 3.25px nth($colors, $i);
+      }
+    }
+  }
+}

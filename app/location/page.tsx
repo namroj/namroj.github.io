@@ -3,11 +3,11 @@ import dynamic from 'next/dynamic';
 
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
+import { CiLocationArrow1 } from 'react-icons/ci';
 
-import { LuMessagesSquare } from 'react-icons/lu';
 
 export const metadata: Metadata = {
-  title: 'Contacto | Jorman Espinoza',
+  title: 'Ubicación | Jorman Espinoza',
 };
 
 const MapWithNoSSR = dynamic(() => import('./components/GMap'), {
@@ -16,24 +16,14 @@ const MapWithNoSSR = dynamic(() => import('./components/GMap'), {
 
 export default function ContactPage() {
   const breadcrumbs: Breadcrumb[] = [
-    { label: 'Contacto', href: '', icon: <LuMessagesSquare /> },
+    { label: 'Ubicación', href: '', icon: <CiLocationArrow1 /> },
   ];
 
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
 
-      <h2>Contacto</h2>
-
-      <p>
-        <a
-          href="mailto:espinoza.dev@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          espinoza.dev@gmail.com
-        </a>
-      </p>
+      <h2>Ubicación</h2>
 
       <p>Actualmente resido en Buenos Aires, Argentina.</p>
 

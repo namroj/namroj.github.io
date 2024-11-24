@@ -6,7 +6,7 @@
   article {
     position: relative;
     padding: var(--gap);
-    border-radius: var(--gap);
+    border-radius: calc(var(--gap) / 2);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
     transition: var(--transition);
 

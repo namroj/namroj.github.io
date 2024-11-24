@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import readJsonFile from '@/utils/files'; // Assuming the file is under utils
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
-import { ExperienceItemType } from '@/app/experiencia/components/ExperienceItem';
+import { ExperienceItemType } from '@/app/experience/components/ExperienceItem';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 import { MdLaptop } from 'react-icons/md';
 import Experience from './components/Experience';
@@ -15,7 +15,7 @@ export default async function ProfessionalExperiencePage() {
     { label: 'Experiencia', icon: <MdLaptop /> },
   ];
 
-  const experience = (await readJsonFile('app/experiencia', 'data.json')) as
+  const experience = (await readJsonFile('app/experience', 'data.json')) as
     | ExperienceItemType[]
     | [];
 
