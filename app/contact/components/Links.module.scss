@@ -25,7 +25,7 @@ $colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColo
       transition: var(--transition);
 
       @media (width > 1024px) {
-        max-width: 60%;
+        max-width: 65%;
         padding: var(--gap);
         gap: var(--gap);
         font-size: 1rem;
