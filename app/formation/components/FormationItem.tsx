@@ -26,11 +26,11 @@ type Props = {
 };
 
 export function FormationItem({
-  item,
-  selectedTags,
-  handleTagClick,
-  highlightText,
-}: Props) {
+                                item,
+                                selectedTags,
+                                handleTagClick,
+                                highlightText,
+                              }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -38,7 +38,6 @@ export function FormationItem({
       <article
         className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
       >
-        <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.data}>
           <a href={item.entity.url} target="_blank" rel="noreferrer">
             <Image
@@ -59,6 +58,7 @@ export function FormationItem({
               </h4>
               <p>[{highlightText(item.location)}]</p>
             </div>
+            <p className={styles.date}>{highlightText(item.interval)}</p>
           </div>
         </div>
 

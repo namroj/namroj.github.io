@@ -29,11 +29,11 @@ type Props = {
 };
 
 export function ExperienceItem({
-  item,
-  selectedTags,
-  handleTagClick,
-  highlightText,
-}: Props) {
+                                 item,
+                                 selectedTags,
+                                 handleTagClick,
+                                 highlightText,
+                               }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   return (
@@ -41,7 +41,6 @@ export function ExperienceItem({
       <article
         className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
       >
-        <p className={styles.date}>{highlightText(item.interval)}</p>
         <div className={styles.entity}>
           <a href={item.entity.url} target="_blank" rel="noreferrer">
             <Image
@@ -61,7 +60,9 @@ export function ExperienceItem({
             <p className={styles.location}>
               <span>[{highlightText(item.location)}]</span>
             </p>
+            <p className={styles.date}>{highlightText(item.interval)}</p>
           </div>
+
         </div>
 
         <div className={styles.timeline}>
@@ -77,8 +78,8 @@ export function ExperienceItem({
                     const descriptionItems = position.description.split('||');
                     return descriptionItems.length > 1
                       ? descriptionItems.map((desc) => (
-                          <li key={desc}>{highlightText(desc)}</li>
-                        ))
+                        <li key={desc}>{highlightText(desc)}</li>
+                      ))
                       : highlightText(position.description);
                   })()}
                 </p>

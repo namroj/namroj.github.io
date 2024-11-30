@@ -94,15 +94,17 @@ export default function Formation({
         </span>
       </div>
     ) : (
-      filteredFormation.map((item: FormationItemType) => (
-        <FormationItem
-          key={item.title}
-          item={item}
-          handleTagClick={handleTagClick}
-          selectedTags={selectedTags}
-          highlightText={highlightText}
-        />
-      ))
+      <ul className={styles.items}>
+        {filteredFormation.map((item: FormationItemType) => (
+          <FormationItem
+            key={item.title}
+            item={item}
+            handleTagClick={handleTagClick}
+            selectedTags={selectedTags}
+            highlightText={highlightText}
+          />
+        ))}
+      </ul>
     );
 
   return (
@@ -114,7 +116,7 @@ export default function Formation({
         className={`${styles.timeline} ${mainWidth < 768 && styles['main-reduced']}`}
       >
         <hr />
-        <ul>{formationList}</ul>
+        {formationList}
       </div>
     </div>
   );

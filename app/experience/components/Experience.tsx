@@ -99,15 +99,17 @@ export default function Experience({
         </span>
       </div>
     ) : (
-      filteredExperience.map((item: ExperienceItemType) => (
-        <ExperienceItem
-          key={item.entity.name}
-          item={item}
-          handleTagClick={handleTagClick}
-          selectedTags={selectedTags}
-          highlightText={highlightText}
-        />
-      ))
+      <ul className={styles.items}>
+        {filteredExperience.map((item: ExperienceItemType) => (
+          <ExperienceItem
+            key={item.entity.name}
+            item={item}
+            handleTagClick={handleTagClick}
+            selectedTags={selectedTags}
+            highlightText={highlightText}
+          />
+        ))}
+      </ul>
     );
 
   return (
@@ -119,7 +121,8 @@ export default function Experience({
         className={`${styles.timeline} ${mainWidth < 900 ? styles['main-reduced'] : ''}`}
       >
         <hr />
-        <ul>{experienceList}</ul>
+
+        {experienceList}
       </div>
     </div>
   );

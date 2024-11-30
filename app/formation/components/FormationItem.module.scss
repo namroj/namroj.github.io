@@ -3,6 +3,10 @@
   list-style: none;
   margin: var(--gap) 0;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   article {
     position: relative;
     padding: var(--gap);
@@ -15,23 +19,27 @@
     }
 
     .date {
-      position: absolute;
-      top: var(--gap);
       right: var(--gap);
       color: var(--bgHoverAccentColor);
       font-size: 0.8rem;
+
+      @media (width > 768px) {
+        position: absolute;
+        top: var(--gap);
+
+      }
     }
 
     .data {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      gap: calc(var(--gap) / 2);
-      margin-bottom: calc(var(--gap) / 2);
+      gap: calc(var(--gap) / 4);
+      margin-bottom: calc(var(--gap) / 4);
 
       img {
-        width: calc(var(--gap) * 2.25);
-        height: calc(var(--gap) * 2.25);
+        width: calc(var(--gap) * 2.425);
+        height: calc(var(--gap) * 2.425);
         border-radius: 50%;
         box-shadow: 0 0 2px var(--bgHoverAccentColor);
         object-fit: cover;
@@ -55,9 +63,13 @@
 
         .title {
           color: var(--textColor);
-          font-size: 0.9rem;
-          max-width: 100%;
+          font-size: 0.8rem;
           text-wrap: balance;
+
+          @media (width > 768px) {
+            max-width: 100%;
+            font-size: 0.9rem;
+          }
         }
 
         .entity {
@@ -92,8 +104,11 @@
       margin-bottom: 0;
 
       &.description {
-        max-width: 80%;
-        text-wrap: pretty;
+
+        @media (width > 768px) {
+          max-width: 80%;
+          text-wrap: pretty;
+        }
       }
     }
 
