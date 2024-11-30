@@ -21,7 +21,7 @@
   }
 
   .timeline {
-    width: 100%;
+    position: relative;
 
     @media (width > 1280px) {
       width: 70%;
@@ -56,10 +56,10 @@
 
     .items {
       @media (width > 768px) {
-        max-height: 55dvh;
-        overflow-y: auto;
+        position: relative;
+        max-height: 60dvh;
         padding: 0 var(--gap) var(--gap) calc(var(--gap) / 4);
-        margin-block-start: 0 !important;
+        overflow-y: auto;
       }
     }
   }

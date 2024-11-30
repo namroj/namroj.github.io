@@ -39,7 +39,7 @@
       }
 
       img {
-        border-radius: var(--gap);
+        border-radius: calc(var(--gap) / 2);
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
         object-fit: cover;
@@ -109,7 +109,7 @@
           max-width: 100%;
 
           img {
-            border-radius: var(--gap);
+            border-radius: calc(var(--gap) / 2);
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
           }

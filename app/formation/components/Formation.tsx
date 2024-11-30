@@ -95,15 +95,18 @@ export default function Formation({
       </div>
     ) : (
       <ul className={styles.items}>
-        {filteredFormation.map((item: FormationItemType) => (
-          <FormationItem
-            key={item.title}
-            item={item}
-            handleTagClick={handleTagClick}
-            selectedTags={selectedTags}
-            highlightText={highlightText}
-          />
-        ))}
+        <div className="content">
+          {filteredFormation.map((item: FormationItemType) => (
+            <FormationItem
+              key={item.title}
+              item={item}
+              handleTagClick={handleTagClick}
+              selectedTags={selectedTags}
+              highlightText={highlightText}
+            />
+          ))}
+          <div className="fade-effect" />
+        </div>
       </ul>
     );
 

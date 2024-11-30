@@ -97,7 +97,7 @@ export default function PostList({ posts }: Props) {
         </span>
       </div>
     ) : (
-      <div className={styles.posts}>
+      <div className={styles.items}>
         {filteredPosts.map((item: PostMetaData) => (
           <PostItem
             key={item.title}
