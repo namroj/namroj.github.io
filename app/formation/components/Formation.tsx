@@ -48,7 +48,7 @@ export default function Formation({
 
   const filters = (
     <div
-      className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
+      className={`${styles.filters} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
         tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
@@ -112,11 +112,11 @@ export default function Formation({
 
   return (
     <div
-      className={`${styles.formation} ${mainWidth < 768 && styles['main-reduced']}`}
+      className={`${styles.formation} ${mainWidth < 1280 && styles['main-reduced']}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 768 && styles['main-reduced']}`}
+        className={`${styles.timeline} ${mainWidth < 1280 && styles['main-reduced']}`}
       >
         <hr />
         {formationList}

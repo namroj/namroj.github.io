@@ -51,7 +51,7 @@ export default function PostList({ posts }: Props) {
 
   const filters = (
     <div
-      className={`${styles.filters} ${mainWidth < 768 ? styles['main-reduced'] : ''}`}
+      className={`${styles.filters} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
         tags={Array.from(new Set(posts.flatMap((item) => item.tags)))}
