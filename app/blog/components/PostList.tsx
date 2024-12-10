@@ -7,7 +7,7 @@ import { PostMetaData } from '@/utils/posts';
 import normalizeAndCleanString from '@/utils/strings';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import TagsFilter from '@/components/ui/tag/TagsFilter';
+import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 
 import { LuPackageSearch } from 'react-icons/lu';

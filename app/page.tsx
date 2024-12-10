@@ -1,14 +1,20 @@
+import Skills from '@/components/skills/Skills';
+import Tools from '@/components/tools/Tools';
+import styles from './page.module.scss';
+
 export default function HomePage() {
+
   return (
     <>
-      Desarrollador Full Stack
+      <h2 className={styles.title}>Desarrollador Full Stack</h2>
       <br />
       Desarrollando profesionalmente desde 2015.
       <br />
       Amante de las buenas prácticas, el código limpio y los patrones de diseño.
       <p>Desde páginas web hasta tiendas virtuales.</p>
+
       <section>
-        <h4>Servicios</h4>
+        <h4 className={styles.title}>Servicios</h4>
         <ul>
           <li>Maquetación</li>
           <li>Firmas de correo personalizadas HTML</li>
@@ -25,38 +31,19 @@ export default function HomePage() {
           <li>Generación y personalización de sitios en WordPress</li>
         </ul>
       </section>
-      <section>
-        <h4>Arsenal</h4>
-        <ul>
-          <li>Java</li>
-          <li>Spring</li>
-          <li>Javascript</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>PHP</li>
-          <li>Symphony</li>
-          <li>Laravel</li>
-          <li>MySQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SASS</li>
-          <li>Ant Design</li>
-          <li>Bootstrap</li>
-          <li>Tailwind</li>
-        </ul>
+
+      <section className={styles.skills}>
+        <h4 className={styles.title}>Arsenal</h4>
+        <Skills />
       </section>
+
       <section>
-        <h4>Herramientas</h4>
-        <li>IntelliJ IDEA</li>
-        <li>Visual Studio Code</li>
-        <li>Terminal</li>
-        <li>Postman</li>
-        <li>DBeaver</li>
-        <li>Draw.io</li>
+        <h4 className={styles.title}>Herramientas</h4>
+        <Tools />
       </section>
+      
       <section>
-        <h4>Tipografías preferidas</h4>
+        <h4 className={styles.title}>Tipografías preferidas</h4>
         <ul>
           <li>
             <a

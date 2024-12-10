@@ -1,8 +1,8 @@
-import normalizeAndCleanString from '@/app/_utils/strings';
+import normalizeAndCleanString from '@/utils/strings';
 
 import { RiArrowGoBackFill } from 'react-icons/ri';
 
-import TagButton from '@/components/ui/tag/TagButton';
+import TagButton from '@/components/ui/tag/btn/TagButton';
 import styles from './TagsFilter.module.scss';
 
 type Props = {
@@ -13,11 +13,11 @@ type Props = {
 };
 
 export default function TagsFilter({
-  tags,
-  selectedTags,
-  handleTagClick,
-  handleClearTags,
-}: Props) {
+                                     tags,
+                                     selectedTags,
+                                     handleTagClick,
+                                     handleClearTags,
+                                   }: Props) {
   const sortedTags = tags
     .slice()
     .sort((a, b) =>

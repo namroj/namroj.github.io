@@ -1,0 +1,12 @@
+// -- skills -----
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) / 4);
+
+  @media (width > 768px) {
+    max-width: 525px;
+  }
+}

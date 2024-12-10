@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import TagButton from '@/components/ui/tag/TagButton';
+import TagButton from '@/components/ui/tag/btn/TagButton';
 
 import { TbExternalLink } from 'react-icons/tb';
 import styles from './FormationItem.module.scss';

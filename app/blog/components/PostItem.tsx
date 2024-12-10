@@ -4,7 +4,7 @@ import moment from 'moment';
 import 'moment/locale/es';
 
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import TagButton from '@/components/ui/tag/TagButton';
+import TagButton from '@/components/ui/tag/btn/TagButton';
 
 import { PostMetaData } from '@/utils/posts';
 import styles from './PostItem.module.scss';
@@ -33,8 +33,10 @@ export default function PostItem({
             <Image
               src={item.cover_image}
               alt={item.title}
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+              priority
             />
           </Link>
         )}

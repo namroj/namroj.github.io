@@ -6,7 +6,7 @@ import Highlighter from 'react-highlight-words';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import normalizeAndCleanString from '@/utils/strings';
 
-import TagsFilter from '@/components/ui/tag/TagsFilter';
+import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 
 import { LuPackageSearch } from 'react-icons/lu';
