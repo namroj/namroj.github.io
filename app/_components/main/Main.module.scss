@@ -1,7 +1,6 @@
 // -- main -----
 .main {
   position: relative;
-  min-width: 300px;
   min-height: 100svh;
   padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5) calc(var(--headerHeight));
   background-color: var(--mainBgColor);

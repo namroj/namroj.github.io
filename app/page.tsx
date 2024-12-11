@@ -6,7 +6,7 @@ export default function HomePage() {
 
   return (
     <>
-      <h2 className={styles.title}>Desarrollador Full Stack</h2>
+      <h2 className={styles.profession}>Desarrollador Full Stack</h2>
       <br />
       Desarrollando profesionalmente desde 2015.
       <br />
@@ -41,7 +41,12 @@ export default function HomePage() {
         <h4 className={styles.title}>Herramientas</h4>
         <Tools />
       </section>
-      
+
+      <section>
+        <h4 className={styles.title}>Proyectos</h4>
+        --
+      </section>
+
       <section>
         <h4 className={styles.title}>Tipografías preferidas</h4>
         <ul>
