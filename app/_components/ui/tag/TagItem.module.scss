@@ -9,12 +9,6 @@ $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) v
   border-radius: calc(var(--gap) / 4);
   transition: var(--transition);
 
-  a {
-    display: flex;
-    align-items: center;
-    color: var(--textSecondaryColor);
-  }
-
   @for $i from 1 through 100 {
     &:nth-of-type(#{$i}) {
       &:hover {
@@ -27,7 +21,13 @@ $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) v
       }
     }
   }
-  
+
+  a {
+    display: flex;
+    align-items: center;
+    color: var(--textSecondaryColor);
+  }
+
   span {
     align-self: center;
     padding: calc(var(--gap) / 6);
