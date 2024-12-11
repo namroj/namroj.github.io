@@ -7,22 +7,27 @@ $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) v
   display: flex;
   align-items: center;
   border-radius: calc(var(--gap) / 4);
+  transition: var(--transition);
 
   a {
-    color: var(--textSecondaryColor);
     display: flex;
     align-items: center;
+    color: var(--textSecondaryColor);
   }
 
   @for $i from 1 through 100 {
     &:nth-of-type(#{$i}) {
-      a:hover {
-        border-color: nth($colors, (($i - 1) % length($colors)) + 1);
-        color: nth($colors, (($i - 1) % length($colors)) + 1);
+      &:hover {
+        border: 1px solid nth($colors, (($i - 1) % length($colors)) + 1);
+
+        a {
+          border-color: nth($colors, (($i - 1) % length($colors)) + 1);
+          color: nth($colors, (($i - 1) % length($colors)) + 1);
+        }
       }
     }
   }
-
+  
   span {
     align-self: center;
     padding: calc(var(--gap) / 6);

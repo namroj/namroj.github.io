@@ -6,7 +6,7 @@ export default function HomePage() {
 
   return (
     <>
-      <h2 className={styles.profession}>Desarrollador Full Stack</h2>
+      <h2 className={styles.profession}>Jorman Espinoza - Desarrollador Full Stack</h2>
       <br />
       Desarrollando profesionalmente desde 2015.
       <br />
