@@ -1,9 +1,9 @@
 import Skills from '@/components/skills/Skills';
 import Tools from '@/components/tools/Tools';
 import styles from './page.module.scss';
+import { Link } from 'next-view-transitions';
 
 export default function HomePage() {
-
   return (
     <>
       <h2 className={styles.profession}>Jorman Espinoza - Desarrollador Full Stack</h2>
@@ -44,7 +44,7 @@ export default function HomePage() {
 
       <section>
         <h4 className={styles.title}>Proyectos</h4>
-        --
+        <Link href="/projects">Ver listado</Link>
       </section>
 
       <section>

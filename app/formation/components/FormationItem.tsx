@@ -16,7 +16,6 @@ export type FormationItemType = {
   certificate?: string;
 };
 
-const COMPONENT_MIN_WIDTH = 400;
 
 type Props = {
   item: FormationItemType;
@@ -24,6 +23,8 @@ type Props = {
   handleTagClick: (tag: string) => void;
   highlightText: (text: string) => JSX.Element;
 };
+
+const COMPONENT_MIN_WIDTH = 400;
 
 export function FormationItem({
                                 item,

@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Daza Real Estate",
+    "summary": "",
+    "description": "",
+    "url": "https://dazarealestate.com",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "SASS",
+      "JavaScript",
+      "Figma"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Proper | Daza Real Estate",
+    "summary": "",
+    "description": "",
+    "url": "https://dazarealestate.com/proper",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "SASS",
+      "JavaScript",
+      "Figma"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Código Natural",
+    "summary": "",
+    "description": "",
+    "url": "https://codigonatural.com.ar",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "SASS",
+      "JavaScript"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Sarapura - Signatures",
+    "summary": "",
+    "description": "",
+    "url": "",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "dark": false
+  },
+  {
+    "name": "DUB",
+    "summary": "",
+    "description": "",
+    "url": "https://dub.com.ar",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Pablo Manso",
+    "summary": "",
+    "description": "",
+    "url": "https://pablomanso.com",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "MySQL"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Friggorina",
+    "summary": "",
+    "description": "",
+    "url": "https://friggorina.com",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Illustrator"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Las Yungas",
+    "summary": "",
+    "description": "",
+    "url": "https://lasyungas.com",
+    "logo": "",
+    "favicon": "",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP"
+    ],
+    "dark": false
+  },
+  {
+    "name": "Boca de Toro",
+    "summary": "Sitio web de la empresa de cocina Boca de Toro. Combina una landing page con un sistema de reservas aplicado mediante la integración de un plugin de Wordpress junto con uno de mensajería de correos.",
+    "description": "Para el diseño del sitio, recibí el diseño en un archivo de Illustrator (.ai), con todo el sitio web.",
+    "url": "https://www.bocadetoro.com",
+    "logo": "/images/projects/bocadetoro/logo.svg",
+    "favicon": "/images/projects/bocadetoro/favicon.png",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "PHP",
+      "WordPress",
+      "Illustrator"
+    ],
+    "dark": false
+  }
+]
