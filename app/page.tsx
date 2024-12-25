@@ -58,7 +58,7 @@ export default function HomePage() {
             >
               Dank Mono
             </a>{' '}
-            - by{' '}
+            - por{' '}
             <a
               href="https://philpl.gumroad.com"
               target="_blank"
@@ -75,7 +75,7 @@ export default function HomePage() {
             >
               JetBrains Mono
             </a>{' '}
-            - by{' '}
+            - por{' '}
             <a
               href="https://www.jetbrains.com/"
               target="_blank"
@@ -92,7 +92,7 @@ export default function HomePage() {
             >
               Cascadia Code
             </a>{' '}
-            - by{' '}
+            - por{' '}
             <a
               href="https://www.microsoft.com/es-ar"
               target="_blank"
@@ -109,7 +109,7 @@ export default function HomePage() {
             >
               Fira Code
             </a>{' '}
-            - by{' '}
+            - por{' '}
             <a
               href="https://github.com/tonsky"
               target="_blank"
