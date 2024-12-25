@@ -1,7 +1,7 @@
+import { Link } from 'next-view-transitions';
 import Skills from '@/components/skills/Skills';
 import Tools from '@/components/tools/Tools';
 import styles from './page.module.scss';
-import { Link } from 'next-view-transitions';
 
 export default function HomePage() {
   return (
