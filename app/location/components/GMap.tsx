@@ -3,7 +3,6 @@
 import { useCallback, useEffect } from 'react';
 import { renderToString } from 'react-dom/server';
 import { Theme, useThemeContext } from '@/providers/theme/ThemeProvider';
-
 import { FaBus, FaMapMarker, FaPlane } from 'react-icons/fa';
 import mapDarkStyles from './dark';
 import mapLightStyles from './light';

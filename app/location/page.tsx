@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 import { CiLocationArrow1 } from 'react-icons/ci';

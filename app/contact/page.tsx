@@ -1,11 +1,8 @@
 import { Metadata } from 'next';
-
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-
 import { LuMessagesSquare } from 'react-icons/lu';
 import Links from '@/app/contact/components/Links';
-
 
 export const metadata: Metadata = {
   title: 'Contacto | Jorman Espinoza',

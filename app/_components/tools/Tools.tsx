@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import { SiDbeaver, SiIntellijidea, SiPostman } from 'react-icons/si';
 import { VscVscodeInsiders } from 'react-icons/vsc';
 import { RiTerminalBoxFill } from 'react-icons/ri';
@@ -10,7 +10,7 @@ import styles from './Tools.module.scss';
 
 interface Tool {
   name: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   url: string;
 }
 

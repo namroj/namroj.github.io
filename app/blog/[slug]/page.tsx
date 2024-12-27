@@ -7,18 +7,15 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeHighlight from 'rehype-highlight';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
-
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json';
 import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json';
-
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-
 import { FaKeyboard } from 'react-icons/fa6';
 import { LuFileTerminal } from 'react-icons/lu';
 import styles from './page.module.scss';
 
-interface PostProps {
+interface Props {
   params: {
     slug: string;
   };
@@ -40,7 +37,7 @@ const prettyCodeOptions = {
   },
 };
 
-export default async function PostPage({ params }: Readonly<PostProps>) {
+export default async function PostPage({ params }: Readonly<Props>) {
   if (!params?.slug) {
     return notFound();
   }
@@ -77,7 +74,7 @@ export default async function PostPage({ params }: Readonly<PostProps>) {
   );
 }
 
-export async function generateMetadata({ params }: Readonly<PostProps>) {
+export async function generateMetadata({ params }: Readonly<Props>) {
   const { data } = await getMarkDownFileData(params.slug);
 
   return {

@@ -3,15 +3,15 @@ import tagStyles from '@/components/ui/tag/TagItem.module.scss';
 
 export interface Tag {
   name: string;
-  icon: React.ReactNode;
   url: string;
+  icon: React.ReactNode;
 }
 
-interface TagItemProps {
+interface Props {
   item: Tag;
 }
 
-export default function TagItem({ item }: Readonly<TagItemProps>) {
+export default function TagItem({ item }: Readonly<Props>) {
   return (
     <li key={item.name} className={tagStyles.item}>
       <a href={item.url} target="_blank" rel="noreferrer">

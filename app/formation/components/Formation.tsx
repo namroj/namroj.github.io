@@ -1,14 +1,10 @@
 'use client';
-
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
-
 import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
-
 import { LuPackageSearch } from 'react-icons/lu';
 import { FormationItem, FormationItemType } from './FormationItem';
 import styles from './Formation.module.scss';

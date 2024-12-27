@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import { Link } from 'next-view-transitions';
-
 import Links from '@/components/sidebar/links/Links';
 import Skills from '@/components/skills/Skills';
 import Tools from '@/components/tools/Tools';
-
 import heroImage from '@/assets/images/hero.jpg';
 import { ImBooks } from 'react-icons/im';
 import { FaCode, FaKeyboard } from 'react-icons/fa6';

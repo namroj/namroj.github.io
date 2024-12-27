@@ -5,7 +5,6 @@ import {
   ThemeLabel,
   useThemeContext,
 } from '@/providers/theme/ThemeProvider';
-
 import { RiMacbookLine } from 'react-icons/ri';
 import { BsSun } from 'react-icons/bs';
 import { HiMoon } from 'react-icons/hi';

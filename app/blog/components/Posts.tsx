@@ -1,24 +1,21 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import Highlighter from 'react-highlight-words';
 import { PostMetaData } from '@/utils/posts';
 import normalizeAndCleanString from '@/utils/strings';
-
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
-
 import { LuPackageSearch } from 'react-icons/lu';
 import PostItem from './PostItem';
-import styles from './PostList.module.scss';
+import styles from './Posts.module.scss';
 
 interface Props {
   posts: PostMetaData[];
 }
 
-export default function PostList({ posts }: Props) {
+export default function Posts({ posts }: Props) {
   const { mainWidth } = useExpandCollapseContext();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);

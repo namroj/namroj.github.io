@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import classNames from 'classnames';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import styles from './ProjectItem.module.scss';
 import TagButton from '@/components/ui/tag/btn/TagButton';
+import styles from './ProjectItem.module.scss';
 
 export type ProjectItemType = {
   name: string;

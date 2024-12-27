@@ -1,7 +1,5 @@
 import Image from 'next/image';
-
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-
 import TagButton from '@/components/ui/tag/btn/TagButton';
 import styles from './ExperienceItem.module.scss';
 

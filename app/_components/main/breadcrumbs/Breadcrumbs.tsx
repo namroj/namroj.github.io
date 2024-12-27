@@ -8,11 +8,11 @@ import {
 } from '@/providers/navigation/NavigationProvider';
 import styles from './Breadcrumbs.module.scss';
 
-interface BreadcrumbsProps {
+interface Props {
   items: Breadcrumb[];
 }
 
-export default function Breadcrumbs({ items }: Readonly<BreadcrumbsProps>) {
+export default function Breadcrumbs({ items }: Readonly<Props>) {
   const { breadcrumbs, setBreadcrumbs } = useNavigationContext();
 
   useEffect(() => {

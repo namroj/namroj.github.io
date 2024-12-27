@@ -2,13 +2,10 @@
 
 import { ChangeEvent, useState } from 'react';
 import Highlighter from 'react-highlight-words';
-
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import normalizeAndCleanString from '@/utils/strings';
-
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
-
 import { LuPackageSearch } from 'react-icons/lu';
 import { ExperienceItem, ExperienceItemType } from './ExperienceItem';
 import styles from './Experience.module.scss';

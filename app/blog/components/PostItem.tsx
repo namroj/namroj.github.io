@@ -2,10 +2,8 @@ import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 import moment from 'moment';
 import 'moment/locale/es';
-
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagButton from '@/components/ui/tag/btn/TagButton';
-
 import { PostMetaData } from '@/utils/posts';
 import styles from './PostItem.module.scss';
 

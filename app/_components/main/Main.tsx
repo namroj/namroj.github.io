@@ -1,12 +1,10 @@
 'use client';
 
 import { ReactNode } from 'react';
-
 import {
   ExpandCollapseState,
   useExpandCollapseContext,
 } from '@/providers/expand-collapse/ExpandCollapseProvider';
-
 import styles from './Main.module.scss';
 
 export default function Main({ children }: Readonly<{ children: ReactNode }>) {

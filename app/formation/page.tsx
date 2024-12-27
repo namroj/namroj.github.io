@@ -1,9 +1,7 @@
 import { Metadata } from 'next';
 import readJsonFile from '@/utils/files';
-
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-
 import { ImBooks } from 'react-icons/im';
 import Formation from '@/app/formation/components/Formation';
 import { FormationItemType } from './components/FormationItem';

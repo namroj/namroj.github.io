@@ -1,11 +1,8 @@
 import { Metadata } from 'next';
-
 import getPosts, { PostMetaData } from '@/utils/posts';
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
-
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
-import PostList from '@/app/blog/components/PostList';
-
+import Posts from '@/app/blog/components/Posts';
 import { FaKeyboard } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
@@ -22,7 +19,7 @@ export default async function BlogPage() {
 
       <h2>Blog</h2>
 
-      <PostList posts={posts} />
+      <Posts posts={posts} />
     </>
   );
 }

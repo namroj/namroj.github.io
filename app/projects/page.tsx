@@ -1,11 +1,9 @@
 import { Metadata } from 'next';
 import readJsonFile from '@/utils/files';
-
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 import Projects from '@/app/projects/components/Projects';
 import { ProjectItemType } from '@/app/projects/components/ProjectItem';
-
 import { FaCode } from 'react-icons/fa6';
 
 export const metadata: Metadata = {
