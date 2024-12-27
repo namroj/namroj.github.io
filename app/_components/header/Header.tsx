@@ -1,16 +1,13 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-
-// import profileImage from '@/assets/images/profile.jpeg';
-// import profileImage from '@/assets/images/bariloche.jpg';
-import profileImage from '@/assets/images/profile-bariloche.jpg';
+import profileImage from '@/assets/images/profile.jpeg';
 import styles from './Header.module.scss';
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.id}>
-        <Link href="/" className={styles['profile-image']}>
+        <Link href="/" className={styles.image}>
           <Image
             src={profileImage}
             alt="Jorman Espinoza - Imagen de perfil"
