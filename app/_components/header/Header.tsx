@@ -1,7 +1,9 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
 
-import profileImage from '@/assets/images/profile.jpeg';
+// import profileImage from '@/assets/images/profile.jpeg';
+// import profileImage from '@/assets/images/bariloche.jpg';
+import profileImage from '@/assets/images/profile-bariloche.jpg';
 import styles from './Header.module.scss';
 
 export default function Header() {

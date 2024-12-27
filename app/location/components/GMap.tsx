@@ -108,11 +108,7 @@ export default function GMap() {
         };
 
         document.head.appendChild(script);
-
-        // Cleanup function to remove the script if the component unmounts
-        return () => {
-          document.head.removeChild(script);
-        };
+        return () => document.head.removeChild(script);
       }
 
       if (window.google && window.google.maps) {

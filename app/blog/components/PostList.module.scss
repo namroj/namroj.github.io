@@ -1,11 +1,11 @@
 // -- post list -----
-.post-list {
+.posts {
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   margin-top: var(--gap);
 
-  @media (width > 1280px) {
+  @media (width > 1920px) {
     min-width: calc(var(--md) - var(--gap));
     flex-direction: row-reverse;
   }
@@ -18,7 +18,7 @@
   .timeline {
     width: 100%;
 
-    @media (width > 1280px) {
+    @media (width > 1920px) {
       width: 70%;
 
       &.main-reduced {

@@ -112,11 +112,11 @@ export default function PostList({ posts }: Props) {
 
   return (
     <div
-      className={`${styles['post-list']} ${mainWidth < 1280 && styles['main-reduced']}`}
+      className={`${styles.posts} ${mainWidth < 1920 && styles['main-reduced']}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 1280 && styles['main-reduced']}`}
+        className={`${styles.timeline} ${mainWidth < 1920 && styles['main-reduced']}`}
       >
         <hr />
 

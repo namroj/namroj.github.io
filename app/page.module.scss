@@ -1,11 +1,66 @@
-// -- home -----
+// -- Jorman -----
+.jorman {
+  display: flex;
+  gap: calc(var(--gap) / 2);
+  margin-bottom: var(--gap);
+
+  h2, h3 {
+    margin: 0;
+    line-height: 0;
+    font-family: var(--jetBrainsMonoFont), sans-serif;
+  }
+
+  h2 {
+    color: var(--headerNameColor);
+    font-size: 1rem;
+  }
+
+  h3 {
+    color: var(--headerProfessionTextColor);
+    font-size: 0.89rem;
+    font-style: italic;
+  }
+}
+
 .profession {
   font-size: 1.2rem;
   font-style: italic;
+}
+
+.intro {
+  margin-bottom: var(--gap);
 }
 
 .title {
   margin-bottom: var(--gap);
   font-style: italic;
   color: var(--textSecondaryAccentColor);
+}
+
+.hero {
+  display: flex;
+  gap: var(--gap);
+
+  .image {
+    margin-bottom: var(--gap);
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 25px solid var(--accentColor);
+    background-color: var(--footerBorderColor);
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    a {
+      color: var(--accentColor);
+
+      &:hover {
+        color: var(--bgHoverAccentColor);
+      }
+    }
+  }
 }

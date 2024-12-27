@@ -2,10 +2,10 @@
 $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor);
 
 .item {
-  margin-left: 0;
-  border: 1px solid var(--footerBorderColor);
   display: flex;
   align-items: center;
+  margin-left: 0;
+  border: 1px solid var(--footerBorderColor);
   border-radius: calc(var(--gap) / 4);
   transition: var(--transition);
 

@@ -2,8 +2,9 @@ import React from 'react';
 import { SiDbeaver, SiIntellijidea, SiPostman } from 'react-icons/si';
 import { VscVscodeInsiders } from 'react-icons/vsc';
 import { RiTerminalBoxFill } from 'react-icons/ri';
-import { FaAws, FaBitbucket, FaGithub, FaJira } from 'react-icons/fa';
+import { FaAws, FaBitbucket, FaFigma, FaGithub, FaJira } from 'react-icons/fa';
 import { BsFillDiagram2Fill } from 'react-icons/bs';
+import { DiIllustrator } from 'react-icons/di';
 import TagItem from '@/components/ui/tag/TagItem';
 import styles from './Tools.module.scss';
 
@@ -65,13 +66,21 @@ export default function Tools() {
       icon: <FaAws />,
       url: 'https://aws.amazon.com/',
     },
+    {
+      name: 'Illustrator',
+      icon: <DiIllustrator />,
+      url: 'https://www.adobe.com/ar/products/illustrator.html',
+    },
+    {
+      name: 'Figma',
+      icon: <FaFigma />,
+      url: 'https://www.figma.com/',
+    },
   ];
 
   return (
     <ul className={styles.tools}>
-      {tools.map(tool => (
-        <TagItem item={tool} />
-      ))}
+      {tools.map(tool => <TagItem item={tool} />)}
     </ul>
   );
 }

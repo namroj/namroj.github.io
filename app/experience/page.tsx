@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import readJsonFile from '@/utils/files'; // Assuming the file is under utils
+import readJsonFile from '@/utils/files';
+
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import { ExperienceItemType } from '@/app/experience/components/ExperienceItem';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
