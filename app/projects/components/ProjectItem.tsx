@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
@@ -10,8 +13,7 @@ export type ProjectItemType = {
   description: string;
   url?: string;
   repository?: string;
-  logo?: string;
-  favicon?: string;
+  logo: string;
   tags: string[];
   dark: boolean;
 }
@@ -23,7 +25,7 @@ type Props = {
   highlightText: (text: string) => JSX.Element;
 };
 
-const FAVICON_SIZE = 20;
+const LOG_SIZE = 89;
 const COMPONENT_MIN_WIDTH = 400;
 
 export default function ProjectItem({
@@ -33,33 +35,33 @@ export default function ProjectItem({
                                       highlightText,
                                     }: Props) {
   const { mainWidth } = useExpandCollapseContext();
-  const showSeeMore = (project: ProjectItemType) => {
-    return project.description.length > 0;
-  };
+  const [showMore, setShowMore] = useState(false);
+  const toggleShowMore = () => setShowMore((prevState) => !prevState);
 
   return (
     <li
       key={item.name}
       className={`${styles.item} ${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
     >
-      <h3 className={styles.title}>
-        {item.favicon && (
+      <div className={styles.identity}>
+        {item.logo && (
           <Image
-            src={item.favicon}
+            src={item.logo}
             alt={item.name}
-            width={FAVICON_SIZE}
-            height={FAVICON_SIZE}
-            className={classNames(styles.favicon, {
+            width={LOG_SIZE}
+            height={LOG_SIZE}
+            className={classNames(styles.logo, {
               [styles.dark]: item.dark,
             })}
           />
         )}
 
-        {highlightText(item.name)}
-      </h3>
-
-      <div className={styles.summary}>
-        {highlightText(item.summary)}
+        <div className={styles.title}>
+          <h3>{highlightText(item.name)}</h3>
+          <p className={styles.summary}>
+            {highlightText(item.summary)}
+          </p>
+        </div>
       </div>
 
       {item.tags.length > 0 && (
@@ -78,6 +80,26 @@ export default function ProjectItem({
           </ul>
         </div>
       )}
+
+      {item.description && (
+        <button
+          type="button"
+          onClick={toggleShowMore}
+          aria-pressed={showMore}
+          className={styles.more}
+        >
+          {showMore ? 'Ver menos' : 'Ver más'}
+        </button>
+      )}
+
+      <div
+        className={
+          classNames(styles.description, { [styles.visible]: showMore })
+        }
+      >
+        {highlightText(item.description)}
+      </div>
+
 
       <div className={styles.links}>
         {item.url && (
@@ -102,23 +124,6 @@ export default function ProjectItem({
           </a>
         )}
       </div>
-
-      {showSeeMore(item) && (
-        <div className={styles.info}>
-          <button>Ver más</button>
-
-          {item.logo && (
-            <Image
-              src={item.logo}
-              alt={item.name}
-              layout="intrinsic"
-              width={150}
-              height={50}
-            />
-          )}
-          <p>{highlightText(item.description)}</p>
-        </div>
-      )}
     </li>
   );
 }

@@ -5,7 +5,6 @@
     "description": "",
     "url": "https://dazarealestate.com",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "SASS",
@@ -20,7 +19,6 @@
     "description": "",
     "url": "https://dazarealestate.com/proper",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "SASS",
@@ -35,7 +33,6 @@
     "description": "",
     "url": "https://codigonatural.com.ar",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "SASS",
@@ -49,7 +46,6 @@
     "description": "",
     "url": "",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "CSS",
@@ -63,7 +59,6 @@
     "description": "",
     "url": "https://dub.com.ar",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "CSS",
@@ -79,7 +74,6 @@
     "description": "",
     "url": "https://pablomanso.com",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "CSS",
@@ -95,7 +89,6 @@
     "description": "",
     "url": "https://friggorina.com",
     "logo": "",
-    "favicon": "",
     "tags": [
       "HTML",
       "CSS",
@@ -106,11 +99,10 @@
   },
   {
     "name": "Las Yungas",
-    "summary": "",
-    "description": "",
+    "summary": "Sitio web para presentar un exclusivo desarrollo residencial con un enfoque en la naturaleza, el golf y la vida en comunidad.",
+    "description": "El sitio web Las Yungas - Country & Golf (https://www.lasyungas.com/), es una plataforma digital que destaca las principales características del country: su reserva ecológica privada, el campo de golf y sus áreas residenciales. Construido con tecnologías estándar como HTML, CSS, JavaScript y con bloques dinámicos manejados mediante PHP, el sitio ofrece una experiencia visualmente atractiva, responsiva y de fácil mantenimiento.",
     "url": "https://lasyungas.com",
-    "logo": "",
-    "favicon": "",
+    "logo": "/images/projects/las-yungas/logo.svg",
     "tags": [
       "HTML",
       "CSS",
@@ -121,11 +113,10 @@
   },
   {
     "name": "Boca de Toro",
-    "summary": "Sitio web de la empresa de cocina Boca de Toro. Combina una landing page con un sistema de reservas aplicado mediante la integración de un plugin de Wordpress junto con uno de mensajería de correos.",
-    "description": "Para el diseño del sitio, recibí el diseño en un archivo de Illustrator (.ai), con todo el sitio web.",
+    "summary": "Sitio web del restaurante Boca de Toro, que combina una landing page con un sistema de reservas implementado mediante la integración de un plugin de WordPress y un sistema de mensajería por correo electrónico.",
+    "description": "El sitio web de Boca de Toro (https://www.bocadetoro.com/) presenta un restaurante que fusiona la cocina argentina con raíces españolas, liderado por el chef Agustín Monticelli. El diseño del sitio se basó en un archivo de Illustrator (.ai), proporcionando una estructura visual detallada. Desarrollado con HTML, CSS, JavaScript y PHP, el sitio integra WordPress para gestionar el sistema de reservas, utilizando plugins específicos para facilitar la comunicación por correo electrónico. Esta combinación de tecnologías permite una experiencia de usuario fluida y una gestión eficiente del contenido.",
     "url": "https://www.bocadetoro.com",
-    "logo": "/images/projects/bocadetoro/logo.svg",
-    "favicon": "/images/projects/bocadetoro/favicon.png",
+    "logo": "/images/projects/boca-de-toro/logo.svg",
     "tags": [
       "HTML",
       "CSS",
@@ -134,6 +125,6 @@
       "WordPress",
       "Illustrator"
     ],
-    "dark": false
+    "dark": true
   }
 ]

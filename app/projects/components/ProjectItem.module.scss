@@ -20,14 +20,18 @@
     margin-bottom: unset;
   }
 
-  .title {
+  .identity {
     @include flexCentered;
+  }
+
+  .title {
     font-size: 1rem;
   }
 
-  .favicon {
+  .logo {
     background-color: var(--lightColor);
     border-radius: calc(var(--gap) / 4);
+    min-width: 89px;
 
     &.dark {
       background-color: var(--darkSemiColor);
@@ -50,14 +54,6 @@
   }
 
   .summary {
-    max-width: 75%;
-    font-size: 0.8rem;
-    font-style: italic;
-    color: var(--textSecondaryColor);
-  }
-
-  .description {
-    max-width: 75%;
     font-size: 0.8rem;
     font-style: italic;
     color: var(--textSecondaryColor);
@@ -65,7 +61,6 @@
 
   .tags {
     @include flexCentered;
-    align-content: flex-end;
     justify-content: space-between;
     margin: calc(var(--gap) / 2) 0 0;
 
@@ -86,8 +81,32 @@
     }
   }
 
-  .info {
-    @include flexCentered;
-    display: none;
+  .more {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--footerAnchorColor);
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: var(--footerAnchorHoverColor);
+    }
+  }
+
+  .description {
+    height: 0;
+    opacity: 0;
+    color: var(--textSecondaryColor);
+    font-size: 0.8rem;
+    font-style: italic;
+    transition: var(--transition);
+
+    &.visible {
+      color: var(--bgHoverAccentColor);
+      height: auto;
+      opacity: 1;
+    }
   }
 }

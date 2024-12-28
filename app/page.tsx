@@ -37,12 +37,12 @@ export default function HomePage() {
       <Links />
 
       <div className={styles.intro}>
-        Desarrollo profesionalmente desde 2015.
+        Profesional en desarrollo de software desde 2015.
         <br />
-        Amante de las buenas prácticas, del código limpio y los patrones de diseño.
+        Apasionado por las buenas prácticas, el código limpio y los patrones de diseño.
         <ul>
-          <li>Realizo desde páginas web hasta tiendas virtuales.</li>
-          <li>Me desenvuelvo dentro de equipos de tecnología.</li>
+          <li>Diseño y desarrollo desde páginas web hasta tiendas en línea.</li>
+          <li>Trabajo de manera efectiva en equipos de tecnología.</li>
         </ul>
       </div>
 
