@@ -37,6 +37,11 @@
     }
   }
 
+  .content {
+    display: flex;
+    gap: calc(var(--gap) / 4);
+  }
+
   span {
     display: flex;
     align-items: center;

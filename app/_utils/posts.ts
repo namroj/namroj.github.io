@@ -11,6 +11,15 @@ export type PostMetaData = {
   cover_image: string;
 };
 
+/**
+ * Retrieves metadata for all posts within a specified directory.
+ *
+ * This function reads all files in the '_posts' directory, extracts metadata such as title,
+ * date, summary, slug, tags, and cover image from each file's content, and returns an array
+ * of post metadata objects sorted in descending order by date.
+ *
+ * @return {Promise<PostMetaData[]>} A promise that resolves to an array of post metadata objects, sorted by date in descending order.
+ */
 export async function getPosts(): Promise<PostMetaData[]> {
   const postsDirectory = path.join(process.cwd(), 'app/_posts');
   const filenames = await fs.readdir(postsDirectory);

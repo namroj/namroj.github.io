@@ -25,7 +25,7 @@ export default function Footer() {
     >
       <Breadcrumbs />
 
-      <div style={{ display: 'flex', gap: 5 }}>
+      <div className={styles.content}>
         <ThemeToggle />
         <span>
           <FaRegCopyright /> por <Link href="/">Jorman Espinoza</Link>
