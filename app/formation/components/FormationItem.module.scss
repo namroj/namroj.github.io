@@ -1,4 +1,4 @@
-// -- formation timeline item -----
+// -- formation item
 .item {
   list-style: none;
   margin: var(--gap) 0;
@@ -46,7 +46,7 @@
         transition: var(--transition);
 
         &:hover {
-          box-shadow: 0 0 15px var(--bgHoverAccentColor);
+          box-shadow: 0 0 5px var(--bgHoverAccentColor);
         }
       }
 

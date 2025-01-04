@@ -1,3 +1,4 @@
+import TagItem, { Tag } from '@/components/ui/tag/TagItem';
 import {
   FaBootstrap,
   FaCss3Alt,
@@ -16,7 +17,6 @@ import { IoLogoJavascript } from 'react-icons/io5';
 import { BiBowlRice } from 'react-icons/bi';
 import { GrMysql } from 'react-icons/gr';
 import { DiJqueryLogo, DiPostgresql } from 'react-icons/di';
-import TagItem, { Tag } from '@/components/ui/tag/TagItem';
 import styles from './Skills.module.scss';
 
 export default function Skills() {
@@ -131,7 +131,7 @@ export default function Skills() {
   return (
     <ul className={styles.skills}>
       {skills.map(skill => (
-        <TagItem item={skill} />
+        <TagItem key={skill.name} item={skill} />
       ))}
     </ul>
   );

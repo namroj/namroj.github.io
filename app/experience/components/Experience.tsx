@@ -85,7 +85,7 @@ export default function Experience({
     return isTagSelected && isSearchTermPresent;
   });
 
-  const experienceList =
+  const experience =
     filteredExperience.length === 0 ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
@@ -119,7 +119,7 @@ export default function Experience({
       >
         <hr />
 
-        {experienceList}
+        {experience}
       </div>
     </div>
   );

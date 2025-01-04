@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import getPosts, { PostMetaData } from '@/utils/posts';
+import { getPosts, PostMetaData } from '@/utils/posts';
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
 import Posts from '@/app/blog/components/Posts';

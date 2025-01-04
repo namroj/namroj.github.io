@@ -9,10 +9,54 @@ import { FaCode, FaKeyboard } from 'react-icons/fa6';
 import { MdLaptop } from 'react-icons/md';
 import styles from './page.module.scss';
 
+interface Typography {
+  name: string;
+  author: {
+    name: string;
+    url: string;
+  };
+  url: string;
+}
+
+const typographies: Typography[] = [
+  {
+    name: 'Dank Mono',
+    url: 'https://philpl.gumroad.com/l/dank-mono',
+    author: {
+      name: 'Phil Pluckthun',
+      url: 'https://philpl.gumroad.com',
+    },
+  },
+  {
+    name: 'JetBrains Mono',
+    url: 'https://www.jetbrains.com/es-es/lp/mono',
+    author: {
+      name: 'JetBrains',
+      url: 'https://www.jetbrains.com',
+    },
+  },
+  {
+    name: 'Cascadia Code',
+    url: 'https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions',
+    author: {
+      name: 'Microsoft',
+      url: 'https://www.microsoft.com/es-ar',
+    },
+  },
+  {
+    name: 'Fira Code',
+    url: 'https://github.com/tonsky/FiraCode/blob/master/LEEME.md',
+    author: {
+      name: 'Nikita Prokopov [tonsky]',
+      url: 'https://github.com/tonsky',
+    },
+  },
+];
+
 export default function HomePage() {
   return (
     <>
-      <div className={styles.jorman}>
+      <div className={styles.dev}>
         <h2>Jorman Espinoza</h2>
         <h3>Desarrollador Full Stack</h3>
       </div>
@@ -41,8 +85,8 @@ export default function HomePage() {
         <br />
         Apasionado por las buenas prácticas, el código limpio y los patrones de diseño.
         <ul>
-          <li>Diseño y desarrollo desde páginas web hasta tiendas en línea.</li>
-          <li>Trabajo de manera efectiva en equipos de tecnología.</li>
+          <li key="li-1">Diseño y desarrollo desde páginas web hasta tiendas en línea.</li>
+          <li key="li-2">Trabajo de manera efectiva en equipos de tecnología.</li>
         </ul>
       </div>
 
@@ -88,78 +132,27 @@ export default function HomePage() {
       <section>
         <h4 className={styles.title}>Tipografías preferidas</h4>
         <ul>
-          <li>
-            <a
-              href="https://philpl.gumroad.com/l/dank-mono"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Dank Mono
-            </a>{' '}
-            - por{' '}
-            <a
-              href="https://philpl.gumroad.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Phil Pluckthun
-            </a>
-            .
-          </li>
-          <li>
-            <a
-              href="https://www.jetbrains.com/es-es/lp/mono"
-              target="_blank"
-              rel="noreferrer"
-            >
-              JetBrains Mono
-            </a>{' '}
-            - por{' '}
-            <a
-              href="https://www.jetbrains.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              JetBrains
-            </a>
-            .
-          </li>
-          <li>
-            <a
-              href="https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Cascadia Code
-            </a>{' '}
-            - por{' '}
-            <a
-              href="https://www.microsoft.com/es-ar"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Microsoft
-            </a>
-            .
-          </li>
-          <li>
-            <a
-              href="https://github.com/tonsky/FiraCode/blob/master/LEEME.md"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Fira Code
-            </a>{' '}
-            - por{' '}
-            <a
-              href="https://github.com/tonsky"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Nikita Prokopov [tonsky]
-            </a>
-            .
-          </li>
+          {typographies.map(typo => (
+            <li key={typo.name}>
+              <a
+                href={typo.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {typo.name}
+              </a>{' '}
+              - por{' '}
+              <a
+                href={typo.author.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {typo.author.name}
+              </a>
+              .
+            </li>
+          ))}
+
         </ul>
       </section>
 

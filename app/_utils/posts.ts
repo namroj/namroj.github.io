@@ -11,7 +11,7 @@ export type PostMetaData = {
   cover_image: string;
 };
 
-async function getPosts(): Promise<PostMetaData[]> {
+export async function getPosts(): Promise<PostMetaData[]> {
   const postsDirectory = path.join(process.cwd(), 'app/_posts');
   const filenames = await fs.readdir(postsDirectory);
 
@@ -36,5 +36,3 @@ async function getPosts(): Promise<PostMetaData[]> {
 
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
-
-export default getPosts;

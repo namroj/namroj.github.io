@@ -80,7 +80,7 @@ export default function Tools() {
 
   return (
     <ul className={styles.tools}>
-      {tools.map(tool => <TagItem item={tool} />)}
+      {tools.map(tool => <TagItem key={tool.name} item={tool} />)}
     </ul>
   );
 }

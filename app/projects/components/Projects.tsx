@@ -62,7 +62,7 @@ export default function Projects({
     </div>
   );
 
-  const projects = data.filter((item) => {
+  const filteredProjects = data.filter((item) => {
     const { tags, ...rest } = item;
     const itemValues = Object.values(rest).filter(
       (value) => typeof value !== 'object',
@@ -81,8 +81,8 @@ export default function Projects({
     return isTagSelected && isSearchTermPresent;
   });
 
-  const projectList =
-    projects.length === 0 ? (
+  const projects =
+    filteredProjects.length === 0 ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
           <LuPackageSearch />
@@ -94,7 +94,7 @@ export default function Projects({
     ) : (
       <ul className={styles.items}>
         <div className="content">
-          {projects.map((item: ProjectItemType) => (
+          {filteredProjects.map((item: ProjectItemType) => (
             <ProjectItem
               key={item.name}
               item={item}
@@ -117,7 +117,7 @@ export default function Projects({
         className={`${styles.timeline} ${mainWidth < 1280 && styles['main-reduced']}`}
       >
         <hr />
-        {projectList}
+        {projects}
       </div>
     </div>
   );

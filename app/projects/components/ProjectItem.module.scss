@@ -1,20 +1,26 @@
-// -- Project Item -----
-@mixin flexCentered($gap: 5px) {
+// -- project item
+@mixin flexCentered() {
   display: flex;
   align-items: center;
-  gap: $gap;
+  gap: calc(var(--gap) / 2);
 }
 
 .item {
   @include flexCentered;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
   margin: var(--gap) 0;
-  margin-bottom: calc(var(--gap) / 2);
-  padding: calc(var(--gap) / 2);
+  padding: var(--gap);
   border: 1px solid var(--footerBorderColor);
-  border-radius: calc(var(--gap) / 4);
+  border-radius: calc(var(--gap) / 2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
   list-style: none;
+  transition: var(--transition);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
 
   &:last-of-type {
     margin-bottom: unset;
@@ -24,22 +30,56 @@
     @include flexCentered;
   }
 
+  .year {
+    display: flex;
+    align-self: flex-end;
+    color: var(--headerNameColor);
+  }
+
   .title {
     font-size: 1rem;
   }
 
-  .logo {
-    background-color: var(--lightColor);
-    border-radius: calc(var(--gap) / 4);
-    min-width: 89px;
+  .year {
+    position: absolute;
+    right: calc(var(--gap) / 2);
+    top: calc(var(--gap) / 2);
+    font-size: 0.89rem;
+    color: var(--textSecondaryAccentColor);
+  }
 
-    &.dark {
-      background-color: var(--darkSemiColor);
+  .logo {
+    @include flexCentered;
+    width: 100%;
+    height: 89px;
+    max-width: 125px;
+    position: relative;
+    border-radius: calc(var(--gap) / 4);
+    padding: calc(var(--gap) * 0.25);
+    box-shadow: 0 0 2px var(--bgHoverAccentColor);
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 15px var(--bgHoverAccentColor);
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .image {
+        object-fit: contain;
+        object-position: center;
+        border-radius: calc(var(--gap) / 4);
+      }
     }
   }
 
   .url {
-    display: block;
+    display: flex;
+    gap: calc(var(--gap) / 4);
   }
 
   .links {
@@ -50,49 +90,14 @@
 
     a {
       font-style: italic;
+      cursor: pointer;
     }
   }
 
   .summary {
+    margin-bottom: 0;
     font-size: 0.8rem;
-    font-style: italic;
     color: var(--textSecondaryColor);
-  }
-
-  .tags {
-    @include flexCentered;
-    justify-content: space-between;
-    margin: calc(var(--gap) / 2) 0 0;
-
-    ul {
-      display: flex;
-      gap: calc(var(--gap) / 4);
-      flex-wrap: wrap;
-      margin: 0;
-
-      @media (width > 768px) {
-        max-width: 100%;
-      }
-
-      li {
-        list-style: none;
-        margin: 0;
-      }
-    }
-  }
-
-  .more {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-style: italic;
-    font-weight: bold;
-    color: var(--footerAnchorColor);
-    transition: color 0.25s ease-in-out;
-
-    &:hover {
-      color: var(--footerAnchorHoverColor);
-    }
   }
 
   .description {
@@ -101,12 +106,52 @@
     color: var(--textSecondaryColor);
     font-size: 0.8rem;
     font-style: italic;
-    transition: var(--transition);
 
     &.visible {
       color: var(--bgHoverAccentColor);
       height: auto;
       opacity: 1;
+      padding-bottom: calc(var(--gap) / 4);
+    }
+  }
+
+  .extra {
+    width: 100%;
+    @include flexCentered;
+
+    .more {
+      display: flex;
+      background-color: transparent;
+      border: none;
+      color: var(--footerAnchorColor);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--footerAnchorHoverColor);
+      }
+    }
+
+    .tags {
+      width: 100%;
+      @include flexCentered;
+      gap: var(--gap);
+
+      ul {
+        display: flex;
+        gap: calc(var(--gap) / 4);
+        margin: 0;
+
+        @media (width > 768px) {
+          max-width: 100%;
+        }
+
+        li {
+          list-style: none;
+          margin: 0;
+        }
+      }
     }
   }
 }
