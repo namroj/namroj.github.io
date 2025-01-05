@@ -3,7 +3,11 @@
   display: flex;
   gap: 5px;
   margin-left: var(--gap);
-  font-size: 0.8rem;
+  font-size: 0.5rem;
+
+  @media (min-width: 768px) {
+    font-size: 0.8rem;
+  }
 
   .item {
     display: flex;

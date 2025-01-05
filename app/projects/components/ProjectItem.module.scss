@@ -112,7 +112,6 @@
     &.visible {
       display: flex;
       color: var(--bgHoverAccentColor);
-      padding-bottom: calc(var(--gap) / 4);
     }
   }
 
@@ -121,7 +120,7 @@
     @include flexCentered;
 
     .more {
-      display: flex;
+      display: none; // TODO set 'flex' once whole project data has been added it to every project
       background-color: transparent;
       border: none;
       color: var(--footerAnchorColor);

@@ -37,7 +37,7 @@ export default function ProjectItem({
                                       highlightText,
                                     }: Props) {
   const { mainWidth } = useExpandCollapseContext();
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
   const toggleShowMore = () => setShowMore((prevState) => !prevState);
 
   return (
@@ -73,6 +73,14 @@ export default function ProjectItem({
         </div>
       </div>
 
+      <div
+        className={
+          classNames(styles.description, { [styles.visible]: showMore })
+        }
+      >
+        {highlightText(item.description)}
+      </div>
+
       <span className={styles.year}>[{item.year}]</span>
 
       <div className={styles.extra}>
@@ -87,29 +95,6 @@ export default function ProjectItem({
             {showMore ? <CiCircleMinus /> : <CiCirclePlus />}
           </button>
         )}
-
-        <div className={styles.links}>
-          {item.repository && (
-            <a
-              href={item.repository}
-              target="_blank"
-              rel="noreferrer"
-              className={styles.url}
-            >
-              <TbExternalLink /> Repositorio
-            </a>
-          )}
-          {item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              className={styles.url}
-            >
-              <TbExternalLink /> Sitio web
-            </a>
-          )}
-        </div>
       </div>
 
       {item.tags.length > 0 && (
@@ -129,12 +114,27 @@ export default function ProjectItem({
         </div>
       )}
 
-      <div
-        className={
-          classNames(styles.description, { [styles.visible]: showMore })
-        }
-      >
-        {highlightText(item.description)}
+      <div className={styles.links}>
+        {item.repository && (
+          <a
+            href={item.repository}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.url}
+          >
+            <TbExternalLink /> Repositorio
+          </a>
+        )}
+        {item.url && (
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.url}
+          >
+            <TbExternalLink /> Sitio web
+          </a>
+        )}
       </div>
     </li>
   );

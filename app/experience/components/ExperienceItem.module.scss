@@ -2,7 +2,11 @@
 .item {
   list-style: none;
   margin: var(--gap) 0;
-  min-width: 300px;
+  max-width: 100%;
+
+  @media (width > 768px) {
+    min-width: 300px;
+  }
 
   article {
     position: relative;
@@ -102,7 +106,7 @@
         display: flex;
         align-items: flex-start;
         position: relative;
-        padding-left: calc(var(--gap) * 1.5);
+        padding-left: var(--gap);
         margin: 0;
 
         .circle {

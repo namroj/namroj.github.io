@@ -45,7 +45,7 @@ export default function Experience({
 
   const filters = (
     <div
-      className={`${styles.filters} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
+      className={`${styles.filters} ${mainWidth < 993 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
         tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
@@ -111,11 +111,11 @@ export default function Experience({
 
   return (
     <div
-      className={`${styles.experience} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
+      className={`${styles.experience} ${mainWidth < 993 ? styles['main-reduced'] : ''}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
+        className={`${styles.timeline} ${mainWidth < 993 ? styles['main-reduced'] : ''}`}
       >
         <hr />
 

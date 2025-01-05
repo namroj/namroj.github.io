@@ -9,7 +9,7 @@ export default function Header() {
       <div className={styles.id}>
         <Link href="/" className={styles.image}>
           <Image
-            src={profileImage}
+            src={profileImage} // TODO update profile image
             alt="Jorman Espinoza - Imagen de perfil"
             priority
           />

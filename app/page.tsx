@@ -64,7 +64,7 @@ export default function HomePage() {
 
       <div className={styles.hero}>
         <Image
-          src={heroImage}
+          src={heroImage} // TODO update/improve hero image (maybe change it for a image/video slider)
           alt="Jorman Espinoza"
           layout="responsive"
           width={16}

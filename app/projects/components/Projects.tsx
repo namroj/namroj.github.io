@@ -46,7 +46,7 @@ export default function Projects({
 
   const filters = (
     <div
-      className={`${styles.filters} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
+      className={`${styles.filters} ${mainWidth < 993 ? styles['main-reduced'] : ''}`}
     >
       <TagsFilter
         tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
@@ -110,11 +110,11 @@ export default function Projects({
 
   return (
     <div
-      className={`${styles.projects} ${mainWidth < 1280 && styles['main-reduced']}`}
+      className={`${styles.projects} ${mainWidth < 993 && styles['main-reduced']}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 1280 && styles['main-reduced']}`}
+        className={`${styles.timeline} ${mainWidth < 993 && styles['main-reduced']}`}
       >
         <hr />
         {projects}
