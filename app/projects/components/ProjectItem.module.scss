@@ -47,7 +47,7 @@
     position: absolute;
     right: calc(var(--gap) / 2);
     top: calc(var(--gap) / 2);
-    font-size: 0.89rem;
+    font-size: 0.79rem;
     color: var(--textSecondaryAccentColor);
   }
 
@@ -89,7 +89,7 @@
     width: 100%;
     @include flexCentered;
     justify-content: flex-end;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 
     a {
       font-style: italic;
@@ -99,14 +99,14 @@
 
   .summary {
     margin-bottom: 0;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--textSecondaryColor);
   }
 
   .description {
     display: none;
     color: var(--textSecondaryColor);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-style: italic;
 
     &.visible {

@@ -21,7 +21,7 @@
     .date {
       right: var(--gap);
       color: var(--bgHoverAccentColor);
-      font-size: 0.8rem;
+      font-size: 0.7rem;
 
       @media (width > 768px) {
         position: absolute;
@@ -63,7 +63,7 @@
 
         .title {
           color: var(--textColor);
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           text-wrap: balance;
 
           @media (width > 768px) {
@@ -78,7 +78,7 @@
         }
 
         h4 {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           text-wrap: balance;
           margin-bottom: 0;
 
@@ -99,7 +99,7 @@
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: var(--textSecondaryColor);
       margin-bottom: 0;
 

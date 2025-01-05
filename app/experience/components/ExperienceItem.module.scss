@@ -141,7 +141,7 @@
     p,
     .description li {
       max-width: 85%;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: var(--textSecondaryColor);
       text-wrap: balance;
 
@@ -178,7 +178,7 @@
 
     .date {
       color: var(--bgHoverAccentColor);
-      font-size: 0.8rem;
+      font-size: 0.7rem;
 
       @media (width > 768px) {
         display: inline-flex;
