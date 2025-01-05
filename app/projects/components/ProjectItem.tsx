@@ -88,23 +88,6 @@ export default function ProjectItem({
           </button>
         )}
 
-        {item.tags.length > 0 && (
-          <div className={styles.tags}>
-            <ul className={styles.tags}>
-              {item.tags.map((tag) => (
-                <li key={tag}>
-                  <TagButton
-                    tag={tag}
-                    handleTagClick={handleTagClick}
-                    selectedTags={selectedTags}
-                    highlightText={highlightText}
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
         <div className={styles.links}>
           {item.repository && (
             <a
@@ -128,6 +111,23 @@ export default function ProjectItem({
           )}
         </div>
       </div>
+
+      {item.tags.length > 0 && (
+        <div className={styles.tags}>
+          <ul className={styles.tags}>
+            {item.tags.map((tag) => (
+              <li key={tag}>
+                <TagButton
+                  tag={tag}
+                  handleTagClick={handleTagClick}
+                  selectedTags={selectedTags}
+                  highlightText={highlightText}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div
         className={

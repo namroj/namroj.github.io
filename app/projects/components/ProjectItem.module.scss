@@ -22,12 +22,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 
-  &:last-of-type {
-    margin-bottom: unset;
-  }
-
   .identity {
     @include flexCentered;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (width > 768px) {
+      flex-direction: row;
+    }
   }
 
   .year {
@@ -37,6 +39,7 @@
   }
 
   .title {
+    margin-bottom: calc(var(--gap) / 4);
     font-size: 1rem;
   }
 
@@ -101,16 +104,14 @@
   }
 
   .description {
-    height: 0;
-    opacity: 0;
+    display: none;
     color: var(--textSecondaryColor);
     font-size: 0.8rem;
     font-style: italic;
 
     &.visible {
+      display: flex;
       color: var(--bgHoverAccentColor);
-      height: auto;
-      opacity: 1;
       padding-bottom: calc(var(--gap) / 4);
     }
   }
@@ -132,25 +133,30 @@
         color: var(--footerAnchorHoverColor);
       }
     }
+  }
 
-    .tags {
-      width: 100%;
-      @include flexCentered;
-      gap: var(--gap);
+  .tags {
+    width: 100%;
+    @include flexCentered;
+    flex-wrap: wrap;
+    gap: var(--gap);
 
-      ul {
-        display: flex;
-        gap: calc(var(--gap) / 4);
+    @media (width > 768px) {
+      flex-wrap: unset;
+    }
+
+    ul {
+      display: flex;
+      gap: calc(var(--gap) / 4);
+      margin: 0;
+
+      @media (width > 768px) {
+        max-width: 100%;
+      }
+
+      li {
+        list-style: none;
         margin: 0;
-
-        @media (width > 768px) {
-          max-width: 100%;
-        }
-
-        li {
-          list-style: none;
-          margin: 0;
-        }
       }
     }
   }

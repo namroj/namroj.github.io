@@ -1,16 +1,17 @@
 // -- main
 .main {
   position: relative;
-  min-height: 100svh;
-  padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5) calc(var(--headerHeight));
-  background-color: var(--mainBgColor);
-  color: var(--textColor);
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
+  padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5) calc(var(--headerHeight));
+  padding-left: calc(var(--gap) * 2.5);
+  background-color: var(--mainBgColor);
+  color: var(--textColor);
   transition: var(--expandCollapseTransition);
 
   @media (width > 1024px) {
-    padding: calc(var(--headerHeight) / 2) calc(var(--headerHeight) + var(--gap)) var(--headerHeight) calc(var(--gap) * 2);
+    padding-left: calc(var(--gap) * 2.5);
   }
 
   &-content {

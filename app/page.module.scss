@@ -50,15 +50,23 @@
 
 .hero {
   display: flex;
-  gap: var(--gap);
+  gap: calc(var(--gap) / 2);
+
+  @media (width > 768px) {
+    gap: var(--gap);
+  }
 
   .image {
-    margin-bottom: var(--gap);
     position: relative;
+    margin-bottom: calc(var(--gap) / 2);
+    border: 25px solid var(--accentColor);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border: 25px solid var(--accentColor);
     background-color: var(--footerBorderColor);
+
+    @media (width > 768px) {
+      margin-bottom: var(--gap);
+    }
   }
 
   .links {

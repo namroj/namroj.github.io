@@ -18,6 +18,7 @@ interface Typography {
   url: string;
 }
 
+// TODO extract typographies to its own component
 const typographies: Typography[] = [
   {
     name: 'Dank Mono',
