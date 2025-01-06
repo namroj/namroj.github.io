@@ -4,13 +4,14 @@
   min-height: 100dvh;
   display: flex;
   justify-content: center;
+  margin-bottom: var(--gap);
   padding: calc(var(--headerHeight) / 2) calc(var(--gap) * 1.5) calc(var(--headerHeight));
   padding-left: calc(var(--gap) * 2.5);
   background-color: var(--mainBgColor);
   color: var(--textColor);
   transition: var(--expandCollapseTransition);
 
-  @media (width > 1024px) {
+  @media (width > 993px) {
     padding-left: calc(var(--gap) * 2.5);
   }
 
@@ -18,7 +19,7 @@
     width: 100%;
     max-width: 100dvw;
 
-    @media (width > 1024px) {
+    @media (width > 993px) {
       max-width: 60dvw;
       width: 100%;
     }
