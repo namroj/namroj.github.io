@@ -16,9 +16,9 @@ export type ProjectItemType = {
   url?: string;
   repository?: string;
   logo: string;
-  tags: string[];
   bg_color: string;
   year: number;
+  tags: string[];
 }
 
 type Props = {
@@ -43,7 +43,7 @@ export default function ProjectItem({
   return (
     <li
       key={item.name}
-      className={`${styles.item} ${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
+      className={`${styles.item} ${mainWidth < COMPONENT_MIN_WIDTH ? styles.mainReduced : ''}`}
     >
       <div className={styles.identity}>
         {item.logo && (

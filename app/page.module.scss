@@ -49,11 +49,13 @@
 }
 
 .hero {
+  max-width: calc(100% - calc(var(--gap) * 1.25));
   display: flex;
   gap: calc(var(--gap) / 2);
 
   @media (width > 768px) {
     gap: var(--gap);
+    max-width: calc(100% - calc(var(--gap) * 2));
   }
 
   .image {
@@ -82,4 +84,9 @@
       }
     }
   }
+}
+
+.location {
+  font-size: 0.7rem;
+  text-align: right;
 }

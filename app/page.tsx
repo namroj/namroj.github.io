@@ -171,7 +171,7 @@ export default function HomePage() {
 
       <hr className={styles.divider} />
 
-      <p style={{ textAlign: 'right' }}>
+      <p className={styles.location}>
         -- Mi camino de Venezuela a <Link href="/location">Argentina</Link>.
       </p>
     </>

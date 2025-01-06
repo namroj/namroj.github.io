@@ -37,7 +37,7 @@ export function ExperienceItem({
   return (
     <li className={styles.item}>
       <article
-        className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles['main-reduced'] : ''}`}
+        className={`${mainWidth < COMPONENT_MIN_WIDTH ? styles.mainReduced : ''}`}
       >
         <div className={styles.entity}>
           <a href={item.entity.url} target="_blank" rel="noreferrer">

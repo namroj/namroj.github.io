@@ -24,7 +24,7 @@ export default function PostItem({
                                  }: Props) {
   const { mainWidth } = useExpandCollapseContext();
   return (
-    <li className={`${styles['post-item']} ${mainWidth < COMPONENT_MIN_WIDTH && styles['main-reduced']}`}>
+    <li className={`${styles['post-item']} ${mainWidth < COMPONENT_MIN_WIDTH && styles.mainReduced}`}>
       <div className={styles.data}>
         {item.cover_image && (
           <Link href={`/blog/${item.slug}`} className={styles.cover}>

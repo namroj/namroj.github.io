@@ -96,7 +96,7 @@
     gap: calc(var(--gap) / 2);
   }
 
-  &.main-reduced {
+  &.mainReduced {
     @media (width > 768px) {
       .data {
         flex-direction: column;

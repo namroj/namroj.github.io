@@ -9,7 +9,7 @@
     min-width: calc(var(--md) - var(--gap));
     flex-direction: row-reverse;
 
-    &.main-reduced {
+    &.mainReduced {
       min-width: unset;
       flex-direction: column;
     }
@@ -26,7 +26,7 @@
     @media (width > 993px) {
       width: 70%;
 
-      &.main-reduced {
+      &.mainReduced {
         width: 100%;
       }
     }
@@ -70,7 +70,7 @@
       width: 30%;
       margin-top: unset;
 
-      &.main-reduced {
+      &.mainReduced {
         width: 100%;
       }
     }

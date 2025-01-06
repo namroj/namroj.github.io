@@ -48,7 +48,7 @@ export default function Posts({ posts }: Props) {
 
   const filters = (
     <div
-      className={`${styles.filters} ${mainWidth < 1280 ? styles['main-reduced'] : ''}`}
+      className={`${styles.filters} ${mainWidth < 1280 ? styles.mainReduced : ''}`}
     >
       <TagsFilter
         tags={Array.from(new Set(posts.flatMap((item) => item.tags)))}
@@ -109,11 +109,11 @@ export default function Posts({ posts }: Props) {
 
   return (
     <div
-      className={`${styles.posts} ${mainWidth < 1920 && styles['main-reduced']}`}
+      className={`${styles.posts} ${mainWidth < 1920 && styles.mainReduced}`}
     >
       {filters}
       <div
-        className={`${styles.timeline} ${mainWidth < 1920 && styles['main-reduced']}`}
+        className={`${styles.timeline} ${mainWidth < 1920 && styles.mainReduced}`}
       >
         <hr />
 
