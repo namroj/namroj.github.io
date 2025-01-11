@@ -3,56 +3,12 @@ import { Link } from 'next-view-transitions';
 import Links from '@/components/sidebar/links/Links';
 import Skills from '@/components/skills/Skills';
 import Tools from '@/components/tools/Tools';
+import Typographies from '@/components/typographies/Typographies';
 import heroImage from '@/assets/images/hero.jpg';
 import { ImBooks } from 'react-icons/im';
 import { FaCode, FaKeyboard } from 'react-icons/fa6';
 import { MdLaptop } from 'react-icons/md';
 import styles from './page.module.scss';
-
-interface Typography {
-  name: string;
-  author: {
-    name: string;
-    url: string;
-  };
-  url: string;
-}
-
-// TODO extract typographies to its own component
-const typographies: Typography[] = [
-  {
-    name: 'Dank Mono',
-    url: 'https://philpl.gumroad.com/l/dank-mono',
-    author: {
-      name: 'Phil Pluckthun',
-      url: 'https://philpl.gumroad.com',
-    },
-  },
-  {
-    name: 'JetBrains Mono',
-    url: 'https://www.jetbrains.com/es-es/lp/mono',
-    author: {
-      name: 'JetBrains',
-      url: 'https://www.jetbrains.com',
-    },
-  },
-  {
-    name: 'Cascadia Code',
-    url: 'https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions',
-    author: {
-      name: 'Microsoft',
-      url: 'https://www.microsoft.com/es-ar',
-    },
-  },
-  {
-    name: 'Fira Code',
-    url: 'https://github.com/tonsky/FiraCode/blob/master/LEEME.md',
-    author: {
-      name: 'Nikita Prokopov [tonsky]',
-      url: 'https://github.com/tonsky',
-    },
-  },
-];
 
 export default function HomePage() {
   return (
@@ -64,7 +20,7 @@ export default function HomePage() {
 
       <div className={styles.hero}>
         <Image
-          src={heroImage} // TODO update/improve hero image (maybe change it for a image/video slider)
+          src={heroImage} // TODO (namroj) update/improve hero image (maybe change it for a image/video slider)
           alt="Jorman Espinoza"
           layout="responsive"
           width={16}
@@ -144,29 +100,7 @@ export default function HomePage() {
 
       <section>
         <h4 className={styles.title}>Tipografías preferidas</h4>
-        <ul>
-          {typographies.map(typo => (
-            <li key={typo.name}>
-              <a
-                href={typo.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {typo.name}
-              </a>{' '}
-              - por{' '}
-              <a
-                href={typo.author.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {typo.author.name}
-              </a>
-              .
-            </li>
-          ))}
-
-        </ul>
+        <Typographies />
       </section>
 
       <hr className={styles.divider} />
