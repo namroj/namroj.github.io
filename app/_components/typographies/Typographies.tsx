@@ -1,4 +1,4 @@
-import favoriteFonts from './data.json';
+import fonts from './data.json';
 
 type Typography = {
   name: string;
@@ -10,27 +10,26 @@ type Typography = {
 }
 
 export default function Typographies() {
-  const typographies: Typography[] = favoriteFonts;
+  const favoriteFonts: Typography[] = fonts;
 
   return <ul>
-    {typographies.map(typo => (
-      <li key={typo.name}>
+    {favoriteFonts.map(font => (
+      <li key={font.name}>
         <a
-          href={typo.url}
+          href={font.url}
           target="_blank"
           rel="noreferrer"
         >
-          {typo.name}
+          {font.name}
         </a>{' '}
         - por{' '}
         <a
-          href={typo.author.url}
+          href={font.author.url}
           target="_blank"
           rel="noreferrer"
         >
-          {typo.author.name}
-        </a>
-        .
+          {font.author.name}
+        </a>.
       </li>
     ))}
   </ul>;
