@@ -94,15 +94,17 @@ export default function Projects({
     ) : (
       <ul className={styles.items}>
         <div className="content">
-          {filteredProjects.map((item: ProjectItemType) => (
-            <ProjectItem
-              key={item.name}
-              item={item}
-              handleTagClick={handleTagClick}
-              selectedTags={selectedTags}
-              highlightText={highlightText}
-            />
-          ))}
+          {filteredProjects
+            .filter((item: ProjectItemType) => item.visible)
+            .map((item: ProjectItemType) => (
+              <ProjectItem
+                key={item.name}
+                item={item}
+                handleTagClick={handleTagClick}
+                selectedTags={selectedTags}
+                highlightText={highlightText}
+              />
+            ))}
           <div className="fade-effect" />
         </div>
       </ul>

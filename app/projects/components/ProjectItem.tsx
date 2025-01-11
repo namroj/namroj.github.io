@@ -19,6 +19,7 @@ export type ProjectItemType = {
   bg_color: string;
   year: number;
   tags: string[];
+  visible: boolean;
 }
 
 type Props = {

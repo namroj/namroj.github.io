@@ -5,6 +5,7 @@
     "description": "El sitio web de Daza Real Estate (https://dazarealestate.com) es una plataforma inmobiliaria que presenta propiedades de alta gama. El diseño del sitio es elegante y funcional, centrado en brindar una excelente experiencia de usuario tanto en dispositivos de escritorio como móviles. Se utilizaron tecnologías como HTML, SASS y JavaScript para el desarrollo, y el diseño visual fue creado utilizando Figma. La plataforma destaca por su enfoque en la presentación clara de las propiedades y facilita el contacto directo con los agentes inmobiliarios.",
     "url": "https://dazarealestate.com",
     "logo": "/images/projects/daza/logo.svg",
+    "bg_color": "#e5e5e5",
     "tags": [
       "HTML",
       "SASS",
@@ -12,8 +13,8 @@
       "Figma",
       "2022"
     ],
-    "bg_color": "#e5e5e5",
-    "year": 2022
+    "year": 2022,
+    "visible": true
   },
   {
     "name": "Proper | Daza Real Estate",
@@ -21,14 +22,15 @@
     "description": "El sitio web Proper | Daza Real Estate (https://dazarealestate.com/proper) es una plataforma dedicada a mostrar propiedades exclusivas, diseñada para clientes interesados en bienes raíces de alta calidad. Con un diseño profesional y elegante, el sitio ofrece una experiencia de usuario fluida, integrando navegación intuitiva y elementos visuales optimizados para diferentes dispositivos. Fue desarrollado utilizando HTML, SASS y JavaScript, con los diseños iniciales elaborados en Figma. Este proyecto se enfoca en la presentación clara de propiedades y la facilidad de contacto.",
     "url": "https://dazarealestate.com/proper",
     "logo": "/images/projects/daza/proper/logo.svg",
+    "bg_color": "#1b4136",
     "tags": [
       "HTML",
       "SASS",
       "JavaScript",
       "Figma"
     ],
-    "bg_color": "#1b4136",
-    "year": 2022
+    "year": 2022,
+    "visible": true
   },
   {
     "name": "Código Natural",
@@ -36,6 +38,8 @@
     "description": "El sitio web de Código Natural (https://codigonatural.com.ar/) está diseñado para destacar productos naturales y sustentables. El diseño del sitio es moderno, limpio y enfocado en la experiencia del usuario, con una navegación intuitiva y elementos visuales que reflejan los valores de la marca. Fue desarrollado con HTML, SASS y JavaScript, y la interfaz visual se diseñó inicialmente en Figma, asegurando una representación precisa del estilo deseado. Este proyecto enfatiza la importancia del diseño receptivo y la optimización de carga para dispositivos móviles y de escritorio.",
     "url": "https://codigonatural.com.ar",
     "logo": "/images/projects/codigo-natural/logo.png",
+    "bg_color": "#263e37",
+    "year": 2022,
     "tags": [
       "HTML",
       "SASS",
@@ -43,8 +47,7 @@
       "Figma",
       "2022"
     ],
-    "bg_color": "#263e37",
-    "year": 2022
+    "visible": true
   },
   {
     "name": "Sarapura - Signatures",
@@ -52,6 +55,8 @@
     "description": "El sitio web 'Sarapura - Signatures' (https://sarapura-signatures.netlify.app/) es una herramienta diseñada para facilitar la creación y descarga de firmas de correo electrónico personalizadas para los miembros del equipo de Sarapura. Desarrollado con tecnologías estándar como HTML, CSS y JavaScript, el diseño visual se realizó utilizando Illustrator para garantizar una interfaz atractiva y coherente con la identidad de la empresa. La aplicación permite a los usuarios generar firmas profesionales de manera eficiente.",
     "url": "https://sarapura-signatures.netlify.app",
     "logo": "/images/projects/sarapura/logo.png",
+    "bg_color": "#fff",
+    "year": 2021,
     "tags": [
       "HTML",
       "CSS",
@@ -59,8 +64,7 @@
       "Illustrator",
       "2021"
     ],
-    "bg_color": "#fff",
-    "year": 2021
+    "visible": false
   },
   {
     "name": "DUB",
@@ -68,6 +72,8 @@
     "description": "El sitio web de DUB (https://dub.com.ar/) presenta a un estudio de arquitectura y urbanismo con sede en Buenos Aires, Argentina, enfocado en proyectos de sustentabilidad creativa en diseño arquitectónico y urbano. Con un enfoque holístico y multidisciplinario, DUB se dedica a desarrollar diseños innovadores y genuinamente responsables con el medio ambiente, arraigados al lugar, la geografía y el paisaje, buscando generar espacios que mejoren la calidad de vida y el confort de las personas. El sitio está desarrollado con tecnologías estándar como HTML, CSS, JavaScript y PHP, utilizando una base de datos MySQL para gestionar el contenido dinámico. El diseño visual se basa en archivos de Illustrator, asegurando una interfaz atractiva y coherente con la identidad del estudio.",
     "url": "https://dub.com.ar",
     "logo": "/images/projects/dub/logo.svg",
+    "bg_color": "#fff",
+    "year": 2020,
     "tags": [
       "HTML",
       "CSS",
@@ -77,8 +83,7 @@
       "Illustrator",
       "2020"
     ],
-    "bg_color": "#fff",
-    "year": 2020
+    "visible": true
   },
   {
     "name": "Pablo Manso",
@@ -86,6 +91,8 @@
     "description": "El sitio web de Pablo Manso (https://pablomanso.com/) sirve como una plataforma para presentar su portafolio de arte, incluyendo galerías de sus pinturas, un catálogo de arte de 2020, biografía, noticias sobre exposiciones y eventos, y detalles de contacto. Desarrollado con tecnologías estándar como HTML, CSS, JavaScript y PHP, el sitio también utiliza una base de datos MySQL para gestionar y mostrar dinámicamente el contenido de las obras de arte y las actualizaciones de noticias. El diseño del sitio se basa en archivos de Illustrator, lo que proporciona una interfaz visualmente atractiva y coherente con la estética del artista.",
     "url": "https://pablomanso.com",
     "logo": "/images/projects/pablo-manso/logo.jpeg",
+    "bg_color": "#fff",
+    "year": 2020,
     "tags": [
       "HTML",
       "CSS",
@@ -95,8 +102,7 @@
       "Illustrator",
       "2020"
     ],
-    "bg_color": "#fff",
-    "year": 2020
+    "visible": true
   },
   {
     "name": "Frigorífico Gorina",
@@ -104,6 +110,8 @@
     "description": "El sitio web de Frigorífico Gorina (https://www.friggorina.com/) presenta a la empresa como un actor destacado en la industria cárnica argentina, con una moderna planta industrial ubicada en La Plata. Desarrollado con tecnologías estándar como HTML, CSS y JavaScript, el diseño del sitio se basó en archivos de Illustrator para lograr una interfaz visualmente atractiva y funcional. El contenido resalta la historia de la empresa, sus valores, objetivos y compromiso con la calidad, además de proporcionar información detallada sobre sus productos y mercados de exportación.",
     "url": "https://www.friggorina.com",
     "logo": "/images/projects/friggorina/logo.svg",
+    "bg_color": "#d9001d",
+    "year": 2019,
     "tags": [
       "HTML",
       "CSS",
@@ -111,8 +119,7 @@
       "Illustrator",
       "2019"
     ],
-    "bg_color": "#d9001d",
-    "year": 2019
+    "visible": true
   },
   {
     "name": "Boca de Toro",
@@ -120,6 +127,8 @@
     "description": "El sitio web de Boca de Toro (https://www.bocadetoro.com/) presenta un restaurante que fusiona la cocina argentina con raíces españolas, liderado por el chef Agustín Monticelli. El diseño del sitio se basó en un archivo de Illustrator (.ai), proporcionando una estructura visual detallada. Desarrollado con HTML, CSS, JavaScript y PHP, el sitio integra WordPress para gestionar el sistema de reservas, utilizando plugins específicos para facilitar la comunicación por correo electrónico. Esta combinación de tecnologías permite una experiencia de usuario fluida y una gestión eficiente del contenido.",
     "url": "https://www.bocadetoro.com",
     "logo": "/images/projects/boca-de-toro/logo.svg",
+    "bg_color": "#111",
+    "year": 2019,
     "tags": [
       "HTML",
       "CSS",
@@ -129,8 +138,7 @@
       "Illustrator",
       "2019"
     ],
-    "bg_color": "#111",
-    "year": 2019
+    "visible": true
   },
   {
     "name": "Las Yungas",
@@ -138,6 +146,8 @@
     "description": "El sitio web Las Yungas - Country & Golf (https://www.lasyungas.com/), es una plataforma digital que destaca las principales características del country: su reserva ecológica privada, el campo de golf y sus áreas residenciales. Construido con tecnologías estándar como HTML, CSS, JavaScript y con bloques dinámicos manejados mediante PHP, el sitio ofrece una experiencia visualmente atractiva, responsiva y de fácil mantenimiento.",
     "url": "https://lasyungas.com",
     "logo": "/images/projects/las-yungas/logo.svg",
+    "bg_color": "#fff",
+    "year": 2018,
     "tags": [
       "HTML",
       "CSS",
@@ -146,7 +156,6 @@
       "Illustrator",
       "2018"
     ],
-    "bg_color": "#fff",
-    "year": 2018
+    "visible": true
   }
 ]
