@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Dank Mono",
+    "url": "https://philpl.gumroad.com/l/dank-mono",
+    "author": {
+      "name": "Phil Pluckthun",
+      "url": "https://philpl.gumroad.com"
+    }
+  },
+  {
+    "name": "JetBrains Mono",
+    "url": "https://www.jetbrains.com/es-es/lp/mono",
+    "author": {
+      "name": "JetBrains",
+      "url": "https://www.jetbrains.com"
+    }
+  },
+  {
+    "name": "Cascadia Code",
+    "url": "https://learn.microsoft.com/es-es/windows/terminal/cascadia-code#cascadia-code-versions",
+    "author": {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com/es-ar"
+    }
+  },
+  {
+    "name": "Fira Code",
+    "url": "https://github.com/tonsky/FiraCode/blob/master/LEEME.md",
+    "author": {
+      "name": "Nikita Prokopov [tonsky]",
+      "url": "https://github.com/tonsky"
+    }
+  }
+]

@@ -1,0 +1,78 @@
+// -- experience
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-top: var(--gap);
+
+  @media (width > 993px) {
+    min-width: calc(var(--md) - var(--gap));
+    flex-direction: row-reverse;
+
+    &.mainReduced {
+      min-width: unset;
+      flex-direction: column;
+    }
+  }
+
+  hr {
+    margin: 0 0 var(--gap);
+    border-color: var(--textSecondaryColor);
+  }
+
+  .timeline {
+    width: 100%;
+
+    @media (width > 993px) {
+      width: 70%;
+
+      &.mainReduced {
+        width: 100%;
+      }
+    }
+
+    .highlight {
+      background-color: var(--bgHoverAccentColor);
+      color: var(--darkColor);
+    }
+
+    .empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--textSecondaryColor);
+      font-size: 0.8rem;
+      text-wrap: balance;
+
+      span {
+        text-align: center;
+      }
+
+      .icon {
+        font-size: 4rem;
+      }
+    }
+
+    .items {
+      @media (width > 768px) {
+        max-height: 70dvh;
+        overflow-y: auto;
+        padding: 0 var(--gap) var(--gap) calc(var(--gap) / 4);
+      }
+    }
+  }
+
+  .filters {
+    width: 100%;
+    margin-top: var(--gap);
+
+    @media (width > 993px) {
+      width: 30%;
+      margin-top: unset;
+
+      &.mainReduced {
+        width: 100%;
+      }
+    }
+  }
+}

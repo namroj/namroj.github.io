@@ -1,0 +1,210 @@
+// -- experience item
+.item {
+  list-style: none;
+  margin: var(--gap) 0;
+  max-width: 100%;
+
+  @media (width > 768px) {
+    min-width: 300px;
+  }
+
+  article {
+    position: relative;
+    padding: var(--gap);
+    border-radius: calc(var(--gap) / 2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+    transition: var(--transition);
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    }
+
+    .entity {
+      display: inline-flex;
+      align-items: center;
+      margin: var(--gap) 0 calc(var(--gap) / 2);
+      gap: 5px;
+
+      @media (width > 768px) {
+        margin-top: 0;
+      }
+
+      * {
+        display: inline-flex;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--gap) / 4);
+
+        @media (width > 768px) {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      p {
+        display: contents;
+
+        &.location {
+          max-width: unset;
+        }
+      }
+
+      h3 {
+        color: var(--textColor);
+        font-size: 1rem;
+        text-wrap: balance;
+        max-width: 90%;
+        transition: var(--transition);
+
+        &:hover {
+          color: var(--bgHoverAccentColor);
+        }
+      }
+
+      img {
+        width: calc(var(--gap) * 2.425);
+        height: calc(var(--gap) * 2.425);
+        border-radius: 75%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        background: var(--textSecondaryColor);
+        object-fit: cover;
+        transition: var(--transition);
+
+        &:hover {
+          box-shadow: 0 0 15px var(--bgHoverAccentColor);
+        }
+      }
+    }
+
+    h4 {
+      max-width: 85%;
+      font-size: 0.8rem;
+      text-wrap: balance;
+
+      @media (width > 768px) {
+        max-width: 100%;
+      }
+
+      a {
+        color: var(--bgAccentColor);
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          color: var(--bgHoverAccentColor);
+        }
+      }
+    }
+
+    .timeline {
+      position: relative;
+      margin-left: calc(var(--gap) / 1.5);
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        padding-left: var(--gap);
+        margin: 0;
+
+        .circle {
+          width: calc(var(--gap) / 2);
+          height: calc(var(--gap) / 2);
+          background-color: var(--textSecondaryColor);
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: calc(var(--gap) / 5);
+        }
+
+        .line {
+          position: absolute;
+          width: 1px;
+          top: calc(var(--gap) * 1.2);
+          left: calc(var(--gap) / 8 + 1px);
+          bottom: calc(var(--gap) / 3.8);
+          background-color: var(--textSecondaryColor);
+        }
+
+        &:last-child .line {
+          display: none;
+        }
+
+        .position {
+          flex: 1;
+        }
+      }
+    }
+
+    p,
+    .description li {
+      max-width: 85%;
+      font-size: 0.7rem;
+      color: var(--textSecondaryColor);
+      text-wrap: balance;
+
+      @media (width > 768px) {
+        max-width: 90%;
+      }
+
+      &.description {
+        margin-top: 5px;
+        max-width: 90%;
+        text-wrap: pretty;
+
+        @media (width > 768px) {
+          max-width: 100%;
+        }
+
+        li {
+          list-style: '- ';
+          margin-bottom: 1px;
+        }
+      }
+
+      &.highlight-text {
+        color: var(--bgHoverAccentColor);
+        font-style: italic;
+        max-width: 85%;
+        text-wrap: pretty;
+
+        @media (width > 768px) {
+          max-width: 95%;
+        }
+      }
+    }
+
+    .date {
+      color: var(--bgHoverAccentColor);
+      font-size: 0.7rem;
+
+      @media (width > 768px) {
+        display: inline-flex;
+      }
+    }
+
+    .tags {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 0;
+
+        @media (width > 768px) {
+          max-width: 85%;
+        }
+
+        li {
+          list-style: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

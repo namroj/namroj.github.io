@@ -1,0 +1,162 @@
+// -- project item
+@mixin flexCentered() {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) / 2);
+}
+
+.item {
+  @include flexCentered;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: var(--gap) 0;
+  padding: var(--gap);
+  border: 1px solid var(--footerBorderColor);
+  border-radius: calc(var(--gap) / 2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  list-style: none;
+  transition: var(--transition);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+
+  .identity {
+    @include flexCentered;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (width > 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .year {
+    display: flex;
+    align-self: flex-end;
+    color: var(--headerNameColor);
+  }
+
+  .title {
+    margin-bottom: calc(var(--gap) / 4);
+    font-size: 1rem;
+  }
+
+  .year {
+    position: absolute;
+    right: calc(var(--gap) / 2);
+    top: calc(var(--gap) / 2);
+    font-size: 0.79rem;
+    color: var(--textSecondaryAccentColor);
+  }
+
+  .logo {
+    @include flexCentered;
+    width: 100%;
+    height: 89px;
+    max-width: 125px;
+    position: relative;
+    border-radius: calc(var(--gap) / 4);
+    padding: calc(var(--gap) * 0.25);
+    box-shadow: 0 0 2px var(--bgHoverAccentColor);
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 15px var(--bgHoverAccentColor);
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .image {
+        object-fit: contain;
+        object-position: center;
+        border-radius: calc(var(--gap) / 4);
+      }
+    }
+  }
+
+  .url {
+    display: flex;
+    gap: calc(var(--gap) / 4);
+  }
+
+  .links {
+    width: 100%;
+    @include flexCentered;
+    justify-content: flex-end;
+    font-size: 0.7rem;
+
+    a {
+      font-style: italic;
+      cursor: pointer;
+    }
+  }
+
+  .summary {
+    margin-bottom: 0;
+    font-size: 0.7rem;
+    color: var(--textSecondaryColor);
+  }
+
+  .description {
+    display: none;
+    color: var(--textSecondaryColor);
+    font-size: 0.7rem;
+    font-style: italic;
+
+    &.visible {
+      display: flex;
+      color: var(--bgHoverAccentColor);
+    }
+  }
+
+  .extra {
+    width: 100%;
+    @include flexCentered;
+
+    .more {
+      display: none; // TODO set 'flex' once whole project data has been added it to every project
+      background-color: transparent;
+      border: none;
+      color: var(--footerAnchorColor);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--footerAnchorHoverColor);
+      }
+    }
+  }
+
+  .tags {
+    width: 100%;
+    @include flexCentered;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+    @media (width > 768px) {
+      flex-wrap: unset;
+    }
+
+    ul {
+      display: flex;
+      gap: calc(var(--gap) / 4);
+      margin: 0;
+
+      @media (width > 768px) {
+        max-width: 100%;
+      }
+
+      li {
+        list-style: none;
+        margin: 0;
+      }
+    }
+  }
+}

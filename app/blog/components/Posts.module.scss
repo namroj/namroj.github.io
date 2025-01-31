@@ -1,0 +1,78 @@
+// -- post list
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-top: var(--gap);
+
+  @media (width > 1920px) {
+    min-width: calc(var(--md) - var(--gap));
+    flex-direction: row-reverse;
+  }
+
+  hr {
+    margin: 0 0 var(--gap);
+    border-color: var(--textSecondaryColor);
+  }
+
+  .timeline {
+    width: 100%;
+
+    @media (width > 1920px) {
+      width: 70%;
+
+      &.mainReduced {
+        width: 100%;
+      }
+    }
+
+    .highlight {
+      background-color: var(--bgHoverAccentColor);
+      color: var(--darkColor);
+    }
+
+    .empty {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gap);
+      align-items: center;
+      color: var(--textSecondaryColor);
+      font-size: 0.8rem;
+      text-wrap: balance;
+
+      span {
+        text-align: center;
+      }
+
+      .icon {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  .filters {
+    width: 100%;
+    margin-top: var(--gap);
+
+    @media (width > 1280px) {
+      width: 30%;
+      margin-top: unset;
+
+      &.mainReduced {
+        width: 100%;
+      }
+    }
+  }
+
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+
+    @media (width > 768px) {
+      max-height: 55dvh;
+      overflow-y: auto;
+      padding: calc(var(--gap) / 4) var(--gap) var(--gap) calc(var(--gap) / 4);
+    }
+  }
+}

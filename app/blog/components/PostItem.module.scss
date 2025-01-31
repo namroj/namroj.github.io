@@ -1,0 +1,129 @@
+// -- post item
+.post-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: calc(var(--gap) / 2);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
+  transition: var(--transition);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+
+  .data {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (width > 768px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: var(--gap);
+    }
+
+    .cover {
+      position: relative;
+      width: 100%;
+      height: 189px;
+      max-width: 100%;
+      margin-bottom: calc(var(--gap) / 2);
+      overflow: hidden;
+
+      @media (width > 768px) {
+        max-width: 180px;
+        height: 130px;
+        margin-bottom: unset;
+      }
+
+      img {
+        border-radius: calc(var(--gap) / 2);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        object-fit: cover;
+
+        @media (width > 768px) {
+          padding: 0;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: calc(var(--gap) / 2);
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+      padding: 0 var(--gap) var(--gap);
+
+      @media (width > 768px) {
+        padding: 0;
+      }
+    }
+
+    .title {
+      max-width: 80%;
+      margin-bottom: calc(var(--gap) / 2);
+      text-wrap: pretty;
+    }
+
+    .summary {
+      margin-bottom: calc(var(--gap) / 2);
+      color: var(--textSecondaryColor);
+      font-size: 0.8rem;
+      font-style: italic;
+      text-wrap: pretty;
+    }
+
+    .date {
+      float: right;
+      margin-bottom: calc(var(--gap) / 2);
+      color: var(--bgHoverAccentColor);
+      font-size: 0.8rem;
+
+      @media (width > 768px) {
+        position: absolute;
+        top: var(--gap);
+        right: var(--gap);
+      }
+    }
+  }
+
+  .tags {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: calc(var(--gap) / 2);
+  }
+
+  &.mainReduced {
+    @media (width > 768px) {
+      .data {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+
+        .cover {
+          width: 100%;
+          height: 200px;
+          max-width: 100%;
+
+          img {
+            border-radius: calc(var(--gap) / 2);
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        .text {
+          padding: 0 var(--gap) var(--gap);
+
+          .date {
+            position: unset;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+// -- breadcrumbs
+.breadcrumbs {
+  display: flex;
+  margin-bottom: calc(var(--gap) / 2);
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    padding: calc(var(--gap) / 8);
+    padding-right: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--breadcrumbItemColor);
+
+    a,
+    span {
+      font-family: var(--jetBrainsMonoFont), monospace;
+    }
+
+    a,
+    .current {
+      display: flex;
+
+      &.linked {
+        font-weight: bold;
+        color: var(--breadcrumbLinkedItemColor);
+        transition: color 0.25s ease-in-out;
+
+        &:hover {
+          color: var(--breadcrumbLinkedItemHoverColor);
+        }
+      }
+
+      svg {
+        display: flex;
+        align-self: center;
+        margin-right: calc(var(--gap) / 3);
+        transition: color 0.25s ease-in-out;
+      }
+    }
+
+    .connector {
+      margin: 0 calc(var(--gap) / 4);
+      font-size: 1rem;
+    }
+  }
+}

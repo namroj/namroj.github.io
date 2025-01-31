@@ -1,0 +1,21 @@
+// -- sidebar
+.sidebar {
+  position: fixed;
+  width: var(--sidebarWidth);
+  height: 100dvh;
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--sidebarBgColor);
+  transition: var(--expandCollapseTransition);
+  z-index: 1;
+
+  &.expanded {
+    width: var(--sidebarWidth);
+  }
+
+  &.collapsed {
+    margin-left: calc((var(--sidebarWidth) * -1) + var(--gap));
+  }
+}

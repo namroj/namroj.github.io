@@ -1,0 +1,22 @@
+// -- tag button
+.tag {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  code {
+    padding: 2px 3px;
+    border-radius: 3px;
+    background-color: var(--tagAccentColor);
+    color: var(--textColor);
+    font-size: 0.7rem;
+
+    &:hover,
+    &.active {
+      background-color: var(--tagBgHoverAccentColor);
+      color: var(--bgColor);
+    }
+  }
+}

@@ -1,0 +1,135 @@
+// -- themes
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+[data-theme='light'] {
+  // general
+  --bgColor: var(--lightColor);
+  --textColor: var(--darkSemiColor);
+  --textSecondaryColor: var(--darkGrayColor);
+  --textAccentColor: var(--lightGrayColor);
+  --textSecondaryAccentColor: var(--purpleColor);
+  --bgAccentColor: var(--blueColor);
+  --bgHoverAccentColor: var(--purpleColor);
+  // scrollbar
+  --scrollbarTrackColor: var(--lightGrayColor);
+  --scrollbarThumbColor: var(--blueColor);
+  // header
+  --headerBorderColor: var(--lightGrayColor);
+  --headerNameColor: var(--darkGrayAlternativeColor);
+  --headerUsernameTextColor: var(--orangeColor);
+  --headerUsernameHoverTextColor: var(--greenColor);
+  --headerProfessionTextColor: var(--blueColor);
+  // sidebar
+  --sidebarBgColor: var(--lightColor);
+  --sidebarTogglerTextColor: var(--darkSemiColor);
+  --sidebarTogglerHoverTextColor: var(--lightSemiColor);
+  --sidebarTogglerBgColor: var(--blueColor);
+  --sidebarTogglerHoverBgColor: var(--purpleColor);
+  --sidebarToggleIconColor: var(--darkSemiColor);
+  // nav
+  --navBgColor: var(--lightSemiColor);
+  --navTextColor: var(--darkGrayColor);
+  --navActiveTextColor: var(--blueColor);
+  --navHoverTextColor: var(--purpleColor);
+  // theme
+  --activeThemeColor: var(--blueColor);
+  // main
+  --mainBgColor: var(--lightSemiColor);
+  --mainHeadingColor: var(--darkSemiColor);
+  // main - breadcrumbs
+  --breadcrumbItemColor: var(--darkGrayColor);
+  --breadcrumbLinkedItemColor: var(--blueColor);
+  --breadcrumbLinkedItemHoverColor: var(--redColor);
+  --breadcrumbBorderColor: var(--blueColor);
+  // footer
+  --footerBgColor: var(--lightSemiColor);
+  --footerBorderColor: var(--lightGrayColor);
+  --footerAnchorColor: var(--blueColor);
+  --footerAnchorHoverColor: var(--purpleColor);
+  // tag
+  --tagAccentColor: var(--lightGrayColor);
+  --tagBgHoverAccentColor: var(--blueColor);
+  // footer - breadcrumbs
+  --footerBreadcrumbItemColor: var(--darkGrayColor);
+  --footerBreadcrumbLinkedItemColor: var(--blueColor);
+}
+
+[data-theme='dark'] {
+  // general
+  --bgColor: var(--darkSemiColor);
+  --textColor: var(--lightSemiColor);
+  --textSecondaryColor: var(--lightGrayColor);
+  --textAccentColor: var(--darkGrayColor);
+  --textSecondaryAccentColor: var(--purpleColor);
+  --bgAccentColor: var(--blueColor);
+  --bgHoverAccentColor: var(--purpleColor);
+  // scrollbar
+  --scrollbarTrackColor: var(--darkGrayColor);
+  --scrollbarThumbColor: var(--purpleColor);
+  // header
+  --headerBorderColor: var(--darkGrayColor);
+  --headerNameColor: var(--grayColor);
+  --headerUsernameTextColor: var(--blueColor);
+  --headerUsernameHoverTextColor: var(--greenColor);
+  --headerProfessionTextColor: var(--purpleColor);
+  // sidebar
+  --sidebarBgColor: var(--darkSemiColor);
+  --sidebarTogglerTextColor: var(--lightSemiColor);
+  --sidebarTogglerHoverTextColor: var(--lightSemiColor);
+  --sidebarTogglerBgColor: var(--purpleColor);
+  --sidebarTogglerHoverBgColor: var(--blueColor);
+  --sidebarToggleIconColor: var(--lightColor);
+  // nav
+  --navBgColor: var(--darkSemiColor);
+  --navTextColor: var(--grayColor);
+  --navActiveTextColor: var(--blueColor);
+  --navHoverTextColor: var(--purpleColor);
+  // theme
+  --activeThemeColor: var(--purpleColor);
+  // main
+  --mainBgColor: var(--darkGrayAlternativeColor);
+  --mainHeadingColor: var(--lightGrayColor);
+  // main - breadcrumbs
+  --breadcrumbItemColor: var(--grayColor);
+  --breadcrumbLinkedItemColor: var(--purpleColor);
+  --breadcrumbLinkedItemHoverColor: var(--blueColor);
+  --breadcrumbBorderColor: var(--purpleColor);
+  // footer
+  --footerBgColor: var(--mainBgColor);
+  --footerBorderColor: var(--darkSemiColor);
+  --footerAnchorColor: var(--blueColor);
+  --footerAnchorHoverColor: var(--purpleColor);
+  // tag
+  --tagAccentColor: var(--darkGrayColor);
+  --tagBgHoverAccentColor: var(--purpleColor);
+  // footer - breadcrumbs
+  --footerBreadcrumbItemColor: var(--textColor);
+  --footerBreadcrumbLinkedItemColor: var(--purpleColor);
+}
+
+// markdown themes
+$codeDarkTheme: 'DarkItalic';
+$codeLightTheme: 'NightOwlLight';
+
+code[data-theme*='#{$codeLightTheme}'] {
+  padding: calc(var(--gap) / 2);
+  border-radius: 4.25px;
+}
+
+[data-theme='light'] code[data-theme*='#{$codeLightTheme}'],
+[data-theme='light'] code[data-theme*='#{$codeLightTheme}'] span {
+  background-color: var(--shiki-light-bg);
+  color: var(--shiki-light);
+  font-style: var(--shiki-light-font-style);
+  font-weight: var(--shiki-light-font-weight);
+}
+
+[data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'],
+[data-theme='dark'] code[data-theme*='#{$codeDarkTheme}'] span {
+  background-color: var(--shiki-dark-bg);
+  color: var(--shiki-dark);
+  font-style: var(--shiki-dark-font-style);
+  font-weight: var(--shiki-dark-font-weight);
+}

@@ -1,0 +1,92 @@
+// -- namroj
+.dev {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gap) / 2);
+  margin-bottom: var(--gap);
+
+  h2,
+  h3 {
+    margin: 0;
+    line-height: 0;
+    font-family: var(--jetBrainsMonoFont), sans-serif;
+  }
+
+  h2 {
+    color: var(--headerNameColor);
+    font-size: 1rem;
+    margin-bottom: calc(var(--gap) / 2);
+
+    @media (width > 768px) {
+      margin-bottom: unset;
+    }
+  }
+
+  h3 {
+    color: var(--headerProfessionTextColor);
+    font-size: 0.89rem;
+    font-style: italic;
+  }
+}
+
+.divider {
+  margin: var(--gap) 0;
+}
+
+.profession {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.intro {
+  margin-bottom: var(--gap);
+  margin-top: var(--gap);
+}
+
+.title {
+  margin-bottom: var(--gap);
+  color: var(--textSecondaryAccentColor);
+}
+
+.hero {
+  max-width: calc(100% - calc(var(--gap) * 1.25));
+  display: flex;
+  gap: calc(var(--gap) / 2);
+
+  @media (width > 768px) {
+    gap: var(--gap);
+    max-width: calc(100% - calc(var(--gap) * 2));
+  }
+
+  .image {
+    position: relative;
+    margin-bottom: calc(var(--gap) / 2);
+    border: 25px solid var(--accentColor);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: var(--footerBorderColor);
+
+    @media (width > 768px) {
+      margin-bottom: var(--gap);
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) / 4);
+
+    a {
+      color: var(--accentColor);
+
+      &:hover {
+        color: var(--bgHoverAccentColor);
+      }
+    }
+  }
+}
+
+.location {
+  font-size: 0.7rem;
+  text-align: right;
+}
