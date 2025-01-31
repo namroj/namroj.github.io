@@ -1,15 +1,18 @@
 import { ReactNode } from 'react';
+
 import { Metadata } from 'next';
 import { ViewTransitions } from 'next-view-transitions';
-import { ThemeContextProvider } from '@/providers/theme/ThemeProvider';
-import { ExpandCollapseContextProvider } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import Sidebar from '@/components/sidebar/Sidebar';
-import Main from '@/components/main/Main';
+
 import Footer from '@/components/footer/Footer';
+import Main from '@/components/main/Main';
+import Sidebar from '@/components/sidebar/Sidebar';
+
+import { ExpandCollapseContextProvider } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { ThemeContextProvider } from '@/providers/theme/ThemeProvider';
+import { NavigationContextProvider } from '@/providers/navigation/NavigationProvider';
 
 import { cascadiaCodeFont, jetBrainsMonoFont } from '@/fonts/Fonts';
 import '@/assets/styles/globals.scss';
-import { NavigationContextProvider } from '@/providers/navigation/NavigationProvider';
 
 export const metadata: Metadata = {
   title: 'Jorman Espinoza',
