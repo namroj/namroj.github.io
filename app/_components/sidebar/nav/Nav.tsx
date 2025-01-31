@@ -23,7 +23,7 @@ export default function Nav() {
       { path: '/formation', label: 'Formación' },
       { path: '/experience', label: 'Experiencia' },
       { path: '/projects', label: 'Proyectos' },
-      { path: '/blog', label: 'Blog' },
+      // { path: '/blog', label: 'Blog' }, // TODO activate blog once an official article has been written
       { path: '/contact', label: 'Contacto' },
     ],
     [],
