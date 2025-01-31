@@ -16,26 +16,49 @@ export const metadata: Metadata = {
   description: 'Desarrollador Full Stack',
 };
 
+function GoogleAnalytics() {
+  return (
+    <>
+      {/* Google tag (gtag.js) */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-SZZ5X56S6P"
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SZZ5X56S6P');
+          `,
+        }}
+      />
+    </>
+  );
+}
+
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{ children: ReactNode }>) {
+  children,
+}: Readonly<{ children: ReactNode }>) {
   return (
     <ViewTransitions>
       <html lang="es">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <body
-        className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
-      >
-      <ThemeContextProvider>
-        <ExpandCollapseContextProvider>
-          <NavigationContextProvider>
-            <Sidebar />
-            <Main>{children}</Main>
-            <Footer />
-          </NavigationContextProvider>
-        </ExpandCollapseContextProvider>
-      </ThemeContextProvider>
-      </body>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <GoogleAnalytics />
+        <body
+          className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
+        >
+          <ThemeContextProvider>
+            <ExpandCollapseContextProvider>
+              <NavigationContextProvider>
+                <Sidebar />
+                <Main>{children}</Main>
+                <Footer />
+              </NavigationContextProvider>
+            </ExpandCollapseContextProvider>
+          </ThemeContextProvider>
+        </body>
       </html>
     </ViewTransitions>
   );
