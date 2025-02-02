@@ -20,7 +20,7 @@ export default function HomePage() {
 
       <div className={styles.hero}>
         <Image
-          src={heroImage} // TODO (namroj) update/improve hero image (maybe change it for a image/video slider)
+          src={heroImage} // TODO update/improve hero image (maybe change it for a image/video slider)
           alt="Jorman Espinoza"
           layout="responsive"
           width={16}
@@ -31,7 +31,7 @@ export default function HomePage() {
           <Link href="/experience" title="Experiencia"><MdLaptop /></Link>
           <Link href="/formation" title="Formación"><ImBooks /></Link>
           <Link href="/projects" title="Proyectos"><FaCode /></Link>
-          <Link href="/blog" title="Blog"><FaKeyboard /></Link>
+          {/*<Link href="/blog" title="Blog"><FaKeyboard /></Link>*/}
         </div>
       </div>
 
