@@ -48,23 +48,7 @@ export default function HomePage() {
       </div>
 
       <hr className={styles.divider} />
-      {/*
-      <section>
-        <h4 className={styles.title}>Servicios</h4>
-        <ul>
-          <li>Maquetación.</li>
-          <li>Firmas de correo personalizadas HTML.</li>
-          <li>Desarrollo de páginas web.</li>
-          <li>Desarrollo de tiendas virtuales.</li>
-          <li>Desarrollo y mantenimiento de APIs.</li>
-          <li>Elaboración, gestión y mantenimiento de bases de datos.</li>
-          <li>Construcción, implementación y personalización de sitios en WordPress.</li>
-        </ul>
-      </section>
-
-      <hr className={styles.divider} />
-      */}
-
+      
       <section className={styles.skills}>
         <h4 className={styles.title}>Arsenal</h4>
         <Skills />
