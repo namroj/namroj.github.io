@@ -57,7 +57,7 @@
     .items {
       @media (width > 768px) {
         position: relative;
-        max-height: 60dvh;
+        max-height: 75dvh;
         padding: 0 var(--gap) var(--gap) calc(var(--gap) / 4);
         overflow-y: auto;
       }
