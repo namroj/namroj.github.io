@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 const nextConfig = {
   eslint: {
@@ -39,6 +40,12 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.plugins.push(new BundleAnalyzerPlugin());
+    }
+    return config;
   },
 };
 

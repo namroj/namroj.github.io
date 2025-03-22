@@ -60,7 +60,8 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "webpack-bundle-analyzer": "^4.10.2"
   },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx)": [
@@ -74,6 +75,9 @@
     "overrides": {
       "vfile": "5.3.7",
       "vfile-message": "3.1.4"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
