@@ -32,7 +32,7 @@ export const EXPAND_COLLAPSE_STATE_LOCAL_STORAGE_KEY = 'expand_collapse_state';
 
 const getExpandCollapseStateFromLocalStorage = (): ExpandCollapseState => {
   if (typeof window === 'undefined') {
-    return ExpandCollapseState.COLLAPSED;
+    return ExpandCollapseState.EXPANDED;
   }
 
   const expandCollapseState = localStorage.getItem(
