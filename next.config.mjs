@@ -40,6 +40,17 @@ const nextConfig = {
       },
     ],
   },
+  output: 'standalone',
+  experimental: {
+    serverMinification: true,
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // Exclude unnecessary dependencies from server bundle
+      config.externals = [...(config.externals || []), 'canvas', 'jsdom'];
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
