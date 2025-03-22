@@ -43,6 +43,7 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     serverMinification: true,
+    serverComponentsExternalPackages: ['sharp', 'canvas', 'jsdom']
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
