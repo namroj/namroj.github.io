@@ -37,7 +37,9 @@ export default function HomePage() {
           <Link href="/projects" title="Proyectos">
             <FaCode />
           </Link>
-          {/*<Link href="/blog" title="Blog"><FaKeyboard /></Link>*/}
+          <Link href="/blog" title="Blog">
+            <FaKeyboard />
+          </Link>
         </div>
       </div>
 

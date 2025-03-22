@@ -111,7 +111,7 @@ export default function Posts({ posts }: Props) {
     <div
       className={`${styles.posts} ${mainWidth < 1920 && styles.mainReduced}`}
     >
-      {filters}
+      {filteredPosts.length > 0 && filters}
       <div
         className={`${styles.timeline} ${mainWidth < 1920 && styles.mainReduced}`}
       >

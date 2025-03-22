@@ -19,7 +19,7 @@ export default async function BlogPage() {
 
       <h2>Blog</h2>
 
-      <Posts posts={posts} />
+      <Posts posts={posts.filter(p => p.visible)} />
     </>
   );
 }

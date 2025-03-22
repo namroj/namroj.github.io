@@ -9,6 +9,7 @@ export type PostMetaData = {
   slug: string;
   tags: string[];
   cover_image: string;
+  visible: boolean;
 };
 
 /**
@@ -37,11 +38,14 @@ export async function getPosts(): Promise<PostMetaData[]> {
         slug: data.slug as string,
         tags: data.tags as string[],
         cover_image: data.cover_image as string,
+        visible: data.visible as boolean,
       };
 
       return postMetaData;
     }),
   );
 
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }
