@@ -43,12 +43,24 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     serverMinification: true,
-    serverComponentsExternalPackages: ['sharp', 'canvas', 'jsdom']
+    serverComponentsExternalPackages: [
+      '@mdx-js/loader',
+      'rehype-pretty-code',
+      'rehype-highlight',
+      'rehype-autolink-headings',
+      'rehype-slug',
+      'remark-gfm',
+      'sharp'
+    ]
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Exclude unnecessary dependencies from server bundle
-      config.externals = [...(config.externals || []), 'canvas', 'jsdom'];
+      config.externals = [...(config.externals || []), {
+        'next-mdx-remote': 'commonjs next-mdx-remote',
+        'framer-motion': 'commonjs framer-motion',
+        'sharp': 'commonjs sharp'
+      }];
     }
     return config;
   },
