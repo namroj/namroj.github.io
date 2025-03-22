@@ -28,9 +28,15 @@ export default function HomePage() {
           className={styles.image}
         />
         <div className={styles.links}>
-          <Link href="/experience" title="Experiencia"><MdLaptop /></Link>
-          <Link href="/formation" title="Formación"><ImBooks /></Link>
-          <Link href="/projects" title="Proyectos"><FaCode /></Link>
+          <Link href="/experience" title="Experiencia">
+            <MdLaptop />
+          </Link>
+          <Link href="/formation" title="Formación">
+            <ImBooks />
+          </Link>
+          <Link href="/projects" title="Proyectos">
+            <FaCode />
+          </Link>
           {/*<Link href="/blog" title="Blog"><FaKeyboard /></Link>*/}
         </div>
       </div>
@@ -38,17 +44,21 @@ export default function HomePage() {
       <Links />
 
       <div className={styles.intro}>
-        Profesional en desarrollo de software desde 2015.
-        <br />
-        Apasionado por las buenas prácticas, el código limpio y los patrones de diseño.
+        <strong>Desarrollador de software desde 2015</strong>, apasionado por
+        las buenas prácticas, el código limpio y los patrones de diseño.
         <ul>
-          <li key="li-1">Diseño y desarrollo desde páginas web hasta tiendas en línea.</li>
-          <li key="li-2">Trabajo de manera efectiva en equipos de tecnología.</li>
+          <li key="li-1">
+            Diseño y desarrollo de soluciones digitales, desde sitios web hasta
+            tiendas en línea.
+          </li>
+          <li key="li-2">
+            Trabajo de forma colaborativa y efectiva en equipos de tecnología.
+          </li>
         </ul>
       </div>
 
       <hr className={styles.divider} />
-      
+
       <section className={styles.skills}>
         <h4 className={styles.title}>Arsenal</h4>
         <Skills />
