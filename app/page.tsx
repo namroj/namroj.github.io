@@ -20,11 +20,13 @@ export default function HomePage() {
 
       <div className={styles.hero}>
         <Image
-          src={heroImage} // TODO update/improve hero image (maybe change it for a image/video slider)
+          src={heroImage}
           alt="Jorman Espinoza"
-          width={16}
-          height={10}
+          width={1600}
+          height={1000}
           className={styles.image}
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className={styles.links}>
           <Link href="/experience" title="Experiencia">
