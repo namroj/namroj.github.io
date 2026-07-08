@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - complementary [ref=e3]:
+    - generic [ref=e5]:
+      - link "Jorman Espinoza - Imagen de perfil" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Jorman Espinoza - Imagen de perfil" [ref=e7]
+      - generic [ref=e8]:
+        - link "Jorman Espinoza" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - heading "Jorman Espinoza" [level=1] [ref=e10]
+        - generic [ref=e12]: Desarrollador Full Stack
+    - button [ref=e13] [cursor=pointer]:
+      - img [ref=e14]
+    - navigation [ref=e16]:
+      - link "Formación" [ref=e17] [cursor=pointer]:
+        - /url: /formation
+      - link "Experiencia" [ref=e18] [cursor=pointer]:
+        - /url: /experience
+      - link "Proyectos" [ref=e19] [cursor=pointer]:
+        - /url: /projects
+      - link "Blog" [ref=e20] [cursor=pointer]:
+        - /url: /blog
+      - link "Contacto" [ref=e21] [cursor=pointer]:
+        - /url: /contact
+    - list [ref=e22]:
+      - listitem [ref=e23]:
+        - link "Email" [ref=e24] [cursor=pointer]:
+          - /url: mailto:espinoza.dev@gmail.com
+          - img [ref=e25]
+      - listitem [ref=e28]:
+        - link "GitHub" [ref=e29] [cursor=pointer]:
+          - /url: https://github.com/namroj
+          - img [ref=e30]
+      - listitem [ref=e32]:
+        - link "LinkedIn" [ref=e33] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/jormanespinoza
+          - img [ref=e34]
+      - listitem [ref=e36]:
+        - link "X" [ref=e37] [cursor=pointer]:
+          - /url: https://x.com/jormandev
+          - img [ref=e38]
+      - listitem [ref=e40]:
+        - link "Instagram" [ref=e41] [cursor=pointer]:
+          - /url: https://instagram.com/jorman.dev
+          - img [ref=e42]
+      - listitem [ref=e44]:
+        - link "Threads" [ref=e45] [cursor=pointer]:
+          - /url: https://www.threads.net/@jorman.dev
+          - img [ref=e46]
+      - listitem [ref=e48]:
+        - link "Bluesky" [ref=e49] [cursor=pointer]:
+          - /url: https://bsky.app/profile/jormandev.bsky.social
+          - img [ref=e50]
+  - main [ref=e52]:
+    - article [ref=e54]:
+      - generic [ref=e55]:
+        - heading "Prueba" [level=1] [ref=e56]:
+          - link "Prueba" [ref=e57] [cursor=pointer]:
+            - /url: "#prueba"
+        - paragraph [ref=e58]:
+          - text: This is some
+          - strong [ref=e59]: bold
+          - text: and
+          - emphasis [ref=e60]: italics
+          - text: text.
+        - paragraph [ref=e61]: "This is a list in markdown:"
+        - list [ref=e62]:
+          - listitem [ref=e63]:
+            - heading "One" [level=2] [ref=e64]:
+              - link "One" [ref=e65] [cursor=pointer]:
+                - /url: "#one"
+          - listitem [ref=e66]:
+            - heading "Two" [level=2] [ref=e67]:
+              - link "Two" [ref=e68] [cursor=pointer]:
+                - /url: "#two"
+          - listitem [ref=e69]:
+            - heading "Three" [level=3] [ref=e70]:
+              - link "Three" [ref=e71] [cursor=pointer]:
+                - /url: "#three"
+        - figure [ref=e72]:
+          - code [ref=e74]:
+            - generic [ref=e75]: // console.log('Hello World!');
+            - generic [ref=e77]: "const handleExample = () => {};"
+        - figure [ref=e78]:
+          - code [ref=e80]:
+            - generic [ref=e81]: String greeting = "Hello World";
+            - generic [ref=e83]: System.out.println(greeting);
+        - figure [ref=e84]:
+          - code [ref=e86]:
+            - generic [ref=e87]: npm run dev
+        - figure [ref=e88]:
+          - code [ref=e90]:
+            - generic [ref=e91]: // Muestra del componente -> Pages > Blog > [slug] > page.tsx
+            - generic [ref=e92]: "import { notFound } from 'next/navigation'"
+            - generic [ref=e93]: "import { MDXRemote } from 'next-mdx-remote/rsc'"
+            - generic [ref=e95]: "import { readFile } from 'fs/promises'"
+            - generic [ref=e96]: import matter from 'gray-matter'
+            - generic [ref=e97]: import remarkGfm from 'remark-gfm'
+            - generic [ref=e98]: import rehypeSlug from 'rehype-slug'
+            - generic [ref=e99]: import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+            - generic [ref=e100]: import rehypeHighlight from 'rehype-highlight'
+            - generic [ref=e101]: import rehypePrettyCode from 'rehype-pretty-code'
+            - generic [ref=e103]: "import Breadcrumbs, { Breadcrumb } from '@/components/main/breadcrumbs/Breadcrumbs'"
+            - generic [ref=e105]: import darkItalic from '@/assets/themes/dark-italic-color-theme.json'
+            - generic [ref=e106]: "import { FaKeyboard } from 'react-icons/fa6'"
+            - generic [ref=e107]: "import { LuFileTerminal } from 'react-icons/lu'"
+            - generic [ref=e108]: import styles from './Page.module.scss'
+            - generic [ref=e110]: "interface PostProps {"
+            - generic [ref=e111]: "params: {"
+            - generic [ref=e112]: "slug: string"
+            - generic [ref=e113]: "}"
+            - generic [ref=e114]: "}"
+            - generic [ref=e116]: "const getMarkDownFileData = async (slug: string) => {"
+            - generic [ref=e117]: "try {"
+            - generic [ref=e118]: "const file = await readFile(`./app/_posts/${slug}.mdx`, 'utf8')"
+            - generic [ref=e119]: return matter(file)
+            - generic [ref=e120]: "} catch (error) {"
+            - generic [ref=e121]: // console.error(error)
+            - generic [ref=e122]: return notFound()
+            - generic [ref=e123]: "}"
+            - generic [ref=e124]: "}"
+            - generic [ref=e126]: "export default async function PostPage({ params }: Readonly<PostProps>) {"
+            - generic [ref=e127]: "if (params?.slug === undefined) {"
+            - generic [ref=e128]: return notFound()
+            - generic [ref=e129]: "}"
+            - generic [ref=e131]: "const postComponents = {}"
+            - generic [ref=e133]: "const { content, data } = await getMarkDownFileData(params.slug)"
+            - generic [ref=e135]: "const breadcrumbs: Breadcrumb[] = ["
+            - generic [ref=e136]: "{ label: 'Blog', href: '/blog', icon: <FaKeyboard /> },"
+            - generic [ref=e137]: "{ label: data.title, icon: <LuFileTerminal /> }"
+            - generic [ref=e138]: "]"
+            - generic [ref=e140]: return (
+            - generic [ref=e141]: "<article className={styles.article}>"
+            - generic [ref=e142]: "<Breadcrumbs items={breadcrumbs} />"
+            - generic [ref=e144]: "<div className={styles.markdown}>"
+            - generic [ref=e145]: <MDXRemote
+            - generic [ref=e146]: "className={styles.markdown}"
+            - generic [ref=e147]: "source={content}"
+            - generic [ref=e148]: "components={{ ...postComponents }}"
+            - generic [ref=e149]: "options={{"
+            - generic [ref=e150]: "mdxOptions: {"
+            - generic [ref=e151]: "useDynamicImport: true,"
+            - generic [ref=e152]: "remarkPlugins: [remarkGfm],"
+            - generic [ref=e153]: "rehypePlugins: ["
+            - generic [ref=e154]: rehypeSlug,
+            - generic [ref=e155]: "["
+            - generic [ref=e156]: // @ts-expect-error
+            - generic [ref=e157]: rehypePrettyCode,
+            - generic [ref=e158]: "{"
+            - generic [ref=e159]: "theme: {"
+            - generic [ref=e160]: "dark: darkItalic,"
+            - generic [ref=e161]: "light: 'min-light'"
+            - generic [ref=e162]: "}"
+            - generic [ref=e163]: "}"
+            - generic [ref=e164]: "],"
+            - generic [ref=e165]: "[rehypeAutolinkHeadings, { behavior: 'wrap' }],"
+            - generic [ref=e166]: // @ts-expect-error
+            - generic [ref=e167]: rehypeHighlight
+            - generic [ref=e168]: "]"
+            - generic [ref=e169]: "}"
+            - generic [ref=e170]: "}}"
+            - generic [ref=e171]: />
+            - generic [ref=e172]: </div>
+            - generic [ref=e173]: </article>
+            - generic [ref=e175]: /*
+            - generic [ref=e176]: Este es un comentario,
+            - generic [ref=e177]: la idea es probar
+            - generic [ref=e178]: el largo del código
+            - generic [ref=e179]: "*/"
+            - generic [ref=e180]: )
+            - generic [ref=e181]: "}"
+            - generic [ref=e183]: "export async function generateMetadata({ params }: Readonly<PostProps>) {"
+            - generic [ref=e184]: "const { data } = await getMarkDownFileData(params.slug)"
+            - generic [ref=e186]: "return {"
+            - generic [ref=e187]: "title: `${data.title} | Jorman Espinoza`,"
+            - generic [ref=e188]: "description: data.summary"
+            - generic [ref=e189]: "}"
+            - generic [ref=e190]: "}"
+        - paragraph [ref=e191]:
+          - link "First link" [ref=e192] [cursor=pointer]:
+            - /url: "#one"
+          - link "Second link" [ref=e193] [cursor=pointer]:
+            - /url: "#two"
+          - link "Third link" [ref=e194] [cursor=pointer]:
+            - /url: "#three"
+  - contentinfo [ref=e195]:
+    - generic [ref=e196]:
+      - generic [ref=e197]:
+        - button "Automático" [ref=e198] [cursor=pointer]:
+          - img "Automático" [ref=e200]
+        - button "Claro" [ref=e202] [cursor=pointer]:
+          - img "Claro" [ref=e204]
+        - button [ref=e206] [cursor=pointer]:
+          - img [ref=e208]
+      - generic [ref=e210]:
+        - img [ref=e211]
+        - text: por
+        - link "Jorman Espinoza" [ref=e213] [cursor=pointer]:
+          - /url: /
