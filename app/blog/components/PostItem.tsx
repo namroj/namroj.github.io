@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
@@ -20,7 +21,7 @@ type Props = {
   item: PostMetaData;
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
-  highlightText: (text: string) => JSX.Element;
+  highlightText: (text: string) => React.ReactNode;
 };
 
 export default function PostItem({

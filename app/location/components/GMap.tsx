@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { renderToString } from 'react-dom/server';
 import { Theme, useThemeContext } from '@/providers/theme/ThemeProvider';
 import { FaBus, FaMapMarker, FaPlane } from 'react-icons/fa';
@@ -47,7 +47,7 @@ export default function GMap() {
       styles: getMapStyles(),
     });
 
-    const createIcon = (icon: JSX.Element) => ({
+    const createIcon = (icon: React.ReactElement) => ({
       url: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(renderToString(icon))}`,
       scaledSize: new google.maps.Size(20, 20),
     });

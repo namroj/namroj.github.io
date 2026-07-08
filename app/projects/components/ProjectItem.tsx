@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
@@ -26,7 +26,7 @@ type Props = {
   item: ProjectItemType;
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
-  highlightText: (text: string) => JSX.Element;
+  highlightText: (text: string) => React.ReactNode;
 };
 
 const COMPONENT_MIN_WIDTH = 400;

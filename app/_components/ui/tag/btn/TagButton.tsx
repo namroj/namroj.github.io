@@ -1,10 +1,11 @@
+import React from 'react';
 import styles from './TagButton.module.scss';
 
 type Props = {
   tag: string;
   handleTagClick: (tag: string) => void;
   selectedTags: string[];
-  highlightText?: (text: string) => JSX.Element;
+  highlightText?: (text: string) => React.ReactNode;
 };
 
 export default function TagButton({

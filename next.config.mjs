@@ -43,19 +43,10 @@ const nextConfig = {
     'rehype-autolink-headings',
     'rehype-slug',
     'remark-gfm',
-    'sharp'
+    'sharp',
+    'next-mdx-remote',
+    'framer-motion'
   ],
-  webpack: (config, { isServer }) => {
-    if (isServer) {
-      // Exclude unnecessary dependencies from server bundle
-      config.externals = [...(config.externals || []), {
-        'next-mdx-remote': 'commonjs next-mdx-remote',
-        'framer-motion': 'commonjs framer-motion',
-        'sharp': 'commonjs sharp'
-      }];
-    }
-    return config;
-  },
 };
 
 export default nextConfig;

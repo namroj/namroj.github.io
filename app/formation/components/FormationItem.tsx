@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagButton from '@/components/ui/tag/btn/TagButton';
@@ -19,7 +20,7 @@ type Props = {
   item: FormationItemType;
   selectedTags: string[];
   handleTagClick: (tag: string) => void;
-  highlightText: (text: string) => JSX.Element;
+  highlightText: (text: string) => React.ReactNode;
 };
 
 const COMPONENT_MIN_WIDTH = 400;
