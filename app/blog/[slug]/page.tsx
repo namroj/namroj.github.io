@@ -15,9 +15,9 @@ import { LuFileTerminal } from 'react-icons/lu';
 import styles from './page.module.scss';
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const getMarkDownFileData = async (slug: string) => {
@@ -37,11 +37,13 @@ const prettyCodeOptions = {
 };
 
 export default async function PostPage({ params }: Readonly<Props>) {
-  if (!params?.slug) {
+  const { slug } = await params;
+
+  if (!slug) {
     return notFound();
   }
 
-  const { content, data } = await getMarkDownFileData(params.slug);
+  const { content, data } = await getMarkDownFileData(slug);
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
@@ -73,7 +75,8 @@ export default async function PostPage({ params }: Readonly<Props>) {
 }
 
 export async function generateMetadata({ params }: Readonly<Props>) {
-  const { data } = await getMarkDownFileData(params.slug);
+  const { slug } = await params;
+  const { data } = await getMarkDownFileData(slug);
 
   return {
     title: `${data.title} | Jorman Espinoza`,

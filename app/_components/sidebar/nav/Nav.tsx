@@ -5,10 +5,6 @@ import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandColl
 
 import styles from './Nav.module.scss';
 
-const isMobile = () => {
-  if (typeof window === 'undefined') return false;
-  return window.innerWidth <= 768;
-};
 
 interface NavItem {
   path: string;

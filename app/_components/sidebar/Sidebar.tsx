@@ -25,7 +25,7 @@ export default function Sidebar() {
       setSidebarWidth(currentSidebarWidth);
       setMainWidth(mainWidth);
     }
-  }, [expandCollapseState]);
+  }, [expandCollapseState, setMainWidth, setSidebarWidth]);
 
   useEffect(() => {
     updateSidebarWidth();
@@ -36,7 +36,7 @@ export default function Sidebar() {
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [expandCollapseState]);
+  }, [updateSidebarWidth]);
 
   return (
     <aside

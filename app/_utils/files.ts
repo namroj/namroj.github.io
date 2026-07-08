@@ -6,9 +6,7 @@ export default async function readJsonFile(filePath: string, fileName: string) {
   try {
     const jsonData = await readFile(file);
     return JSON.parse(jsonData.toString()) as unknown;
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    // console.error('Error reading JSON file:', error);
+  } catch {
     return [];
   }
 }

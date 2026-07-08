@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // --links
 $colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor) var(--lightGrayColor);
 
@@ -17,9 +19,9 @@ $colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColo
       transition: color 0.25s ease-in-out;
     }
 
-    @for $i from 1 through length($colors) {
+    @for $i from 1 through list.length($colors) {
       &:nth-child(#{$i}) a:hover {
-        color: nth($colors, $i);
+        color: list.nth($colors, $i);
       }
     }
   }

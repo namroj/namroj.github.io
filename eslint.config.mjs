@@ -24,7 +24,7 @@ const eslintConfig = [
     }
   }),
   {
-    ignores: [".next/*", "node_modules/*", "dist/*", "build/*", "next.config.mjs"],
+    ignores: [".next/*", "node_modules/*", "dist/*", "build/*", "next.config.mjs", "next-env.d.ts", ".lintstagedrc.js"],
   }
 ];
 

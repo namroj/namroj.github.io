@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // -- tag
 $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor);
 
@@ -12,11 +14,11 @@ $colors: var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) v
   @for $i from 1 through 100 {
     &:nth-of-type(#{$i}) {
       &:hover {
-        border: 1px solid nth($colors, (($i - 1) % length($colors)) + 1);
+        border: 1px solid list.nth($colors, (($i - 1) % list.length($colors)) + 1);
 
         a {
-          border-color: nth($colors, (($i - 1) % length($colors)) + 1);
-          color: nth($colors, (($i - 1) % length($colors)) + 1);
+          border-color: list.nth($colors, (($i - 1) % list.length($colors)) + 1);
+          color: list.nth($colors, (($i - 1) % list.length($colors)) + 1);
         }
       }
     }
