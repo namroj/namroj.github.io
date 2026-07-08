@@ -46,7 +46,7 @@ export default async function PostPage({ params }: Readonly<Props>) {
   const { content, data } = await getMarkDownFileData(slug);
 
   const breadcrumbs: Breadcrumb[] = [
-    { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
+    { label: 'Blog', href: '/blog/', icon: <FaKeyboard /> },
     { label: data.title as string, icon: <LuFileTerminal /> },
   ];
 

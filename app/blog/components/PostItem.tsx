@@ -35,7 +35,7 @@ export default function PostItem({
     <li className={`${styles['post-item']} ${mainWidth < COMPONENT_MIN_WIDTH && styles.mainReduced}`}>
       <div className={styles.data}>
         {item.cover_image && (
-          <Link href={`/blog/${item.slug}`} className={styles.cover}>
+          <Link href={`/blog/${item.slug}/`} className={styles.cover}>
             <Image
               src={item.cover_image}
               alt={item.title}
@@ -51,7 +51,7 @@ export default function PostItem({
           <span className={styles.date}>{highlightText(formatDate(item.date))}</span>
 
           <h3 className={styles.title}>
-            <Link href={`/blog/${item.slug}`}>
+            <Link href={`/blog/${item.slug}/`}>
               {highlightText(item.title)}
             </Link>
           </h3>

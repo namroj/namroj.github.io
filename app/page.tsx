@@ -29,16 +29,16 @@ export default function HomePage() {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className={styles.links}>
-          <Link href="/experience" title="Experiencia">
+          <Link href="/experience/" title="Experiencia">
             <MdLaptop />
           </Link>
-          <Link href="/formation" title="Formación">
+          <Link href="/formation/" title="Formación">
             <ImBooks />
           </Link>
-          <Link href="/projects" title="Proyectos">
+          <Link href="/projects/" title="Proyectos">
             <FaCode />
           </Link>
-          <Link href="/blog" title="Blog">
+          <Link href="/blog/" title="Blog">
             <FaKeyboard />
           </Link>
         </div>
@@ -78,14 +78,14 @@ export default function HomePage() {
 
       <section>
         <h4 className={styles.title}>Proyectos</h4>
-        Algunos <Link href="/projects">proyectos</Link> que he realizado.
+        Algunos <Link href="/projects/">proyectos</Link> que he realizado.
       </section>
 
       <hr className={styles.divider} />
 
       <section>
         <h4 className={styles.title}>Formación</h4>
-        Acerca de mi <Link href="/formation">formación</Link>.
+        Acerca de mi <Link href="/formation/">formación</Link>.
       </section>
 
       <hr className={styles.divider} />
@@ -98,7 +98,7 @@ export default function HomePage() {
       <hr className={styles.divider} />
 
       <p className={styles.location}>
-        -- Mi camino de Venezuela a <Link href="/location">Argentina</Link>.
+        -- Mi camino de Venezuela a <Link href="/location/">Argentina</Link>.
       </p>
     </>
   );

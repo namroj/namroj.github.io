@@ -36,6 +36,7 @@ const nextConfig = {
     ],
   },
   output: 'standalone',
+  trailingSlash: true,
   serverExternalPackages: [
     '@mdx-js/loader',
     'rehype-pretty-code',
