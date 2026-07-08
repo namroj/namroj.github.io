@@ -17,7 +17,7 @@ export default function Breadcrumbs({ items }: Readonly<Props>) {
 
   useEffect(() => {
     setBreadcrumbs(items);
-  }, [items]);
+  }, [items, setBreadcrumbs]);
 
   return (
     <div className={styles.breadcrumbs}>

@@ -2,9 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import useMedia from 'use-media';
 
 import styles from './Nav.module.scss';
+
 
 interface NavItem {
   path: string;
@@ -13,18 +13,28 @@ interface NavItem {
 
 export default function Nav() {
   const currentPath = usePathname();
-  const isMobile = useMedia({ maxWidth: 768 });
+  const [mobile, setMobile] = useState(false);
   const { toggleExpandCollapseState } = useExpandCollapseContext();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
 
   const items: NavItem[] = useMemo(
     () => [
-      { path: '/formation', label: 'Formación' },
-      { path: '/experience', label: 'Experiencia' },
-      { path: '/projects', label: 'Proyectos' },
-      { path: '/blog', label: 'Blog' },
-      { path: '/contact', label: 'Contacto' },
+      { path: '/formation/', label: 'Formación' },
+      { path: '/experience/', label: 'Experiencia' },
+      { path: '/projects/', label: 'Proyectos' },
+      { path: '/blog/', label: 'Blog' },
+      { path: '/contact/', label: 'Contacto' },
     ],
     [],
   );
@@ -38,7 +48,7 @@ export default function Nav() {
   }, [currentPath, items]);
 
   const handleLinkClick = () => {
-    if (isMobile) {
+    if (mobile) {
       toggleExpandCollapseState();
     }
   };

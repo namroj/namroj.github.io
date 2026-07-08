@@ -1,3 +1,5 @@
+@use "sass:list";
+
 // -- contact links
 $colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColor) var(--greenColor) var(--orangeColor) var(--grayColor);
 
@@ -39,11 +41,11 @@ $colors: var(--lightGrayColor) var(--redColor) var(--purpleColor) var(--blueColo
       }
     }
 
-    @for $i from 1 through length($colors) {
+    @for $i from 1 through list.length($colors) {
       &:nth-child(#{$i}) a:hover {
-        color: nth($colors, $i);
-        border: 1px solid nth($colors, $i);
-        box-shadow: 0 0 3.25px nth($colors, $i);
+        color: list.nth($colors, $i);
+        border: 1px solid list.nth($colors, $i);
+        box-shadow: 0 0 3.25px list.nth($colors, $i);
       }
     }
   }

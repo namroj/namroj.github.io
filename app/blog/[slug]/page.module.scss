@@ -57,14 +57,11 @@
 
     code {
       counter-reset: line;
+      font-size: 0.8rem;
 
       * {
         font-family: var(--jetBrainsMonoFont), monospace;
-        font-size: 0.7rem;
-
-        @media (width > 768px) {
-          font-size: 1rem;
-        }
+        font-size: inherit;
       }
 
       > [data-line]::before {

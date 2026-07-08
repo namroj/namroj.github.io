@@ -4,7 +4,6 @@ import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import remarkGfm from 'remark-gfm';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeHighlight from 'rehype-highlight';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json';
@@ -16,9 +15,9 @@ import { LuFileTerminal } from 'react-icons/lu';
 import styles from './page.module.scss';
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 const getMarkDownFileData = async (slug: string) => {
@@ -38,14 +37,16 @@ const prettyCodeOptions = {
 };
 
 export default async function PostPage({ params }: Readonly<Props>) {
-  if (!params?.slug) {
+  const { slug } = await params;
+
+  if (!slug) {
     return notFound();
   }
 
-  const { content, data } = await getMarkDownFileData(params.slug);
+  const { content, data } = await getMarkDownFileData(slug);
 
   const breadcrumbs: Breadcrumb[] = [
-    { label: 'Blog', href: '/blog', icon: <FaKeyboard /> },
+    { label: 'Blog', href: '/blog/', icon: <FaKeyboard /> },
     { label: data.title as string, icon: <LuFileTerminal /> },
   ];
 
@@ -64,7 +65,6 @@ export default async function PostPage({ params }: Readonly<Props>) {
                 rehypeSlug,
                 [rehypePrettyCode as never, prettyCodeOptions],
                 [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-                rehypeHighlight,
               ],
             },
           }}
@@ -75,7 +75,8 @@ export default async function PostPage({ params }: Readonly<Props>) {
 }
 
 export async function generateMetadata({ params }: Readonly<Props>) {
-  const { data } = await getMarkDownFileData(params.slug);
+  const { slug } = await params;
+  const { data } = await getMarkDownFileData(slug);
 
   return {
     title: `${data.title} | Jorman Espinoza`,

@@ -1,6 +1,8 @@
+@use "sass:color";
+
 // -- themes
 @function hexToRGB($hex) {
-  @return red($hex), green($hex), blue($hex);
+  @return color.red($hex), color.green($hex), color.blue($hex);
 }
 
 [data-theme='light'] {
