@@ -22,7 +22,6 @@ export default function HomePage() {
         <Image
           src={heroImage} // TODO update/improve hero image (maybe change it for a image/video slider)
           alt="Jorman Espinoza"
-          layout="responsive"
           width={16}
           height={10}
           className={styles.image}

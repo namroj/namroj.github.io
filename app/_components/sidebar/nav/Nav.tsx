@@ -2,9 +2,13 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import useMedia from 'use-media';
 
 import styles from './Nav.module.scss';
+
+const isMobile = () => {
+  if (typeof window === 'undefined') return false;
+  return window.innerWidth <= 768;
+};
 
 interface NavItem {
   path: string;
@@ -13,8 +17,18 @@ interface NavItem {
 
 export default function Nav() {
   const currentPath = usePathname();
-  const isMobile = useMedia({ maxWidth: 768 });
+  const [mobile, setMobile] = useState(false);
   const { toggleExpandCollapseState } = useExpandCollapseContext();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth <= 768);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
 
@@ -38,7 +52,7 @@ export default function Nav() {
   }, [currentPath, items]);
 
   const handleLinkClick = () => {
-    if (isMobile) {
+    if (mobile) {
       toggleExpandCollapseState();
     }
   };

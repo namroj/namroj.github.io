@@ -1,11 +1,18 @@
 import Image from 'next/image';
 import { Link } from 'next-view-transitions';
-import moment from 'moment';
-import 'moment/locale/es';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagButton from '@/components/ui/tag/btn/TagButton';
 import { PostMetaData } from '@/utils/posts';
 import styles from './PostItem.module.scss';
+
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('es-ES', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(date);
+};
 
 const COMPONENT_MIN_WIDTH = 767;
 
@@ -40,7 +47,7 @@ export default function PostItem({
         )}
 
         <div className={styles.text}>
-          <span className={styles.date}>{highlightText(moment(item.date).format('MMMM D, YYYY'))}</span>
+          <span className={styles.date}>{highlightText(formatDate(item.date))}</span>
 
           <h3 className={styles.title}>
             <Link href={`/blog/${item.slug}`}>

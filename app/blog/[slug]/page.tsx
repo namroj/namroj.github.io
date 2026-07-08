@@ -4,7 +4,6 @@ import { readFile } from 'fs/promises';
 import matter from 'gray-matter';
 import remarkGfm from 'remark-gfm';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeHighlight from 'rehype-highlight';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import DarkItalic from '@/assets/themes/dark-italic-color-theme.json';
@@ -64,7 +63,6 @@ export default async function PostPage({ params }: Readonly<Props>) {
                 rehypeSlug,
                 [rehypePrettyCode as never, prettyCodeOptions],
                 [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-                rehypeHighlight,
               ],
             },
           }}

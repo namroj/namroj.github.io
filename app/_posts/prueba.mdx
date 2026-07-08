@@ -19,7 +19,7 @@ This is a list in markdown:
 - ### Three
 
 ```js
-console.log('Hello World!');
+// console.log('Hello World!');
 
 const handleExample = () => {};
 ```
@@ -65,7 +65,7 @@ const getMarkDownFileData = async (slug: string) => {
     const file = await readFile(`./app/_posts/${slug}.mdx`, 'utf8')
     return matter(file)
   } catch (error) {
-    console.error(error)
+    // console.error(error)
     return notFound()
   }
 }

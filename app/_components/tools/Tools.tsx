@@ -6,81 +6,46 @@ import { FaAws, FaBitbucket, FaFigma, FaGithub, FaJira } from 'react-icons/fa';
 import { BsFillDiagram2Fill } from 'react-icons/bs';
 import { DiIllustrator } from 'react-icons/di';
 import TagItem from '@/components/ui/tag/TagItem';
+import readJsonFile from '@/utils/files';
 import styles from './Tools.module.scss';
 
-interface Tool {
+const iconMap: Record<string, ReactNode> = {
+  SiIntellijidea: <SiIntellijidea />,
+  VscVscodeInsiders: <VscVscodeInsiders />,
+  RiTerminalBoxFill: <RiTerminalBoxFill />,
+  FaGithub: <FaGithub />,
+  FaBitbucket: <FaBitbucket />,
+  SiPostman: <SiPostman />,
+  SiDbeaver: <SiDbeaver />,
+  BsFillDiagram2Fill: <BsFillDiagram2Fill />,
+  FaJira: <FaJira />,
+  FaAws: <FaAws />,
+  DiIllustrator: <DiIllustrator />,
+  FaFigma: <FaFigma />,
+};
+
+interface ToolData {
   name: string;
-  icon: ReactNode;
+  icon: string;
   url: string;
 }
 
-export default function Tools() {
-  const tools: Tool[] = [
-    {
-      name: 'IntelliJ IDEA',
-      icon: <SiIntellijidea />,
-      url: 'https://www.jetbrains.com/idea/',
-    },
-    {
-      name: 'VS Code',
-      icon: <VscVscodeInsiders />,
-      url: 'https://code.visualstudio.com/',
-    },
-    {
-      name: 'Terminal',
-      icon: <RiTerminalBoxFill />,
-      url: 'https://ohmyz.sh/',
-    },
-    {
-      name: 'GitHub',
-      icon: <FaGithub />,
-      url: 'https://github.com/',
-    },
-    {
-      name: 'Bitbucket',
-      icon: <FaBitbucket />,
-      url: 'https://bitbucket.org/',
-    },
-    {
-      name: 'Postman',
-      icon: <SiPostman />,
-      url: 'https://www.postman.com/',
-    },
-    {
-      name: 'DBeaver',
-      icon: <SiDbeaver />,
-      url: 'https://dbeaver.io/',
-    },
-    {
-      name: 'Draw.io',
-      icon: <BsFillDiagram2Fill />,
-      url: 'https://draw.io/',
-    },
-    {
-      name: 'Jira',
-      icon: <FaJira />,
-      url: 'https://www.atlassian.com/es/software/jira/',
-    },
-    {
-      name: 'AWS',
-      icon: <FaAws />,
-      url: 'https://aws.amazon.com/',
-    },
-    {
-      name: 'Illustrator',
-      icon: <DiIllustrator />,
-      url: 'https://www.adobe.com/ar/products/illustrator.html',
-    },
-    {
-      name: 'Figma',
-      icon: <FaFigma />,
-      url: 'https://www.figma.com/',
-    },
-  ];
+export default async function Tools() {
+  const data = (await readJsonFile(
+    'app/_components/tools',
+    'data.json',
+  )) as ToolData[];
+
+  const tools = data.map(item => ({
+    ...item,
+    icon: iconMap[item.icon] || <span>{item.name}</span>,
+  }));
 
   return (
     <ul className={styles.tools}>
-      {tools.map(tool => <TagItem key={tool.name} item={tool} />)}
+      {tools.map(tool => (
+        <TagItem key={tool.name} item={tool} />
+      ))}
     </ul>
   );
 }

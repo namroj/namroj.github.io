@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
@@ -41,18 +36,15 @@ const nextConfig = {
     ],
   },
   output: 'standalone',
-  experimental: {
-    serverMinification: true,
-    serverComponentsExternalPackages: [
-      '@mdx-js/loader',
-      'rehype-pretty-code',
-      'rehype-highlight',
-      'rehype-autolink-headings',
-      'rehype-slug',
-      'remark-gfm',
-      'sharp'
-    ]
-  },
+  serverExternalPackages: [
+    '@mdx-js/loader',
+    'rehype-pretty-code',
+    'rehype-highlight',
+    'rehype-autolink-headings',
+    'rehype-slug',
+    'remark-gfm',
+    'sharp'
+  ],
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Exclude unnecessary dependencies from server bundle
