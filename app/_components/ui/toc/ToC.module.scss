@@ -16,10 +16,6 @@
   }
 
   @media (width > 1200px) {
-    position: fixed;
-    right: 2rem;
-    width: 250px;
-    margin-bottom: 0;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
 

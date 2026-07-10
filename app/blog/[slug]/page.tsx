@@ -58,23 +58,28 @@ export default async function PostPage({ params }: Readonly<Props>) {
   return (
     <article className={styles.article}>
       <Breadcrumbs items={breadcrumbs} />
-      <ToC headings={headings} />
 
-      <div className={styles.markdown}>
-        <MDXRemote
-          source={content}
-          options={{
-            mdxOptions: {
-              useDynamicImport: false,
-              remarkPlugins: [remarkGfm],
-              rehypePlugins: [
-                rehypeSlug,
-                [rehypePrettyCode as never, prettyCodeOptions],
-                [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-              ],
-            },
-          }}
-        />
+      <div className={styles.content}>
+        <aside className={styles.aside}>
+          <ToC headings={headings} />
+        </aside>
+
+        <div className={styles.markdown}>
+          <MDXRemote
+            source={content}
+            options={{
+              mdxOptions: {
+                useDynamicImport: false,
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [
+                  rehypeSlug,
+                  [rehypePrettyCode as never, prettyCodeOptions],
+                  [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+                ],
+              },
+            }}
+          />
+        </div>
       </div>
     </article>
   );

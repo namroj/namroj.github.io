@@ -1,20 +1,24 @@
 // -- post/article
 .article {
   @media (width > 993px) {
-    max-width: 60dvw;
+    max-width: 80dvw;
+    width: 100%;
   }
 
-  * {
-    font-family: var(--dankMonoFont), monospace;
-  }
+  .content {
+    display: flex;
+    flex-direction: column;
 
-  h1[id] {
-    margin-top: var(--gap);
-    margin-bottom: var(--gap);
-    color: var(--purpleColor);
+    @media (width > 1200px) {
+      flex-direction: row-reverse;
+      gap: 2rem;
+      align-items: flex-start;
+    }
   }
 
   .markdown {
+    flex: 1;
+    min-width: 0;
     line-height: 1.25rem;
 
     h2[id] {
@@ -81,5 +85,24 @@
         width: 2rem;
       }
     }
+  }
+
+  .aside {
+    @media (width > 1200px) {
+      width: 250px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 2rem;
+    }
+  }
+
+  * {
+    font-family: var(--dankMonoFont), monospace;
+  }
+
+  h1[id] {
+    margin-top: var(--gap);
+    margin-bottom: var(--gap);
+    color: var(--purpleColor);
   }
 }
