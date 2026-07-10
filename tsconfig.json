@@ -39,6 +39,9 @@
       ],
       "@/utils/*": [
         "./app/_utils/*"
+      ],
+      "@/locales/*": [
+        "./app/_locales/*"
       ]
     },
     "target": "ES2022"

@@ -24,7 +24,7 @@ import { IoLogoJavascript } from 'react-icons/io5';
 import { BiBowlRice } from 'react-icons/bi';
 import { GrMysql } from 'react-icons/gr';
 import { DiJqueryLogo, DiPostgresql } from 'react-icons/di';
-import readJsonFile from '@/utils/files';
+import data from './data.json';
 import styles from './Skills.module.scss';
 
 const iconMap: Record<string, ReactNode> = {
@@ -57,13 +57,8 @@ interface SkillData {
   url: string;
 }
 
-export default async function Skills() {
-  const data = (await readJsonFile(
-    'app/_components/skills',
-    'data.json',
-  )) as SkillData[];
-
-  const skills: Tag[] = data.map(item => ({
+export default function Skills() {
+  const skills: Tag[] = (data as SkillData[]).map(item => ({
     ...item,
     icon: iconMap[item.icon] || <span>{item.name}</span>,
   }));

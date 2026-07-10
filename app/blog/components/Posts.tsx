@@ -5,6 +5,7 @@ import Highlighter from 'react-highlight-words';
 import { PostMetaData } from '@/utils/posts';
 import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import { LuPackageSearch } from 'react-icons/lu';
@@ -17,6 +18,7 @@ interface Props {
 
 export default function Posts({ posts }: Props) {
   const { mainWidth } = useExpandCollapseContext();
+  const { t } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -58,6 +60,7 @@ export default function Posts({ posts }: Props) {
       />
       <KeywordSearch
         keyword={searchTerm}
+        placeholder={t('blog.search_placeholder')}
         handleSearchChange={handleSearchChange}
         handleClearSearch={handleClearSearch}
       />
@@ -90,7 +93,7 @@ export default function Posts({ posts }: Props) {
           <LuPackageSearch />
         </span>
         <span>
-          No se encontraron resultados. Prueba con otra palabra clave.
+          {t('blog.no_results')}
         </span>
       </div>
     ) : (

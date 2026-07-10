@@ -10,6 +10,8 @@ import DarkItalic from '@/assets/themes/dark-italic-color-theme.json';
 import NightOwlLight from '@/assets/themes/night-owl-light-color-theme.json';
 import { Breadcrumb } from '@/providers/navigation/NavigationProvider';
 import Breadcrumbs from '@/components/main/breadcrumbs/Breadcrumbs';
+import ToC from '@/components/ui/toc/ToC';
+import { extractHeadings } from '@/utils/posts';
 import { FaKeyboard } from 'react-icons/fa6';
 import { LuFileTerminal } from 'react-icons/lu';
 import styles from './page.module.scss';
@@ -44,6 +46,7 @@ export default async function PostPage({ params }: Readonly<Props>) {
   }
 
   const { content, data } = await getMarkDownFileData(slug);
+  const headings = extractHeadings(content);
 
   const breadcrumbs: Breadcrumb[] = [
     { label: 'Blog', href: '/blog/', icon: <FaKeyboard /> },
@@ -53,6 +56,7 @@ export default async function PostPage({ params }: Readonly<Props>) {
   return (
     <article className={styles.article}>
       <Breadcrumbs items={breadcrumbs} />
+      <ToC headings={headings} />
 
       <div className={styles.markdown}>
         <MDXRemote

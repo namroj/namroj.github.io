@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "formation": "Formation",
+    "experience": "Experience",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "role": "Full Stack Developer",
+    "description": "Software developer since 2015, passionate about best practices, clean code, and design patterns.",
+    "bullet1": "Design and development of digital solutions, from websites to online stores.",
+    "bullet2": "I work collaboratively and effectively in technology teams.",
+    "arsenal": "Arsenal",
+    "tools": "Tools",
+    "projects_title": "Projects",
+    "projects_text": "Some {link} I have worked on.",
+    "formation_title": "Formation",
+    "formation_text": "About my {link}.",
+    "fonts_title": "Preferred Typefaces",
+    "path_text": "-- My path from Venezuela to {link}."
+  },
+  "blog": {
+    "search_placeholder": "Search posts...",
+    "global_search_placeholder": "Search...",
+    "global_search_indexing": "Indexing content...",
+    "global_search_no_results": "No results found for \"{query}\"",
+    "global_search_close_hint": "to close",
+    "global_search_select_hint": "to select",
+    "filter_label": "Filter by keyword",
+    "clear_label": "Clear",
+    "no_results": "No results found. Try another keyword.",
+    "toc_title": "Table of Contents"
+  },
+  "common": {
+    "back": "Back",
+    "by": "by"
+  }
+}

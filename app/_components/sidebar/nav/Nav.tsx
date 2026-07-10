@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 
 import styles from './Nav.module.scss';
 
@@ -27,16 +28,17 @@ export default function Nav() {
   }, []);
 
   const [activePaths, setActivePaths] = useState<string[]>([]);
+  const { t } = useLanguage();
 
   const items: NavItem[] = useMemo(
     () => [
-      { path: '/formation/', label: 'Formación' },
-      { path: '/experience/', label: 'Experiencia' },
-      { path: '/projects/', label: 'Proyectos' },
-      { path: '/blog/', label: 'Blog' },
-      { path: '/contact/', label: 'Contacto' },
+      { path: '/formation/', label: t('nav.formation') },
+      { path: '/experience/', label: t('nav.experience') },
+      { path: '/projects/', label: t('nav.projects') },
+      { path: '/blog/', label: t('nav.blog') },
+      { path: '/contact/', label: t('nav.contact') },
     ],
-    [],
+    [t],
   );
 
   useEffect(() => {
