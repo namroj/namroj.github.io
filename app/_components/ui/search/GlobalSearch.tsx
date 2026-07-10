@@ -13,6 +13,7 @@ export default function GlobalSearch() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isIndexed, setIsIndexed] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const { t } = useLanguage();
@@ -46,17 +47,22 @@ export default function GlobalSearch() {
   useEffect(() => {
     if (isOpen) {
       inputRef.current?.focus();
-      if (Object.keys(results).length === 0 && !isLoading) {
+      if (!isIndexed && !isLoading) {
         setIsLoading(true);
         fetch('/api/search-data')
           .then((res) => res.json())
           .then((data) => {
             initSearchIndex(data);
+            setIsIndexed(true);
+            setIsLoading(false);
+          })
+          .catch((error) => {
+            console.error('Failed to index search:', error);
             setIsLoading(false);
           });
       }
     }
-  }, [isOpen, isLoading, results]);
+  }, [isOpen, isLoading, isIndexed]);
 
   useEffect(() => {
     if (query.trim()) {
