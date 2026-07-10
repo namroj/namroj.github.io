@@ -9,12 +9,11 @@ export interface SearchResult {
 }
 
 let index: Index | null = null;
-let dataStore: Record<string, SearchResult> = {};
+const dataStore: Record<string, SearchResult> = {};
 
 export function initSearchIndex(items: SearchResult[]) {
   index = new Index({
     tokenize: 'forward',
-    optimize: true,
   });
 
   items.forEach((item) => {
