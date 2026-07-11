@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { AiFillSlackCircle } from "react-icons/ai";
-import { SiDbeaver, SiIntellijidea, SiPostman, SiJetbrains } from 'react-icons/si';
+import { AiFillSlackCircle, AiFillOpenAI } from "react-icons/ai";
+import { SiDbeaver, SiClaudecode, SiIntellijidea, SiPostman, SiJetbrains } from 'react-icons/si';
 import { VscVscodeInsiders } from 'react-icons/vsc';
 import { RiNotionFill, RiTerminalBoxFill } from 'react-icons/ri';
 import { FaAws, FaBitbucket, FaFigma, FaGithub, FaJira, FaTrello } from 'react-icons/fa';
@@ -26,7 +26,9 @@ const iconMap: Record<string, ReactNode> = {
   FaTrello: <FaTrello />,
   RiNotionFill: <RiNotionFill />,
   AiFillSlackCircle: <AiFillSlackCircle />,
-  SiJetbrains: <SiJetbrains />
+  SiJetbrains: <SiJetbrains />,
+  SiClaudecode: <SiClaudecode />,
+  AiFillOpenAI: <AiFillOpenAI />,
 };
 
 interface ToolData {

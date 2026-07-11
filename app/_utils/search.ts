@@ -28,7 +28,10 @@ export function search(query: string): SearchResult[] {
   return results.map((id) => dataStore[id as string]);
 }
 
-export function createSnippet(content: string, query: string, length: number = 100): string {
+export function createSnippet(content: any, query: string, length: number = 100): string {
+  if (typeof content !== 'string') {
+    return '';
+  }
   const index = content.toLowerCase().indexOf(query.toLowerCase());
   if (index === -1) return content.slice(0, length) + '...';
 

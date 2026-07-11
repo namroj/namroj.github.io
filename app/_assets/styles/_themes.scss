@@ -56,6 +56,13 @@
   // footer - breadcrumbs
   --footerBreadcrumbItemColor: var(--darkGrayColor);
   --footerBreadcrumbLinkedItemColor: var(--blueColor);
+
+  // missing colors for search/language/toc
+  --color-text-primary: var(--textColor);
+  --color-text-secondary: var(--textSecondaryColor);
+  --color-primary: var(--activeThemeColor);
+  --cardBgColor: var(--lightSemiColor);
+  --borderColor: var(--lightGrayColor);
 }
 
 [data-theme='dark'] {
@@ -109,6 +116,13 @@
   // footer - breadcrumbs
   --footerBreadcrumbItemColor: var(--textColor);
   --footerBreadcrumbLinkedItemColor: var(--purpleColor);
+
+  // missing colors for search/language/toc
+  --color-text-primary: var(--textColor);
+  --color-text-secondary: var(--textSecondaryColor);
+  --color-primary: var(--activeThemeColor);
+  --cardBgColor: var(--darkGrayAlternativeColor);
+  --borderColor: var(--darkGrayColor);
 }
 
 // markdown themes

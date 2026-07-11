@@ -24,13 +24,19 @@ export async function GET() {
 
   const projectsFile = path.join(process.cwd(), 'app/projects/data.json');
   const projectsData = JSON.parse(await fs.readFile(projectsFile, 'utf8'));
-  const projects = projectsData.map((project: any) => ({
-    id: `project-${project.name.toLowerCase().replace(/\s+/g, '-')}`,
-    title: project.name,
-    type: 'project',
-    slug: '/projects/',
-    content: project.description || '',
-  }));
+  const projects = projectsData.map((project: any) => {
+    const description = typeof project.description === 'object'
+      ? `${project.description.en || ''} ${project.description.es || ''}`
+      : project.description || '';
+
+    return {
+      id: `project-${project.name.toLowerCase().replace(/\s+/g, '-')}`,
+      title: project.name,
+      type: 'project',
+      slug: '/projects/',
+      content: description,
+    };
+  });
 
   return NextResponse.json([...posts, ...projects]);
 }

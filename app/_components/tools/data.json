@@ -78,5 +78,15 @@
     "name": "Junie",
     "icon": "SiJetbrains",
     "url": "https://www.jetbrains.com/junie/"
+  },
+  {
+    "name": "Claude Code",
+    "icon": "SiClaudecode",
+    "url": "https://claude.com/product/claude-code/"
+  },
+  {
+    "name": "Codex",
+    "icon": "AiFillOpenAI",
+    "url": "https://openai.com/codex/"
   }
 ]
