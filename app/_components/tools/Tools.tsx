@@ -6,7 +6,7 @@ import { FaAws, FaBitbucket, FaFigma, FaGithub, FaJira } from 'react-icons/fa';
 import { BsFillDiagram2Fill } from 'react-icons/bs';
 import { DiIllustrator } from 'react-icons/di';
 import TagItem from '@/components/ui/tag/TagItem';
-import readJsonFile from '@/utils/files';
+import data from './data.json';
 import styles from './Tools.module.scss';
 
 const iconMap: Record<string, ReactNode> = {
@@ -30,13 +30,8 @@ interface ToolData {
   url: string;
 }
 
-export default async function Tools() {
-  const data = (await readJsonFile(
-    'app/_components/tools',
-    'data.json',
-  )) as ToolData[];
-
-  const tools = data.map(item => ({
+export default function Tools() {
+  const tools = (data as ToolData[]).map(item => ({
     ...item,
     icon: iconMap[item.icon] || <span>{item.name}</span>,
   }));

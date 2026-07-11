@@ -1,0 +1,169 @@
+.trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--cardBgColor);
+    color: var(--color-primary);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.modal {
+  background-color: var(--bgColor);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 0.75rem;
+  border: 1px solid var(--borderColor);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--borderColor);
+  gap: 0.75rem;
+}
+
+.searchIcon {
+  color: var(--color-text-secondary);
+  font-size: 1.2rem;
+}
+
+.input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+  font-family: var(--font-jetbrains-mono);
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.5;
+  }
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  display: flex;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: var(--cardBgColor);
+  }
+}
+
+.body {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.status {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resultItem {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: var(--cardBgColor);
+    border-color: var(--color-primary);
+  }
+}
+
+.resultType {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-jetbrains-mono);
+}
+
+.resultTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.resultSnippet {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.footer {
+  padding: 0.75rem 1rem;
+  background-color: var(--cardBgColor);
+  border-top: 1px solid var(--borderColor);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  kbd {
+    background-color: var(--bgColor);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--borderColor);
+    font-size: 0.7rem;
+  }
+}

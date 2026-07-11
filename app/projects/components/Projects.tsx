@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import ProjectItem, { ProjectItemType } from '@/app/projects/components/ProjectItem';
 import Highlighter from 'react-highlight-words';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
@@ -15,6 +15,7 @@ export default function Projects({
                                    data,
                                  }: Readonly<{ data: ProjectItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
+  const { t } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,6 +23,11 @@ export default function Projects({
   const handleClearTags = () => setSelectedTags([]);
 
   const handleClearSearch = () => setSearchTerm('');
+
+  const handleResetFilters = () => {
+    setSelectedTags([]);
+    setSearchTerm('');
+  };
 
   const handleTagClick = (tag: string) =>
     setSelectedTags((prevTags) =>
@@ -87,9 +93,12 @@ export default function Projects({
         <span className={styles.icon}>
           <LuPackageSearch />
         </span>
-        <span>
-          No se encontraron resultados. Prueba con otra palabra clave.
-        </span>
+        <div className={styles.message}>
+          <span>{t('blog.no_results')}</span>
+          <button className={styles.resetButton} onClick={handleResetFilters}>
+            {t('blog.clear_filters')}
+          </button>
+        </div>
       </div>
     ) : (
       <ul className={styles.items}>

@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "formation": "Formación",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "home": {
+    "role": "Desarrollador Full Stack",
+    "description": "Desarrollador de software desde 2015, apasionado por las buenas prácticas, el código limpio y los patrones de diseño.",
+    "bullet1": "Diseño y desarrollo de soluciones digitales, desde sitios web hasta tiendas en línea.",
+    "bullet2": "Trabajo de forma colaborativa y efectiva en equipos de tecnología.",
+    "arsenal": "Arsenal",
+    "tools": "Herramientas",
+    "projects_title": "Proyectos",
+    "projects_text": "Algunos {link} que he realizado.",
+    "formation_title": "Formación",
+    "formation_text": "Acerca de mi {link}.",
+    "fonts_title": "Tipografías preferidas",
+    "path_text": "-- Mi camino de Venezuela a {link}."
+  },
+  "blog": {
+    "search_placeholder": "Buscar posts...",
+    "global_search_placeholder": "Buscar...",
+    "global_search_indexing": "Indexando contenido...",
+    "global_search_no_results": "No se encontraron resultados para \"{query}\"",
+    "global_search_close_hint": "para cerrar",
+    "global_search_select_hint": "para seleccionar",
+    "filter_label": "Filtrar por palabra clave",
+    "clear_label": "Borrar",
+    "no_results": "No se encontraron resultados. Prueba con otra palabra clave.",
+    "clear_filters": "Limpiar todos los filtros",
+    "toc_title": "Tabla de Contenidos"
+  },
+  "common": {
+    "back": "Volver",
+    "by": "por"
+  }
+}

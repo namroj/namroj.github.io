@@ -38,11 +38,35 @@
 
     .empty {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      gap: var(--gap);
       align-items: center;
       color: var(--textSecondaryColor);
       font-size: 0.8rem;
       text-wrap: balance;
+
+      .message {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .resetButton {
+        margin-top: 5px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 0.7rem;
+        font-family: var(--dankMonoFont);
+        font-style: italic;
+        color: var(--bgAccentColor);
+        cursor: pointer;
+        text-align: left;
+
+        &:hover {
+          color: var(--bgHoverAccentColor);
+        }
+      }
 
       span {
         text-align: center;

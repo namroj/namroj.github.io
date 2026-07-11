@@ -5,6 +5,7 @@ import Highlighter from 'react-highlight-words';
 import { PostMetaData } from '@/utils/posts';
 import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import { LuPackageSearch } from 'react-icons/lu';
@@ -17,6 +18,7 @@ interface Props {
 
 export default function Posts({ posts }: Props) {
   const { mainWidth } = useExpandCollapseContext();
+  const { t } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,6 +26,11 @@ export default function Posts({ posts }: Props) {
   const handleClearTags = () => setSelectedTags([]);
 
   const handleClearSearch = () => setSearchTerm('');
+
+  const handleResetFilters = () => {
+    setSelectedTags([]);
+    setSearchTerm('');
+  };
 
   const handleTagClick = (tag: string) =>
     setSelectedTags((prevTags) =>
@@ -58,6 +65,7 @@ export default function Posts({ posts }: Props) {
       />
       <KeywordSearch
         keyword={searchTerm}
+        placeholder={t('blog.search_placeholder')}
         handleSearchChange={handleSearchChange}
         handleClearSearch={handleClearSearch}
       />
@@ -89,9 +97,12 @@ export default function Posts({ posts }: Props) {
         <span className={styles.icon}>
           <LuPackageSearch />
         </span>
-        <span>
-          No se encontraron resultados. Prueba con otra palabra clave.
-        </span>
+        <div className={styles.message}>
+          <span>{t('blog.no_results')}</span>
+          <button className={styles.resetButton} onClick={handleResetFilters}>
+            {t('blog.clear_filters')}
+          </button>
+        </div>
       </div>
     ) : (
       <div className={styles.items}>
@@ -111,7 +122,7 @@ export default function Posts({ posts }: Props) {
     <div
       className={`${styles.posts} ${mainWidth < 1920 && styles.mainReduced}`}
     >
-      {filteredPosts.length > 0 && filters}
+      {posts.length > 0 && filters}
       <div
         className={`${styles.timeline} ${mainWidth < 1920 && styles.mainReduced}`}
       >

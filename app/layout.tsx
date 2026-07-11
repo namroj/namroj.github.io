@@ -10,6 +10,7 @@ import Sidebar from '@/components/sidebar/Sidebar';
 import { ExpandCollapseContextProvider } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import { NavigationContextProvider } from '@/providers/navigation/NavigationProvider';
 import { ThemeContextProvider } from '@/providers/theme/ThemeProvider';
+import { LanguageProvider } from '@/providers/language/LanguageProvider';
 
 import { cascadiaCodeFont, jetBrainsMonoFont } from '@/fonts/Fonts';
 
@@ -35,15 +36,17 @@ export default function RootLayout({
           className={`${jetBrainsMonoFont.variable} ${cascadiaCodeFont.variable}`}
         >
           <GoogleAnalytics gaId="G-SZZ5X56S6P" />
-          <ThemeContextProvider>
-            <ExpandCollapseContextProvider>
-              <NavigationContextProvider>
-                <Sidebar />
-                <Main>{children}</Main>
-                <Footer />
-              </NavigationContextProvider>
-            </ExpandCollapseContextProvider>
-          </ThemeContextProvider>
+          <LanguageProvider>
+            <ThemeContextProvider>
+              <ExpandCollapseContextProvider>
+                <NavigationContextProvider>
+                  <Sidebar />
+                  <Main>{children}</Main>
+                  <Footer />
+                </NavigationContextProvider>
+              </ExpandCollapseContextProvider>
+            </ThemeContextProvider>
+          </LanguageProvider>
         </body>
       </html>
     </ViewTransitions>
