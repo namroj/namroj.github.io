@@ -5,8 +5,6 @@ import {
   ExpandCollapseState,
   useExpandCollapseContext,
 } from '@/providers/expand-collapse/ExpandCollapseProvider';
-import ThemeToggle from '@/components/theme/ThemeToggle';
-import LanguageSwitcher from '@/components/ui/language/LanguageSwitcher';
 import Breadcrumbs from '@/components/footer/breadcrumbs/Breadcrumbs';
 import { useLanguage } from '@/providers/language/LanguageProvider';
 import { FaRegCopyright } from 'react-icons/fa';
@@ -29,10 +27,6 @@ export default function Footer() {
       <Breadcrumbs />
 
       <div className={styles.content}>
-        <div className={styles.controls}>
-          <ThemeToggle />
-          <LanguageSwitcher />
-        </div>
         <span>
           <FaRegCopyright /> {t('common.by')} <Link href="/">Jorman Espinoza</Link>
         </span>

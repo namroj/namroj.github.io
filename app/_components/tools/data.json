@@ -58,5 +58,25 @@
     "name": "Figma",
     "icon": "FaFigma",
     "url": "https://www.figma.com/"
+  },
+  {
+    "name": "Notion",
+    "icon": "RiNotionFill",
+    "url": "https://www.notion.so/"
+  },
+  {
+    "name": "Slack",
+    "icon": "AiFillSlackCircle",
+    "url": "https://slack.com/"
+  },
+  {
+    "name": "Trello",
+    "icon": "FaTrello",
+    "url": "https://trello.com/"
+  },
+  {
+    "name": "Junie",
+    "icon": "SiJetbrains",
+    "url": "https://www.jetbrains.com/junie/"
   }
 ]

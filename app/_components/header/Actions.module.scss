@@ -1,0 +1,32 @@
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 100;
+
+  @media (width > 768px) {
+    position: fixed;
+    top: var(--gap);
+    right: var(--gap);
+    background-color: var(--bgColor);
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--darkGrayColor);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (width <= 768px) {
+    padding: 1.5rem 1rem;
+    justify-content: center;
+    border-top: 1px solid var(--darkGrayColor);
+    width: 100%;
+    margin-top: auto;
+    background-color: var(--sidebarBgColor);
+    gap: 1.5rem;
+  }
+}

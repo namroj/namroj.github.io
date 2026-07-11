@@ -1,6 +1,5 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import GlobalSearch from '@/components/ui/search/GlobalSearch';
 import { useLanguage } from '@/providers/language/LanguageProvider';
 import profileImage from '@/assets/images/profile.jpeg';
 import styles from './Header.module.scss';
@@ -28,7 +27,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <GlobalSearch />
       </div>
     </header>
   );

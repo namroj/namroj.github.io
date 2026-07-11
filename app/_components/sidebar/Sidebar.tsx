@@ -8,6 +8,7 @@ import {
 import Header from '@/components/header/Header';
 import SidebarToggle from '@/components/sidebar/toggle/SidebarToggle';
 import Nav from './nav/Nav';
+import Actions from '@/components/header/Actions';
 import Links from './links/Links';
 import styles from './Sidebar.module.scss';
 
@@ -46,6 +47,7 @@ export default function Sidebar() {
       <Header />
       <SidebarToggle />
       <Nav />
+      <Actions />
       <Links />
     </aside>
   );

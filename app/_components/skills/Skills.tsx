@@ -19,6 +19,7 @@ import {
   SiPhp,
   SiAntdesign,
   SiTailwindcss,
+  SiExpo,
 } from 'react-icons/si';
 import { IoLogoJavascript } from 'react-icons/io5';
 import { BiBowlRice } from 'react-icons/bi';
@@ -49,6 +50,7 @@ const iconMap: Record<string, ReactNode> = {
   SiAntdesign: <SiAntdesign />,
   FaBootstrap: <FaBootstrap />,
   SiTailwindcss: <SiTailwindcss />,
+  SiExpo: <SiExpo />,
 };
 
 interface SkillData {

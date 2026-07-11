@@ -103,5 +103,10 @@
     "name": "Tailwind",
     "icon": "SiTailwindcss",
     "url": "https://tailwindcss.com/"
+  },
+  {
+    "name": "Expo",
+    "icon": "SiExpo",
+    "url": "https://expo.dev/"
   }
 ]
