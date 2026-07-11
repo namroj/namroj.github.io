@@ -4,6 +4,9 @@
   "author": "Jorman Espinoza",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
