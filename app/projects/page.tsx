@@ -16,6 +16,9 @@ export default async function ProjectsPage() {
     | ProjectItemType[]
     | [];
 
+  const allTags = Array.from(new Set(projects.flatMap((item) => item.tags))).sort();
+  const initialData = projects.slice(0, 10);
+
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
@@ -24,7 +27,7 @@ export default async function ProjectsPage() {
 
       <p>Acá una lista de alguno de los proyectos que desarrollé:</p>
 
-      <Projects data={projects} />
+      <Projects data={initialData} allTags={allTags} />
     </>
   );
 }

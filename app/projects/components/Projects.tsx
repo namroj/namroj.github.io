@@ -7,18 +7,27 @@ import ProjectItem, { ProjectItemType } from '@/app/projects/components/ProjectI
 import Highlighter from 'react-highlight-words';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
-import normalizeAndCleanString from '@/utils/strings';
 import { LuPackageSearch } from 'react-icons/lu';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import styles from './Projects.module.scss';
 
 export default function Projects({
                                    data,
-                                 }: Readonly<{ data: ProjectItemType[] }>) {
+                                   allTags,
+                                 }: Readonly<{ data: ProjectItemType[]; allTags: string[] }>) {
   const { mainWidth } = useExpandCollapseContext();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const { items: filteredProjects, loading, hasMore, observerTarget } = useInfiniteScroll<ProjectItemType>({
+    type: 'projects',
+    initialData: data,
+    search: searchTerm,
+    tags: selectedTags,
+    language,
+  });
 
   const handleClearTags = () => setSelectedTags([]);
 
@@ -55,7 +64,7 @@ export default function Projects({
       className={`${styles.filters} ${mainWidth < 993 ? styles.mainReduced : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
+        tags={allTags}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -68,27 +77,8 @@ export default function Projects({
     </div>
   );
 
-  const filteredProjects = data.filter((item) => {
-    const { tags, ...rest } = item;
-    const itemValues = Object.values(rest).filter(
-      (value) => typeof value !== 'object',
-    );
-    const tagsKeywords = tags.join(' ');
-    const itemKeywords = normalizeAndCleanString(
-      [...itemValues, item.name, tagsKeywords].join('').toLowerCase(),
-    );
-    const isTagSelected =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => item.tags.includes(tag));
-    const isSearchTermPresent =
-      searchTerm === '' ||
-      itemKeywords.includes(normalizeAndCleanString(searchTerm));
-
-    return isTagSelected && isSearchTermPresent;
-  });
-
   const projects =
-    filteredProjects.length === 0 ? (
+    filteredProjects.length === 0 && !loading ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
           <LuPackageSearch />
@@ -101,11 +91,10 @@ export default function Projects({
         </div>
       </div>
     ) : (
-      <ul className={styles.items}>
-        <div className="content">
-          {filteredProjects
-            .filter((item: ProjectItemType) => item.visible)
-            .map((item: ProjectItemType) => (
+      <>
+        <ul className={styles.items}>
+          <div className="content">
+            {filteredProjects.map((item: ProjectItemType) => (
               <ProjectItem
                 key={item.name}
                 item={item}
@@ -114,9 +103,15 @@ export default function Projects({
                 highlightText={highlightText}
               />
             ))}
-          <div className="fade-effect" />
-        </div>
-      </ul>
+            <div className="fade-effect" />
+          </div>
+        </ul>
+        {hasMore && (
+          <div ref={observerTarget} className={styles.loading}>
+            {loading && <span>{t('common.loading')}...</span>}
+          </div>
+        )}
+      </>
     );
 
   return (

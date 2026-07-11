@@ -4,21 +4,30 @@ import { ChangeEvent, useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import { useLanguage } from '@/providers/language/LanguageProvider';
-import normalizeAndCleanString from '@/utils/strings';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import { LuPackageSearch } from 'react-icons/lu';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { ExperienceItem, ExperienceItemType } from './ExperienceItem';
 import styles from './Experience.module.scss';
 
 export default function Experience({
                                      data,
-                                   }: Readonly<{ data: ExperienceItemType[] }>) {
+                                     allTags,
+                                   }: Readonly<{ data: ExperienceItemType[]; allTags: string[] }>) {
   const { mainWidth } = useExpandCollapseContext();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const { items: filteredExperience, loading, hasMore, observerTarget } = useInfiniteScroll<ExperienceItemType>({
+    type: 'experience',
+    initialData: data,
+    search: searchTerm,
+    tags: selectedTags,
+    language,
+  });
 
   const handleClearTags = () => setSelectedTags([]);
 
@@ -55,7 +64,7 @@ export default function Experience({
       className={`${styles.filters} ${mainWidth < 993 ? styles.mainReduced : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
+        tags={allTags}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -68,32 +77,8 @@ export default function Experience({
     </div>
   );
 
-  const filteredExperience = data.filter((item) => {
-    const { entity, tags, positions, ...rest } = item;
-    const itemValues = Object.values(rest).filter(
-      (value) => typeof value !== 'object',
-    );
-    const positionsValues = positions.map((position) =>
-      Object.values(position).filter((value) => typeof value !== 'object'),
-    );
-    const tagsKeywords = tags.join(' ');
-    const itemKeywords = normalizeAndCleanString(
-      [...itemValues, ...positionsValues, entity.name, tagsKeywords]
-        .join('')
-        .toLowerCase(),
-    );
-    const isTagSelected =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => item.tags.includes(tag));
-    const isSearchTermPresent =
-      searchTerm === '' ||
-      itemKeywords.includes(normalizeAndCleanString(searchTerm));
-
-    return isTagSelected && isSearchTermPresent;
-  });
-
   const experience =
-    filteredExperience.length === 0 ? (
+    filteredExperience.length === 0 && !loading ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
           <LuPackageSearch />
@@ -106,17 +91,24 @@ export default function Experience({
         </div>
       </div>
     ) : (
-      <ul className={styles.items}>
-        {filteredExperience.map((item: ExperienceItemType) => (
-          <ExperienceItem
-            key={item.entity.name}
-            item={item}
-            handleTagClick={handleTagClick}
-            selectedTags={selectedTags}
-            highlightText={highlightText}
-          />
-        ))}
-      </ul>
+      <>
+        <ul className={styles.items}>
+          {filteredExperience.map((item: ExperienceItemType) => (
+            <ExperienceItem
+              key={item.entity.name}
+              item={item}
+              handleTagClick={handleTagClick}
+              selectedTags={selectedTags}
+              highlightText={highlightText}
+            />
+          ))}
+        </ul>
+        {hasMore && (
+          <div ref={observerTarget} className={styles.loading}>
+            {loading && <span>{t('common.loading')}...</span>}
+          </div>
+        )}
+      </>
     );
 
   return (

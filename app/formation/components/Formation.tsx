@@ -2,23 +2,32 @@
 
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
-import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import { useLanguage } from '@/providers/language/LanguageProvider';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import { LuPackageSearch } from 'react-icons/lu';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import { FormationItem, FormationItemType } from './FormationItem';
 import styles from './Formation.module.scss';
 
 export default function Formation({
                                     data,
-                                  }: Readonly<{ data: FormationItemType[] }>) {
+                                    allTags,
+                                  }: Readonly<{ data: FormationItemType[]; allTags: string[] }>) {
   const { mainWidth } = useExpandCollapseContext();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const { items: filteredFormation, loading, hasMore, observerTarget } = useInfiniteScroll<FormationItemType>({
+    type: 'formation',
+    initialData: data,
+    search: searchTerm,
+    tags: selectedTags,
+    language,
+  });
 
   const handleClearTags = () => setSelectedTags([]);
 
@@ -55,7 +64,7 @@ export default function Formation({
       className={`${styles.filters} ${mainWidth < 993 ? styles.mainReduced : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(data.flatMap((item) => item.tags)))}
+        tags={allTags}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -68,27 +77,8 @@ export default function Formation({
     </div>
   );
 
-  const filteredFormation = data.filter((item) => {
-    const { entity, tags, ...rest } = item;
-    const itemValues = Object.values(rest).filter(
-      (value) => typeof value !== 'object',
-    );
-    const tagsKeywords = tags.join(' ');
-    const itemKeywords = normalizeAndCleanString(
-      [...itemValues, entity.name, tagsKeywords].join('').toLowerCase(),
-    );
-    const isTagSelected =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => item.tags.includes(tag));
-    const isSearchTermPresent =
-      searchTerm === '' ||
-      itemKeywords.includes(normalizeAndCleanString(searchTerm));
-
-    return isTagSelected && isSearchTermPresent;
-  });
-
   const formationList =
-    filteredFormation.length === 0 ? (
+    filteredFormation.length === 0 && !loading ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
           <LuPackageSearch />
@@ -101,20 +91,27 @@ export default function Formation({
         </div>
       </div>
     ) : (
-      <ul className={styles.items}>
-        <div className="content">
-          {filteredFormation.map((item: FormationItemType) => (
-            <FormationItem
-              key={item.title}
-              item={item}
-              handleTagClick={handleTagClick}
-              selectedTags={selectedTags}
-              highlightText={highlightText}
-            />
-          ))}
-          <div className="fade-effect" />
-        </div>
-      </ul>
+      <>
+        <ul className={styles.items}>
+          <div className="content">
+            {filteredFormation.map((item: FormationItemType) => (
+              <FormationItem
+                key={item.title.es}
+                item={item}
+                handleTagClick={handleTagClick}
+                selectedTags={selectedTags}
+                highlightText={highlightText}
+              />
+            ))}
+            <div className="fade-effect" />
+          </div>
+        </ul>
+        {hasMore && (
+          <div ref={observerTarget} className={styles.loading}>
+            {loading && <span>{t('common.loading')}...</span>}
+          </div>
+        )}
+      </>
     );
 
   return (

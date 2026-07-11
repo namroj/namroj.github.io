@@ -40,6 +40,9 @@
       "@/utils/*": [
         "./app/_utils/*"
       ],
+      "@/hooks/*": [
+        "./app/_hooks/*"
+      ],
       "@/locales/*": [
         "./app/_locales/*"
       ]

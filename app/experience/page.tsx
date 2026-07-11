@@ -19,6 +19,9 @@ export default async function ProfessionalExperiencePage() {
     | ExperienceItemType[]
     | [];
 
+  const allTags = Array.from(new Set(experience.flatMap((item) => item.tags))).sort();
+  const initialData = experience.slice(0, 10);
+
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
@@ -27,7 +30,7 @@ export default async function ProfessionalExperiencePage() {
 
       <p>Registro de mi experiencia laboral.</p>
 
-      <Experience data={experience} />
+      <Experience data={initialData} allTags={allTags} />
     </>
   );
 }

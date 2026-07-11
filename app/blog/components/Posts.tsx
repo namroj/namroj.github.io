@@ -3,25 +3,34 @@
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import { PostMetaData } from '@/utils/posts';
-import normalizeAndCleanString from '@/utils/strings';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import { useLanguage } from '@/providers/language/LanguageProvider';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
 import { LuPackageSearch } from 'react-icons/lu';
+import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import PostItem from './PostItem';
 import styles from './Posts.module.scss';
 
 interface Props {
   posts: PostMetaData[];
+  allTags: string[];
 }
 
-export default function Posts({ posts }: Props) {
+export default function Posts({ posts, allTags }: Props) {
   const { mainWidth } = useExpandCollapseContext();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
+
+  const { items: filteredPosts, loading, hasMore, observerTarget } = useInfiniteScroll<PostMetaData>({
+    type: 'post',
+    initialData: posts,
+    search: searchTerm,
+    tags: selectedTags,
+    language,
+  });
 
   const handleClearTags = () => setSelectedTags([]);
 
@@ -58,7 +67,7 @@ export default function Posts({ posts }: Props) {
       className={`${styles.filters} ${mainWidth < 1280 ? styles.mainReduced : ''}`}
     >
       <TagsFilter
-        tags={Array.from(new Set(posts.flatMap((item) => item.tags)))}
+        tags={allTags}
         selectedTags={selectedTags}
         handleTagClick={handleTagClick}
         handleClearTags={handleClearTags}
@@ -72,27 +81,8 @@ export default function Posts({ posts }: Props) {
     </div>
   );
 
-  const filteredPosts = posts.filter((item) => {
-    const { tags, ...rest } = item;
-    const itemValues = Object.values(rest).filter(
-      (value) => typeof value !== 'object',
-    );
-    const tagsKeywords = tags.join(' ');
-    const itemKeywords = normalizeAndCleanString(
-      [...itemValues, tagsKeywords].join('').toLowerCase(),
-    );
-    const isTagSelected =
-      selectedTags.length === 0 ||
-      selectedTags.some((tag) => item.tags.includes(tag));
-    const isSearchTermPresent =
-      searchTerm === '' ||
-      itemKeywords.includes(normalizeAndCleanString(searchTerm));
-
-    return isTagSelected && isSearchTermPresent;
-  });
-
   const postList =
-    filteredPosts.length === 0 ? (
+    filteredPosts.length === 0 && !loading ? (
       <div className={styles.empty}>
         <span className={styles.icon}>
           <LuPackageSearch />
@@ -105,17 +95,24 @@ export default function Posts({ posts }: Props) {
         </div>
       </div>
     ) : (
-      <div className={styles.items}>
-        {filteredPosts.map((item: PostMetaData) => (
-          <PostItem
-            key={item.title}
-            item={item}
-            handleTagClick={handleTagClick}
-            selectedTags={selectedTags}
-            highlightText={highlightText}
-          />
-        ))}
-      </div>
+      <>
+        <div className={styles.items}>
+          {filteredPosts.map((item: PostMetaData) => (
+            <PostItem
+              key={item.slug}
+              item={item}
+              handleTagClick={handleTagClick}
+              selectedTags={selectedTags}
+              highlightText={highlightText}
+            />
+          ))}
+        </div>
+        {hasMore && (
+          <div ref={observerTarget} className={styles.loading}>
+            {loading && <span>{t('common.loading')}...</span>}
+          </div>
+        )}
+      </>
     );
 
   return (

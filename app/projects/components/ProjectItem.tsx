@@ -7,12 +7,13 @@ import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandColl
 import TagButton from '@/components/ui/tag/btn/TagButton';
 import { CiCircleMinus, CiCirclePlus } from 'react-icons/ci';
 import { TbExternalLink } from 'react-icons/tb';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import styles from './ProjectItem.module.scss';
 
 export type ProjectItemType = {
   name: string;
-  summary: string;
-  description: string;
+  summary: { es: string; en: string };
+  description: { es: string; en: string };
   url?: string;
   repository?: string;
   logo: string;
@@ -38,6 +39,7 @@ export default function ProjectItem({
                                       highlightText,
                                     }: Props) {
   const { mainWidth } = useExpandCollapseContext();
+  const { language } = useLanguage();
   const [showMore, setShowMore] = useState(true);
   const toggleShowMore = () => setShowMore((prevState) => !prevState);
 
@@ -69,7 +71,7 @@ export default function ProjectItem({
         <div>
           <h3 className={styles.title}>{highlightText(item.name)}</h3>
           <p className={styles.summary}>
-            {highlightText(item.summary)}
+            {highlightText(item.summary[language])}
           </p>
         </div>
       </div>
@@ -79,7 +81,7 @@ export default function ProjectItem({
           classNames(styles.description, { [styles.visible]: showMore })
         }
       >
-        {highlightText(item.description)}
+        {highlightText(item.description[language])}
       </div>
 
       <span className={styles.year}>[{item.year}]</span>

@@ -17,6 +17,9 @@ export default async function FormationPage() {
     | FormationItemType[]
     | [];
 
+  const allTags = Array.from(new Set(formation.flatMap((item) => item.tags))).sort();
+  const initialData = formation.slice(0, 10);
+
   return (
     <>
       <Breadcrumbs items={breadcrumbs} />
@@ -35,10 +38,9 @@ export default async function FormationPage() {
         <li>Libros</li>
         <li>Blogs</li>
         <li>Documentación oficial/de terceros</li>
-        <li>Proyectos laborales/personales</li>
       </ul>
 
-      <Formation data={formation} />
+      <Formation data={initialData} allTags={allTags} />
     </>
   );
 }

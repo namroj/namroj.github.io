@@ -2,18 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagButton from '@/components/ui/tag/btn/TagButton';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import styles from './ExperienceItem.module.scss';
 
 export type ExperienceItemType = {
   entity: { name: string; image: string; url: string };
-  location: string;
-  interval: string;
+  location: { es: string; en: string };
+  interval: { es: string; en: string };
   positions: {
-    title: string;
-    extract: string;
-    description: string;
-    highlight: string;
-    interval: string;
+    title: { es: string; en: string };
+    description: { es: string; en: string };
+    highlight: { es: string; en: string };
+    interval: { es: string; en: string };
   }[];
   tags: string[];
 };
@@ -34,6 +34,7 @@ export function ExperienceItem({
                                  highlightText,
                                }: Props) {
   const { mainWidth } = useExpandCollapseContext();
+  const { language } = useLanguage();
 
   return (
     <li className={styles.item}>
@@ -57,33 +58,34 @@ export function ExperienceItem({
               </a>
             </h3>
             <p className={styles.location}>
-              <span>[{highlightText(item.location)}]</span>
+              <span>[{highlightText(item.location[language])}]</span>
             </p>
-            <p className={styles.date}>{highlightText(item.interval)}</p>
+            <p className={styles.date}>{highlightText(item.interval[language])}</p>
           </div>
 
         </div>
 
         <div className={styles.timeline}>
           {item.positions.map((position) => (
-            <div key={position.title} className={styles.item}>
+            <div key={position.title[language]} className={styles.item}>
               <div className={styles.circle} />
               <div className={styles.line} />
               <div className={styles.position}>
-                <h4>{highlightText(position.title)}</h4>
-                <p>{highlightText(position.interval)}</p>
+                <h4>{highlightText(position.title[language])}</h4>
+                <p>{highlightText(position.interval[language])}</p>
                 <p className={styles.description}>
                   {(() => {
-                    const descriptionItems = position.description.split('||');
+                    const description = position.description[language];
+                    const descriptionItems = description.split('||');
                     return descriptionItems.length > 1
                       ? descriptionItems.map((desc) => (
                         <li key={desc}>{highlightText(desc)}</li>
                       ))
-                      : highlightText(position.description);
+                      : highlightText(description);
                   })()}
                 </p>
                 <p className={styles['highlight-text']}>
-                  {highlightText(position.highlight)}
+                  {highlightText(position.highlight[language])}
                 </p>
               </div>
             </div>

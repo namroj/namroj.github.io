@@ -13,20 +13,25 @@ export type PostMetaData = {
 };
 
 /**
- * Retrieves metadata for all posts within a specified directory.
+ * Retrieves metadata for all posts within a specified directory for a specific language.
  *
- * This function reads all files in the '_posts' directory, extracts metadata such as title,
- * date, summary, slug, tags, and cover image from each file's content, and returns an array
- * of post metadata objects sorted in descending order by date.
+ * This function reads all files in the '_posts' directory, filters them by language suffix,
+ * extracts metadata such as title, date, summary, slug, tags, and cover image from each
+ * file's content, and returns an array of post metadata objects sorted in descending order by date.
  *
+ * @param {string} lang The language code (e.g., 'es', 'en'). Defaults to 'es'.
  * @return {Promise<PostMetaData[]>} A promise that resolves to an array of post metadata objects, sorted by date in descending order.
  */
-export async function getPosts(): Promise<PostMetaData[]> {
+export async function getPosts(lang: string = 'es'): Promise<PostMetaData[]> {
   const postsDirectory = path.join(process.cwd(), 'app/_posts');
   const filenames = await fs.readdir(postsDirectory);
 
+  const filteredFilenames = filenames.filter((filename) =>
+    filename.endsWith(`.${lang}.mdx`),
+  );
+
   const posts = await Promise.all(
-    filenames.map(async (filename) => {
+    filteredFilenames.map(async (filename) => {
       const filePath = path.join(postsDirectory, filename);
       const fileContents = await fs.readFile(filePath, 'utf8');
       const { data } = matter(fileContents);

@@ -35,6 +35,7 @@
   },
   "common": {
     "back": "Volver",
-    "by": "por"
+    "by": "por",
+    "loading": "Cargando"
   }
 }

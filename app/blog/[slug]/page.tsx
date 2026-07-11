@@ -20,12 +20,13 @@ import styles from './page.module.scss';
 interface Props {
   params: Promise<{
     slug: string;
+    lang?: string;
   }>;
 }
 
-const getMarkDownFileData = async (slug: string) => {
+const getMarkDownFileData = async (slug: string, lang: string = 'es') => {
   try {
-    const filePath = path.join(process.cwd(), 'app/_posts', `${slug}.mdx`);
+    const filePath = path.join(process.cwd(), 'app/_posts', `${slug}.${lang}.mdx`);
     const file = await readFile(filePath, 'utf8');
     return matter(file);
   } catch {
@@ -41,13 +42,13 @@ const prettyCodeOptions = {
 };
 
 export default async function PostPage({ params }: Readonly<Props>) {
-  const { slug } = await params;
+  const { slug, lang = 'es' } = await params;
 
   if (!slug) {
     return notFound();
   }
 
-  const { content, data } = await getMarkDownFileData(slug);
+  const { content, data } = await getMarkDownFileData(slug, lang);
   const headings = extractHeadings(content);
 
   const breadcrumbs: Breadcrumb[] = [
@@ -86,8 +87,8 @@ export default async function PostPage({ params }: Readonly<Props>) {
 }
 
 export async function generateMetadata({ params }: Readonly<Props>) {
-  const { slug } = await params;
-  const { data } = await getMarkDownFileData(slug);
+  const { slug, lang = 'es' } = await params;
+  const { data } = await getMarkDownFileData(slug, lang);
 
   return {
     title: `${data.title} | Jorman Espinoza`,
@@ -96,9 +97,18 @@ export async function generateMetadata({ params }: Readonly<Props>) {
 }
 
 export async function generateStaticParams() {
-  const posts = await getPosts();
+  const languages = ['es', 'en'];
+  const params = [];
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  for (const lang of languages) {
+    const posts = await getPosts(lang);
+    for (const post of posts) {
+      params.push({
+        slug: post.slug,
+        lang: lang,
+      });
+    }
+  }
+
+  return params;
 }

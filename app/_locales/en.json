@@ -35,6 +35,7 @@
   },
   "common": {
     "back": "Back",
-    "by": "by"
+    "by": "by",
+    "loading": "Loading"
   }
 }

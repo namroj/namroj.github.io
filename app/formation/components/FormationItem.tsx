@@ -3,14 +3,15 @@ import Image from 'next/image';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
 import TagButton from '@/components/ui/tag/btn/TagButton';
 import { TbExternalLink } from 'react-icons/tb';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import styles from './FormationItem.module.scss';
 
 export type FormationItemType = {
-  title: string;
+  title: { es: string; en: string };
   entity: { name: string; image: string; url: string };
-  location: string;
-  interval: string;
-  description: string;
+  location: { es: string; en: string };
+  interval: { es: string; en: string };
+  description: { es: string; en: string };
   tags: string[];
   certificate?: string;
 };
@@ -32,6 +33,7 @@ export function FormationItem({
                                 highlightText,
                               }: Props) {
   const { mainWidth } = useExpandCollapseContext();
+  const { language } = useLanguage();
 
   return (
     <li className={styles.item}>
@@ -49,20 +51,20 @@ export function FormationItem({
           </a>
 
           <div className={styles.content}>
-            <h3 className={styles.title}>{highlightText(item.title)}</h3>
+            <h3 className={styles.title}>{highlightText(item.title[language])}</h3>
             <div className={styles.entity}>
               <h4>
                 <a href={item.entity.url} target="_blank" rel="noreferrer">
                   {highlightText(item.entity.name)}
                 </a>
               </h4>
-              <p>[{highlightText(item.location)}]</p>
+              <p>[{highlightText(item.location[language])}]</p>
             </div>
-            <p className={styles.date}>{highlightText(item.interval)}</p>
+            <p className={styles.date}>{highlightText(item.interval[language])}</p>
           </div>
         </div>
 
-        <p className={styles.description}>{highlightText(item.description)}</p>
+        <p className={styles.description}>{highlightText(item.description[language])}</p>
 
         <div className={styles.tags}>
           <ul>

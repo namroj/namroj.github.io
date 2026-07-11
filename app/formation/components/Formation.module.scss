@@ -85,6 +85,14 @@
         overflow-y: auto;
       }
     }
+
+    .loading {
+      padding: var(--gap);
+      text-align: center;
+      font-family: var(--dankMonoFont);
+      font-style: italic;
+      color: var(--textSecondaryColor);
+    }
   }
 
   .filters {

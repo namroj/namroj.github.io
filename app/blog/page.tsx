@@ -11,7 +11,10 @@ export const metadata: Metadata = {
 
 export default async function BlogPage() {
   const breadcrumbs: Breadcrumb[] = [{ label: 'Blog', icon: <FaKeyboard /> }];
-  const posts: PostMetaData[] = await getPosts();
+  const posts: PostMetaData[] = await getPosts('es');
+  const visiblePosts = posts.filter((p) => p.visible);
+  const allTags = Array.from(new Set(visiblePosts.flatMap((post) => post.tags))).sort();
+  const initialPosts = visiblePosts.slice(0, 10);
 
   return (
     <>
@@ -19,7 +22,7 @@ export default async function BlogPage() {
 
       <h2>Blog</h2>
 
-      <Posts posts={posts.filter(p => p.visible)} />
+      <Posts posts={initialPosts} allTags={allTags} />
     </>
   );
 }
