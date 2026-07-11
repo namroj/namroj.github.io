@@ -27,14 +27,19 @@
   --expandCollapseTransition: width 0.5s ease-in-out, padding 0.5s ease-in-out, margin-left 0.5s ease-in-out;
   --dankMonoFont: 'Dank Mono';
   // breakpoints
-  --sm: 576px;
-  --md: 768px;
-  --lg: 992px;
-  --xl: 1200px;
+  $sm: 576px;
+  $md: 768px;
+  $lg: 992px;
+  $xl: 1200px;
+
+  --sm: #{$sm};
+  --md: #{$md};
+  --lg: #{$lg};
+  --xl: #{$xl};
   // transition
   --transition: all 0.25s ease-in-out;
 
-  @media (width > var(--md)) {
+  @media (width > $md) {
     --headerHeight: 70px;
     --sidebarWidth: calc(330px + var(--gap));
     --mainWidth: calc(100vw - var(--sidebarWidth));
