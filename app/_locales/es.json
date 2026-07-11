@@ -30,6 +30,7 @@
     "filter_label": "Filtrar por palabra clave",
     "clear_label": "Borrar",
     "no_results": "No se encontraron resultados. Prueba con otra palabra clave.",
+    "clear_filters": "Limpiar todos los filtros",
     "toc_title": "Tabla de Contenidos"
   },
   "common": {

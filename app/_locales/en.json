@@ -30,6 +30,7 @@
     "filter_label": "Filter by keyword",
     "clear_label": "Clear",
     "no_results": "No results found. Try another keyword.",
+    "clear_filters": "Clear all filters",
     "toc_title": "Table of Contents"
   },
   "common": {

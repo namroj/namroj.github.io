@@ -3,6 +3,7 @@
 import { ChangeEvent, useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import { useExpandCollapseContext } from '@/providers/expand-collapse/ExpandCollapseProvider';
+import { useLanguage } from '@/providers/language/LanguageProvider';
 import normalizeAndCleanString from '@/utils/strings';
 import TagsFilter from '@/components/ui/tag/filter/TagsFilter';
 import KeywordSearch from '@/components/ui/keyword/KeywordSearch';
@@ -14,6 +15,7 @@ export default function Experience({
                                      data,
                                    }: Readonly<{ data: ExperienceItemType[] }>) {
   const { mainWidth } = useExpandCollapseContext();
+  const { t } = useLanguage();
 
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,6 +23,11 @@ export default function Experience({
   const handleClearTags = () => setSelectedTags([]);
 
   const handleClearSearch = () => setSearchTerm('');
+
+  const handleResetFilters = () => {
+    setSelectedTags([]);
+    setSearchTerm('');
+  };
 
   const handleTagClick = (tag: string) =>
     setSelectedTags((prevTags) =>
@@ -91,9 +98,12 @@ export default function Experience({
         <span className={styles.icon}>
           <LuPackageSearch />
         </span>
-        <span>
-          No se encontraron resultados. Prueba con otra palabra clave.
-        </span>
+        <div className={styles.message}>
+          <span>{t('blog.no_results')}</span>
+          <button className={styles.resetButton} onClick={handleResetFilters}>
+            {t('blog.clear_filters')}
+          </button>
+        </div>
       </div>
     ) : (
       <ul className={styles.items}>

@@ -27,6 +27,11 @@ export default function Posts({ posts }: Props) {
 
   const handleClearSearch = () => setSearchTerm('');
 
+  const handleResetFilters = () => {
+    setSelectedTags([]);
+    setSearchTerm('');
+  };
+
   const handleTagClick = (tag: string) =>
     setSelectedTags((prevTags) =>
       prevTags.includes(tag)
@@ -92,9 +97,12 @@ export default function Posts({ posts }: Props) {
         <span className={styles.icon}>
           <LuPackageSearch />
         </span>
-        <span>
-          {t('blog.no_results')}
-        </span>
+        <div className={styles.message}>
+          <span>{t('blog.no_results')}</span>
+          <button className={styles.resetButton} onClick={handleResetFilters}>
+            {t('blog.clear_filters')}
+          </button>
+        </div>
       </div>
     ) : (
       <div className={styles.items}>
@@ -114,7 +122,7 @@ export default function Posts({ posts }: Props) {
     <div
       className={`${styles.posts} ${mainWidth < 1920 && styles.mainReduced}`}
     >
-      {filteredPosts.length > 0 && filters}
+      {posts.length > 0 && filters}
       <div
         className={`${styles.timeline} ${mainWidth < 1920 && styles.mainReduced}`}
       >
